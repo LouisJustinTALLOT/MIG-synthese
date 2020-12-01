@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[bottom = 3 cm]{geometry}
+\usepackage[french, english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{numprint}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{titling}
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{blindtext}
+
+
+% \setlength{\hoffset}{-18pt}
+% \setlength{\oddsidemargin}{0pt} % Marge gauche sur pages impaires
+% \setlength{\evensidemargin}{9pt} % Marge gauche sur pages paires
+% \setlength{\marginparwidth}{54pt} % Largeur de note dans la marge
+% \setlength{\textwidth}{481pt} % Largeur de la zone de texte (17cm)
+% \setlength{\voffset}{-18pt} % Bon pour DOS
+% \setlength{\marginparsep}{7pt} % Séparation de la marge
+% \setlength{\topmargin}{0pt} % Pas de marge en haut
+% \setlength{\headheight}{13pt} % Haut de page
+% \setlength{\headsep}{10pt} % Entre le haut de page et le texte
+% \setlength{\footskip}{50pt} % Bas de page + séparation
+% \setlength{\textheight}{708pt} % Hauteur de la zone de texte (25cm)
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{École des Mines de Paris}
+\lhead{MIG L'Eau après la Mine}
+\rfoot{\vspace{-1 cm}\thepage}
+\lfoot{\includegraphics[width = 3 cm]{logoMPT.png}}
+
+\renewcommand{\thesection}{\Roman{section})} 
+% \renewcommand{\thesubsection}{\thesubsection)}
+% pk y a des parenthèses dans les numéros de titres ? c'est cette commande ?
+
+\title{\textbf{\LARGE{\textsc{École des Mines de Paris}}\\ \vspace{1 cm}MIG L'Eau après la Mine\\\vspace{0.8 cm}Synthèse du projet}\vspace{1 cm}}
+
+\author{Sophian \textsc{Akkari}, Tom \textsc{Boezennec}, Paul \textsc{Colombel}, Florestan \textsc{Fontaine},\\ Yiqiong \textsc{Hu}, Tasnime \textsc{Ouchtar}, Guillaume \textsc{Ramos}, Louison \textsc{Rapin},\\ Guillaume \textsc{Rouy},  Louis-Justin \textsc{Tallot}, Gabrielle \textsc{Vernet}, Guillaume \textsc{Vigne}\\ }
+
+\date{\vspace{1 cm}Novembre 2020}
+
+\begin{document}
+\selectlanguage{french}
+\maketitle
+\thispagestyle{empty}
+\vspace{5 cm}
+\begin{center}
+    \includegraphics[width = 0.4\linewidth]{logoMPT.png}
+\end{center}
+
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\begin{abstract}
+    Ceci est le résumé
+\end{abstract}
+
+{\selectlanguage{english}
+\begin{abstract}
+    English abstract
+\end{abstract}
+}
+
+\newpage
+\pagenumbering{arabic}
+\section{Introduction}
+\subsection{test}
+\Blindtext
+\end{document}
