@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage[bottom = 3 cm]{geometry}
+\usepackage[bottom = 2 cm]{geometry}
 \usepackage[french, english]{babel}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -10,10 +10,19 @@
 \usepackage{hyperref}
 \usepackage[T1]{fontenc}
 \usepackage{titling}
+\usepackage[nottoc, numbib]{tocbibind}
 \usepackage{color}
 \usepackage{fancyhdr}
 \usepackage{blindtext}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{array}
+\usepackage{listings}
 
+
+\usepackage{biblatex}
+\addbibresource{biblio.bib}
+\bibliography{biblio.bib}
 
 % \setlength{\hoffset}{-18pt}
 % \setlength{\oddsidemargin}{0pt} % Marge gauche sur pages impaires
@@ -23,7 +32,7 @@
 % \setlength{\voffset}{-18pt} % Bon pour DOS
 % \setlength{\marginparsep}{7pt} % Séparation de la marge
 % \setlength{\topmargin}{0pt} % Pas de marge en haut
-% \setlength{\headheight}{13pt} % Haut de page
+\setlength{\headheight}{13pt} % Haut de page
 % \setlength{\headsep}{10pt} % Entre le haut de page et le texte
 % \setlength{\footskip}{50pt} % Bas de page + séparation
 % \setlength{\textheight}{708pt} % Hauteur de la zone de texte (25cm)
@@ -32,12 +41,76 @@
 \fancyhf{}
 \rhead{École des Mines de Paris}
 \lhead{MIG L'Eau après la Mine}
-\rfoot{\vspace{-1 cm}\thepage}
+\rfoot{\vspace{-0.7 cm}\thepage}
 \lfoot{\includegraphics[width = 3 cm]{logoMPT.png}}
 
-\renewcommand{\thesection}{\Roman{section})} 
-% \renewcommand{\thesubsection}{\thesubsection)}
-% pk y a des parenthèses dans les numéros de titres ? c'est cette commande ?
+
+\titleformat{\section}
+    {\Large\bfseries}
+    {\thesection}
+    {1 em}
+    {}
+\titleformat{\subsection}
+    {\large\bfseries}
+    {\qquad\thesubsection}
+    {1 em}
+    {}
+\titleformat{\subsubsection}
+    {\large\bfseries}
+    {\qquad\qquad\thesubsubsection}
+    {1 em}
+    {}
+
+\renewcommand{\thesection}{\Roman{section})}
+\renewcommand{\thesubsection}{\arabic{subsection})}
+\renewcommand{\thesubsubsection}{\alph{subsubsection})}
+
+
+            
+\titlecontents{section}
+            [0pt]
+            {\bfshape}%
+            {\contentsmargin{0pt}%
+            \bfseries
+            \makebox[0pt][r]{\large\thecontentslabel\enspace}%
+            \large}
+            {\contentsmargin{0pt}\large}
+            {\hfill\textbf{\contentspage}}
+            [\addvspace{1pc}]
+\titlecontents{subsection}
+            [10 pt]
+            {}%
+            {\contentsmargin{0pt}\bfseries            \makebox[0pt][r]{\large\thecontentslabel\enspace}%
+            \large}
+            {\contentsmargin{0pt}\large}
+            {\hfill\textbf{\contentspage}}
+            [\addvspace{1pc}]
+            
+\titlecontents{subsubsection}
+            [20 pt]
+            {}
+            {\contentsmargin{0pt}\bfseries\makebox[0pt][r]{\large\thecontentslabel\enspace}
+            \large}
+            {\contentsmargin{0pt}\large}
+            {\hfill\textbf{\contentspage}}
+            [\addvspace{1pc}]
+
+
+\makeatletter
+\renewcommand\listoffigures{%
+    \section{\listfigurename}% Used to be \section*{\listfigurename}
+      \@mkboth{\MakeUppercase\listfigurename}%
+              {\MakeUppercase\listfigurename}%
+    \@starttoc{lof}%
+    }
+\makeatother
+
+\lstset{numbers=left, stepnumber=5,breaklines = true}%, numbersep=5pt}
+\lstdefinelanguage{hytec}{
+    morekeyword = {darcy-velocity,diffusion-coeff,database,solver-regime,grid-regime,flow-regime,zone,head,porosity,permeability,geochem,boundary,exclude, unit,extend,kinetics,rate,area,exclude},
+    sensitive = true
+}
+
 
 \title{\textbf{\LARGE{\textsc{École des Mines de Paris}}\\ \vspace{1 cm}MIG L'Eau après la Mine\\\vspace{0.8 cm}Synthèse du projet}\vspace{1 cm}}
 
@@ -45,8 +118,11 @@
 
 \date{\vspace{1 cm}Novembre 2020}
 
-\begin{document}
+
+
+\begin{document} % début du document
 \selectlanguage{french}
+
 \maketitle
 \thispagestyle{empty}
 \vspace{5 cm}
@@ -56,7 +132,7 @@
 
 
 \newpage
-
+\pagenumbering{gobble}
 \tableofcontents
 
 \newpage
@@ -64,6 +140,7 @@
 \begin{abstract}
     Ceci est le résumé
 \end{abstract}
+
 
 {\selectlanguage{english}
 \begin{abstract}
@@ -73,7 +150,49 @@
 
 \newpage
 \pagenumbering{arabic}
-\section{Introduction}
-\subsection{test}
-\Blindtext
+\section{Introduction aux problématiques de l'Après-Mine}
+\subsection{Les mines d'Uranium en France}
+\subsubsection{une sous sous section}
+\blindtext
+
+Un essai de \cite{einstein} d'un ouvrage, ou encore \cite{dirac}. 
+\newpage
+\subsection{une deuxieme sous section}
+\blindtext
+\blindtext
+\blindtext
+
+
+\newpage
+\section{L'Uranium dans le contexte de l'Après-Mine}
+
+
+
+\newpage
+\section{Le Radon dans le contexte de l'Après-Mine}
+
+%%%%%% ANNEXES %%%%%%%
+\newpage
+\appendix
+\pagenumbering{roman}
+\titleformat{\section}
+    {\Large\bfseries}
+    {Annexe \thesection \: -}
+    {0.5 em}
+    {}
+\section{Code HYTEC Utilisé }
+
+
+\lstinputlisting[language=hytec, caption = ziljbfjez]{modele-13.htc}
+\newpage
+\section{Résultats des simulations numériques HYTEC}
+
+
+\newpage
+\listoffigures
+
+\newpage
+\section{Références bibliographiques}
+\printbibliography[header = none]
+
 \end{document}

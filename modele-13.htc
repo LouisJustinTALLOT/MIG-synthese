@@ -1,0 +1,284 @@
+# MIG 2020 - MP1
+# Modele numero 13
+
+# Geometry and hydrogeology
+# -------------------------
+
+# domain = 0,300 0,395 21,394 36,392 46,390 91,380 109,376 121,375 199,368 206,367 270,358 286,356 327,356 390,351 430,350 430,300 m
+#domain = 0,300 0,395 21,394 36,392 46,390 46,358 121,358 121,375 199,368 206,367 270,358 286,356 327,356 390,351 430,350 430,300 m
+
+
+
+# darcy-velocity = 0.5 cm/hr
+# dispersivity = 2.5 mm
+diffusion-coeff = 1e-9 m2/s
+# porosity = 0.3
+
+database = prodata1104_utf8_MIG_test.tdb
+
+solver-regime = vertex
+grid-regime = vertex ribiere2.msh
+
+flow-regime = saturated, transient 
+
+# nodes = 2000
+# solver-regime = rectangular
+# solver = continuous-fractions
+
+# domain 0,0 0,1 1,1 1,0 m
+
+
+zone 1001 {
+  head = 360 m
+  porosity = 0.03
+  permeability = 1e-7, 1e-7, 0, 0 m/s 
+  geochem = chimie_granite
+}
+
+zone 1002 {
+  head = 360 m
+  porosity = 0.05
+  permeability = 5e-7, 5e-6, 0, 0 m/s
+  geochem = chimie_granite_frac
+}
+
+zone 1003 {
+  head = 370 m
+  porosity = 0.1
+  permeability = 1e-5, 1e-4, 0, 0 m/s
+  geochem = chimie_steriles
+}
+
+zone 1004 {
+  head = 360 m
+  porosity = 0.2
+  permeability = 5e-5, 5e-5, 0, 0 m/s
+  geochem = chimie_residus_sable
+}
+
+zone 1005 {
+  head = 360 m
+  porosity = 0.2
+  permeability = 1e-5, 1e-5, 0, 0 m/s
+  geochem = chimie_residus_boues
+}
+
+boundary 2001 {
+  coordinates = 0,300 0,370 m
+  #flow-condition = constant-flow at 0.05,0 mm/d
+  #flow-condition = constant-head at 370 m
+  # flow-constant-concentration = constant-head at 370 m
+  transport-condition = constant-concentration using chimie_granite
+  # modify at 5 h, transport-condition = flux using injection_base
+  # modify at X 100 d, flow-condition =
+}
+
+boundary 2002 {
+  coordinates = 430,300 430,350 m
+  flow-condition = constant-head at 348 m
+}
+
+boundary 2003 {
+  coordinates = 0,395 21,394
+  transport-condition = flux using top
+  flow-condition = constant-flow at 0,-200 mm/y
+  # modify at  31 d, flow-condition = constant-flow at 0,-181.2 mm/y
+  # modify at  59 d, flow-condition = constant-flow at 0,-12 mm/y
+  # modify at  90 d, flow-condition = constant-flow at 0,-522 mm/y
+  # modify at  120 d, flow-condition = constant-flow at 0,-0 mm/y
+  # modify at  304 d, flow-condition = constant-flow at 0,-154.8 mm/y
+  # modify at  334 d, flow-condition = constant-flow at 0,-1010.4 mm/y
+}
+
+
+# Geochemistry
+# ------------
+exclude gases, minerals
+
+# unit left {
+#   # tot T1(aq) = 1 umol/l
+#   tot Na[+] = 1 mmol/L
+#   tot Cl[-] = 1 mmol/L
+#   fug CO2(g) = 0.001
+#   tot Ca[2+] = 1 mmol/L
+#   tot Mg[2+] = 1 mmol/L
+#   tot SO4[2-] = 1 mmol/L
+# }
+# unit right {
+#   # tot T1(aq) = 1 umol/l
+# }
+unit top {
+  tot Tpluie(aq) = 1 umol/l
+
+  tot Na[+] = 1 umol/L
+  tot Cl[-] = 1 umol/L
+  fug CO2(g) = 400e-6
+  tot Ca[2+] = 1 umol/L
+  tot Mg[2+] = 1 umol/L
+  tot SO4[2-] = 1 umol/L
+  # tot Si(OH)4(aq) = 1 mmol/L
+}
+
+unit chimie_residus_sable {
+  # pH = 7
+  # tot Tresidus(aq) = 1 umol/l
+  mineral Residues = 1 mol/l
+  # mineral Sand = 8 kg/l
+  
+  tot Na[+] = 1 mmol/L
+  tot Cl[-] = 1 mmol/L
+  fug CO2(g) = 0.001
+
+  mineral Quartz = 557 g/L
+  mineral Microcline = 321 g/L
+  mineral Montmorillonite-Ca = 137 g/L , surface = 600 m2/g
+  mineral Gypse = 19.3 g/L
+  mineral BaSO4(cr) = 841 mg/L
+  mineral Autunite = 239 mg/L
+  mineral Ferrihydrite = 33 g/L , surface = 0.1 m2/g
+  mineral RaSO4(s) = 1.76 ug/L
+}
+
+unit chimie_residus_boues {
+  # pH = 7
+  # tot Tresidus(aq) = 1 umol/l
+  mineral Residues = 1 mol/l
+  # mineral Sand = 8 kg/l
+
+  tot Na[+] = 0.1 mmol/L
+  tot Cl[-] = 0.1 mmol/L
+  mineral Microcline = 29.5 g/L
+  mineral Montmorillonite-Ca = 297 g/L , surface = 700 m2/g
+  mineral Gypse = 403 g/L
+  mineral BaSO4(cr) = 48.3 mg/L
+  mineral Calcite = 16.7 g/L
+  mineral Autunite = 82.2 mg/L
+  mineral Ferrihydrite = 66.9 g/L , surface = 0.2 m2/g
+  mineral RaSO4(s) = 594 ng/L
+}
+
+unit chimie_steriles {
+  # pH = 7
+  tot Tsteriles(aq) = 1 umol/l
+  fug CO2(g) = 400e-6
+  # mineral Quartz = 557 g/L
+  tot Na[+] = 1 umol/L
+  tot Cl[-] = 1 umol/L
+  # tot Ca[2+] = 1 umol/L
+  # tot Mg[2+] = 1 umol/L
+  # tot SO4[2-] = 1 umol/L
+  # tot Si(OH)4(aq) = 10 mg/l
+  mineral Quartz = 1 kg/L  
+  mineral Microcline = 29.5 g/L
+  mineral Ferrihydrite = 66.9 g/l, surface = 0.1 m2/g
+  mineral Gypse = 20 g/l
+  mineral Montmorillonite-Ca = 30 g/L 
+  # mineral Kaolinite = 20 g/L
+}
+
+unit chimie_granite {
+  tot Tgranite(aq) = 1 umol/l
+  tot Na[+] = 1 mmol/L
+  tot Cl[-] = 1 mmol/L
+  fug CO2(g) = 0.001
+  mineral Quartz = 1 kg/L 
+  # mineral Microcline = 29.5 g/L
+  mineral Ferrihydrite = 66.9 g/L, surface = 0.1 m2/g 
+}
+
+unit chimie_granite_frac {
+  tot Tgfrac(aq) = 1 umol/l
+  # conc Quartz = 2648.29 kg/m3
+  tot Na[+] = 1 mmol/L
+  tot Cl[-] = 1 mmol/L
+  fug CO2(g) = 0.001
+  mineral Quartz = 1 kg/L  
+  # mineral Microcline = 30 g/L
+  # mineral Ferrihydrite = 66.9 g/l, surface = 0.1 m2/g
+}
+
+
+extend mineral Montmorillonite-Ca {
+  surface = 600 m2/g
+}
+
+extend mineral Ferrihydrite {
+  surface = 0.1 m2/g
+}
+
+extend mineral Montmorillonite-Ca {
+  kinetics {
+    rate = -1.2e-15 mol/m2/s
+    area = Montmorillonite-Ca
+    y-term, species = Montmorillonite-Ca
+    w-term {
+      species = H[+]
+      power = 0.22
+    }
+  }
+  kinetics {
+    rate = 1.9e-15 mol/m2/s
+    area = Montmorillonite-Ca
+    y-term, species = Montmorillonite-Ca
+    w-term {
+      species = H[+]
+      power = 0.22
+    }
+  }
+}
+
+exclude (UO2)11(CO3)6(OH)12[2-], (UO2)3(CO3)6[6-], U(CO3)5[6-], S3O6[2-], S2[2-], S4[2-], S5[2-], S6[2-], S3[2-], S3O6[2-] 
+exclude Mg2UO2(CO3)3(aq), MgUO2(CO3)3[2-], UO2(CO3)3[4-], Ca2UO2(CO3)3(aq), CaUO2(CO3)3[2-], (UO2)3O(OH)2(HCO3)[+], UO2(H2PO4)(H3PO4)[+]
+# exclude BaRaSO4
+
+# define basis T1(aq)
+define basis Tresidus(aq)
+define basis Tgranite(aq)
+define basis Tsteriles(aq)
+define basis Tpluie(aq)
+define basis Tgfrac(aq)
+
+define mineral Residues {
+  composition = 1 Tresidus(aq)
+  logK = 6
+}
+
+
+# extend surface-sites Sand(Cs), logK = 2.5
+
+# Simulation parameters
+# ---------------------
+duration = 1 y #25 y
+timestep = variable {
+ start = 0.1 h
+ maximum = 5 d
+ courant-factor = 50
+}
+ 
+# Output specifications
+# ---------------------
+output = modele_13_no9
+output-format = res, vtk
+sample = 100
+ 
+# select T1(aq) in umol/l
+select Tresidus(aq) in umol/l
+select Tgranite(aq) in umol/l
+select Tsteriles(aq) in umol/l
+select Tpluie(aq) in umol/l
+select Tgfrac(aq) in umol/l
+select head
+select permeability
+select x-permeability
+select y-permeability
+select porosity 
+select x-flowrate in m/s
+select y-flowrate in m/s
+
+select aqueous{UO2[2+]}, fixed{UO2[2+]}, mineral{UO2[2+]} in umol/L
+select pH
+select minerals in mg/l
+select aqueous{Ra[2+]} in umol/L
+
+# select aqueous{Cs[+]}, fixed{Cs[+]} in umol/l
+# select aqueous{Na[+]}, fixed{Na[+]} in umol/l
