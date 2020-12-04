@@ -20,6 +20,7 @@
 \usepackage{array}
 \usepackage{listings}
 \usepackage{subfig}
+\usepackage{float}
 %\usepackage[amssymb]{SIunits}
 
 \usepackage[style = numeric]{biblatex}
@@ -33,7 +34,7 @@
 % \setlength{\marginparwidth}{54pt} % Largeur de note dans la marge
 % \setlength{\textwidth}{481pt} % Largeur de la zone de texte (17cm)
 % \setlength{\voffset}{-18pt} % Bon pour DOS
-% \setlength{\marginparsep}{7pt} % Séparation de la marge
+\setlength{\marginparsep}{7pt} % Séparation de la marge
 % \setlength{\topmargin}{0pt} % Pas de marge en haut
 \setlength{\headheight}{20pt} % Haut de page
 % \setlength{\headsep}{10pt} % Entre le haut de page et le texte
@@ -304,6 +305,22 @@ Le site de la Ribière, abordé plus en détail dans ce rapport, est un site de 
 %   \caption{}
 % \end{figure}
 
+\begin{figure}[!ht]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{I_A_3.jpg} 
+        \caption{Site de Bellezane. (Orano)}
+        \label{fig:bellezane1}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{I_A_4.jpg} 
+        \caption{Site de La Ribière. (Orano)}
+        \label{fig:ribiere1}
+    \end{minipage}
+\end{figure}
+
 %%%% GUILLAUME JE FAIS REGARDE : Ok je regarde Au pire viens sur Zoom
 % ça a marché 
 % nan je peux pas je suis sur zoom sur la conf Ah ok np..... La c'était juste pour mettre 2 trucs cote a cote. Ca devrait pas etre trop courant
@@ -320,21 +337,7 @@ A partir de 1967, le nombre de mines tend à décroître. Ce sont les mines de c
 %Annexe 1 Carte minière de la France 
 % et il suffit dans le texte de faire un truc
 
-\begin{figure}[!ht]
-    \centering
-    \begin{minipage}{0.5\textwidth}
-        \centering
-        \includegraphics[width=0.9\textwidth]{I_A_3.jpg} 
-        \caption{Site de Bellezane. (Orano)}
-        \label{fig:bellezane1}
-    \end{minipage}\hfill
-    \begin{minipage}{0.5\textwidth}
-        \centering
-        \includegraphics[width=0.9\textwidth]{I_A_4.jpg} 
-        \caption{Site de La Ribière. (Orano)}
-        \label{fig:ribiere1}
-    \end{minipage}
-\end{figure}
+
 
 
 
@@ -371,7 +374,10 @@ A partir de 1967, le nombre de mines tend à décroître. Ce sont les mines de c
 % et ainsi la lixiviation (fig.3) est une technique ....
 
 \subsection{Importance et enjeux de l'après-mine}
-\paragraph{} L’après-mine fait partie intégrante du cycle minier. [N. Himeur] Aujourd’hui, cette phase est pensée dès les phases d’exploration et de développement du projet minier. C’est une étape clé qui comporte de nombreux enjeux. Elle dure en général plusieurs dizaines d’années, et il est nécessaire de surveiller la mine même au-delà. Il faut en effet assurer la sécurité et la salubrité de la mine. L’objectif de ce processus est de réduire l’impact du site sur son environnement. Pour cela, il est essentiel de mettre en place un plan de réaménagement en concertation avec les autorités et les habitants. Une fois le plan établi et les différentes procédures achevées, les travaux peuvent commencer pour réinsérer le site dans le paysage. L’après-mine consiste aussi en la surveillance des sites. A l’issue du réaménagement, il faut continuer à entretenir les équipements de dépollution et vérifier que les normes sont toujours respectées.
+\paragraph{} L’après-mine fait partie intégrante du cycle minier. [N. Himeur] Aujourd’hui, cette phase est pensée dès les phases d’exploration et de développement du projet minier. C’est une étape clé qui comporte de nombreux enjeux. Elle dure en général plusieurs dizaines d’années, et il est nécessaire de surveiller la mine même au-delà. Il faut en effet assurer la sécurité et la salubrité de la mine.
+
+L’objectif de ce processus est de réduire l’impact du site sur son environnement. Pour cela, il est essentiel de mettre en place un plan de réaménagement en concertation avec les autorités et les habitants. Une fois le plan établi et les différentes procédures achevées, les travaux peuvent commencer pour réinsérer le site dans le paysage. L’après-mine consiste aussi en la surveillance des sites. A l’issue du réaménagement, il faut continuer à entretenir les équipements de dépollution et vérifier que les normes sont toujours respectées.
+
 
 %Image 1 (prez Après-mine Orano)
 \begin{figure}[!h]
@@ -384,17 +390,18 @@ A partir de 1967, le nombre de mines tend à décroître. Ce sont les mines de c
 La roche que l’on a excavé dans une mine pour atteindre le minerai constitue le stérile minier tandis que le produit issu du concassage du filon est appelé résidu minier. Ce dernier garde des propriétés radioactives : il faut donc le stocker et le surveiller.
 Pour le réaménagement actif (remblayage), il s’agit souvent d’utiliser les stériles miniers pour remblayer les anciennes mines à ciel ouvert. On peut ensuite revégétaliser la zone - mais attention à ne pas planter d’arbres au-dessus des résidus, car leurs racines pourraient percer jusqu’à ces derniers. Il faut aussi s’assurer de ne pas forcer la nature, qui doit d’elle-même reprendre ses droits. Cela peut alors prendre 6 mois comme au Gabon, ou près de 10 ans comme près de Clisson en France où une forêt maritime est en train de se former. La stabilité peut être assurée avec des digues, qui retiennent les eaux d’exhaure et/ou les résidus. Des contrôles des résidus sont effectués régulièrement ainsi que des analyses de concentrations de radionucléides (uranium, radium…) dans l’eau et l’air du site.  [N. Himeur]
 
-Des stations de traitement des eaux sont souvent utilisées pour traiter les eaux d’exhaure, certaines avec des méthodes de filtration particulières sur résines échangeuses d’ions ou sur zéolites, ce qui sera abordé plus tard dans le document. Le pôle Recherche et Développement (R&D) de l’exploitant (Orano pour la France) a un rôle à jouer en essayant d’innover, d’optimiser ce traitement et d’étudier l’impact de l’après-mine sur les écosystèmes pour le minimiser. [J. Schick]
+Des stations de traitement des eaux sont souvent utilisées pour traiter les eaux d’exhaure, certaines avec des méthodes de filtration particulières sur résines échangeuses d’ions ou sur zéolites, ce qui sera abordé plus tard dans le document. Le pôle Recherche et Développement (R\&D) de l’exploitant (Orano pour la France) a un rôle à jouer en essayant d’innover, d’optimiser ce traitement et d’étudier l’impact de l’après-mine sur les écosystèmes pour le minimiser. [J. Schick]
 
 Les secondes vies des mines peuvent être diverses : certaines sont transformées en parcs photovoltaïques, en zones industrielles ou agricoles, en réacteur nucléaire naturel comme à Oklo au Gabon, en musée (comme le musée Uréka de Bessines-sur-Gartempes), en base nautique ou encore en parc. Les projets de parc photovoltaïques sont effectués en partenariat avec NEOEN ou via des appels d’offres. [N. Himeur]
+
 À Bellezane, de nombreuses procédures ont été lancées. Des résidus y ont été coulés avant d’y poser une couverture en stériles et terre, puis de commencer la revégétalisation. Il y a notamment sur le site des fourrés et des mares à protéger, un écologue passe donc annuellement sur le site. L’entreprise MISTRI s’est désormais installée dans les anciens locaux du site, et un projet de centrale photovoltaïque en partenariat avec Total est en cours : il devrait aboutir vers 2023. Le stockage des sédiments sur le site est, lui, géré par Orano. [C. Benesteau]
 
 %Image 2  : Bellezane avant/après
-\begin{figure}[!h]
+\begin{figure}[!hbt]
     \centering
     \includegraphics[width=\linewidth]{I_B_2.jpg}
     \caption{Le site de Bellezane avant et après le réaménagement. (Orano)}
-    \label{}
+    \label{fig:bellezane_avant_apres}
 \end{figure}
 
 L’après-mine comprend une dimension sanitaire : les eaux d’exhaure peuvent se déverser dans des lacs ou des nappes utilisés pour le pompage de l’eau potable. C’est le cas par exemple dans le Limousin : les eaux d’exhaure de l’ancienne mine Henriette se déversent dans l’étang de la Crouzille qui est utilisé par la régie de l’eau de la métropole de Limoges pour alimenter le réseau d’eau potable. L’entreprise chargée de l’après-mine, Orano, doit donc veiller à la qualité de l’eau rejetée dans l’étang, qui ne doit pas dégrader la qualité de l’eau de l’étang. La présence de mines est également source de contraintes pour la régie de l’eau : la teneur en métaux et en minéraux de l’eau est modifiée par les eaux d’exhaure ce qui occasionne des frais de surveillance et de traitement supplémentaires. De plus, la disponibilité de l’eau est parfois réduite. Les mines ont également des effets indirects : elles ajoutent des contraintes de gestion technique et suscitent la méfiance des populations à l’égard des gestionnaires de l’eau. [J-L Viallesèche]
@@ -450,7 +457,13 @@ L’aluminium a quant à lui un impact sur le système osseux et sur le système
 \subsubsection{Focalisation du grand public sur l'uranium et les risques radiologiques}
 \paragraph{} Le manque d’informations transmises par COGEMA (l’ancien nom d’Orano) lors du début du réaménagement des mines a rendu la population locale méfiante envers les différentes actions que l’entreprise a prises pour enfouir les déchets radioactifs. Alors que COGEMA affirmait avoir été transparent sur leur gestion des déchets, certains journalistes indépendants accusent l’entreprise d’avoir enfoui des bidons dans les résidus miniers sans prévenir ni alerter les riverains. 
 
-De nos jours, des tensions sont encore présentes entre Orano et les riverains. De nombreuses associations se sont formées pour protester contre la “mauvaise gestion de l'après-mine” (Collectif Mines d’Uranium). Le collectif mines d’uranium (regroupant plusieurs associations dont l’Association Oui à l'avenir (Creuse), l’Association Noria (Vendée), l’Association Sources et Rivières du Limousin (SRL), et bien d’autres) déplore  l’état dans lequel les entreprises minières laissent le territoire et  affirme que les déchets miniers sont souvent “disséminés dans l’environnement ou stockés dans des conditions totalement inappropriées” et qu’ils “génèrent des pollutions environnementales multiples (air, eau, sol, chaîne alimentaire) induisant des dangers sanitaires inacceptables aujourd’hui et pour les générations futures”(Collectif Mines d’Uranium). Il tiennent Orano pour responsable de la dégradation de la faune et de la flore et protestent contre une “législation complaisante”. Ils se plaignent, entre autres, de la contamination des terrains par des éléments radioactifs, de la pollution des ressources aquatiques, de la mauvaise gestion des sites de stockage des déchets, de la perte de mémoire sur la localisation des sites, de l’absence de normes sanitaires et environnementales intégralement respectées… 
+De nos jours, des tensions sont encore présentes entre Orano et les riverains. De nombreuses associations se sont formées pour protester contre la “mauvaise gestion de l'après-mine” (Collectif Mines d’Uranium). Le collectif mines d’uranium (regroupant plusieurs associations dont l’Association Oui à l'avenir (Creuse), l’Association Noria (Vendée), l’Association Sources et Rivières du Limousin (SRL), et bien d’autres) déplore  l’état dans lequel les entreprises minières laissent le territoire et  affirme que les déchets miniers sont souvent “disséminés dans l’environnement ou stockés dans des conditions totalement inappropriées” et qu’ils “génèrent des pollutions environnementales multiples (air, eau, sol, chaîne alimentaire) induisant des dangers sanitaires inacceptables aujourd’hui et pour les générations futures”(Collectif Mines d’Uranium). 
+
+% rewording à faire
+
+Ils tiennent Orano pour responsable de la dégradation de la faune et de la flore et protestent contre une “législation complaisante”. Ils se plaignent, entre autres, de la contamination des terrains par des éléments radioactifs, de la pollution des ressources aquatiques, de la mauvaise gestion des sites de stockage des déchets, de la perte de mémoire sur la localisation des sites, de l’absence de normes sanitaires et environnementales intégralement respectées… 
+
+
 Les associations ne se contentent pas d’informer la population sur les risques inhérents aux anciennes mines. L’association CRIIRAD (Commission de Recherche et d’Information Indépendantes sur la Radioactivité)  contrôle également la radioactivité de l’environnement pour évaluer l’impact des déchets radioactifs. En 2004, une action de contrôle de radioactivité les a amenés à prélever des échantillons au bord d’un ruisseau en aval d’un ancien site minier. La radioactivité mesurée dans ces échantillons était de 3,4 Bq/g, soit d’après leur chiffre trois fois plus que la teneur naturelle. Selon eux, le fait qu’il n’y ait plus de contrôle radioactif officiel autour des mines est un danger pour l’environnement et pour la vie humaine. 
 
 
@@ -496,13 +509,20 @@ Les mesures correctives doivent être prises en accord avec le ministère de l�
 
 \paragraph{Allemagne}
 
-En Allemagne le Radiation Protection Act (StrlSchG), établi en 2017, fournit le cadre juridique de la protection face aux effets néfastes des radiations et établit les bases légales de la radioprotection. Cet acte implémente la directive 2013/59/Euratom du conseil européen qui met en place des standards de protection face à l’exposition aux radiations. Cet acte met donc en place des valeurs limites de concentration d’activité, d’activité et de dose effective annuelles précises pour des espèces radioactives et des publics distincts. Par exemple, la limite générale de la dose effective annuelle pour le public est de 1 mSv, et la concentration d’activité de l’uranium ne doit pas dépasser 10 kBq/kg. Cependant, il n’existe pas de loi spécifique à la gestion des mines d’uranium après la fin de leurs activités, pas de législation globale sur les méthodes à appliquer. Le gouvernement allemand préfère appliquer des méthodes distinctes pour chaque site afin d’apporter des réponses adaptées à des questions spécifiques.
+En Allemagne, le \emph{Radiation Protection Act} (StrlSchG), établi en 2017, fournit le cadre juridique de la protection face aux effets néfastes des radiations et établit les bases légales de la radioprotection. Cet acte implémente la directive 2013/59/Euratom du conseil européen qui met en place des standards de protection face à l’exposition aux radiations. Cet acte met donc en place des valeurs limites de concentration d’activité, d’activité et de dose effective annuelles précises pour des espèces radioactives et des publics distincts. 
+
+
+Par exemple, la limite générale de la dose effective annuelle pour le public est de 1 mSv, et la concentration d’activité de l’uranium ne doit pas dépasser 10 kBq/kg. Cependant, il n’existe pas de loi spécifique à la gestion des mines d’uranium après la fin de leurs activités, pas de législation globale sur les méthodes à appliquer. Le gouvernement allemand préfère appliquer des méthodes distinctes pour chaque site afin d’apporter des réponses adaptées à des questions spécifiques.
 
 La réhabilitation des mines d’uranium allemandes est principalement gérée par la société Wisbut GmbH, détenue et financée par le gouvernement. Elle est chargée du démantèlement des mines, du traitement du site et de la surveillance des installations et des émanations. La surveillance implique des mesures menées sur le long terme à des positions précises afin d’assurer la cohérence du site avec la loi et un meilleur contrôle sur les actions de réhabilitation.
 
 \paragraph{Etats-Unis}
 
-Aux États-Unis, en 1950, le US Public Health Service commençait une étude sur les mineurs d'uranium, conduisant à la première publication d'une corrélation statistique entre le cancer et l'extraction d'uranium, publiée en 1962. Le gouvernement fédéral a finalement réglementé la quantité standard de radon dans les mines, fixant le niveau à 0,3 WL en 1969. Plus tard, l'USAEC (United States Atomic Energy Commission) a donné l’objectif et des conseils pour la réhabilitation de l’eau dans les anciens sites miniers, surtout pour les eaux souterraines contaminées par l'ISR. L’objectif est de restaurer la qualité de l'eau dans les nappes aquifères affectées à l’état avant l'exploitation minière. Bien que toutes les caractéristiques chimiques ne puissent pas être retournées à celles avant l'extraction, l'eau doit être assurée aux mêmes utilisations qu'auparavant. USAEC formule des recommandations concernant la caractérisation du niveau de base (baseline) de la qualité des eaux souterraines avant le début des opérations minières, la surveillance pour détecter l’évolution de lixiviat pendant l'exploitation minière et la surveillance à long terme pour déterminer à quel moment la qualité des eaux souterraines se stabilise après la fermeture des opérations minières.
+Aux États-Unis, en 1950, le US Public Health Service commençait une étude sur les mineurs d'uranium, conduisant à la première publication d'une corrélation statistique entre le cancer et l'extraction d'uranium, publiée en 1962. Le gouvernement fédéral a finalement réglementé la quantité standard de radon dans les mines, fixant le niveau à 0,3 WL en 1969. 
+
+Plus tard, l'USAEC (United States Atomic Energy Commission) a donné l’objectif et des conseils pour la réhabilitation de l’eau dans les anciens sites miniers, surtout pour les eaux souterraines contaminées par l'ISR. L’objectif est de restaurer la qualité de l'eau dans les nappes aquifères affectées à l’état avant l'exploitation minière. Bien que toutes les caractéristiques chimiques ne puissent pas être retournées à celles avant l'extraction, l'eau doit être assurée aux mêmes utilisations qu'auparavant. 
+
+USAEC formule des recommandations concernant la caractérisation du niveau de base (baseline) de la qualité des eaux souterraines avant le début des opérations minières, la surveillance pour détecter l’évolution de lixiviat pendant l'exploitation minière et la surveillance à long terme pour déterminer à quel moment la qualité des eaux souterraines se stabilise après la fermeture des opérations minières.
 
 L'eau avant l'exploitation est généralement de mauvaise qualité (teneurs élevées en métal, en uranium et parfois de haute salinité), résultant des mécanismes de genèse du minerai. L'objectif de qualité physico-chimique à atteindre dépend de la réglementation locale, généralement de concentration aussi proche que possible du niveau de base.
 
@@ -511,20 +531,22 @@ Par exemple, au Texas, c’est la TCEQ (Texas Commission on Environmental Qualit
 %Figure 2 – Niveau de base du site Zamzow
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=\linewidth]{II_C_2.jpg}
+    \includegraphics[width=0.8\linewidth]{II_C_2.png}
     \caption{Niveau de base du site Zamzow}
-    \label{fig:phases_reamenagement}
+    \label{fig:site_zamzow_base}
 \end{figure}
 
 Cependant, une étude publiée par l'U.S. Geological Survey en 2009 a révélé que « À ce jour, aucune opération après ISR aux États-Unis n'a réussi à restaurer l'eau dans l'aquifère au niveau de base ». Tous les sites du Texas ont reçu des objectifs de restauration modifiés pour au moins un élément, déterminés par TCEQ. Les données de restauration finale pour Zamzow montrent une limite modifiée de 3,00 milligrammes par litre pour l'uranium. 
 
+
 %Figure 3 - Données de restauration finale du site Zamzow
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=\linewidth]{II_C_3.jpg}
+    \includegraphics[width=0.7\linewidth]{II_C_3.png}
     \caption{Données de restauration finale du site Zamzow}
-    \label{fig:phases_reamenagement}
+    \label{fig:restauration_finale_zamzow}
 \end{figure}
+
 
 Ce graphique de concentration d'uranium pour divers sites du Texas illustre la relation entre les niveaux de base, les valeurs finales après réhabilitation et les objectifs de restauration modifiés. Les barres bleues représentent les niveaux de base. Les barres rouges représentent les concentrations finales pour l'uranium, et les barres vertes représentent les objectifs de restauration modifiés par TCEQ.
 
@@ -532,10 +554,12 @@ Ce graphique de concentration d'uranium pour divers sites du Texas illustre la r
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=\linewidth]{II_C_3.jpg}
+    \includegraphics[width=\linewidth]{II_C_3.png}
     \caption{Concentration d'uranium pour divers sites du Texas}
-    \label{fig:phases_reamenagement}
+    \label{fig:conc_u_texas}
 \end{figure}
+
+\newpage
 
 \paragraph{Canada}
 
@@ -565,12 +589,16 @@ Le traitement des eaux en sortie de mines est ainsi un enjeu central de l’apr�
 
 %(IMAGE $III_A_1$)
 
-\begin{figure}[!ht]
+
+
+\begin{figure}[!hbt]
 \centering
-\includegraphics[]{III_A_1.png}
+\includegraphics[width = 0.5\linewidth]{III_A_1.png}
 \caption{Bassin de décantation}
 \label{fig:bassin_decantation}
 \end{figure}
+
+
 
 Le procédé de traitement des eaux le plus répandu en France est le traitement actif par précipitation et coagulation-floculation-décantation. Il équipe onze des quinze stations de traitement des eaux de sortie de mine françaises. 
 L’étape de précipitation vise la transformation des métaux dissous dans l’eau (généralement fer, aluminium, uranium, radium) en précipités insolubles par l’ajout de réactifs, souvent de la chaux ou de la soude, selon la réaction suivante :   
@@ -612,7 +640,7 @@ Lorsque les colonnes sont en série, le remplacement se fait de manière cycliqu
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[]{III_A_3.png}
+\includegraphics[width=0.8\linewidth]{III_A_3.png}
 \caption{L'usine de traitement des eaux par résines échangeuse d'ion de xxxxx}
 \label{fig:usine_traitement_resines}
 \end{figure}
@@ -665,7 +693,7 @@ Les coûts d’entretien d’une tourbière sont négligeables. Les seuls coûts
 %(Image III_A_4)
 \begin{figure}[!ht]
 \centering
-\includegraphics[]{III_A_4.png}
+\includegraphics[width=0.8\linewidth]{III_A_4.png}
 \caption{Une tourbière xxxxxxxxxxxx}
 \label{fig:tourbiere}
 \end{figure}
@@ -775,17 +803,53 @@ Nous nous proposons donc de mettre en œuvre deux modèles du site, hydrologique
 
 Pour proposer un modèle convaincant du site, il est nécessaire de s’intéresser aux flux hydrogéologiques. Nous avons pour cela utilisé un rapport hydrogéologique du site, daté de 2011. Nous nous sommes basés sur les relevés des 9 piézomètres du site et avons décidé de faire une modélisation en coupe. Cette coupe a été choisie puisqu’elle passe à la fois par la zone de résidus de traitement, par la rivière en contrebas, et par 5 piézomètres différents.
 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{III_B_3_1.png}
+    \caption{Le choix de la coupe (Orano)}
+    \label{fig:coupe_ribiere}
+\end{figure}
+% / il la connaît pas
 Les relevés piézométriques permettent de définir plusieurs zones. On note tout d’abord une zone de surface, composée d’une arène granitique, et de stériles miniers au dessus de la zone de résidus, d’une épaisseur moyenne de 4 m. Celle-ci est composée de deux faciès, un faciès sableux et un faciès boueux. Une zone de granite fracturé est également présente, en dessous de laquelle on trouve une zone de granite sain. Les résidus de traitement apparaissent donc comme localisés et situés proches d’une zone de granite fracturé. L’identification de ces différentes zones permet la création d’un maillage grâce au logiciel GMSH, et la modélisation du site grâce à HYTEC.
+
+\begin{figure}[!ht]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{III_B_3_2.png} 
+        \caption{Modélisation des différentes zones}
+        \label{fig:zones_ribieres_geogebra}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{III_B_3_3.png} 
+        \caption{Maillage de la zone obtenu avec GMSH}
+        \label{maillage_ribiere}
+    \end{minipage}
+\end{figure}
 
 Les relevés piézométriques permettent aussi de définir un niveau de charge: le piézomètre PZ2 indique une profondeur d’eau à environ 24 m, et le piézomètre PZ9 à 1 m, ce qui correspond au Verraux.
 
 Les données météorologiques montrent des précipitations effectives (c’est à dire la différence entre les précipitations totales et l’évapotranspiration) variables au cours de l’année : en effet, on remarque que les mois de novembre,décembre, janvier et mars correspondent à de hautes valeurs de précipitations effectives, alors qu’elles sont presque nulles le reste de l’année. Ceci permet donc de modéliser les saisons et les variations de précipitations, et met en évidence l’importance de la couche de surface, qui sert d’interface pour les transferts.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{III_B_3_4.png}
+    \caption{Précipitations annuelles sur le site de la Ribière (Orano)}
+    \label{fig:precipitations_ribiere}
+\end{figure}
 
 \paragraph{Résultats}
 
 Les modélisations montrent l’importance de la perméabilité et de la porosité des différentes zones, puisque de faibles variations induisent des comportements différents à long terme. Il est donc nécessaire d’avoir des valeurs les plus précises possibles et les plus représentatives du site. En effet, un gradient de perméabilité trop élevé, ou bien des discontinuités de perméabilité peuvent engendrer des comportements non représentatifs, comme une remontée du traceur dans les résidus en surface.
 
 La détermination du temps de résidence peut se faire de différentes façons. Une approximation linéaire permet un calcul d’ordre de grandeur : une modélisation par deux zones, une zone de résidus et une de granite fracturé, donne un temps de résidence d’environ 15 ans. La solution analytique donne également le même ordre de grandeur. Enfin, le modèle hydrogéologique montre l’évolution du traceur des résidus : on obtient ici un temps de résidence de 25 ans.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{III_B_3_5.png}
+    \caption{Résultat de la simulation du modèle hydrogéologique après 25 ans}
+    \label{hytec_hydro_25ans}
+\end{figure}
 
 Ces résultats sont à nuancer, puisqu’à ce stade aucun modèle chimique n’a été intégré. De plus, certaines données non renseignées permettraient d’aller plus loin. Il serait possible d’affiner les bords de la fosse à résidus: nous l’avons modélisé par un trapèze, mais il est très probable que les pentes de la fosse aient une forme de gradins, afin d’assurer la stabilité de la zone. La donnée de la hauteur et de la largeur des marches permettrait une modélisation plus fine.
 
