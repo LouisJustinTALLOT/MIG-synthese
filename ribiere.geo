@@ -1,7 +1,7 @@
 // Géométrie du site de La Ribière
 // Mini-projet 1 - hydrogéologie
 
-// précision du mailllage
+// précision du maillage
 dx = 5;
 dxx = 2;
 dxxx = 2;
@@ -34,7 +34,6 @@ Point(16) = {0, 395, 0, dxx};
 Point(17) = {430, 350, 0, dxx};
 Point(18) = {0, 395, 0, dx};
 Point(19) = {46, 358, 0, 3};
-// Point(20) = {121, 358, 0, dx};
 Point(21) = {121, 375, 0, dx};
 Point(22) = {36, 388, 0, dx};
 Point(23) = {46, 386, 0, dxx};
@@ -49,7 +48,6 @@ Point(31) = {430, 346, 0, dx};
 Point(32) = {121, 371, 0, dxx};
 Point(33) = {0, 391, 0, dx};
 Point(34) = {91, 350, 0, dx};
-// Point(35) = {91, 358, 0, 4};
 Point(39) = {430, 341, 0, dx};
 Point(40) = {430, 337, 0, dx};
 Point(41) = {270, 337, 0, dx};
@@ -95,8 +93,6 @@ Line(27) = {27, 28};
 Line(28) = {28, 29};
 Line(29) = {29, 30};
 Line(30) = {30, 31};
-// Line(31) = {19, 35};
-// Line(32) = {35, 20};
 Line(34) = {34, 42};
 Line(35) = {42, 41};
 Line(36) = {41, 40};
@@ -106,9 +102,7 @@ Line(40) = {45, 46};
 Line(41) = {46, 47};
 Line(42) = {47, 48};
 Line(43) = {23, 45};
-// Line(45) = {45, 19};
 Line(46) = {32, 48};
-// Line(47) = {48, 20};
 Line(48) = {49, 45};
 Line(49) = {48, 52};
 Line(50) = {53, 50};
@@ -144,7 +138,6 @@ Physical Surface(zone_residus_sable) = {4};
 
 Physical Line(CL_g) = {1, 2};
 Physical Line(CL_d) = {16, 14, 15, 13};
-// Physical Line(CL_h) = {11, 12, 10, 9, 8, 6, 7, 5, 4, 3};
 Physical Line(CL_h) = {3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
 
 
