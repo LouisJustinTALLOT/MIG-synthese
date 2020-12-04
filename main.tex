@@ -19,10 +19,15 @@
 \usepackage{titletoc}
 \usepackage{array}
 \usepackage{listings}
-\usepackage{SIunits} %je crois qu'il est incompatible avec certains package (amssymb ?) mais il serait pourtant bien pratique. Une idée ? 
+\usepackage[amssymb]{SIunits} %je crois qu'il est incompatible avec certains package (amssymb ?) mais il serait pourtant bien pratique. Une idée ? 
 % je le trouve pas méga utile perso... exemples ?
+% C'était pour les unités, mais y a peut-être moyen d'en mettre un autre... (je m'y connais pas assez) --Sophian
+% mais il va pas en avoir tant que ça si ?
+% un $\text{m}^3$ ça marche bien hein
+%non ça met le m en italique (détail j'avoue xD)
+%yep bien sûr, comme tu veux
 
-\usepackage{biblatex}
+\usepackage[style = numeric]{biblatex}
 \addbibresource{biblio.bib}
 \bibliography{biblio.bib}
 
@@ -39,7 +44,7 @@
 \setlength{\footskip}{50pt} % Bas de page + séparation
 \setlength{\textheight}{21cm} % Hauteur de la zone de texte (25cm)
 \setlength{\parskip}{1em}
-\setlength{\parindent}{2em}
+\setlength{\parindent}{1em}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -71,34 +76,41 @@
 % sinon on peut mettre Partie 1 ... aussi 
 
 %paramétrage de la table des matières
-\titlecontents{section}
-            [0pt]
-            {\bfshape}%
-            {\contentsmargin{0pt}%
-            \bfseries
-            \makebox[0pt][r]{\large\thecontentslabel\enspace}%
-            \large}
-            {\contentsmargin{0pt}\large}
-            {\hfill\textbf{\contentspage}}
-            [\addvspace{1pc}]
-\titlecontents{subsection}
-            [20 pt]
-            {}%
-            {\contentsmargin{0pt}\bfseries            \makebox[0pt][r]{\large\thecontentslabel\enspace}%
-            \large}
-            {\contentsmargin{0pt}\large}
-            {\hfill\textbf{\contentspage}}
-            [\addvspace{1pc}]
+% \titlecontents{section}
+%             [0pt]
+%             {\bfshape}%
+%             {\contentsmargin{0pt}%
+%             \bfseries
+%             \makebox[0pt][r]{\large\thecontentslabel\enspace}%
+%             \large}
+%             {\contentsmargin{0pt}\large}
+%             {\hfill\textbf{\contentspage}}
+%             [\addvspace{1pc}]
             
-\titlecontents{subsubsection}
-            [40 pt]
-            {}
-            {\contentsmargin{0pt}\bfseries\makebox[0pt][r]{\large\thecontentslabel\enspace}\large}
-            {\contentsmargin{0pt}\large}
-            {\hfill\textbf{\contentspage}}
-            [\addvspace{1pc}]
+\dottedcontents{section}[]{\Large\bfseries}{2 em}{0.6 em}
+% \titlecontents{subsection}
+%             [20 pt]
+%             {}%
+%             {\contentsmargin{0pt}\bfseries            \makebox[0pt][r]{\large\thecontentslabel\enspace}%
+%             \large}
+%             {\contentsmargin{0pt}\large}
+%             {\hfill\textbf{\contentspage}}
+%             [\addvspace{1pc}]
+\dottedcontents{subsection}[30 pt]{\large\bfseries}{2 em}{0.6 em}    
+% \titlecontents{subsubsection}
+%             [40 pt]
+%             {}
+%             {\contentsmargin{0pt}\bfseries\makebox[0pt][r]{\large\thecontentslabel\enspace}\large}
+%             {\contentsmargin{0pt}\large}
+%             {\hfill\textbf{\contentspage}}
+%             [\addvspace{1pc}]
+\dottedcontents{subsubsection}[60 pt]{\bfseries}{2 em}{0.6 em}    
+
+
 % Y a pas moyen de garder les petits points horizontaux (c'est plus lisible je pense) ?
-% euh si si j'ai pas encore cherché comment c'est tout
+% euh si si j'ai pas encore cherché comment c'est tout -LJ
+% c'est faaaaaaaaaaaaait !!!
+% Super !! :D --Sophian
 
 \makeatletter
 \renewcommand\listoffigures{%
@@ -109,7 +121,7 @@
     }
 \makeatother
 
-\lstset{numbers=left, stepnumber=5, firstnumber=1, breaklines = true,backgroundcolor=\color{white}}%, numbersep=5pt}
+\lstset{numbers=left, stepnumber=5, firstnumber=1, breaklines = true,backgroundcolor=\color{grey!10!}}%, numbersep=5pt}
 \lstdefinelanguage{hytec}{language = Python,
     alsoletter =/,
     alsoletter =-,
@@ -147,6 +159,14 @@
 \begin{center}
     \includegraphics[width = 0.4\linewidth]{logoMPT.png}
 \end{center}
+\newpage
+\pagenumbering{gobble}
+\section*{Remerciements}
+
+Les élèves remercient : 
+\begin{itemize}
+    \item Camille \textsc{CHAUTARD} et Michael \textsc{DESCOSTES} (Orano Mining, R\&D Env Dpt) \includegraphics[width = 40pt]{oranologo.png}
+\end{itemize}
 
 
 \newpage
@@ -169,20 +189,12 @@
 \newpage
 \pagenumbering{arabic}
 \section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
+
 
 \newpage
-
 \section{Contexte de l’Après-Mine}
 \subsection{Histoire minière de la France}
-
-%Test pour voir la longueur (c'est notre texte mais on risque de l'améliorer, d'ajouter des images...) :+1:
-
-%Ça donne quelque chose de très dense... (comme un latex en fait lol, mais un word (tu vois l'idée) est plus lisible car plus aéré. Y a moyen de rendre ça plus lisible ?
-
-%coucou ! oui c'est très dense en effet je m'en occupe
-% c'est bon normalement, du moins à mes yeux
-% t'en pesnes quoi ? -LJ
-
 \paragraph{} Lorsqu’on parle de mine, on a bien souvent en tête l’image du mineur de charbon portant casque avec lampe frontale ainsi que bleu de travail, noirci par son travail et éreinté de ses journées, qui descend chaque jour dans le ventre de la mine pour excaver la roche et nourrir sa famille. L’histoire minière française est bien plus diverse que cela en réalité : bien que le charbon occupe une place importante, surtout dans le Nord de la France, bien d’autres métaux ont été exploités en France - et notamment l’uranium.
 
 Une mine est, en général, un site d’exploitation d’un minerai qui est nécessaire à diverses activités. 
@@ -202,7 +214,7 @@ Le site de la Ribière, abordé plus en détail dans ce rapport, est un site de 
 
 
 Les mines sont régies par différentes autorités : le code minier par exemple, qui pose un cadre juridique récent, ainsi que diverses polices des mines, dont la police des ICPE (installation classée pour la protection de l’environnement), créée en 1976. 
-Des polices liées à des domaines transverses tels que l’eau, les déchets, ou encore la santé, interviennent elles aussi sur ce sujet qui lie ainsi de nombreux domaines. Le RGIE complète enfin ces polices des mines. (près IRSN ça)
+Des polices liées à des domaines transverses tels que l’eau, les déchets, ou encore la santé, interviennent elles aussi sur ce sujet qui lie ainsi de nombreux domaines. Le RGIE complète enfin ces polices des mines.
 
 
 Ces polices sont nécessaires car les risques miniers sont importants et peuvent causer de lourds dégâts. On peut parler d’instabilité mécanique, c’est à dire lorsqu’un pan de la mine s’effondre, s’affaisse, ou lorsque des digues créées pour retenir l’eau à la mine se rompent. Il y a aussi des risques d’impact sur l’hydrosystème : pollution de l’eau, inondation, ou sur le cycle de l’eau en lui même lorsque les eaux qui parcourent le site minier, aussi appelées eaux d’exhaure, sortent à la surface et viennent confluer dans d’autres cours d’eau voisins.
@@ -234,6 +246,23 @@ Puis, à partir de 1967, le nombre de mines tend à décroître. Ce sont donc le
 \paragraph{Traitement par zones humides}
 \paragraph{Prélèvements et analyses}
 \subsubsection{Comparaison, faisabilité}
+\begin{center}
+\begin{tabular}{ |c |c |}
+
+\hline
+ Type de traitement & Coût en € / $\text{m}^3$ \\ 
+ \hline
+ Précipitations & 0.20 à 0.50 \\ 
+ \hline
+ Résines échangeuses d’ions & 0.10 (avec revente du polluant) à 0.50  \\
+ \hline
+Zones humides & Négligeable  \\
+ \hline
+\end{tabular}
+\end{center}
+
+
+
 \paragraph{Investissement et mise en place}
 \paragraph{Exploitation et maintenance}
 \paragraph{Gestion des déchets }
@@ -241,7 +270,7 @@ Puis, à partir de 1967, le nombre de mines tend à décroître. Ce sont donc le
 \paragraph{Situation générale de mines d’uranium de chaque pays}
 \paragraph{Les méthodes de traitement préférées par pays}
 
-\subsection{Les traitements sont-ils toujours nécessaires ? Etude de cas du site de la Ribière}
+\subsection{Les traitements sont-ils toujours nécessaires ? Étude de cas du site de la Ribière}
 \subsubsection{Présentation du site de La Ribière}
 \subsubsection{Modèle géochimique et 1D}
 \paragraph{Modélisation}
@@ -275,9 +304,9 @@ Puis, à partir de 1967, le nombre de mines tend à décroître. Ce sont donc le
 \printbibliography[header = none]
 
 \section{Code HYTEC Utilisé }
-% bonjour Irina
 
-\lstinputlisting[language=hytec, caption = ziljbfjez]{modele-13.htc}
+
+\lstinputlisting[language=hytec, caption = Modèle hydrogéologique]{modele-13.htc}
 \newpage
 \section{Résultats des simulations numériques HYTEC}
 
@@ -289,5 +318,6 @@ Puis, à partir de 1967, le nombre de mines tend à décroître. Ce sont donc le
 %La bibliographie se met avant les annexes normalement
 % ouais okay je fais ça
 % juste signez les commentaires c'est + cool -LJ
+%Dsl ^^ c'était Sophian. Merci !! AH mais ne les range pas comme annexe, c'est pas une annexe normalement je crois, faut les mettre à la fin du rapport
 
 \end{document}
