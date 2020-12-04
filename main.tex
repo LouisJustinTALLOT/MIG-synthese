@@ -19,13 +19,7 @@
 \usepackage{titletoc}
 \usepackage{array}
 \usepackage{listings}
-%\usepackage[amssymb]{SIunits} %je crois qu'il est incompatible avec certains package (amssymb ?) mais il serait pourtant bien pratique. Une idée ? 
-% je le trouve pas méga utile perso... exemples ?
-% C'était pour les unités, mais y a peut-être moyen d'en mettre un autre... (je m'y connais pas assez) --Sophian
-% mais il va pas en avoir tant que ça si ?
-% un $\text{m}^3$ ça marche bien hein
-%non ça met le m en italique (détail j'avoue xD)
-%yep bien sûr, comme tu veux
+%\usepackage[amssymb]{SIunits}
 
 \usepackage[style = numeric]{biblatex}
 \addbibresource{biblio.bib}
@@ -106,12 +100,6 @@
 %             [\addvspace{1pc}]
 \dottedcontents{subsubsection}[60 pt]{\bfseries}{2 em}{0.6 em}    
 
-
-% Y a pas moyen de garder les petits points horizontaux (c'est plus lisible je pense) ?
-% euh si si j'ai pas encore cherché comment c'est tout -LJ
-% c'est faaaaaaaaaaaaait !!!
-% Super !! :D --Sophian
-
 \makeatletter
 \renewcommand\listoffigures{%
     \section{\listfigurename}% Used to be \section*{\listfigurename}
@@ -121,7 +109,7 @@
     }
 \makeatother
 
-\lstset{numbers=left, stepnumber=5, firstnumber=1, breaklines = true,backgroundcolor=\color{grey!10!}}%, numbersep=5pt}
+\lstset{numbers=left, stepnumber=5, firstnumber=1, breaklines = true,backgroundcolor=\color{lightgray!20!}}%, numbersep=5pt}
 \lstdefinelanguage{hytec}{language = Python,
     alsoletter =/,
     alsoletter =-,
@@ -142,15 +130,38 @@
 }
 
 
-\title{\textbf{\LARGE{\textsc{École des Mines de Paris}}\\ \vspace{1 cm}MIG L'Eau après la Mine\\\vspace{0.8 cm}Synthèse du projet}\vspace{1 cm}}
+\definecolor{couleurmines}{RGB}{22, 91, 160}
 
-\author{Sophian \textsc{Akkari}, Tom \textsc{Boezennec}, Paul \textsc{Colombel}, Florestan \textsc{Fontaine},\\ Yiqiong \textsc{Hu}, Tasnime \textsc{Ouchtar}, Guillaume \textsc{Ramos}, Louison \textsc{Rapin}, Guillaume \textsc{Rouy},\\ Louis-Justin \textsc{Tallot}, Gabrielle \textsc{Vernet}, Guillaume \textsc{Vigne}, Robin \textsc{Willocquet}\\ \\ Irina \textsc{Sin}, Sophie \textsc{Guillon}, Nicolas \textsc{Seigneur}, Vincent \textsc{Lagneau}}
+\title{ \textbf{ {\color{couleurmines}
+\Huge{\textsc{École des Mines de Paris}}\\
+\vspace{1 cm}
+MIG L'Eau après la Mine\\\vspace{1 cm}Synthèse du projet}}
+\vspace{1 cm}
+}
+
+\author{Sophian \textsc{Akkari},
+Tom \textsc{Boezennec}, 
+Paul \textsc{Colombel}, 
+Florestan \textsc{Fontaine},\\
+Yiqiong \textsc{Hu}, 
+Tasnime \textsc{Ouchtar}, 
+Guillaume \textsc{Ramos}, 
+Louison \textsc{Rapin}, 
+Guillaume \textsc{Rouy},\\ 
+Louis-Justin \textsc{Tallot}, 
+Gabrielle \textsc{Vernet}, 
+Guillaume \textsc{Vigne}, 
+Robin \textsc{Willocquet}\\
+\\ Irina \textsc{Sin}, 
+Sophie \textsc{Guillon}, 
+Nicolas \textsc{Seigneur}, 
+Vincent \textsc{Lagneau}}
 
 \date{\vspace{2 cm}Novembre - Décembre 2020}
 
 
 
-\begin{document} % début du document
+\begin{document} % début du document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \selectlanguage{french}
 
 \maketitle
@@ -161,28 +172,31 @@
 \end{center}
 \newpage
 \pagenumbering{gobble}
-\section*{Remerciements}
 
-Les élèves remercient : 
+\section*{Remerciements}
+Les élèves remercient sincèrement : 
 \begin{itemize}
     \item Camille \textsc{Chautard} (Orano Mining)
     \item Caroline \textsc{Benesteau} (Orano Mining)
     \item Nadine \textsc{Himeur} (Orano Mining)
-    \item Michael \textsc{Descostes} (Orano Mining) 
+    \item Michael \textsc{Descostes} (Orano Mining)
+    \item Joachim \textsc{Schick} (Orano Mining)
     \item Louis \textsc{Raimbault} (Mines ParisTech - PSL, Centre de géosciences) 
     \item  Emmanuel \textsc{Ledoux} (Mines ParisTech - PSL)
     \item Valentin \textsc{Robin} (Université de Limoges, Laboratoire E$^2$LIM) 
     \item Jean-Luc \textsc{Viallesseche} (Eaux de Limoges Métropole)
     \item Pascale \textsc{Blanchard} (IRSN)  
-    \item Isabelle \textsc{Dublineau} (IRSN)
-
+    \item Isabelle \textsc{Dublineau} (IRSN)    
+    \item  Pascale \textsc{Nalon} (Mines ParisTech - PSL, bibliothèque de Fontainebleau)
+    \item Anne \textsc{Schmid} (Mines ParisTech - PSL, bibliothèque de Fontainebleau)
 \end{itemize}
+
 \includegraphics[height = 40pt]{oranologo.png}
-\includegraphics[height = 40pt ]{logoMPT.png}% bon app' bon app!
+\includegraphics[height = 40pt ]{logoMPT.png}
 \includegraphics[height = 40pt ]{logoUNILIM.png}
 \includegraphics[height = 40pt ]{Logo-PEIRENE.png}
 \includegraphics[height = 80pt ]{logoeaulimoges.png}
-%logoirsn
+\includegraphics[height = 40pt ]{logoIRSN.png} 
 
 \newpage
 \pagenumbering{gobble}
@@ -210,34 +224,76 @@ Les élèves remercient :
 \newpage
 \section{Contexte de l’Après-Mine}
 \subsection{Histoire minière de la France}
-\paragraph{} Lorsqu’on parle de mine, on a bien souvent en tête l’image du mineur de charbon portant casque avec lampe frontale ainsi que bleu de travail, noirci par son travail et éreinté de ses journées, qui descend chaque jour dans le ventre de la mine pour excaver la roche et nourrir sa famille. L’histoire minière française est bien plus diverse que cela en réalité : bien que le charbon occupe une place importante, surtout dans le Nord de la France, bien d’autres métaux ont été exploités en France - et notamment l’uranium.
+\paragraph{} Lorsqu’on parle de mine, on a souvent en tête l’image du mineur de charbon portant casque avec lampe frontale ainsi que bleu de travail, noirci par son travail et éreinté de ses journées, qui descend chaque jour dans le ventre de la mine pour excaver la roche et nourrir sa famille. L’histoire minière française est bien plus diverse que cela en réalité : bien que le charbon occupe une place importante, surtout dans le Nord de la France, bien d’autres métaux ont été exploités en France - dont notamment l’uranium.
 
-Une mine est, en général, un site d’exploitation d’un minerai qui est nécessaire à diverses activités. 
-La décision d’exploiter une mine est le résultat d’un processus appelé exploration. Il vise à établir, avec le plus haut niveau de confiance possible, la géologie du site. On effectue pour cela des sondages puis des forages et des analyses géochimiques. Si le filon est trouvé et que l’on ne sait rien de plus, on parle de ressource. Dès lors que l’on est assuré que l’exploitation est possible, on parle alors de réserve. Pour décider de l’exploitation, il faut réunir plusieurs conditions : une ressource en quantité suffisante, des techniques d’exploitation suffisamment adaptées et des risques financiers limités. Une fois l’exploitation décidée, vient la phase de développement. Cette dernière consiste à décider des techniques d’exploitation et à étudier les impacts sociaux et environnementaux afin d’obtenir les autorisations légales. Il se passe ainsi une dizaine d’années entre les premières études géologiques et le début de l’exploitation.
-La moitié des mines sont à ciel ouvert, mais ces dernières représentent 90 \% de la quantité extraite. La plupart des mines existantes à ciel ouvert sont excavées par motif en escalier : cela permet de voir les différentes strates et différentes époques d’exploitation.
+La décision d’exploiter un gisement est le résultat d’un processus appelé exploration. Il vise à établir, avec le plus haut niveau de confiance possible, la géologie du site. On effectue pour cela des sondages puis des forages et des analyses géochimiques. Si le filon est trouvé et que l’on ne sait rien de plus, on parle de ressource. Dès lors que l’on est assuré que l’exploitation est possible, on parle de réserve. Pour décider de l’exploitation, il faut réunir plusieurs conditions : une ressource en quantité suffisante, des techniques d’exploitation suffisamment adaptées et des risques financiers limités. Une fois l’exploitation décidée, vient la phase de développement. Cette dernière consiste à décider des techniques d’exploitation et à étudier les impacts sociaux et environnementaux afin d’obtenir les autorisations légales. Il se passe ainsi une dizaine d’années entre les premières études géologiques et le début de l’exploitation. [L.Raimbault]
+La moitié des mines sont à ciel ouvert, mais ces dernières représentent 90 \% de la quantité extraite en masse. La plupart des mines existantes à ciel ouvert sont excavées par motif en escalier : cela permet de voir les différentes strates et différentes époques d’exploitation. [L. Raimbault]
 
-La France est un pays avec un passif minier bien présent et ancré dans les esprits. En effet, c’est vers l’ère industrielle qu’apparaissent de nombreuses mines qui mèneront à divers bassins miniers français : or, cuivre, fer, étain, manganèse, tungstène, bauxite…. Vers le début du XXème siècle, on compte environ 800 sites miniers en France. Les mines sont régulées par divers organismes, car les méthodes d’extraction peuvent être diverses et affecter de nombreuses sphères publiques.
+La France est un pays avec un passif minier bien présent et ancré dans les esprits. En effet, c’est vers l’ère industrielle qu’apparaissent de nombreuses mines qui mèneront à divers bassins miniers français : or, cuivre, fer, étain, manganèse, tungstène, bauxite…. Vers le début du XXème siècle, on compte environ 800 sites miniers en France. L’industrie minière est régulée par divers organismes car les conséquences de l’exploitation touchent de nombreux acteurs. [E. Ledoux]
+%Comment formater les siècles ?
 
-L’Uranium, élément 92 du tableau périodique, est le centre de notre attention ici. En effet, il est au fondement de l’énergie nucléaire massivement utilisée en France et sert d’élément principal pour l’arme nucléaire. On en trouve naturellement, principalement de l’isotope 238. Et pourtant, c’est surtout l’isotope 235 qui nous intéresse : en effet, son activité radioactive est plus élevée. Il représente 0,7 \% de l’uranium mondial et comporte 2 degrés d’oxydation : le +IV se trouve surtout sous terre, il est insoluble et réducteur et est celui qui est prévalent (uraninite, coffinite) ; le +VI se trouve principalement en surface, et est soluble et oxydant (autunite). On le trouve aussi en quantité moindre en rétention dans de l’argile ou des oxydes.
+L’Uranium, élément 92 du tableau périodique, est le centre de notre attention ici. En effet, il est au fondement de l’énergie nucléaire massivement utilisée en France et sert d’élément principal pour l’arme nucléaire. On en trouve naturellement, principalement de l’isotope 238. Et pourtant, c’est surtout l’isotope 235 qui nous intéresse : en effet, son activité radioactive est plus élevée. Il représente 0,7 \% de l’uranium mondial et comporte 2 degrés d’oxydation : le +IV se trouve surtout sous terre, il est insoluble et réducteur et est celui qui est prévalent (uraninite, coffinite) ; le +VI se trouve principalement en surface, et est soluble et oxydant (autunite). On le trouve aussi en quantité moindre en rétention dans de l’argile ou des oxydes. [M. Descostes]
+Les gisements d’uranium ont des concentrations très diverses. La plupart des gisements ont une concentration en uranium de l’ordre de 0,1 \% mais elle peut atteindre jusqu’à 10 \% dans certaines mines canadiennes (Cigar Lake, McArthur River). [L. Raimbault]
 
+                   
+Image 1 (prez L. Raimbault)
 
-En France, la volonté d’exploiter l’uranium date de la fin de la Seconde Guerre mondiale. Il s’agit alors d’un enjeu stratégique majeur puisque l’objectif était d’assurer l’approvisionnement en uranium de l’armée, qui en avait besoin pour développer l’arme nucléaire. La première mine d’uranium française a ainsi ouvert en 1948. Avec la décision de développer le nucléaire civil, il a ensuite fallu approvisionner en combustibles les centrales nucléaires pour assurer l’indépendance énergétique du pays. L’épuisement des gisements français et la découverte de gisements bien plus importants à l’étranger, notamment au Niger, entraînent la fermeture des mines françaises. La dernière mine d’uranium ferme ainsi en 2001. Au total, il y a près de 230 sites miniers liés à l’uranium en France, qui ont produit environ 76 000 t en un demi-siècle (une mine française produisait quelques tonnes d’uranium par an). Ces sites sont situés dans le Massif Central ainsi qu’en Bretagne et en Vendée.
-Les gisements d’uranium ont des concentrations très diverses. La plupart des gisements ont une concentration en uranium de l’ordre de 0,1 \% mais elle peut atteindre jusqu’à 10 \% dans certaines mines canadiennes (Cigar Lake, McArthur River).
-
-Nous avons eu l’occasion de visiter virtuellement deux mines d’uranium : la mine de Bellezane et celle de la Ribière. Le site de Bellezane comporte en fait deux mines à ciel ouvert. C’est un site en Haute-Vienne qui a été exploité de 1975 à 1992. 5 \% de la production d’uranium français provient du site de Bellezane, qui employait alors jusqu’à 100 personnes. Ce site, qui fait partie de la concession minière de la Gartempe, est un site historique français, de taille conséquente (25 kilomètres de galeries souterraines). De plus, il bénéficie de sa propre station de traitement des eaux, utilisée pour traiter environ 500 000 $\text{m}^3$ d’eau par an.
-Le site de la Ribière, abordé plus en détail dans ce rapport, est un site de plus petite taille, avec une teneur plus faible en uranium et un minéral extrait différent (de l’autunite, tandis qu’à Bellezane on extrait surtout de l’uraninite). Le site, dans la Creuse, avantagé par sa topographie, a été exploité de 1959 à 1984, puis a servi de lieu de traitement de l’uranium faible de 1982 à 1985. C’est, tout comme Bellezane, un site de stockage de résidus uranifères. Contrairement à Bellezane, il n’y a pas de station de traitement liée au site.
-
-
-Les mines sont régies par différentes autorités : le code minier par exemple, qui pose un cadre juridique récent, ainsi que diverses polices des mines, dont la police des ICPE (installation classée pour la protection de l’environnement), créée en 1976. 
-Des polices liées à des domaines transverses tels que l’eau, les déchets, ou encore la santé, interviennent elles aussi sur ce sujet qui lie ainsi de nombreux domaines. Le RGIE complète enfin ces polices des mines.
+En France, la volonté d’exploiter l’uranium date de la fin de la Seconde Guerre mondiale. Il s’agit alors d’un enjeu stratégique majeur puisque l’objectif était d’assurer l’approvisionnement en uranium de l’armée, qui en avait besoin pour développer l’arme nucléaire. La première mine d’uranium française a ainsi ouvert en 1948. Avec la décision de développer le nucléaire civil, il a ensuite fallu approvisionner en combustibles les centrales nucléaires pour assurer l’indépendance énergétique du pays. L’épuisement des gisements français et la découverte de gisements bien plus importants à l’étranger, notamment au Niger, entraînent la fermeture des mines françaises. La dernière mine d’uranium ferme ainsi en 2001. Au total, il y a près de 230 sites miniers liés à l’uranium en France, qui ont produit environ 76 000 t en un demi-siècle (une mine française produisait quelques tonnes d’uranium par an). Ces sites sont situés dans le Massif Central ainsi qu’en Bretagne et en Vendée. Le Limousin est à lui seul à l’origine de près de la moitié de la production française. [M. Descostes]
 
 
-Ces polices sont nécessaires car les risques miniers sont importants et peuvent causer de lourds dégâts. On peut parler d’instabilité mécanique, c’est à dire lorsqu’un pan de la mine s’effondre, s’affaisse, ou lorsque des digues créées pour retenir l’eau à la mine se rompent. Il y a aussi des risques d’impact sur l’hydrosystème : pollution de l’eau, inondation, ou sur le cycle de l’eau en lui même lorsque les eaux qui parcourent le site minier, aussi appelées eaux d’exhaure, sortent à la surface et viennent confluer dans d’autres cours d’eau voisins.
-Après l’abandon d’une mine, c’est souvent ce qui arrive, et un ruisseau dit d’exhaure se forme alors. Enfin, les travaux miniers souterrains peuvent eux aussi affecter l’hydrosystème si l’eau se propage dans les galeries, voire créer un impact sur l’hydrodynamique même du milieu.
+    Image 2 (prez Orano C. Benesteau)
 
-Puis, à partir de 1967, le nombre de mines tend à décroître. Ce sont donc les mines de charbon qui disparaissent en premier, puis celles de bauxite, d’argent… Mais bien qu’elles ne produisent plus, leur activité n’est pas finie pour autant. En effet, il s’agit de veiller à leur remise en état durable. C’est ce que l’on appelle l’\emph{après-mine}.
+
+Les mines sont régies par différentes autorités : le code minier par exemple, qui pose un cadre juridique récent, ainsi que diverses polices des mines, dont la police des ICPE (installation classée pour la protection de l’environnement), créée en 1976. Des polices liées à des domaines transverses tels que l’eau, les déchets, ou encore la santé, interviennent elles aussi sur ce sujet qui lie ainsi de nombreux domaines. Le RGIE complète enfin ces polices des mines. [IRSN]
+
+Ces polices sont nécessaires car les risques miniers sont importants et peuvent causer de lourds dégâts. On parle d’instabilité mécanique pour désigner les risques d’effondrement ou d’affaissement de pans de mines, ou de rupture des digues de rétention de l’eau. Il y a aussi des risques d’impact sur l’hydrosystème : pollution de l’eau, inondation, ou sur le cycle de l’eau lorsque les eaux qui parcourent le site minier, aussi appelées eaux d’exhaure, sortent à la surface et confluent dans d’autres cours d’eau voisins. Cela arrive souvent après l’abandon d’une mine, et un ruisseau dit d’exhaure se forme alors. Par ailleurs, les travaux miniers souterrains peuvent eux aussi affecter l’hydrosystème si l’eau se propage dans les galeries, voire créer un impact sur l’hydrodynamique même du milieu. [L. Raimbault et E. Ledoux]
+%… transition !
+
+Nous avons eu l’occasion de visiter virtuellement deux mines d’uranium : la mine de Bellezane et celle de la Ribière. 
+
+Le site de Bellezane comporte en fait deux mines à ciel ouvert. C’est un site en Haute-Vienne qui a été exploité de 1975 à 1992. 5 \% de la production d’uranium français provient du site de Bellezane, qui employait alors jusqu’à 100 personnes. Ce site, qui fait partie de la concession minière de la Gartempe, est un site historique français, de taille conséquente (25 kilomètres de galeries souterraines). De plus, il bénéficie de sa propre station de traitement des eaux, utilisée pour traiter environ 500 000 $\text{m}^3$ d’eau par an. [C. Benesteau]
+
+Le site de la Ribière, abordé plus en détail dans ce rapport, est un site de plus petite taille, avec une teneur plus faible en uranium et un minéral extrait différent (de l’autunite, tandis qu’à Bellezane on extrayait surtout de l’uraninite). Le site, dans la Creuse, avantagé par sa topographie, a été exploité de 1959 à 1984, puis a servi de lieu de traitement de l’uranium faible de 1982 à 1985. C’est, tout comme Bellezane, un site de stockage de résidus uranifères. Contrairement à Bellezane, il n’y a pas de station de traitement liée au site. [C. Chautard]
+
+Image 3 (prez de Bellezane)            Image 4 (prez de la Ribière)
+
+A partir de 1967, le nombre de mines tend à décroître. Ce sont les mines de charbon qui disparaissent en premier, puis celles de bauxite, d’argent… À partir des années 1980, ce sont les mines d’uranium qui ferment massivement. Située à Jouac, non loin de Bessines, la dernière mine d’uranium française a fermé en 2001. Pour autant, cette date ne marque pas la fin de l’histoire des mines d’uranium en France. Il s’agit désormais de réaménager les sites de manière durable. C’est ce que l’on appelle l’\emph{après-mine}.
+
+Annexe 1 Carte minière de la France
 
 \subsection{Importance et enjeux de l’Après-Mine} 
+
+\paragraph{} L’après-mine fait partie intégrante du cycle minier. [N. Himeur] Aujourd’hui, cette phase est pensée dès les phases d’exploration et de développement du projet minier. C’est une étape clé qui comporte de nombreux enjeux. Elle dure en général plusieurs dizaines d’années, et il est nécessaire de surveiller la mine même au-delà. Il faut en effet assurer la sécurité et la salubrité de la mine. L’objectif de ce processus est de réduire l’impact du site sur son environnement. Pour cela, il est essentiel de mettre en place un plan de réaménagement en concertation avec les autorités et les habitants. Une fois le plan établi et les différentes procédures achevées, les travaux peuvent commencer pour réinsérer le site dans le paysage. L’après-mine consiste aussi en la surveillance des sites. A l’issue du réaménagement, il faut continuer à entretenir les équipements de dépollution et vérifier que les normes sont toujours respectées.
+
+
+
+Image 1 (prez Après-mine Orano)
+
+La roche que l’on a excavé dans une mine pour atteindre le minerai constitue le stérile minier tandis que le produit issu du concassage du filon est appelé résidu minier. Ce dernier garde des propriétés radioactives : il faut donc le stocker et le surveiller.
+Pour le réaménagement actif (remblayage), il s’agit souvent d’utiliser les stériles miniers pour remblayer les anciennes mines à ciel ouvert. On peut ensuite revégétaliser la zone - mais attention à ne pas planter d’arbres au-dessus des résidus, car leurs racines pourraient percer jusqu’à ces derniers. Il faut aussi s’assurer de ne pas forcer la nature, qui doit d’elle-même reprendre ses droits. Cela peut alors prendre 6 mois comme au Gabon, ou près de 10 ans comme près de Clisson en France où une forêt maritime est en train de se former. La stabilité peut être assurée avec des digues, qui retiennent les eaux d’exhaure et/ou les résidus. Des contrôles des résidus sont effectués régulièrement ainsi que des analyses de concentrations de radionucléides (uranium, radium…) dans l’eau et l’air du site.  [N. Himeur]
+Des stations de traitement des eaux sont souvent utilisées pour traiter les eaux d’exhaure, certaines avec des méthodes de filtration particulières sur résines échangeuses d’ions ou sur zéolites, ce qui sera abordé plus tard dans le document. Le pôle Recherche et Développement (R&D) de l’exploitant (Orano pour la France) a un rôle à jouer en essayant d’innover, d’optimiser ce traitement et d’étudier l’impact de l’après-mine sur les écosystèmes pour le minimiser. [J. Schick]
+
+Les secondes vies des mines peuvent être diverses : certaines sont transformées en parcs photovoltaïques, en zones industrielles ou agricoles, en réacteur nucléaire naturel comme à Oklo au Gabon, en musée (comme le musée Uréka de Bessines-sur-Gartempes), en base nautique ou encore en parc. Les projets de parc photovoltaïques sont effectués en partenariat avec NEOEN ou via des appels d’offres. [N. Himeur]
+À Bellezane, de nombreuses procédures ont été lancées. Des résidus y ont été coulés avant d’y poser une couverture en stériles et terre, puis de commencer la revégétalisation. Il y a notamment sur le site des fourrés et des mares à protéger, un écologue passe donc annuellement sur le site. L’entreprise MISTRI s’est désormais installée dans les anciens locaux du site, et un projet de centrale photovoltaïque en partenariat avec Total est en cours : il devrait aboutir vers 2023. Le stockage des sédiments sur le site est, lui, géré par Orano. [C. Benesteau]
+
+Image 2  : Bellezane avant/après
+
+L’après-mine comprend une dimension sanitaire : les eaux d’exhaure peuvent se déverser dans des lacs ou des nappes utilisés pour le pompage de l’eau potable. C’est le cas par exemple dans le Limousin : les eaux d’exhaure de l’ancienne mine Henriette se déversent dans l’étang de la Crouzille qui est utilisé par la régie de l’eau de la métropole de Limoges pour alimenter le réseau d’eau potable. L’entreprise chargée de l’après-mine, Orano, doit donc veiller à la qualité de l’eau rejetée dans l’étang, qui ne doit pas dégrader la qualité de l’eau de l’étang. La présence de mines est également source de contraintes pour la régie de l’eau : la teneur en métaux et en minéraux de l’eau est modifiée par les eaux d’exhaure ce qui occasionne des frais de surveillance et de traitement supplémentaires. De plus, la disponibilité de l’eau est parfois réduite. Les mines ont également des effets indirects : elles ajoutent des contraintes de gestion technique et suscitent la méfiance des populations à l’égard des gestionnaires de l’eau. [J-L Viallesèche]
+
+En raison des différents risques, notamment sanitaires, l’après-mine fait l’objet d’une réglementation. Celle-ci s’est développée en France dans les années 1970.
+La police des ICPE régie le stockage des résidus et la RGIE (Règlement général des industries extractives) le réaménagement. Ce n’est pas tout : diverses commissions de suivi sont mises en place, en général une par an pour les sites principaux : elles informent le public - notamment les riverains - sur les activités de gestion des sites.
+L’IRSN, l’Institut de Radioprotection pour la Sûreté Nucléaire, est un organisme public qui participe aussi à l’après-mine : il réunit des experts scientifiques sur la question, forme et enseigne à des élèves et informe le public. Orano participe également à des congrès, à des études locales et à des groupes de travail sur le sujet. Ces derniers peuvent réunir des acteurs de domaines très divers : Ministère de la Transition Écologique, exploitant (Orano), experts techniques de l’IRSN, du BRGM ou de Geoderis, élus locaux, société civile… Ils étudient différents scénarios en se basant sur des critères et sous critères environnementaux, sociétaux et techniques différents afin de prendre en compte les avis de tous les acteurs.
+Des programmes sont aussi mis en place comme le Plan National de Gestion des Matières et Déchets Radioactifs (PNGMDR) qui fixe des objectifs pour l’après-mine. Reconductible tous les  2 ans, son objectif est d’éclairer les autorités sur le réaménagement et le traitement, tout en prenant en compte l’évolution des situations et les contraintes de maintenance et de gestion.  [IRSN]
+Par ailleurs, des visites de sites, des présentations et des conférences sont organisées pour sensibiliser et informer le public. Un musée, baptisé Urêka et situé à Bessines-sur-Gartempes, a été inauguré en 2013 dans le but de retracer l’histoire de l’industrie minière uranifère dans le Limousin.
+
+Pour Orano, les mines représentent actuellement près du tiers des activités en France mais cette activité minière consiste principalement à réaménager les sites. Orano est chargé de l’après-mine uranifère en France, ce qui correspond à la gestion de près de 237 sites. Cela représente donc un enjeu important pour Orano : 26 personnes se consacrent à temps-plein à cet après-mine à Bessines-sur-Gartempes, dans le Limousin. Pour l’entreprise, l’après-mine représente 6 millions d’euros de dépenses annuelles pour la surveillance et l’entretien auxquels s’ajoutent 3 à 5 millions d’euros d’investissement dans des projets d’améliorations. Il y a donc également un enjeu économique pour l’entreprise. [N. Himeur]
+
+Orano investit dans des outils spécifiques à l’après-mine afin de permettre un gain d’efficacité, ce qui démontre son importance dans le cycle minier. Des Systèmes d’Information Géographiques (SIG) ont notamment été mis en place, comme ArcGIS. Ce logiciel équipe Orano Mining afin de faciliter les tâches des techniciens chargés de la surveillance des sites. Les relevés sont notamment beaucoup plus rapides et précis grâce à cet outil. Des formulaires disponibles dans le logiciel permettent de recenser en temps réel les anomalies constatées sur le site et s’assurer qu’elles sont résolues par les autres équipes. Les points de prélèvement d’analyses d’eau et d’air y sont aussi indiqués, et les relevés peuvent eux aussi être faits en temps réel. ArcGIS permet de plus d’afficher des zones en réalité augmentée et de guider l’acquisition des données. D’autres outils numériques ont été développés pour l’après-mine. CartOmines est une story map permettant d’afficher d’anciennes vues minières (galeries, descenderies…) pour les comparer aux vues actuelles, grâce à d’importantes géodatabases. [CartOmines] Collector permet de modifier des données cartographiques et même de visualiser les galeries des mines en 3 dimensions ou en coupe. Le logiciel ERICA est utilisé pour évaluer les risques générés par l’uranium. Enfin, les bases de données Prodata, ainsi que les logiciels HYTEC et CHESS, que nous avons eu l’occasion d’utiliser, sont des outils importants utilisés pour la modélisation géochimique, hydrochimique et hydrogéologique des sites miniers. Puisqu’ils permettent de gérer l’après-mine en temps réel, les outils ont une grande importance. C’est pourquoi un budget annuel de 100 000 € leur est alloué. [S. Gerland]
+
+Ainsi, l’après-mine répond à de nombreux enjeux : il faut gérer les résidus et les stériles miniers, gérer les eaux d’exhaure, assurer la stabilité mécanique du site, surveiller l’impact radiologique, sans oublier la dimension sociale : le projet doit être accepté par les habitants et doit s’inscrire dans un projet de réhabilitation sur le long terme. Enfin, pour l’exploitant, il y a aussi une dimension économique.
+
+Image 3 (Akkari, S., Willocquet, R., 2020)
+
 \subsection{Enjeux sanitaires de l’Après-Mine}
 
 \newpage
@@ -255,17 +311,118 @@ Puis, à partir de 1967, le nombre de mines tend à décroître. Ce sont donc le
 \newpage
 \section{Traitements/Solutions}
 \subsection{Différents traitements}
+Le traitement des eaux en sortie de mines est ainsi un enjeu central de l’après-mine. En France, plusieurs techniques de traitement sont utilisées dans les quinze stations stations dédiées. Elles diffèrent par les installations qu’elles requièrent tant que par leurs implications socio-économiques.
+
 \subsubsection{Fonctionnement et coûts}
-\paragraph{Traitement par résines échangeuses d’ions} 
 \paragraph{Traitement par précipitations}
-\paragraph{Traitement par zones humides}
-\paragraph{Prélèvements et analyses}
-\subsubsection{Comparaison, faisabilité}
+(IMAGE III_A_1) Le procédé de traitement des eaux le plus répandu en France est le traitement actif par précipitation et coagulation-floculation-décantation. Il équipe onze des quinze stations de traitement des eaux de sortie de mine françaises. 
+L’étape de précipitation vise la transformation des métaux dissous dans l’eau (généralement fer, aluminium, uranium, radium) en précipités insolubles par l’ajout de réactifs, souvent de la chaux ou de la soude, selon la réaction suivante :   
+          	$$Me^{n+} + n(OH) \rightarrow Me(OH)_{n}$$
+          	
+L’ajout de sulfate d’alumine permet la formation d’hydroxyde d’aluminium susceptible de fixer l’uranium. De même, l’utilisation de chlorure de baryum permet de piéger de radium par la création d’un co-précipité baryum-radium. Ces réactions s’accompagnent d’une augmentation du pH. Etant donné que le pH favorisant la précipitation est différent selon les polluants, il faut ajuster le pH à une valeur optimale en fonction des polluants à éliminer, par exemple par l’ajout de soude ou de chaux.  
+
+
+La coagulation-floculation consiste en l’agrégation des précipités non décantables en microflocs puis en flocs  pour permettre leur décantation. Les réactifs couramment utilisés à cette fin sont la chaux pour la coagulation et les polymères organiques à longue chaîne carbonée pour la floculation. 
+
+
+Enfin, la décantation consiste à séparer les phases eau et flocs. Elle peut se faire par passage des effluents dans plusieurs bassins successifs, ou par passage à travers un lit de boue. Les eaux à la surface des décanteurs sont évacuées et les boues créées chargées en polluants sont récupérées au fond des cuves pour être déshydratées puis traitées.
+
+
+Ce procédé est largement répandu pour le traitement industriel d’eaux riches en métaux. Il nécessite de nombreuses installations pour contenir les matières (cuves de préparation ou de stockage des réactifs nécessaires aux différentes étapes, cuves de précipitation, coagulation, décantation), pour traiter les déchets formés (filière de traitement des boues) et contrôler les caractéristiques des eaux en réaction comme en sortie (mesure de la stoechiométrie, du pH…). 
+
+
+La maintenance nécessaire pour un site de traitement se divise entre le nettoyage préventif du site à hauteur de douze heures hebdomadaires et l’étalonnage des dispositifs de mesure à hauteur d’une demi-heure hebdomadaire. En prenant également en compte de la consommation énergétique du site (pompes à boues, agitateurs à cuves…) et du prix des réactifs, le prix de traitement d’un mètre cube d’effluent par précipitation-coagulation-floculation varie entre 0,20 € et 0,50 € en fonction des réactifs utilisés.
+
+\paragraph{Traitement par résines échangeuses d’ions}
+
+(Image III_A_2) Les résines échangeuses d’ions sont des macromolécules granulaires insolubles. Elles possèdent des radicaux capables de permuter avec certains ions d’une solution de manière réversible. Lors du traitement, la résine se trouve dans un réservoir cylindrique fermé sous pression relié à un filtre et alimenté par un dispositif collecteur du liquide à traiter. Cet ensemble est appelé colonne.
+
+
+Le processus de traitement consiste à remplacer les ions centraux de complexes polluants par un autre type d’ion qui rendra le nouveau complexe inerte. Il existe 2 types de résines échangeuses d’ions : les résines cathodiques qui remplacent les cations des complexes de la solution (comme l’uranium U4+) par des cations inoffensifs présents sur ces radicaux ; et les résines anodiques qui permutent des anions de la même manière.
+ L’échange se fait selon l’équation suivante, de manière réversible sans altération ni solubilisation:
+$$R-A^+ + B^+ = R-B^+ + A^+$$
+R est le radical de la résine, A l’ion de la résine fixé sur ce radical, et B l’ion à éliminer de la solution.
+
+
+Le traitement se décompose en plusieurs étapes. Si l’espèce polluante n’est pas sous forme ionique, ou si l’eau contient trop de précipités, une élution est nécessaire. L’eau à traiter est ensuite envoyée grâce à une pompe dans le réservoir jusqu’à saturation de la résine. Ce réservoir est ensuite remplacé et transporté jusqu’au lieu de régénération de la résine, où est opéré le procédé inverse du traitement. L’injection d’une solution régénérante permet de remplacer les ions polluants (comme les ions uranium) par de nouveaux ions inertes. Les résines sont ensuite rincées à faible puis fort débit afin d’éliminer les traces de la solution régénérante. Elles peuvent ensuite être réutilisées pour le processus de traitement de l’eau.
+
+
+Les réservoirs contenant les résines peuvent être disposés en série, pour augmenter l’efficacité du traitement de l’eau ou bien en parallèle pour augmenter le débit d’eau traité.
+
+
+Lorsque les colonnes sont en série, le remplacement se fait de manière cyclique : la deuxième colonne prend la place de la première qui est envoyé au site de régénération tandis que la troisième colonne prend la place de la deuxième et ainsi de suite. Une seule nouvelle colonne est ajoutée à la fin de la série. (Image III_A_3)
+
+
+Lors de la régénération des résines, il est possible de traiter la solution régénérante qui ressort du réservoir pour récupérer la substance polluante, soit pour une mise en déchet soit pour réutilisation. Ce processus est notamment très utilisé lors du traitement des eaux pour les mines d’uranium : l’uranium récupéré peut alors être utilisé ou vendu.
+Ce type de traitement s’applique principalement à l’uranium dans le cadre des mines et il permet également de traiter des eaux contenant des métaux solubles, des sulfates, des nitrates, des cyanures, des halogénures… Le procédé est plus rarement utilisé pour les polluants organiques.
+La majorité des coûts du traitement par résines échangeuses d’ions correspond à l’élution, aux coûts humains, matériels et de transport de la matière polluante.
+Un demi équivalent temps plein est nécessaire pour surveiller les différents paramètres de suivi (débits d’eau, concentrations et paramètre de fonctionnements comme la consommation électrique…), pour remplacer les colonnes et nettoyer les filtres. (Tableau III_A_1)
 \begin{center}
 \begin{tabular}{ |c |c |}
-
 \hline
- Type de traitement & Coût en € / $\text{m}^3$ \\ 
+ Tâche à réaliser & Temps nécessaire pour un fonctionnement hebdomadaire permanent \\ 
+ \hline
+ Nettoyage des filtres & 8h / semaine \\ 
+ \hline
+ Changement des colonnes & 8,5h / colonne / semaine  \\
+ \hline
+Analyses & 4h / semaine  \\
+ \hline
+\end{tabular}
+\end{center}
+
+Dans le cas d’une mine d’uranium, la régénération des résines saturées permet de récupérer et revendre l’uranium à un prix avoisinant 80 €/kg.
+Le coût du matériel dépend directement du nombre de colonnes nécessaires et donc du débit d’eau à traiter : une colonne coûte 10500 €.
+
+
+Le coût du transport correspond notamment aux déplacements des résines vers les lieux de régénération et dépend donc de l’éloignement entre le site de traitement de l’eau et le site de régénération des résines.
+L’ensemble des coûts de traitement pour un volume d’eau varie alors entre 0,10 et 0,50 €/m 3.
+
+\paragraph{Traitement par zones humides}
+A l’inverse des traitements précédents, les traitements passifs reposent sur des réactions chimiques à l’œuvre naturellement dans l’environnement. Ils ne nécessitent donc pas d’apport d’énergie supplémentaire. 
+
+L’utilisation d’une zone humide (wetland en anglais) constitue un moyen de traitement passif des effluents miniers. Le procédé est encore à l’étude et son emploi est encore très marginal en France : parmi les quinze stations de traitement des eaux françaises, une seule en est équipée. Un wetland désigne une étendue d’eau artificielle reproduisant les conditions d’une tourbière dans laquelle transitent des effluents miniers. 
+
+L’abaissement des concentrations en polluants dans l’eau repose sur trois procédés conjoints. D’une part, des bactéries sulfato-réductrices sont nourries par la matière organique présentes dans la tourbe et permettent le maintien du caractère réducteur du milieu. Dans ces conditions, l’uranium tend à précipiter en uraninite insoluble. D’autre part, uranium et radium peuvent être sorbés sur la matière organique ou sur les fractions argileuses présentes dans la tourbe. Enfin, dans le cas des eaux d’exhaure riches en fer, la présence d’une couche d’eau à la surface de la tourbière favorise la précipitation d’oxy-hydroxydes de fer capables de fixer uranium et radium. 
+
+Les coûts d’entretien d’une tourbière sont négligeables. Les seuls coûts significatifs lors de son fonctionnement sont ceux des analyses des eaux en sortie de la zone humide. (Image III_A_4)
+
+\paragraph{Pas de traitement : prélèvements et analyses}
+Il est assez fréquent qu’aucun traitement ne soit nécessaire sur un site minier, lorsque le site est assez isolé ou bien lorsque le traitement qui était nécessaire lors de l’exploitation est devenu inutile (voir III.B). Le coût n’est cependant pas nul, il faut continuer les prélèvements et analyses pour vérifier en permanence que l’eau n’a effectivement pas à être traitée et pouvoir traiter rapidement si un phénomène imprévu présente des dangers (apparition d’un nouveau rejet, effet saisonnier...). Les prélèvements doivent être réalisés au moins une fois par semaine et impliquent donc un coût humain. Il faut également payer les laboratoires responsables des analyses de ces prélèvements.
+
+
+Le coût est donc, même si aucun traitement n’est mis en place, non négligeable  par rapport au coût total de l’après mine. Avec ou sans traitement, les prélèvements et analyses réalisés dans l’ensemble de la filière après-mine représentent un investissement de 700 000 à 800 000 € par an.
+
+
+Il est de même préférable de laisser les infrastructures en place après l'interruption d’un traitement, et de les entretenir régulièrement pour pouvoir recommencer le traitement si nécessaire, et permettre  une meilleure entente avec les associations et les locaux. 
+
+
+\subsubsection{Comparaison, faisabilité}
+Les 3 méthodes de traitements discutées ci-dessus sont aujourd’hui utilisées en France. Bien qu’elles soient toutes les 3 non destructives, elles ne sont pas perçues de la même manière et présentent chacune certains avantages ou aspects contraignants importants à étudier pour savoir quel type de traitement utiliser sur chaque site.
+
+
+\paragraph{Investissement et mise en place}
+Les coûts détaillés à la partie précédente représentent principalement les OPEX (dépenses d’exploitation). Les CAPEX (dépenses d’investissement) représentent également une dépense conséquente qui s'additionnent à toute la gestion de l’après-mine. Ce type de dépense doit donc être pris en compte pour choisir un type de traitement plutôt qu’un autre.
+
+
+Les CAPEX prennent en compte les dépenses liées aux infrastructures et à l’achat du gros matériel non remplacé pendant l’exploitation. Ce coût est équivalent pour ce qui concerne les traitements par précipitation et par zone humide, mais il est 4 à 5 fois plus important pour le traitement par résines échangeuses d’ions.
+
+
+Il faut cependant également prendre en compte la durée de vie du matériel pour faire un retour sur investissement. Par exemple, si la construction d’un wetland demande un faible investissement, les travaux se réduisant souvent à quelques opérations de terrassement, la tourbe nécessaire à son fonctionnement semble devenir inefficace en quelques années. Or, l’approvisionnement en tourbe a un impact économique et environnemental important, puisque, l’exploitation industrielle de la tourbe française étant strictement réglementée, il peut être nécessaire de l’importer, notamment des pays baltes. 
+
+
+L’impact environnemental des infrastructures est aussi à prendre en compte. Par exemple, alors que le traitement par précipitation nécessite la construction de nombreux bassins spacieux et pouvant empiéter sur l’environnement, le wetland s’insère dans le paysage, accueillant la végétation et permettant le développement d’une faune spécifique.
+
+
+\paragraph{Exploitation et maintenance}
+Les méthodes de traitement présentent chacune des avantages et inconvénients relatifs à leur exploitation. D’une part, leurs caractéristiques techniques ne leur permettent pas de prendre en charge les mêmes débits d’effluents. Le traitement par précipitation et coagulation-floculation-décantation est le plus productif, avec environ 200 m^3 traités par heure, mais aussi le plus flexible, avec une bonne capacité d’adaptation aux variations saisonnières du volume d’effluent entrant. Le traitement par résines échangeuses d’ions permet le traitement d’environ 100 m^3 d’effluent par heure et présente une bonne adaptabilité au débit grâce à la possibilité de placer les bouteilles en série ou en parallèle. Au contraire, le wetland ne traite que de très faibles débits, de l’ordre du m^3 par heure.
+Le traitement par résines échangeuses d’ions est le traitement le plus efficace pour abattre la concentration en uranium de l’eau avec un rendement pouvant atteindre 95% ou même 98% lorsque les colonnes sont disposées en série.  Tout comme le procédé de précipitation, qui permet d’atteindre dans de bonnes conditions des rendements de 90%, il est en mesure d’éliminer une large gamme de polluants grâce au recours à différentes résines. L’efficacité de ces deux traitements est en outre sensible aux caractéristiques chimiques de l’effluent, telles que son pH ou la présence de certains éléments. Pour le traitement par résines, la présence de précipités peut très fortement nuire au traitement. Un prétraitement, l’élution, est alors nécessaire et représente la majorité des coûts du traitement par résines. Le wetland est de nouveau la solution la moins efficace, l’abattage des concentrations en uranium et radium étant de l’ordre de 50 à 70%.
+Le traitement par résines met en jeu des réactions rapides qui permettent, sous réserve de bonnes conditions chimiques, un traitement rapide des eaux. A l’inverse, le traitement par précipitation repose sur une longue phase de décantation pouvant durer plusieurs jours. Les deux solutions de traitement actif présentent également des coûts importants en maintenance (transport des résines, manutention des colonnes, nettoyage préventif des cuves) et en réactifs tandis que l’utilisation du wetland ne requiert pas la présence permanente d’un opérateur. Les seuls coûts associés à son fonctionnement sont les coûts des analyses de l’eau en sortie.  Néanmoins, la durée d’efficacité du wetland semble courte : des données relevées en 2020 au bassin pilote de la mine d’Henriette ouvert en 2014 montrent que l’abattage des concentrations en polluants est moins important après cinq ans d’activité. 
+En termes de coûts, les traitements par zones humides et par précipitation sont plus avantageux que celui par résine car l’investissement et l’élution sont trop coûteux, même en prenant en compte les éventuelles ventes après régénération de la résine. (Tableau III_A_2)
+\begin{center}
+\begin{tabular}{ |c |c |}
+\hline
+ Type de traitement & Coût d’exploitation en € / m3 \\ 
  \hline
  Précipitations & 0.20 à 0.50 \\ 
  \hline
@@ -276,24 +433,101 @@ Zones humides & Négligeable  \\
 \end{tabular}
 \end{center}
 
+L’un des principaux enjeux de l’après-mine est de diminuer ces coûts car le traitement par résine est très avantageux lorsque le polluant peut être récupéré.
 
-
-\paragraph{Investissement et mise en place}
-\paragraph{Exploitation et maintenance}
 \paragraph{Gestion des déchets }
+
+Les traitements produisent des déchets sous différentes formes qu’il est nécessaire de stocker où d’évacuer en respectant les normes et les sociétés locales.
+
+
+Le traitement par zone humide engendre des tourbes saturées au bout de quelques années. La question de la gestion de cette matière organique chargée est encore à l’étude. En outre, l’utilisation d’un wetland peut entraîner le relargage des métaux fixés dans l’environnement avoisinant.
+De même, le traitement par précipitation donne naissance à d’importants volumes de boues qui impliquent de nouveaux coûts de traitement ou de déshydratation. Il peut également augmenter les concentrations en sulfates dans l’eau. 
+
+
+Au contraire, le traitement par résines échangeuses d’ions est très bien perçu par les associations car il permet de retirer définitivement un certain type de polluant du site minier. C’est notamment le cas pour les mines d’uranium : les associations qui se focalisent sur les dangers liés à l’uranium sont satisfaites par l’exportation de ce dernier vers d’autres lieux ou il va être traité puis revendu lors de la régénération des résines.
+
+
+Cependant ce type de traitement provoque la création de nouveaux déchets, à l’extérieur du site minier, lorsque le polluant ne peut pas être réutilisé après avoir été récupéré lors de la régénération des résines. Le problème est donc dans ce cas le même que la gestion des déchets liés aux traitements par zones humides et précipitations.
+
+
+Le traitement de l’eau par résine échangeuse d’ion est alors plus avantageux que les autres principalement dans le cas où le polluant peut être récupéré après régénération de la résine: le coût est diminué grâce à la revente et le processus ne produit presque pas de déchets.
+
+
+Ne pas traiter une eau dont les teneurs en polluants sont en adéquation avec les normes en vigueur est aussi une solution pertinente sur les plans environnementaux et économiques, son coût se réduisant aux frais de contrôle et d’analyse des eaux. Cette solution pourrait également être pertinente dans le cas où l’évacuation de l’eau vers un cours d’eau met en jeu des dilutions importantes. Néanmoins, du fait de l’exacerbation de la dangerosité de l’uranium dans l’opinion collective, un traitement, même s’il est plus susceptible de dégrader la qualité de l’eau que de l’améliorer, est souvent préféré par les populations locales. De même, l’interruption d’un traitement des eaux est susceptible d’être mal accueillie par les riverains.
+
 \subsubsection{Présentation des situations des autres pays}
 \paragraph{Situation générale de mines d’uranium de chaque pays}
 \paragraph{Les méthodes de traitement préférées par pays}
 
 \subsection{Les traitements sont-ils toujours nécessaires ? Étude de cas du site de la Ribière}
 \subsubsection{Présentation du site de La Ribière}
+L’étude du traitement des eaux d’exhaure d’une mine nécessitait de se baser sur un exemple concret, et c’est pour cette raison que nous nous sommes penchés sur le site de la Ribière. 
+
+
+Situé sur la commune de Domeyrot dans la Creuse, ce site a été exploité de 1959 à 1984 par la compagnie TCMF (\emph{Total Compagnie Minière France}), qui en a extrait 142,9 tonnes d’uranium sur l’ensemble de la durée d’exploitation. Pour récupérer cette quantité d’uranium, il a fallu extraire 628 kt d’une mine à ciel ouvert (MCO) d’une superficie de 17472 m². Il n’y a pas de travaux miniers souterrains à la Ribière
+
+
+Le traitement du minerai brut extrait a conduit, d’une part à l’uranium, et d’autre part à un volume important de résidus et de stériles miniers. Ainsi, une partie de ces résidus a été stockée sur le site, dans l’emplacement correspondant à l'ancienne mine à ciel ouvert, et pour une masse totale de 192 000 tonnes.
+
+
+Ces résidus, placés en grande partie dans l’ancienne MCO, ont été traités de manière statique, par lixiviation \textit{in situ} entre 1982 et 1985. Il s'agissait d’un minerai pauvre en uranium, avec une concentration de l’ordre de 350 ppm. 
+
+
+Puis, une fois cette phase de dépôt effectuée, le site est entré en phase de réaménagement entre 1991 et 1992, par son recouvrement avec une couche de stériles et de terre épaisse de 4 mètres et sa végétalisation (partielle). La surface est recouverte d’herbe étant donné que l’on ne peut pas laisser un système racinaire développé s’implanter, car cela favoriserait une infiltration trop importante d’eau.
+
+
+Le site constitue un bassin versant d’altitude maximale 405 mètres, avec le ruisseau Le Verraux qui le longe dans sa partie inférieure, à un altitude de 348 mètres.
+
+
+Désormais géré par Orano Mining, le site de la Ribière a été équipé d'appareils de mesure et de surveillance, notamment pour ce qui est de l’eau qui traverse le site. Ainsi sont répartis sur les 14 ha 4 points de surface pour la surveillance environnementale, et 9 piézomètres qui s’enfoncent dans le sol afin d’en avoir une vision détaillée, et notamment le profil géologique et hydrologique de la zone.
+ 
+ 
+Selon Orano Mining, le site, qui ne dispose pas de station de traitement des eaux, respecte les normes environnementales en vigueur en termes de qualité des eaux à l’exutoire. La concentration en uranium mesurée est de $7,6 \cdot 10^{-6} $ mol/L et la dose mesurée est de $1,37$ Bq/L pour le $^{226}$Ra.
+
+
+Nous nous proposons donc de mettre en œuvre deux modèles du site, hydrologique et géochimique, afin de confirmer ces mesures et d’obtenir une prévision de long terme quant au respect de ces normes. 
+
 \subsubsection{Modèle géochimique et 1D}
 \paragraph{Modélisation}
-\paragraph{Résultats pour la chimie}
+
+
+\paragraph{Résultats du modèle géochimique }
+
 \subsubsection{Modèle hydrologique 2D}
 \paragraph{Modélisation}
+Pour proposer un modèle convaincant du site, il est nécessaire de s’intéresser aux flux hydrogéologiques. Nous avons pour cela utilisé un rapport hydrogéologique du site, daté de 2011. Nous nous sommes basés sur les relevés des 9 piézomètres du site et avons décidé de faire une modélisation en coupe. Cette coupe a été choisie puisqu’elle passe à la fois par la zone de résidus de traitement, par la rivière en contrebas, et par 5 piézomètres différents.
+
+
+Les relevés piézométriques permettent de définir plusieurs zones. On note tout d’abord une zone de surface, composée d’une arène granitique, et de stériles miniers au dessus de la zone de résidus, d’une épaisseur moyenne de 4 m. Celle-ci est composée de deux faciès, un faciès sableux et un faciès boueux. Une zone de granite fracturé est également présente, en dessous de laquelle on trouve une zone de granite sain. Les résidus de traitement apparaissent donc comme localisés et situés proches d’une zone de granite fracturé. L’identification de ces différentes zones permet la création d’un maillage grâce au logiciel GMSH, et la modélisation du site grâce à HYTEC.
+
+
+Les relevés piézométriques permettent aussi de définir un niveau de charge: le piézomètre PZ2 indique une profondeur d’eau à environ 24 m, et le piézomètre PZ9 à 1 m, ce qui correspond au Verraux.
+
+
+Les données météorologiques montrent des précipitations effectives (c’est à dire la différence entre les précipitations totales et l’évapotranspiration) variables au cours de l’année : en effet, on remarque que les mois de novembre,décembre, janvier et mars correspondent à de hautes valeurs de précipitations effectives, alors qu’elles sont presque nulles le reste de l’année. Ceci permet donc de modéliser les saisons et les variations de précipitations, et met en évidence l’importance de la couche de surface, qui sert d’interface pour les transferts.
 \paragraph{Résultats}
-\paragraph{Fusion avec la géochimie - résultats}
+
+Les modélisations montrent l’importance de la perméabilité et de la porosité des différentes zones, puisque de faibles variations induisent des comportements différents à long terme. Il est donc nécessaire d’avoir des valeurs les plus précises possibles et les plus représentatives du site. En effet, un gradient de perméabilité trop élevé, ou bien des discontinuités de perméabilité peuvent engendrer des comportements non représentatifs, comme une remontée du traceur dans les résidus en surface.
+
+
+La détermination du temps de résidence peut se faire de différentes façons. Une approximation linéaire permet un calcul d’ordre de grandeur : une modélisation par deux zones, une zone de résidus et une de granite fracturé, donne un temps de résidence d’environ 15 ans. La solution analytique donne également le même ordre de grandeur. Enfin, le modèle hydrogéologique montre l’évolution du traceur des résidus : on obtient ici un temps de résidence de 25 ans.
+
+
+Ces résultats sont à nuancer, puisqu’à ce stade aucun modèle chimique n’a été intégré. De plus, certaines données non renseignées permettraient d’aller plus loin. Il serait possible d’affiner les bords de la fosse à résidus: nous l’avons modélisé par un trapèze, mais il est très probable que les pentes de la fosse aient une forme de gradins, afin d’assurer la stabilité de la zone. La donnée de la hauteur et de la largeur des marches permettrait une modélisation plus fine.
+
+
+La nature des résidus est également peu connue. Il y a une alternance entre les deux faciès, mais la proportion réelle de chaque n’est pas renseignée. Or ces deux zones ont des comportements hydrogéologiques très différents, avec des porosité et perméabilités différentes. Une analyse géochimique des résidus pourrait donc être réalisée. De plus, seul un unique piézomètre est présent dans cette zone, ce qui induit des incertitudes : on ne dispose que des données en un point pour une zone de 80 m de long et d’environ 20m de profondeur.
+
+
+Le granite fracturé aux alentours n’est pas non plus très bien connu. Des analyses seraient nécessaires pour déterminer ses caractéristiques, afin de les comparer avec celles du granite sain. Le fait que la zone soit fracturée va en effet modifier drastiquement le comportement hydrologique, puisqu’il s’agit de la zone la plus en contact avec les résidus miniers.
+
+\paragraph{Modèle hydrogéochimique}
+Une fois le modèle hydrogéologique et le modèle chimique établi, nous avons pu concevoir un nouveau modèle, prenant en compte la dynamique des flux hydrologiques et les interactions chimiques entre les éléments mis en jeu. Ceci introduit de nouvelles sensibilités, puisque l’augmentation ou la diminution de la concentration ou de la distribution d’un élément peut impacter tout le modèle. On obtient donc un modèle à la fois très sensible aux caractéristiques des roches, mais aussi à des données chimiques comme le pH.
+
+
+Il a fallu néanmoins interpréter certaines données. Des relevés et analyses chimiques dans les différentes zones mises en jeu pourraient être réalisées pour évaluer précisément les compositions et concentrations en les différentes espèces. Par exemple, les taux précis en gypse ne sont pas connus partout.
+
+
 \subsubsection{Conclusion pour le site}
 
 \subsection{Le radon, un gaz volatile}
@@ -328,11 +562,5 @@ Zones humides & Négligeable  \\
 
 \newpage
 \listoffigures
-
-
-%La bibliographie se met avant les annexes normalement
-% ouais okay je fais ça
-% juste signez les commentaires c'est + cool -LJ
-%Dsl ^^ c'était Sophian. Merci !! AH mais ne les range pas comme annexe, c'est pas une annexe normalement je crois, faut les mettre à la fin du rapport
 
 \end{document}
