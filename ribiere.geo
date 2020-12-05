@@ -1,7 +1,7 @@
-// Géométrie du site de La Ribière
-// Mini-projet 1 - hydrogéologie
+// Geometrie du site de La Ribiere
+// Mini-projet 1 - hydrogeologie
 
-// précision du maillage
+// precision du maillage
 dx = 5;
 dxx = 2;
 dxxx = 2;
