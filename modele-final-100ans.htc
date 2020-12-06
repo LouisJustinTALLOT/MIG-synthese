@@ -2,7 +2,6 @@
 # Modele final
 
 # Geometrie and hydrogeologie
-# -------------------------
 
 diffusion-coeff = 1e-9 m2/s
 
@@ -71,7 +70,6 @@ boundary 2003 {
 
 
 # Geochimie
-# ------------
 
 exclude gases, minerals
 
@@ -151,7 +149,6 @@ unit chimie_granite_frac {
   mineral Ferrihydrite = 66.9 g/l, surface = 0.1 m2/g
 }
 
-
 extend mineral Montmorillonite-Ca {
   surface = 600 m2/g
 }
@@ -196,7 +193,6 @@ define mineral Residues {
 }
 
 # Simulation parameters
-# ---------------------
 duration = 100 y
 timestep = variable {
  start = 0.5 h
@@ -205,7 +201,6 @@ timestep = variable {
 }
  
 # Output specifications
-# ---------------------
 output = modele_final_100_ans_chimie_2
 output-format = vtk
 sample = 200
@@ -226,7 +221,6 @@ select y-flowrate in m/s
 select aqueous{UO2[2+]}, fixed{UO2[2+]}, mineral{UO2[2+]} in umol/L
 select pH
 select minerals in mg/l
-# select aqueous{Ra[2+]} in umol/L
 select rate{Gypse}, rate{Montmorillonite-Ca}, rate{Microcline}, rate{Ferrihydrite}
 select rate{Quartz}, rate{Autunite}, rate{BaSO4(cr)}, rate{RaSO4(s)}
 select aqueous{SO4[2-]}, fixed{SO4[2-]}
