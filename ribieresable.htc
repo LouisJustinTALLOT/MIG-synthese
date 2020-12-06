@@ -1,0 +1,155 @@
+domain = 0,0 200,0 200,30 0,30 m
+dispersivity = 2.5 mm
+permeability = 1e-6
+diffusion-coeff = 1e-9 m2/s
+#porosity = 0.3
+#darcy-velocity = 1e-6 m/s
+flow-regime = saturated, stationary
+
+zone sable {
+    porosity = 0.3
+    geometry = rectangle 15,15 30,30 m, nodes = 20,1
+    geochem = sable
+}
+
+zone granite {
+    porosity = 0.05
+    geometry = rectangle 115,15 170,30 m, nodes = 50,1
+    geochem = granit
+}
+
+boundary inject {
+    coordinates = 0,0 0,30 m
+    flow-condition = constant-head at 20 m
+    transport-condition = flux using tracer
+}
+
+boundary droite {
+    coordinates = 200,0 200,30 m
+    flow-condition = constant-head at 0 m
+}
+
+
+exclude gases, minerals
+exclude BaRaSO4
+define basis T1(aq)
+
+
+unit sable {
+    tot Na[+] = 1 mmol/L
+    tot Cl[-] = 1 mmol/L
+    fug CO2(g) = 0.001
+
+    mineral Quartz = 557 g/L
+    mineral Microcline = 321 g/L
+    mineral Montmorillonite-Ca = 137 g/L , surface = 600 m2/g
+    mineral Gypse = 19.3 g/L
+    mineral BaSO4(cr) = 841 mg/L
+    mineral Autunite = 239 mg/L
+    mineral Ferrihydrite = 33 g/L , surface = 0.1 m2/g
+    mineral RaSO4(s) = 1.76 ug/L
+}
+
+unit boue {
+    tot Na[+] = 0.1 mmol/L
+    tot Cl[-] = 0.1 mmol/L
+    mineral Microcline = 29.5 g/L
+    mineral Montmorillonite-Ca = 297 g/L , surface = 700 m2/g
+    mineral Gypse = 403 g/L
+    #mineral BaSO4(cr) = 48.3 mg/L
+    mineral Calcite = 16.7 g/L
+    mineral Autunite = 82.2 mg/L
+    mineral Ferrihydrite = 66.9 g/L , surface = 0.2 m2/g
+    mineral RaSO4(s) = 594 ng/L
+}
+
+unit granit {
+    tot Na[+] = 1 mmol/L
+    tot Cl[-] = 1 mmol/L
+    fug CO2(g) = 0.001
+    mineral Quartz = 1 kg/L
+    mineral Microcline = 1 kg/L
+    mineral Ferrihydrite = 33 g/L, surface = 0.1 m2/g
+}
+
+
+unit tracer {
+    pH = 6.1
+    tot T1(aq) = 1 mmol/L
+    mineral Quartz = 1 kg/L
+    mineral Microcline = 100 g/L
+    mineral Gypse = 19.3 g/L
+    mineral Ferrihydrite = 33 g/L, surface = 0.1 m2/g
+    tot Na[+] = 1 mmol/L
+    tot Cl[-] = 1 mmol/L
+    #tot UO2[2+] = 10 nmol/L
+}
+
+
+extend mineral Montmorillonite-Ca {
+  surface = 600 m2/g
+}
+
+extend mineral Ferrihydrite {
+  surface = 0.1 m2/g
+}
+
+#extend mineral Al(OH)3(am) {
+#  surface = 1 m2/g
+#} 
+
+extend mineral Montmorillonite-Ca {
+	kinetics {
+		rate = -1.2e-15 mol/m2/s
+		area = Montmorillonite-Ca
+		y-term, species = Montmorillonite-Ca
+		w-term {
+			species = H[+]
+			power = 0.22
+		}
+	}
+	kinetics {
+		rate = 1.9e-15 mol/m2/s
+		area = Montmorillonite-Ca
+		y-term, species = Montmorillonite-Ca
+		w-term {
+			species = H[+]
+			power = 0.22
+		}
+	}
+}
+
+
+exclude (UO2)11(CO3)6(OH)12[2-], (UO2)3(CO3)6[6-], U(CO3)5[6-], S3O6[2-], S2[2-], S4[2-], S5[2-], S6[2-], S3[2-], S3O6[2-] 
+exclude Mg2UO2(CO3)3(aq), MgUO2(CO3)3[2-], UO2(CO3)3[4-], Ca2UO2(CO3)3(aq), CaUO2(CO3)3[2-], (UO2)3O(OH)2(HCO3)[+], UO2(H2PO4)(H3PO4)[+]
+include Brucite
+
+
+#database = /home/sguillon/prodata1104_utf8_MIG_test.tdb
+database = /home/nseigneur/prodata1104_utf8_MIG.tdb
+duration = 100 y
+timestep = variable {
+  minimum = 30 s
+  start = 1 h
+  maximum = 5 d
+}
+
+output = ribieresable
+output-format = res, vtk
+sample = 400
+ 
+select T1(aq) in umol/l
+select aqueous{UO2[2+]}, fixed{UO2[2+]}, mineral{UO2[2+]} in umol/L
+select pH
+select minerals in mg/L
+select x-flowrate
+select aqueous{Ca[2+]}, fixed{Ca[2+]}
+select aqueous{Mg[2+]}, fixed{Mg[2+]}
+select aqueous{Na[+]}, fixed{Na[+]}
+select aqueous{K[+]}, fixed{K[+]}
+select aqueous{H[+]}, fixed{H[+]}
+select aqueous{Ba[2+]}, fixed{Ba[2+]}
+#select aqueous{Ra[2+]}, fixed{Ra[2+]}
+select aqueous{PO4[3-]}, fixed{PO4[3-]}
+select aqueous{SO4[2-]}, fixed{SO4[2-]}
+select aqueous{Fe[3+]}, fixed{Fe[3+]}
