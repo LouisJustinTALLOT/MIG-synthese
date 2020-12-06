@@ -439,8 +439,155 @@ L’aluminium a quant à lui un impact sur le système osseux et sur le système
 \newpage
 \section{Problématique de l’après-mine}
 \subsection{Les différentes pollutions}
+\subsubsection{L'uranium}
+\subsubsection{Le radon, un polluant gazeux issu des résidus de traitement}
 
- 
+\paragraph{Formation et émanation du radon}
+
+\paragraph{} Les résidus de traitement, dont on a extrait l’uranium, contiennent encore des traces d’uranium et de radium, qui se situe dans la chaîne de désintégration radioactive de l’uranium (figure II-A2-1).
+
+%Wikipédia
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{II_A2_1.png}
+    \caption{Chaîne de désintégration de l’uranium}
+    \label{fig:desintegration_uranium}
+\end{figure}
+
+Au sein d’un grain de résidu, les atomes de radium, dont la demi-vie est de 1602 années, se désintègrent en atomes de radon en libérant une particule alpha. Alors que la radioactivité alpha de l’uranium ou du radium, libérée en profondeur, ne pose pas de risque radiologique direct, le radon naît à l’état gazeux et peut atteindre la surface.
+
+Il est donc impératif de savoir quelle proportion de radon est transportée vers la surface, pour évaluer les risques et prendre les mesures de sûreté nécessaires.
+
+La première étape du transport du radon est appelée émanation. Le radium se désintègre au sein des résidus de traitement, qui sont sous forme de grains, et ainsi, tous les atomes de radon ne parviennent pas à atteindre les porosités. En effet, la distance $R_s$ que les atomes peuvent parcourir de l’ordre de 30 nm dans un minéral de densité commune. Cette distance est de 50 $\mu$m dans l’air et de 50 nm dans l’eau. %coucou guillaume 
+% si tu as du code python on le mettra en annexe !! :)
+
+On définit alors le facteur d’émanation comme étant la proportion d’atomes de radon qui atteignent les porosités sans être absorbés par un autre grain. Il est possible d’estimer le facteur d’émanation $F_e$ \cite{fleischer_theory_1983} dans le cas simplifié d’un grain sphérique de diamètre D, sans prendre en compte l’humidité ou la potentielle absorption des atomes par un grain adjacent. La formule suivante est donnée en fonction du paramètre $x=2\,R_s/D$ et on a tracé la fonction selon le diamètre, avec $R_s=30$ nm dans le grain (figure \ref{fig:facteur_emanation}).
+
+$$
+F_e (x)= \frac{3}{4} \,x\,(1- \frac{x^2}{12} )
+$$
+
+%Python
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{II_A2_2.png}
+    \caption{Facteur d’émanation en fonction du diamètre des grains}
+    \label{fig:facteur_emanation}
+\end{figure}
+
+La littérature scientifique permet de confirmer l’ordre de grandeur obtenu par le calcul simplifié pour des grains dont le diamètre est de l’ordre du micromètre (figure \ref{fig:facteur_emanation_valeurs}) \cite{ferry_migration_2000}. On note que le facteur d’émanation est d’autant plus élevé que les résidus sont humides puisque l’eau, avec une distance d’arrêt plus courte, empêche les atomes d’être absorbés par les grains adjacents.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{II_A2_3.png}
+    \caption{Quelques valeurs de facteurs d’émanations (Ferry C. 2000)}
+    \label{fig:facteur_emanation_valeurs}
+\end{figure}
+
+Pour nos valeurs numériques dans les résidus miniers, enfouis en zone saturée, on a sélectionné une valeur du coefficient d’émanation $E=0,3$.
+
+\paragraph{Équilibre séculaire}
+
+\paragraph{} Au sein des résidus, le radium se désintègre en radon, mais le radon se désintègre également, plus rapidement. Au bout d’un certain temps, autant de radon est créé que désintégré. La concentration de radon dans les résidus est alors constante, c’est l’équilibre séculaire. Déterminons l'activité volumique du radon ($Bq/m^3$) dans les résidus atteinte à cet équilibre.
+
+On se place dans les résidus, de concentration en radium solide $c_{Ra}$ constante ($mol/m^3$). La proportion de moles de $Rn(g)$ créés par désintégration atteignant les porosités par unité de volume est $E c_{Ra}$, où $E$ est le facteur d’émanation. On note $\lambda_{Ra}$ et $\lambda_{Rn}$ les coefficients de désintégration du radium et du radon en $s^{-1}$. On caractérise le milieu par une masse volumique $\rho$, une porosité $\omega$ et une saturation en gaz $S_g$. La concentration en radon $c_{Rn}$ en $mol/m^3$ évolue selon l'équation :
+
+$$
+\frac{d \omega S_g c_{Rn}}{dt} = - \lambda_{Rn} \omega S_g c_{Rn} + \lambda_{Ra} E (1-\omega) c_{Ra}
+$$
+
+A l'équilibre séculaire, $c_{Rn}(t)=c_0$ et ainsi :
+
+$$
+c_0 = \frac{ \lambda_{Ra} E (1-\omega) c_{Ra} }{\lambda_{Rn} \omega S_g}
+$$
+
+On notera les activités en radon et en radium dans les résidus, avec $N_a$ le nombre d'Avogadro :
+\begin{itemize}
+  \item $a_{Rn}= \lambda_{Rn} N_a c_{Rn}$ en $Bq/m^3$
+  \item $A_{Ra}= \frac{\lambda_{Ra} N_a }{\rho} c_{Ra}$ en $Bq/kg$
+\end{itemize}
+
+Ce qui permet d'obtenir les expressions, et les applications numériques dans le cas du site de la Ribière, avec $\rho = 2,6 \;.10^3 \text{ kg/m}3^$, $\omega= 0,43$, $S_g=0,3$ et $A_{Ra}=4000$ Bq/kg :
+
+$$
+c_0 = \frac{ E (1-\omega) \rho }{\lambda_{Rn} \omega S_g N_a} A_{Ra} = 7,1 \; .10^{-12} \text{ mol/m}^3
+$$
+$$
+a_0=\lambda_{Rn} N_a c_0 =\frac{E(1-\omega)\rho}{\omega S_g} A_{Ra} =9,1 \; \text{MBq/m}^3
+$$
+
+\paragraph{Transport du radon vers la surface}
+
+\paragraph{} Plusieurs processus peuvent expliquer le transport du radon vers la surface \cite{irsn_ineris_radon_nodate} : sa diffusion ou le déplacement de la matière environnante.
+
+Le moteur de la diffusion du radon dans les pores est son gradient de concentration, dans la mesure où le radon est transporté vers les zones où sa concentration est plus faible. Par ailleurs, le radon étant un gaz inerte, dense et très dilué, son transport est surtout lié au mouvement de son environnement, c’est-à-dire d’autres gaz ou l’eau infiltrée dans le sous-sol. Le gradient de température est le moteur de la convection de ces fluides, mais c’est surtout le gradient de pression - le moteur de l’advection - qui induit une vitesse de Darcy et qui engendre le transport du radon. Autrement dit, si l’eau est en mouvement, le radon emprisonné dans l’eau se déplace avec elle.
+
+Si la diffusion se fait majoritairement vers la surface, l’advection se fait le plus souvent dans l’autre sens, avec les infiltrations dues aux précipitations. Ainsi, travailler sur un modèle purement diffusif ne sous-estime pas le transport du radon vers la surface, mais peut légèrement le surestimer.
+
+\paragraph{Impact radiologique : calcul de dose efficace}
+
+\paragraph{} Le radon gazeux, à l’air libre, est susceptible d’être inspiré par des êtres humains. Sa désintégration de type alpha pose alors un risque radiologique important. Son impact a donc été quantifié par plusieurs agences de radioprotection, et des normes ont été imposées.
+
+Il y a tout d’abord une norme sur la dose efficace de radioactivité absorbée. En France, la dose efficace moyenne liée au radon est de $1,43 \; mSv/an^$ (Figure II-Ab-4) \cite{irsn_quelle_nodate}. Cette exposition est en partie d’origine naturelle, puisque le radon est un élément chimiquement présent dans les sols, notamment dans les zones granitiques. En revanche, l’exposition au radon peut également être d’origine anthropique, et c’est là qu’intervient la norme \cite{inrs_rayonnements_nodate}. La valeur limite d’exposition du public ou des travailleurs non exposés au radon est de $1 \; mSv$, et de $20 \; mSv$ pour les travailleurs majeurs exposés (Figure II-Ab-5).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10cm]{II_A2_4.png}
+    \caption{Exposition moyenne de la population aux rayonnements ionisants}
+    \label{fig:exposition_moyenne}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=9.5cm]{II_A2_5.png}
+    \caption{Comparaison des normes radiologiques sur le radon}
+    \label{fig:comparaison_normes}
+\end{figure}
+
+Depuis le 1er juillet 2018, le niveau de référence de l’activité volumique du radon dans l'air est fixé à $300 \; Bq/m^3$ en moyenne annuelle \cite{autorite_de_surete_nucleaire_reglementation_nodate}, dans les bâtiments habités, publics ou accueillant des travailleurs. Il est possible de déduire la dose efficace d’exposition au radon sur le lieu de travail (Blanchardon E. 2019) à partir de l’activité volumique en radon $a$ en $Bq/m^3$, le temps de travail en heures $\Delta t$ et du facteur d’équilibre $F$, qui est une image de la qualité de la ventilation du milieu. Un facteur d’équilibre proche de $0$ caractérise un milieu bien aéré, et un facteur d’équilibre proche de $1$ signifie que l’air du milieu n’est que très peu renouvelé. Le facteur d’équilibre $0,4$ correspond à la moyenne dans les habitations françaises. Une ventilation forcée peut baisser ce paramètre. L'INRS donne alors une expression \cite{blanchardon_evaluation_2019} de la dose efficace (en Sieverts) :
+
+$$
+d = r F a \Delta t
+$$
+
+Où $r=7,8 \; .10^{-6} \; mSv/(Bq/m^3.h)$ est un coefficient lié à l’impact du radon, que approxime dans le paragraphe suivant.
+
+La figure (II-Ab-6) permet de visualiser la position du niveau de référence de $300 \; Bq/m^3$ par rapport aux limites d’exposition (les cases rouges sont les doses dépassant la limite légale de dose efficace) pour des travailleurs qui ont travaillé 35 heures pendant 56 semaines de l’année. On note que le niveau de référence est bien positionné.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{II_A2_6.png}
+    \caption{Dose efficace en $mSv/an$ en fonction de $F$ et $a$ pour un travailleur}
+    \label{fig:exposition_double_entree}
+\end{figure}
+
+A la surface de la zone d’enfouissement des résidus de la Ribière, on peut approximer analytiquement la valeur de l’activité volumique à $a=180 \; Bq/m^3$. Pour une ventilation naturelle $F=0,4$ et 56 semaines de travail à 35h, la dose efficace absorbée par un travailleur est de $1,1 \; mSv$. Cette valeur respecte les normes établies par le code du travail.
+
+\paragraph{Estimation du facteur $r$}
+
+\paragraph{} On cherche à retrouver la valeur $r=7,8 \; .10^{-6} \; mSv/(Bq/m^3.h)$.
+
+L’IRSN donne un lien \cite{irsn_ineris_radon_nodate} entre l’activité volumique du radon $a$ et l’énergie alpha potentielle volumique $e_{\alpha}$ (l’énergie libérée par les désintégrations successives par unité de volume) à l’aide du facteur d’équilibre $F$ et du coefficient de conversion $f=5,56 \; nJ/Bq$ :
+$$
+F=\frac{e_{\alpha}}{f a}
+$$
+
+On sait que le risque radiologique du radon gazeux se situe au niveau des poumons. Le volume d’air inspiré par une personne est égal à $V=4,8 \;.10^3 \;  m^3/an=0,55 \; m^3/h $. Or, la dose absorbée en Grey pendant une durée $\Delta t$ et avec des poumons moyens de masse $m=1,2 \; kg$ est donnée par :
+$$
+d_{Gy}=\frac{E_{absorbée}}{m}=\frac{e_{\alpha} V \Delta t}{m}=\frac{FfV\Delta t}{m}a
+$$
+On peut en déduire la dose efficace en Sieverts, qui est pondérée par un facteur $\omega_{rad}=20$ (radioactivité alpha) et un facteur $\omega_{tissu}=0,12$ (tissus pulmonaires) :
+$$
+d_{Sv}=\omega_{rad} \omega_{tissu} d_{Gy} = r'F \Delta t a
+$$
+On a alors posé le facteur $r'$ :
+$$
+r'= \omega_{rad} \omega_{tissu}  fV/m=6,1 \; .10^{-6} \; mSv/(Bq/m^3.h)
+$$
+Qui constitue un ordre de grandeur raisonnable du facteur r, avec un écart relatif de 22$\%$.
+
+
 \subsection{La dimension sociétale}
 \subsubsection{Focalisation du grand public sur l'uranium et les risques radiologiques}
 \paragraph{} Le manque d’informations transmises par COGEMA (\emph{COmpagnie GÉnérale des MAtières nucléaires}) lors du début du réaménagement des mines a rendu la population locale méfiante envers les différentes actions que l’entreprise a prises pour enfouir les déchets radioactifs. Alors que COGEMA affirmait avoir été transparent sur leur gestion des déchets, certains journalistes indépendants accusent l’entreprise d’avoir enfoui des bidons dans les résidus miniers sans prévenir ni alerter les riverains. 
@@ -791,22 +938,22 @@ Nous nous proposons donc de mettre en œuvre deux modèles du site, hydrologique
 Nous voulons réaliser un modèle hydrogéologique du site, afin de pouvoir analyser et prévoir à long terme l'écoulement des eaux qui traversent le site. L'eau arrive grâce aux précipitations, s'infiltre dans le site ou ruisselle, puis est évacuée en partie dans le ruisseau le Verraux en contrebas. Nous voulons donc connaître le niveau piézométrique sous le site, le profil de vitesse sur une coupe tranversale, ainsi que le débit d'exhaure au niveau du ruisseau.
 
 La modélisation du site sera réalisée à l'aide du logiciel HYTEC, développé depuis 1993 au sein du consortium \emph{Pôle Géochimie Transport} fondé autour du Département de Géosciences de Mines ParisTech - PSL \cite{site_hytec_hydrodynamique_nodate}. 
-Ce logiciel comporte un volet réalisant le calcul hydrodynamique nommé R2D2, qui est couplé avec le logiciel CHESS réalisant la simulation chimique \cite{lagneau:hal-00614306} afin d'obtenir un modèle complet de transport réactif.
+Ce logiciel comporte un volet réalisant le calcul hydrodynamique nommé R2D2, qui est couplé avec le logiciel CHESS réalisant la simulation chimique \cite{lagneau:hal-00614306} afin d'obtenir un modèle complet de transport réactif. 
 
 Nous réaliseront le modèle géographique du site à l'aide du logiciel libre GMSH \cite{gmsh_site} afin de le représenter fidèlement aux données de terrain.
 
-Pour proposer un modèle convaincant du site, il est nécessaire de s’intéresser aux flux hydrogéologiques. Nous avons pour cela utilisé un rapport hydrogéologique du site, daté de 2011. Nous nous sommes basés sur les relevés des 9 piézomètres du site et avons décidé de faire une modélisation en coupe. Cette coupe a été choisie puisqu’elle passe à la fois par la zone de résidus de traitement, par la rivière en contrebas, et par 5 piézomètres différents.
+Pour proposer un modèle convaincant du site, il est nécessaire de s’intéresser aux flux hydrogéologiques. Nous avons pour cela utilisé un rapport hydrogéologique du site, daté de 2011 \cite{societe_areva_nc_etude_2011}. Nous nous sommes basés sur les relevés des 9 piézomètres du site et avons décidé de faire une modélisation en coupe, ce qui permet à la fois de décrire "l'épaisseur" du site dans toute sa richesse tout en évitant de réaliser un modèle 3D beaucoup trop complexe. Cette coupe (figure \ref{fig:coupe_ribiere}) a été choisie car d'une part elle comprend l'intégralité de l'étendue du site (de 348 m à 395 m d'altitude), la zone de résidus et la rivière. Nous disposons également de 5 piézomètres pour nous renseigner sur le terrain.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{III_B_3_1.png}
-    \caption{Coupe réalisée pour l'étude du site (Orano)}
+    \caption{Coupe réalisée pour l'étude du site (Orano) \cite{societe_areva_nc_etude_2011}}
     \label{fig:coupe_ribiere}
 \end{figure}
 
 
 
-Les relevés piézométriques permettent de définir plusieurs zones. On note tout d’abord une zone de surface, composée d’une arène granitique, et de stériles miniers au dessus de la zone de résidus, d’une épaisseur moyenne de 4 m. Celle-ci est composée de deux faciès, un faciès sableux et un faciès boueux. Une zone de granite fracturé est également présente, en dessous de laquelle on trouve une zone de granite sain. Les résidus de traitement apparaissent donc comme localisés et situés proches d’une zone de granite fracturé. L’identification de ces différentes zones permet la création d’un maillage grâce au logiciel GMSH, et la modélisation du site grâce à HYTEC.
+Les relevés piézométriques permettent de définir plusieurs zones. On note tout d’abord une zone de surface, composée d’une arène granitique, et de stériles miniers au dessus de la zone de résidus, d’une épaisseur moyenne de 4 m. Celle-ci est composée de deux faciès, un faciès sableux et un faciès boueux. Une zone de granite fracturé est également présente, en dessous de laquelle on trouve une zone de granite sain. Les résidus de traitement apparaissent donc comme localisés et situés proches d’une zone de granite fracturé.
 
 \begin{figure}[H]
     \centering
