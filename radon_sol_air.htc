@@ -1,0 +1,156 @@
+#============================================================
+# Non-sature, colonne verticale, diffusion de Rn
+#============================================================
+
+#break
+# Description de l'ecoulement
+# --------------------------------------
+flow-regime = two-phase, transient
+
+temperature = 25 C
+
+unsaturated-model = van-genuchten { # parameters for loam
+  alpha = 3.6
+  n = 1.56
+}
+
+# Geometrie
+# --------------
+domain = 0,0 1,0 1,6.5 0,6.5 m
+
+zone Steriles {
+  geometry = rectangle 0.5,3 1,6 m, nodes = 1,60
+  geochem = chimie_steriles
+  
+  head = -0.2 m
+  porosity = 0.43
+  permeability = 3e-6 m/s
+  
+  unsaturated-model = van-genuchten { # parameters for loam
+    alpha = 3.6
+    n = 1.2
+  }
+  water-content {
+    start = 0.3
+    minimum = 0.078
+    maximum = 0.43
+  }
+  millington-quirk = enabled {
+    porosity-coefficient = 2
+    saturation-coefficient = 2
+    gas-porosity-coefficient = 2
+    gas-saturation-coefficient = 2
+  }
+  
+  diff.coeff = 1e-9 m2/s
+  gas-diffusion-coefficient = 2e-5 m2/s
+}
+
+zone Atm {
+  geometry = rectangle 0.5,6.25 1,0.5 m, nodes = 1,5
+  geochem = chimie_atm
+  
+  head = -0.2 m
+  porosity = 1
+  permeability = 1e-20 m/s
+  dispersivity = 0 m
+  
+  unsaturated-model = van-genuchten { # parameters 
+    alpha = 8.85
+    n = 1.56
+  }
+  water-content {
+    start = 0.3
+    minimum = 0.01
+    maximum = 1
+  }
+  millington-quirk = enabled {
+    porosity-coefficient = 1
+    saturation-coefficient = 1
+    gas-porosity-coefficient = 1
+    gas-saturation-coefficient = 1
+  }
+  
+  diff.coeff = 0 m2/s
+  gas-diffusion-coefficient = 1e-4 m2/s
+}
+
+
+# Conditions aux limites
+# ------------------------------
+boundary Residus {
+  coordinates = 0,0 1,0 m
+  flow-condition = constant-head at -0.2 m 
+  gas-transport-condition = constant-conc using chimie_residus
+}
+boundary Atm {
+  coordinates = 0,6.5 1,6.5 m
+#  flow-condition = constant-head at -0.2 m
+  flow-condition = constant-flow at 0,0 mm/y
+#  gas-transport-condition = constant-conc using chimie_atm
+  transport-condition = flux using chimie_atm
+}
+
+# Geochimie
+# --------------
+
+unit chimie_atm {
+  temperature = 25 C
+  tot Tatm = 1 umol/l
+#  tot O2(aq) = 2.6e-4 mol/l
+  fug N2(g)  = 1
+  fug Rn(g) = 1e-25
+  fug Ar(g) = 1e-25
+}
+unit chimie_steriles {
+  temperature = 25 C
+  tot Tcol = 1 umol/l
+  fug N2(g)  = 1
+  fug Rn(g) = 1e-25
+  fug Ar(g) = 1e-25
+}
+unit chimie_residus {
+  temperature = 25 C
+  tot Tres = 1 umol/l
+  fug Ar(g) = 1.7e-13
+  fug Rn(g) = 1.7e-13
+}
+
+#database = chess.tdb
+database = llnlR+gas2019P.tdb
+exclude gases, minerals, colloids, sites
+define basis-species Tcol
+define basis-species Tres
+define basis-species Tatm
+
+# Criteres de temps
+# ------------------------
+duration = 100 d
+timestep = variable {
+  start = 0.1 h
+  maximum = 2 h
+}
+
+# Parametres de sortie
+# ----------------------------
+output-format = res, vtk
+sample = 40
+verbose = enabled
+
+select head, pressure in m
+select water-content
+select gas-diffusion
+select moisture
+select effective-saturation
+select y-flowrate in m/s
+select permeability in m/s
+select Tatm, Tcol, Tres in umol/l
+select fug{Rn(g)} in Pa
+select fug{Ar(g)} in Pa
+#select fug{N2(g)} in Pa
+select Rn(g), Rn(aq) in molal
+select Ar(g), Ar(aq) in molal
+#select N2(g), N2(aq) in molal
+#select O2(aq) in molal
+
+
