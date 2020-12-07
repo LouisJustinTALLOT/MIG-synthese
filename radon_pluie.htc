@@ -2,7 +2,7 @@
 # Non-sature, colonne verticale, diffusion de Rn
 #============================================================
 
-#break
+
 # Description de l'ecoulement
 # --------------------------------------
 flow-regime = two-phase, transient
@@ -55,9 +55,7 @@ boundary Residus {
 }
 boundary Atm {
   coordinates = 0,3 1,3 m
-#  flow-condition = constant-head at -0.2 m
   flow-condition = constant-flow at 0,-200 mm/y
-#  gas-transport-condition = constant-conc using chimie_atm
   transport-condition = flux using chimie_pluie
 }
 
@@ -70,23 +68,23 @@ unit chimie_pluie {
   fug Rn_l(g) = 1e-25
   fug Ar(g) = 1e-25
 }
+
 unit chimie_steriles {
   temperature = 25 C
   tot Tcol = 1 umol/l
   fug Rn(aq) = 1e-25
   fug Rn_l(aq) = 1e-25
-#  fug Ar(aq) = 1e-25
 }
+
 unit chimie_residus {
   temperature = 25 C
   tot Tres = 1 umol/l
-#  fug Ar(g) = 1.7e-13
+
   fug Rn(g) = 1.7e-13
   fug Rn_l(g) = 1.7e-13
   fug Rn(g) = 1.7e-13
 }
 
-#database = chess.tdb
 database = ../llnlR+gas2019P.tdb
 exclude gases, minerals, colloids, sites
 define basis-species Tcol
