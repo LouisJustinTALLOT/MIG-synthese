@@ -2,9 +2,8 @@
 # Non-sature, colonne verticale, diffusion de Rn
 #============================================================
 
-#break
 # Description de l'ecoulement
-# --------------------------------------
+
 flow-regime = two-phase, transient
 
 temperature = 25 C
@@ -15,7 +14,7 @@ unsaturated-model = van-genuchten { # parameters for loam
 }
 
 # Geometrie
-# --------------
+
 domain = 0,0 1,0 1,6.5 0,6.5 m
 
 zone Steriles {
@@ -70,14 +69,13 @@ zone Atm {
     gas-porosity-coefficient = 1
     gas-saturation-coefficient = 1
   }
-  
   diff.coeff = 0 m2/s
   gas-diffusion-coefficient = 1e-4 m2/s
 }
 
 
 # Conditions aux limites
-# ------------------------------
+
 boundary Residus {
   coordinates = 0,0 1,0 m
   flow-condition = constant-head at -0.2 m 
@@ -85,19 +83,15 @@ boundary Residus {
 }
 boundary Atm {
   coordinates = 0,6.5 1,6.5 m
-#  flow-condition = constant-head at -0.2 m
   flow-condition = constant-flow at 0,0 mm/y
-#  gas-transport-condition = constant-conc using chimie_atm
   transport-condition = flux using chimie_atm
 }
 
 # Geochimie
-# --------------
 
 unit chimie_atm {
   temperature = 25 C
   tot Tatm = 1 umol/l
-#  tot O2(aq) = 2.6e-4 mol/l
   fug N2(g)  = 1
   fug Rn(g) = 1e-25
   fug Ar(g) = 1e-25
@@ -116,7 +110,6 @@ unit chimie_residus {
   fug Rn(g) = 1.7e-13
 }
 
-#database = chess.tdb
 database = llnlR+gas2019P.tdb
 exclude gases, minerals, colloids, sites
 define basis-species Tcol
@@ -124,7 +117,7 @@ define basis-species Tres
 define basis-species Tatm
 
 # Criteres de temps
-# ------------------------
+
 duration = 100 d
 timestep = variable {
   start = 0.1 h
@@ -132,7 +125,7 @@ timestep = variable {
 }
 
 # Parametres de sortie
-# ----------------------------
+
 output-format = res, vtk
 sample = 40
 verbose = enabled
@@ -147,10 +140,5 @@ select permeability in m/s
 select Tatm, Tcol, Tres in umol/l
 select fug{Rn(g)} in Pa
 select fug{Ar(g)} in Pa
-#select fug{N2(g)} in Pa
 select Rn(g), Rn(aq) in molal
 select Ar(g), Ar(aq) in molal
-#select N2(g), N2(aq) in molal
-#select O2(aq) in molal
-
-
