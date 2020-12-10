@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc} % on touche pas 
 \usepackage{graphicx}
 \usepackage[bottom = 2 cm]{geometry}
 \usepackage[french, english]{babel}
@@ -43,6 +43,9 @@
 \setlength{\textheight}{21cm} % Hauteur de la zone de texte (25cm)
 \setlength{\parskip}{1em}
 \setlength{\parindent}{1em}
+
+\setlength\tabcolsep{8pt}
+\renewcommand{\arraystretch}{1.4}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -113,7 +116,15 @@
     }
 \makeatother
 
-\lstset{numbers=left, stepnumber=5, firstnumber=1, breaklines = true,backgroundcolor=\color{lightgray!20!}}%, numbersep=5pt}
+\lstset{numbers=left, 
+    stepnumber=5, 
+    firstnumber=1, 
+    breaklines = true,backgroundcolor=\color{lightgray!20!},
+    rulecolor=\color{black},
+    frame=tb
+    }%, numbersep=5pt}
+    
+    
 \lstdefinelanguage{hytec}{language = Python,
     alsoletter =/,
     alsoletter =-,
@@ -134,16 +145,52 @@
 }
 
 
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\lstdefinelanguage{gmsh}{
+%   basicstyle=\footnotesize\ttfamily\color{black},   
+  breakatwhitespace=false,
+  breaklines=true,               
+  captionpos=t,                   
+  commentstyle=\color{dkgreen},
+  deletekeywords={...},          
+  escapeinside={\%*}{*)},                  
+  frame=tb, %top/bottom lines
+  language=C++,                
+  keywordstyle=\color{purple},  
+  morekeywords={Point, Line, Surface, Ellipse, Volume, Physical, Circle, Line Loop, Plane, Loop, newp, newreg, newl, news, newll, newv, Mesh, CharacteristicLengthMax, CharacteristicLengthMin, SetFactory, Spline, BSpline, Rectangle, Disk, Torus, Wedge, Cone, Block, Sphere, Cylinder,
+    BooleanIntersection, BooleanDifference, BooleanFragments, BooleanUnion,
+    Delete, Rotate, Extrude, Pi, StrCat,
+  DefineConstant, ReadOnly, Step, Min, Max, Name, AutoCheck, Visible, Choices},  
+  identifierstyle=\color{black},
+  stringstyle=\color{blue}, 
+%   numbers=left,                 
+%   numbersep=5pt,                  
+%   numberstyle=\tiny\color{black}, 
+  rulecolor=\color{black},        
+  showspaces=false,               
+  showstringspaces=false,        
+  showtabs=false,                
+%   stepnumber=1,                   
+  tabsize=5,                     
+  title=\lstname,                 
+}
+
+
+
+
+
+
 \definecolor{couleurmines}{RGB}{22, 91, 160}
 
 \title{ \textbf{ {\color{couleurmines}
 \Huge{\textsc{École des Mines de Paris}}\\
-\vspace{1 cm}
+\vspace{1.5 cm}
 MIG L'Eau après la Mine\\\vspace{1 cm}Synthèse du projet}}
 \vspace{1 cm}
 }
 
-\author{Elèves des Mines de Paris \\ 
+\author{%Projet réalisé par les élèves : \\ 
 Sophian \textsc{Akkari},
 Tom \textsc{Boezennec}, 
 Paul \textsc{Colombel}, 
@@ -157,11 +204,13 @@ Louis-Justin \textsc{Tallot},
 Gabrielle \textsc{Vernet}, 
 Guillaume \textsc{Vigne}, 
 Robin \textsc{Willocquet}\\
-\\ Encadrants du Centre de Géosciences (Mines ParisTech) \\
+%\\ qui furent encadrés par les enseignants-chercheurs  : \\
+\\ encadrés par les enseignants-chercheurs \\
 Irina \textsc{Sin}, 
 Sophie \textsc{Guillon}, 
-Nicolas \textsc{Seigneur}, 
-Vincent \textsc{Lagneau}}
+Nicolas \textsc{Seigneur}
+et Vincent \textsc{Lagneau} \\
+du Centre de Géosciences (Mines ParisTech - PSL)}
 
 \date{\vspace{2 cm}Novembre - Décembre 2020}
 
@@ -229,7 +278,8 @@ ainsi que leurs encadrants :
 \includegraphics[height = 40pt]{logo_BRGM.png}
 
 \end{center}
-
+%Est-ce vraiment utile de mettre tous les logos ? On cite déjà les différentes entreprises/universités/labos... --S qui est S le sang
+% oui c'est joli et il reste de la place sur la page et je me suis embêté à les mettre
 
 \newpage
 \pagenumbering{gobble}
@@ -253,10 +303,13 @@ Nous proposons ainsi une synthèse des problématiques de l’après-mine compre
 L’après-mine est ainsi un problème très important pris au sérieux et bien résolu par les exploitants mais souvent méconnu des populations. Bien que de nombreuses solutions soient mises en place, il est nécessaire de faire de l’information et de donner à l’après-mine une importance plus grande encore que celle qui lui est accordée aujourd’hui.
 \end{abstract}
 
-
 {\selectlanguage{english}
 \begin{abstract}
-    English abstract
+France used to be a major mining country. Yet, the exploitation of most of French mines has been completely interrupted and the mining sites need to be rehabilitated. This rehabilitation is the post-mine process. It aims at addressing health related and environmental issues (such as the gestion of mining waste), as well as social (such as finding consensus with local associations and populations), political (for instance the accordance with standards) and economical issues.
+
+This study deals with most of these questions. Its goal is to identify both the different parties the post-mine process involves and the issues it brings up, to try to solve them. It also deals with technical aspects of the process such as the treatment of polluted mining waste. We will focus on the former uranium mines, on the treatment of water and on the alleviation of radon. We will particularly study the necessity of water treatment in the former uranium mine La Ribière. After having synthesized these questions, we will draw a comparison of the diverse existing means of water treatment and investigate the strategies implemented by the major mining countries to deal with the post-mines problematics. 
+
+We will acknowledge that the major polluting substances (radon, radium, uranium…) can be efficiently treated. A hydrogeochemical modelisation of the La Ribière site will enable us to determine whether if the treatment of the effluents is necessary. The post-mine process is a serious issue which is often well dealt with by the exploiting firms but quite ignored by the local populations. Although many measures have been enforced, it is still necessary to inform the inhabitants of former mining areas to make bring the post-mine process into even wider attention. 
 \end{abstract}
 }
 
@@ -264,10 +317,9 @@ L’après-mine est ainsi un problème très important pris au sérieux et bien 
 \pagenumbering{arabic}
 \section*{Introduction}
 \addcontentsline{toc}{section}{Introduction}
-%Pour l'instant, on a mis l'intro dans le I. A
-% oui... je sais pas trop comment faire
+
 \newpage
-\section{Contexte de l’après-mine}
+\section{Contexte de l’après-mine} %bonjour irina :)
 
 \subsection{Histoire minière de la France}
 
@@ -284,7 +336,7 @@ L’uranium, élément 92 du tableau périodique, est le centre de notre attenti
 Les gisements d’uranium ont des concentrations très diverses, comme le montre la figure \ref{fig:gisements_uranium}. La plupart des gisements ont une concentration en uranium de l’ordre de 0,1 \% mais elle peut atteindre jusqu’à 10 \% dans certaines mines canadiennes (Cigar Lake, McArthur River) \cite{raimbault_mine_2020}.
 
 
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \includegraphics[width = \linewidth]{I_A_1.jpg}
     \caption{Taille des gisements d'uranium selon leur teneur et la quantité de minerai \cite{raimbault_mine_2020}}
@@ -295,7 +347,7 @@ Les gisements d’uranium ont des concentrations très diverses, comme le montre
 En France, la volonté d’exploiter l’uranium date de la fin de la Seconde Guerre mondiale. Il s’agit alors d’un enjeu stratégique majeur puisque l’objectif était d’assurer l’approvisionnement en uranium de l’armée, qui en avait besoin pour développer l’arme nucléaire. La première mine d’uranium française a ainsi ouvert en 1948. Avec la décision de développer le nucléaire civil, il a ensuite fallu approvisionner en combustibles les centrales nucléaires pour assurer l’indépendance énergétique du pays. L’épuisement des gisements français et la découverte de gisements bien plus importants à l’étranger, notamment au Niger, entraînent la fermeture des mines françaises. La dernière mine d’uranium ferme ainsi en 2001. Au total, il y a près de 230 sites miniers liés à l’uranium en France, qui ont produit environ 76 000 t en un demi-siècle (une mine française produisait quelques tonnes d’uranium par an). Ces sites sont situés dans le Massif Central ainsi qu’en Bretagne et en Vendée (voir la carte en figure \ref{fig:sites_orano}). Le Limousin est à lui seul à l’origine de près de la moitié de la production française \cite{descostes_introduction_2020}.
 
 %    Image 2 (prez Orano C. Benesteau)
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{I_A_2.jpg}
     \caption{Carte des sites miniers uranifères en France (Orano)}
@@ -304,14 +356,17 @@ En France, la volonté d’exploiter l’uranium date de la fin de la Seconde Gu
 
 Les mines sont régies par différentes autorités : le code minier par exemple, qui pose un cadre juridique récent, ainsi que diverses polices des mines, dont la police des ICPE (installation classée pour la protection de l’environnement), créée en 1976. Des polices liées à des domaines transverses tels que l’eau, les déchets, ou encore la santé, interviennent elles aussi sur ce sujet qui lie ainsi de nombreux domaines. Le RGIE (\emph{Règlement Général des Industries Extractives}) complète enfin ces polices des mines. [IRSN]
 
-Ces polices sont nécessaires car les risques miniers sont importants et peuvent causer de lourds dégâts. On parle d’instabilité mécanique pour désigner les risques d’effondrement ou d’affaissement de pans de mines, ou de rupture des digues de rétention de l’eau. Il y a aussi des risques d’impact sur l’hydrosystème : pollution de l’eau, inondation, ou sur le cycle de l’eau lorsque les eaux qui parcourent le site minier, aussi appelées eaux d’exhaure, sortent à la surface et confluent dans d’autres cours d’eau voisins. Cela arrive souvent après l’abandon d’une mine, et un ruisseau dit d’exhaure se forme alors. Par ailleurs, les travaux miniers souterrains peuvent eux aussi affecter l’hydrosystème si l’eau se propage dans les galeries, voire créer un impact sur l’hydrodynamique même du milieu. [L. Raimbault et E. Ledoux]
+Ces polices sont nécessaires car les risques miniers sont importants et peuvent causer de lourds dégâts. On parle d’instabilité mécanique pour désigner les risques d’effondrement ou d’affaissement de pans de mines, ou de rupture des digues de rétention de l’eau. Il y a aussi des risques d’impact sur l’hydrosystème : pollution de l’eau, inondation, ou sur le cycle de l’eau lorsque les eaux qui parcourent le site minier, aussi appelées eaux d’exhaure, sortent à la surface et confluent dans d’autres cours d’eau voisins. Cela arrive souvent après l’abandon d’une mine, et un ruisseau dit d’exhaure se forme alors. Par ailleurs, les travaux miniers souterrains peuvent eux aussi affecter l’hydrosystème si l’eau se propage dans les galeries, voire créer un impact sur l’hydrodynamique même du milieu \cite{ledoux_notions_2020}\cite{raimbault_mine_2020}.
+%[L. Raimbault et E. Ledoux]
 %… (transition !)
 
 Nous avons eu l’occasion de visiter virtuellement deux mines d’uranium : la mine de Bellezane et celle de la Ribière. 
 
-Le site de Bellezane (figure 3) comporte en fait deux mines à ciel ouvert. C’est un site en Haute-Vienne qui a été exploité de 1975 à 1992. 5 \% de la production d’uranium français provient du site de Bellezane, qui employait alors jusqu’à 100 personnes. Ce site, qui fait partie de la concession minière de la Gartempe, est un site historique français, de taille conséquente (25 kilomètres de galeries souterraines). De plus, il bénéficie de sa propre station de traitement des eaux, utilisée pour traiter environ 500 000 $\text{m}^3$ d’eau par an. [C. Benesteau]
+Le site de Bellezane (figure 3) comporte en fait deux mines à ciel ouvert. C’est un site en Haute-Vienne qui a été exploité de 1975 à 1992. 5 \% de la production d’uranium français provient du site de Bellezane, qui employait alors jusqu’à 100 personnes. Ce site, qui fait partie de la concession minière de la Gartempe, est un site historique français, de taille conséquente (25 kilomètres de galeries souterraines). De plus, il bénéficie de sa propre station de traitement des eaux, utilisée pour traiter environ 500 000 $\text{m}^3$ d’eau par an \cite{benesteau_site_2020}.
+% [C. Benesteau]
 
-Le site de la Ribière (figure 4), abordé plus en détail dans ce rapport, est un site de plus petite taille, avec une teneur plus faible en uranium et un minéral extrait différent (de l’autunite, tandis qu’à Bellezane on extrayait surtout de l’uraninite). Le site, dans la Creuse, avantagé par sa topographie, a été exploité de 1959 à 1984, puis a servi de lieu de traitement de minerai à faible teneur en uranium de 1982 à 1985. C’est, tout comme Bellezane, un site de stockage de résidus uranifères. Contrairement à Bellezane, il n’y a pas de station de traitement liée au site. [C. Chautard]
+Le site de la Ribière (figure 4), abordé plus en détail dans ce rapport, est un site de plus petite taille, avec une teneur plus faible en uranium et un minéral extrait différent (de l’autunite, tandis qu’à Bellezane on extrayait surtout de l’uraninite). Le site, dans la Creuse, avantagé par sa topographie, a été exploité de 1959 à 1984, puis a servi de lieu de traitement de minerai à faible teneur en uranium de 1982 à 1985. C’est, tout comme Bellezane, un site de stockage de résidus uranifères. Contrairement à Bellezane, il n’y a pas de station de traitement liée au site \cite{descostes_introduction_2020}.
+%[C. Chautard et M. Descostes]
 
 %Image 3 (prez de Bellezane)            Image 4 (prez de la Ribière)
 % \begin{figure}[!ht]
@@ -322,7 +377,7 @@ Le site de la Ribière (figure 4), abordé plus en détail dans ce rapport, est 
 %   \caption{}
 % \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \begin{minipage}{0.5\textwidth}
         \centering
@@ -338,22 +393,10 @@ Le site de la Ribière (figure 4), abordé plus en détail dans ce rapport, est 
     \end{minipage}
 \end{figure}
 
-%%%% GUILLAUME JE FAIS REGARDE : Ok je regarde Au pire viens sur Zoom
-% ça a marché 
-% nan je peux pas je suis sur zoom sur la conf Ah ok np..... La c'était juste pour mettre 2 trucs cote a cote. Ca devrait pas etre trop courant
-% au pire un google rapide hein 
-% https://tex.stackexchange.com/questions/5769/two-figures-side-by-side
-% je suis pas un expert je fais juste des copiers collers Bah pareil, mais aparemmnt j'avais trouve une autre syntaxe qui marchait aussi
-%LJ t'es encore la?
-%  oui oui oui oui oui 
-
-
 
 A partir de 1967, le nombre de mines tend à décroître. Ce sont les mines de charbon qui disparaissent en premier, puis celles de bauxite, d’argent… À partir des années 1980, ce sont les mines d’uranium qui ferment massivement. Située à Jouac, non loin de Bessines, la dernière mine d’uranium française a fermé en 2001. Pour autant, cette date ne marque pas la fin de l’histoire des mines d’uranium en France. Il s’agit désormais de réaménager les sites de manière durable. C’est ce que l’on appelle l’après-mine.
 
 %Annexe 1 Carte minière de la France 
-% et il suffit dans le texte de faire un truc
-
 
 
 \subsection{Importance et enjeux de l'après-mine}
@@ -363,7 +406,7 @@ L’objectif de ce processus est de réduire l’impact du site sur son environn
 
 
 %Image 1 (prez Après-mine Orano)
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{I_B_1.jpg}
     \caption{Les différentes phases du réaménagement d'une mine (Orano)}
@@ -381,7 +424,7 @@ Les projets de parc photovoltaïques sont effectués en partenariat, ou via des 
 À Bellezane, de nombreuses procédures ont été lancées. Des résidus y ont été coulés avant d’y poser une couverture en stériles et terre, puis de commencer la revégétalisation. Il y a notamment sur le site des fourrés et des mares à protéger, un écologue passe donc annuellement sur le site. L’entreprise MISTRI s’est désormais installée dans les anciens locaux du site, et un projet de centrale photovoltaïque en partenariat avec Total est en cours : il devrait aboutir vers 2023. Le stockage des résidus et sédiments marqués en radioactivité sur le site est, lui, géré par Orano \cite{benesteau_site_2020}.
 
 %Image 2  : Bellezane avant/après
-\begin{figure}[!hbt]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{I_B_2.jpg}
     \caption{Le site de Bellezane avant et après le réaménagement (Orano)}
@@ -402,8 +445,8 @@ Pour Orano, les mines représentent actuellement près du tiers des activités e
 
 Orano investit dans des outils spécifiques à l’après-mine afin de permettre un gain d’efficacité, ce qui démontre son importance dans le cycle minier. Des Systèmes d’Information Géographiques (SIG) ont notamment été mis en place, comme ArcGIS. Ce logiciel équipe Orano Mining afin de faciliter les tâches des techniciens chargés de la surveillance des sites. Les relevés sont notamment beaucoup plus rapides et précis grâce à cet outil. Des formulaires disponibles dans le logiciel permettent de recenser en temps réel les anomalies constatées sur le site et s’assurer qu’elles sont résolues par les autres équipes. Les points de prélèvement d’analyses d’eau et d’air y sont aussi indiqués, et les relevés peuvent eux aussi être faits en temps réel. ArcGIS permet de plus d’afficher des zones en réalité augmentée et de guider l’acquisition des données. 
 
-D’autres outils numériques ont été développés pour l’après-mine. CartOmines est une story map permettant d’afficher d’anciennes vues minières (galeries, descenderies…) pour les comparer aux vues actuelles, grâce à d’importantes géodatabases. [CartOmines] Collector permet de modifier des données cartographiques et même de visualiser les galeries des mines en 3 dimensions ou en coupe. Le logiciel ERICA est utilisé pour évaluer les risques générés par l’uranium. Enfin, les bases de données Prodata, ainsi que les logiciels HYTEC et CHESS, que nous avons eu l’occasion d’utiliser, sont des outils importants utilisés pour la modélisation géochimique, hydrochimique et hydrogéologique des sites miniers. Puisqu’ils permettent de gérer l’après-mine en temps réel, les outils ont une grande importance. C’est pourquoi un budget annuel de 100 000€ leur est alloué. [S. Gerland]
-
+D’autres outils numériques ont été développés pour l’après-mine. CartOmines est une story map permettant d’afficher d’anciennes vues minières (galeries, descenderies…) pour les comparer aux vues actuelles, grâce à d’importantes géodatabases. [CartOmines] Collector permet de modifier des données cartographiques et même de visualiser les galeries des mines en 3 dimensions ou en coupe. Le logiciel ERICA est utilisé pour évaluer les risques générés par l’uranium. Enfin, les bases de données Prodata, ainsi que les logiciels HYTEC et CHESS, que nous avons eu l’occasion d’utiliser, sont des outils importants utilisés pour la modélisation géochimique, hydrochimique et hydrogéologique des sites miniers. Puisqu’ils permettent de gérer l’après-mine en temps réel, les outils ont une grande importance. C’est pourquoi un budget annuel de 100 000€ leur est alloué %\cite{}.
+%[S. Gerland]
 
 %Image 3 (Akkari, S., Willocquet, R., 2020)
 \begin{figure}[H]
@@ -445,81 +488,28 @@ Ces polluants sont importants pour les entreprises et doivent être pris en comp
 \section{Problématique de l’après-mine}
 \subsection{Les différentes pollutions}
 \subsubsection{L'uranium}
+
 \subsubsection{Le radon, un polluant gazeux issu des résidus de traitement}
 
 \paragraph{Formation et émanation du radon}
 
-\paragraph{} Les résidus de traitement, dont on a extrait l’uranium, contiennent encore des traces d’uranium et de radium, qui se situe dans la chaîne de désintégration radioactive de l’uranium (figure II-A2-1).
+\paragraph{} Les résidus de traitement, dont on a extrait l’uranium, contiennent encore des traces d’uranium et de radium, qui se situe dans la chaîne de désintégration radioactive de l’uranium (figure \ref{fig:desintegration_uranium}).
 
-%Wikipédia
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=8cm]{II_A2_1.png}
-    \caption{Chaîne de désintégration de l’uranium}
-    \label{fig:desintegration_uranium}
-\end{figure}
+Au sein d’un grain de résidu, les atomes de radium, dont la demi-vie est de 1602 années, se désintègrent en atomes de radon en libérant une particule alpha. Alors que la radioactivité alpha de l’uranium ou du radium, libérée en profondeur, ne pose pas de risque radiologique direct, le radon naît à l’état gazeux et peut atteindre la surface. Il est donc impératif de savoir quelle proportion de radon est transportée vers la surface, pour évaluer les risques et prendre les mesures de sûreté nécessaires.
 
-Au sein d’un grain de résidu, les atomes de radium, dont la demi-vie est de 1602 années, se désintègrent en atomes de radon en libérant une particule alpha. Alors que la radioactivité alpha de l’uranium ou du radium, libérée en profondeur, ne pose pas de risque radiologique direct, le radon naît à l’état gazeux et peut atteindre la surface.
+La première étape du transport du radon est appelée émanation. Le radium se désintègre au sein des résidus de traitement, qui sont sous forme de grains, et ainsi, tous les atomes de radon ne parviennent pas à atteindre les porosités. En effet, la distance $R_s$ que les atomes peuvent parcourir de l’ordre de 30 nm dans un minéral de densité commune. Cette distance est de 50 $\mu$m dans l’air et de 50 nm dans l’eau.
 
-Il est donc impératif de savoir quelle proportion de radon est transportée vers la surface, pour évaluer les risques et prendre les mesures de sûreté nécessaires.
-
-La première étape du transport du radon est appelée émanation. Le radium se désintègre au sein des résidus de traitement, qui sont sous forme de grains, et ainsi, tous les atomes de radon ne parviennent pas à atteindre les porosités. En effet, la distance $R_s$ que les atomes peuvent parcourir de l’ordre de 30 nm dans un minéral de densité commune. Cette distance est de 50 $\mu$m dans l’air et de 50 nm dans l’eau. %coucou guillaume 
-% si tu as du code python on le mettra en annexe !! :)
-
-On définit alors le facteur d’émanation comme étant la proportion d’atomes de radon qui atteignent les porosités sans être absorbés par un autre grain. Il est possible d’estimer le facteur d’émanation $F_e$ \cite{fleischer_theory_1983} dans le cas simplifié d’un grain sphérique de diamètre D, sans prendre en compte l’humidité ou la potentielle absorption des atomes par un grain adjacent. La formule suivante est donnée en fonction du paramètre $x=2\,R_s/D$ et on a tracé la fonction selon le diamètre, avec $R_s=30$ nm dans le grain (figure \ref{fig:facteur_emanation}).
-
-$$
-F_e (x)= \frac{3}{4} \,x\,(1- \frac{x^2}{12} )
-$$
-
-%Python
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=8cm]{II_A2_2.png}
-    \caption{Facteur d’émanation en fonction du diamètre des grains}
-    \label{fig:facteur_emanation}
-\end{figure}
-
-La littérature scientifique permet de confirmer l’ordre de grandeur obtenu par le calcul simplifié pour des grains dont le diamètre est de l’ordre du micromètre (figure \ref{fig:facteur_emanation_valeurs}) \cite{ferry_migration_2000}. On note que le facteur d’émanation est d’autant plus élevé que les résidus sont humides puisque l’eau, avec une distance d’arrêt plus courte, empêche les atomes d’être absorbés par les grains adjacents.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=12cm]{II_A2_3.png}
-    \caption{Quelques valeurs de facteurs d’émanations (Ferry C. 2000)}
-    \label{fig:facteur_emanation_valeurs}
-\end{figure}
+On définit alors le facteur d’émanation comme étant la proportion d’atomes de radon qui atteignent les porosités sans être absorbés par un autre grain. Il est possible d’estimer le facteur d’émanation \cite{fleischer_theory_1983} dans le cas simplifié d’un grain sphérique de diamètre D, sans prendre en compte l’humidité ou la potentielle absorption des atomes par un grain adjacent (détails en annexe B\ref{annexe:emanation}). La littérature scientifique \cite{ferry_migration_2000} permet de confirmer l’ordre de grandeur obtenu par le calcul simplifié à sec pour des grains dont le diamètre est de l’ordre du micromètre ($E \simeq 10^{-2}$). On note que le facteur d’émanation est d’autant plus élevé que les résidus sont humides ($E\simeq 0,3$) puisque l’eau, avec une distance d’arrêt plus courte, empêche les atomes d’être absorbés par les grains adjacents.
 
 Pour nos valeurs numériques dans les résidus miniers, enfouis en zone saturée, on a sélectionné une valeur du coefficient d’émanation $E=0,3$.
 
 \paragraph{Équilibre séculaire}
 
-\paragraph{} Au sein des résidus, le radium se désintègre en radon, mais le radon se désintègre également, plus rapidement. Au bout d’un certain temps, autant de radon est créé que désintégré. La concentration de radon dans les résidus est alors constante, c’est l’équilibre séculaire. Déterminons l'activité volumique du radon ($Bq/m^3$) dans les résidus atteinte à cet équilibre.
+\paragraph{} Au sein des résidus, le radium se désintègre en radon, mais le radon se désintègre également, plus rapidement. Au bout d’un certain temps, autant de radon est créé que désintégré. La concentration de radon dans les résidus est alors constante, c’est l’équilibre séculaire.
 
-On se place dans les résidus, de concentration en radium solide $c_{Ra}$ constante ($mol/m^3$). La proportion de moles de $Rn(g)$ créés par désintégration atteignant les porosités par unité de volume est $E c_{Ra}$, où $E$ est le facteur d’émanation. On note $\lambda_{Ra}$ et $\lambda_{Rn}$ les coefficients de désintégration du radium et du radon en $s^{-1}$. On caractérise le milieu par une masse volumique $\rho$, une porosité $\omega$ et une saturation en gaz $S_g$. La concentration en radon $c_{Rn}$ en $mol/m^3$ évolue selon l'équation :
-
+On peut déterminer l'activité volumique du radon $a_0$ (en $Bq/m^3$) dans les résidus atteinte à cet équilibre, en fonction de l'activité massique du radium $A_{Ra}$ ($Bq/kg$), du facteur d'émanation $E$ du milieu, de sa masse volumique $\rho$, de sa porosité $\omega$ et de sa une saturation en gaz $S_g$ (détails et valeurs sélectionnées en annexe B\ref{annexe:seculaire} :
 $$
-\frac{d \omega S_g c_{Rn}}{dt} = - \lambda_{Rn} \omega S_g c_{Rn} + \lambda_{Ra} E (1-\omega) c_{Ra}
-$$
-
-A l'équilibre séculaire, $c_{Rn}(t)=c_0$ et ainsi :
-
-$$
-c_0 = \frac{ \lambda_{Ra} E (1-\omega) c_{Ra} }{\lambda_{Rn} \omega S_g}
-$$
-
-On notera les activités en radon et en radium dans les résidus, avec $N_a$ le nombre d'Avogadro :
-\begin{itemize}
-  \item $a_{Rn}= \lambda_{Rn} N_a c_{Rn}$ en $Bq/m^3$
-  \item $A_{Ra}= \frac{\lambda_{Ra} N_a }{\rho} c_{Ra}$ en $Bq/kg$
-\end{itemize}
-
-Ce qui permet d'obtenir les expressions, et les applications numériques dans le cas du site de la Ribière, avec $\rho = 2,6 \;.10^3 \text{ kg/m}3^$, $\omega= 0,43$, $S_g=0,3$ et $A_{Ra}=4000$ Bq/kg :
-
-$$
-c_0 = \frac{ E (1-\omega) \rho }{\lambda_{Rn} \omega S_g N_a} A_{Ra} = 7,1 \; .10^{-12} \text{ mol/m}^3
-$$
-$$
-a_0=\lambda_{Rn} N_a c_0 =\frac{E(1-\omega)\rho}{\omega S_g} A_{Ra} =9,1 \; \text{MBq/m}^3
+a_0 =\frac{E(1-\omega)\rho}{\omega S_g} A_{Ra} =9,1 \; \text{MBq/m}^3
 $$
 
 \paragraph{Transport du radon vers la surface}
@@ -528,35 +518,17 @@ $$
 
 Le moteur de la diffusion du radon dans les pores est son gradient de concentration, dans la mesure où le radon est transporté vers les zones où sa concentration est plus faible. Par ailleurs, le radon étant un gaz inerte, dense et très dilué, son transport est surtout lié au mouvement de son environnement, c’est-à-dire d’autres gaz ou l’eau infiltrée dans le sous-sol. Le gradient de température est le moteur de la convection de ces fluides, mais c’est surtout le gradient de pression - le moteur de l’advection - qui induit une vitesse de Darcy et qui engendre le transport du radon. Autrement dit, si l’eau est en mouvement, le radon emprisonné dans l’eau se déplace avec elle.
 
-Si la diffusion se fait majoritairement vers la surface, l’advection se fait le plus souvent dans l’autre sens, avec les infiltrations dues aux précipitations. Ainsi, travailler sur un modèle purement diffusif ne sous-estime pas le transport du radon vers la surface, mais peut légèrement le surestimer.
-
 \paragraph{Impact radiologique : calcul de dose efficace}
 
 \paragraph{} Le radon gazeux, à l’air libre, est susceptible d’être inspiré par des êtres humains. Sa désintégration de type alpha pose alors un risque radiologique important. Son impact a donc été quantifié par plusieurs agences de radioprotection, et des normes ont été imposées.
 
-Il y a tout d’abord une norme sur la dose efficace de radioactivité absorbée. En France, la dose efficace moyenne liée au radon est de $1,43 \; mSv/an^$ (figure \ref{fig:exposition_moyenne}) \cite{irsn_quelle_nodate}. Cette exposition est en partie d’origine naturelle, puisque le radon est un élément chimiquement présent dans les sols, notamment dans les zones granitiques. En revanche, l’exposition au radon peut également être d’origine anthropique, et c’est là qu’intervient la norme \cite{inrs_rayonnements_nodate}. La valeur limite d’exposition du public ou des travailleurs non exposés au radon est de $1 \; mSv$, et de $20 \; mSv$ pour les travailleurs majeurs exposés (Figure II-Ab-5).
+Il y a tout d’abord une norme sur la dose efficace de radioactivité absorbée. En France, la dose efficace moyenne liée au radon est de 1,43 mSv/an (figure \ref{fig:exposition_moyenne}) \cite{irsn_quelle_nodate}. Cette exposition est en partie d’origine naturelle, puisque le radon est un élément chimiquement présent dans les sols, notamment dans les zones granitiques. En revanche, l’exposition au radon peut également être d’origine anthropique, et c’est là qu’intervient la norme \cite{inrs_rayonnements_nodate}. La valeur limite d’exposition du public ou des travailleurs non exposés au radon est de 1 mSv, et de 20 mSv pour les travailleurs majeurs exposés (figure \ref{fig:comparaison_normes}).
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=10cm]{II_A2_4.png}
-    \caption{Exposition moyenne de la population aux rayonnements ionisants}
-    \label{fig:exposition_moyenne}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=9.5cm]{II_A2_5.png}
-    \caption{Comparaison des normes radiologiques sur le radon}
-    \label{fig:comparaison_normes}
-\end{figure}
-
-Depuis le 1er juillet 2018, le niveau de référence de l’activité volumique du radon dans l'air est fixé à $300 \; Bq/m^3$ en moyenne annuelle \cite{autorite_de_surete_nucleaire_reglementation_nodate}, dans les bâtiments habités, publics ou accueillant des travailleurs. Il est possible de déduire la dose efficace d’exposition au radon sur le lieu de travail (Blanchardon E. 2019) à partir de l’activité volumique en radon $a$ en $Bq/m^3$, le temps de travail en heures $\Delta t$ et du facteur d’équilibre $F$, qui est une image de la qualité de la ventilation du milieu. Un facteur d’équilibre proche de $0$ caractérise un milieu bien aéré, et un facteur d’équilibre proche de $1$ signifie que l’air du milieu n’est que très peu renouvelé. Le facteur d’équilibre $0,4$ correspond à la moyenne dans les habitations françaises. Une ventilation forcée peut baisser ce paramètre. L'INRS donne alors une expression \cite{blanchardon_evaluation_2019} de la dose efficace (en Sieverts) :
-
+Depuis le 1er juillet 2018, le niveau de référence de l’activité volumique du radon dans l'air est fixé à $300 \; Bq/m^3$ en moyenne annuelle \cite{autorite_de_surete_nucleaire_reglementation_nodate}, dans les bâtiments habités, publics ou accueillant des travailleurs. Il est possible de déduire la dose efficace d’exposition au radon sur le lieu de travail à partir de l’activité volumique en radon $a$ en $Bq/m^3$, le temps de travail en heures $\Delta t$ et du facteur d’équilibre $F$, qui est une image de la qualité de la ventilation du milieu. Un facteur d’équilibre proche de $0$ caractérise un milieu bien aéré, et un facteur d’équilibre proche de $1$ signifie que l’air du milieu n’est que très peu renouvelé. Le facteur d’équilibre $0,4$ correspond à la moyenne dans les habitations françaises. Une ventilation forcée peut baisser ce paramètre. L'INRS donne alors une expression \cite{blanchardon_evaluation_2019} de la dose efficace (en Sieverts) :
 $$
 d = r F a \Delta t
 $$
-
-Où $r=7,8 \; .10^{-6} \; mSv/(Bq/m^3.h)$ est un coefficient lié à l’impact du radon, que approxime dans le paragraphe suivant.
+Où $r=7,8 \; .10^{-6} \; mSv/(Bq/m^3.h)$ est un coefficient lié à l’impact du radon, que l'on approxime en annexe B\ref{annexe:estimation_r}.
 
 La figure (II-Ab-6) permet de visualiser la position du niveau de référence de $300 \; Bq/m^3$ par rapport aux limites d’exposition (les cases rouges sont les doses dépassant la limite légale de dose efficace) pour des travailleurs qui ont travaillé 35 heures pendant 56 semaines de l’année. On note que le niveau de référence est bien positionné.
 
@@ -569,40 +541,15 @@ La figure (II-Ab-6) permet de visualiser la position du niveau de référence de
 
 A la surface de la zone d’enfouissement des résidus de la Ribière, on peut approximer analytiquement la valeur de l’activité volumique à $a=180 \; Bq/m^3$. Pour une ventilation naturelle $F=0,4$ et 56 semaines de travail à 35h, la dose efficace absorbée par un travailleur est de $1,1 \; mSv$. Cette valeur respecte les normes établies par le code du travail.
 
-\paragraph{Estimation du facteur $r$}
-
-\paragraph{} On cherche à retrouver la valeur $r=7,8 \; .10^{-6} \; mSv/(Bq/m^3.h)$.
-
-L’IRSN donne un lien \cite{irsn_ineris_radon_nodate} entre l’activité volumique du radon $a$ et l’énergie alpha potentielle volumique $e_{\alpha}$ (l’énergie libérée par les désintégrations successives par unité de volume) à l’aide du facteur d’équilibre $F$ et du coefficient de conversion $f=5,56 \; nJ/Bq$ :
-$$
-F=\frac{e_{\alpha}}{f a}
-$$
-
-On sait que le risque radiologique du radon gazeux se situe au niveau des poumons. Le volume d’air inspiré par une personne est égal à $V=4,8 \;.10^3 \;  m^3/an=0,55 \; m^3/h $. Or, la dose absorbée en Grey pendant une durée $\Delta t$ et avec des poumons moyens de masse $m=1,2 \; kg$ est donnée par :
-$$
-d_{Gy}=\frac{E_{absorbée}}{m}=\frac{e_{\alpha} V \Delta t}{m}=\frac{FfV\Delta t}{m}a
-$$
-On peut en déduire la dose efficace en Sieverts, qui est pondérée par un facteur $\omega_{rad}=20$ (radioactivité alpha) et un facteur $\omega_{tissu}=0,12$ (tissus pulmonaires) :
-$$
-d_{Sv}=\omega_{rad} \omega_{tissu} d_{Gy} = r'F \Delta t a
-$$
-On a alors posé le facteur $r'$ :
-$$
-r'= \omega_{rad} \omega_{tissu}  fV/m=6,1 \; .10^{-6} \; mSv/(Bq/m^3.h)
-$$
-Qui constitue un ordre de grandeur raisonnable du facteur r, avec un écart relatif de 22$\%$.
-
-
 \subsection{La dimension sociétale}
 \subsubsection{La prise en charge des tensions entre riverains et entreprises}
 \paragraph{} De nos jours, des tensions sont encore présentes entre ORANO et les riverains. Le manque d’informations transmises par COGEMA (l’ancien nom d’ORANO) lors de l’ouverture des mines a rendu la population locale méfiante envers les différentes actions que l’entreprise a prises pour enfouir les déchets radioactifs. Les organisations locales, comme l’association Source et Rivière du Limousin, se tournent alors vers des organisations à but non lucratif pour accéder à des informations fiables sur les sites. 
 
-L’une de ces organisations est la CRIIRAD: Commission de Recherche et d'Information Indépendantes sur la Radioactivité. Cette association, créée en 1986, agit pour un accès plus direct à l’information sur la radioactivité à l’aide d’un laboratoire de recherche indépendant. Dans les années 90, elle décide de se tourner vers la surveillance des anciens sites miniers à la demande d’acteurs locaux qui doutent des informations transmises par ORANO. Le but initial de la CRIIRAD est de faire des constats sur les sites en prélevant des échantillons, puis de former des citoyens à continuer cette surveillance. Ensuite, un dialogue s'instaure avec les différents partis concernés, comme les entreprises en charge du réaménagement, des CSS (comité de suivi des sites) ou d’autres acteurs comme l’IRSN. Suite à ce dialogue, les mines peuvent passer ICPE (Installation Classée pour la Protection de l'Environnement) où l’exploitant se voit obligé d’apporter des mesures complémentaires au site. Cependant, un enjeu économique entre en jeu lors de la demande de travaux complémentaires, qui peuvent donc ne pas être aussi efficaces que l’espèrent les organisations locales. 
+L’une de ces organisations est la CRIIRAD (Commission de Recherche et d'Information Indépendantes sur la Radioactivité). Cette association, créée en 1986, agit pour un accès plus direct à l’information sur la radioactivité à l’aide d’un laboratoire de recherche indépendant. Dans les années 90, elle décide de se tourner vers la surveillance des anciens sites miniers à la demande d’acteurs locaux qui doutent des informations transmises par ORANO. Le but initial de la CRIIRAD est de faire des constats sur les sites en prélevant des échantillons, puis de former des citoyens à continuer cette surveillance. Ensuite, un dialogue s'instaure avec les différents partis concernés, comme les entreprises en charge du réaménagement, des CSS (comité de suivi des sites) ou d’autres acteurs comme l’IRSN. Suite à ce dialogue, les mines peuvent passer ICPE (Installation Classée pour la Protection de l'Environnement) où l’exploitant se voit obligé d’apporter des mesures complémentaires au site. Cependant, un enjeu économique entre en jeu lors de la demande de travaux complémentaires, qui peuvent donc ne pas être aussi efficaces que l’espèrent les organisations locales. 
 
-Pour poursuivre la surveillance des sites sur des périodes de temps plus longues, la CRIIRAD a mis en place un Collectif Mines d’Uranium (CMU). Le CMU (regroupant plusieurs associations dont l’Association Oui à l'avenir (Creuse), l’Association Noria (Vendée), l’Association Sources et Rivières du Limousin (SRL), et bien d’autres) déplore  l’état dans lequel les entreprises minières laissent le territoire et  affirme que les déchets miniers sont souvent “disséminés dans l’environnement ou stockés dans des conditions totalement inappropriées” et qu’ils “génèrent des pollutions environnementales multiples (air, eau, sol, chaîne alimentaire) induisant des dangers sanitaires inacceptables aujourd’hui et pour les générations futures”. Il tiennent ORANO pour responsable de la dégradation de la faune et de la flore et protestent contre une “législation complaisante”. Ils se plaignent, entre autres, de la contamination des terrains par des éléments radioactifs, de la pollution des ressources aquatiques, de la mauvaise gestion des sites de stockage des déchets, de la perte de mémoire sur la localisation des sites, de l’absence de normes sanitaires et environnementales intégralement respectées… Accompagnés de la CRIIRAD, ils reprennent les rapports d’ORANO et de l’IRSN pour en dégager les erreurs et avoir un impact assez important pour que les acteurs publics agissent.
+Pour poursuivre la surveillance des sites sur des périodes de temps plus longues, la CRIIRAD a mis en place un Collectif Mines d’Uranium (CMU). Le CMU (regroupant plusieurs associations dont l’Association Oui à l'avenir (Creuse), l’Association Noria (Vendée), l’Association Sources et Rivières du Limousin (SRL), et bien d’autres) déplore  l’état dans lequel les entreprises minières laissent le territoire et  affirme que les déchets miniers sont souvent « disséminés dans l’environnement ou stockés dans des conditions totalement inappropriées » et qu’ils « génèrent des pollutions environnementales multiples (air, eau, sol, chaîne alimentaire) induisant des dangers sanitaires inacceptables aujourd’hui et pour les générations futures ». Il tiennent ORANO pour responsable de la dégradation de la faune et de la flore et protestent contre une « législation complaisante ». Ils se plaignent, entre autres, de la contamination des terrains par des éléments radioactifs, de la pollution des ressources aquatiques, de la mauvaise gestion des sites de stockage des déchets, de la perte de mémoire sur la localisation des sites, de l’absence de normes sanitaires et environnementales intégralement respectées… Accompagnés de la CRIIRAD, ils reprennent les rapports d’ORANO et de l’IRSN pour en dégager les erreurs et avoir un impact assez important pour que les acteurs publics agissent.
 
 Cependant, même avec l’action de la CRIIRAD, certains maires ou organisations territoriales se trouvent impactées par la mauvaise gestion de l’Après-Mine. L’impact sur le tourisme et l’accès au ressource n’est pas négligeable, puisqu’il est impensable de construire un complexe sur un ancien site minier, ou de se servir de l’eau d’un lac pollué pour l’agriculture par exemple. AREVA ayant laissé les entreprises utiliser les stériles miniers pour différents projets, il faut aussi détruire des infrastructures qui présentent un danger radioactif.
- 
 
 
 \subsubsection{Gestion des risques par un acteur extérieur: le rôle de l’IRSN}
@@ -616,7 +563,7 @@ Pour les sites miniers, l’enjeu est le long terme: les polluants seront là pe
 
 L’objectif pour les entreprises est de faire en sorte que les eaux rejetées dans l’environnement   soient conformes aux limites fixées par arrêté préfectoral. Il est  basé sur les limites fixées par le RGIE (Règlement Général des Industries Extractives).
 
-Au niveau sanitaire, l’impact radiologique sur la santé a été évalué par la Commission Internationale de Protection Radiologique qui a évalué le risque à 17 cancers pour 100 000 personnes exposées à 1 mSv/an. La limite fixée pour le public est de 1 mSv/an et pour les travailleurs miniers de 20 mSv/an. Or, certains acteurs comme des associations pour les travailleurs au Niger ou les "Amis de la Terre” en France dénoncent Orano pour ne pas avoir admis mettre en danger ses travailleurs en les exposant à 20 mSv/an. Selon eux, d’une part les études scientifiques ne sont pas précises et donc Orano n’est en rien obligé de se plier aux seuils définis par la CIPR et d’autre part Orano ne prend pas en compte dans ses calculs les émissions radiologiques liées au fond géochimique lorsque le travailleur rentre chez lui.
+Au niveau sanitaire, l’impact radiologique sur la santé a été évalué par la Commission Internationale de Protection Radiologique qui a évalué le risque à 17 cancers pour 100 000 personnes exposées à 1 mSv/an. La limite fixée pour le public est de 1 mSv/an et pour les travailleurs miniers de 20 mSv/an. Or, certains acteurs comme des associations pour les travailleurs au Niger ou les Amis de la Terre en France dénoncent Orano pour ne pas avoir admis mettre en danger ses travailleurs en les exposant à 20 mSv/an. Selon eux, d’une part les études scientifiques ne sont pas précises et donc Orano n’est en rien obligé de se plier aux seuils définis par la CIPR et d’autre part Orano ne prend pas en compte dans ses calculs les émissions radiologiques liées au fond géochimique lorsque le travailleur rentre chez lui.
 
 \subsection{Les différentes normes mises en place sur l’eau}
 \subsubsection{Acteurs de la législation}
@@ -643,7 +590,7 @@ La qualité de l’eau potable est encadrée par une réglementation européenne
 \paragraph{Australie}
 
 En Australie, les \textit{Environmental Requirements} (ER) pour la mine d’uranium de Ranger, établis en 1999, fixent les normes de protection environnementale auxquelles l’entreprise responsable d’un site minier doit se soumettre. L’entreprise doit s’assurer que les opérations minières ne compromettent pas l’écosystème environnant et la santé de la population locale. Elle doit maintenir la biodiversité des écosystèmes et assurer la continuation des processus biologiques. Elle doit par ailleurs réhabiliter le site minier de sorte à établir un environnement correspondant à sa zone géographique, en assurant la revégétalisation avec des espèces natives de cette zone, avec la même densité et abondance, ou encore en faisant en sorte que les caractéristiques d’érosion du site soient cohérentes, afin d’assurer la viabilité à long terme et, à terme, de permettre à la zone de se développer sans maintenance particulière par rapport aux zones alentour. De plus, l’entreprise doit assurer des conditions radiologiques stables afin que la dose reçue par les travailleurs et le public soit aussi basse que raisonnablement possible. Elle doit pour cela minimiser le volume d’eau contaminée nécessaire pour faire fonctionner le site, et minimiser la quantité de contaminants présente dans cette eau, tout en s’assurant que ces contaminants soient contenus dans le site. De même, les émissions gazeuses et particulaires doivent être minimisées. L’objectif étant de limiter autant que raisonnablement possible les risques pour la santé des locaux. L’entreprise doit pour cela suivre le principe BTP (\textit{Best Practicable Technology}), en implémentant la technologie disponible ayant le plus de retombées positives sur l’environnement. L’Australie a donc mis en place un mode de gestion ALARA (\textit{As Low As Reasonably Possible}) pour le contrôle et la réhabilitation de ses mines d’uranium.
-Les mesures correctives doivent être prises en accord avec le ministère de l’environnement, mais ce sont les compagnies minières qui ont la responsabilité de réaliser la réhabilitation et de payer les coûts associés jusqu’à ce que les autorités (comme par exemple le Northern Territory Department of Mines and Energy: NTDME) estiment que le site a été réhabilité à un niveau satisfaisant. La surveillance du site doit par ailleurs s’effectuer par des prélèvements réguliers sur les eaux souterraines.
+Les mesures correctives doivent être prises en accord avec le ministère de l’environnement, mais ce sont les compagnies minières qui ont la responsabilité de réaliser la réhabilitation et de payer les coûts associés jusqu’à ce que les autorités (comme par exemple le \textit{Northern Territory Department of Mines and Energy} : NTDME) estiment que le site a été réhabilité à un niveau satisfaisant. La surveillance du site doit par ailleurs s’effectuer par des prélèvements réguliers sur les eaux souterraines.
 
 \paragraph{Allemagne}
 
@@ -656,15 +603,15 @@ La réhabilitation des mines d’uranium allemandes est principalement gérée p
 
 \paragraph{Etats-Unis}
 
-Aux États-Unis, en 1950, le US Public Health Service commençait une étude sur les mineurs d'uranium, conduisant à la première publication d'une corrélation statistique entre le cancer et l'extraction d'uranium, publiée en 1962. Le gouvernement fédéral a finalement réglementé la quantité standard de radon dans les mines, fixant le niveau à 0,3 WL en 1969. 
+Aux États-Unis, en 1950, le \textit{US Public Health Service} commençait une étude sur les mineurs d'uranium, conduisant à la première publication d'une corrélation statistique entre le cancer et l'extraction d'uranium, publiée en 1962. Le gouvernement fédéral a finalement réglementé la quantité standard de radon dans les mines, fixant le niveau à 0,3 WL en 1969. 
 
-Plus tard, l'USAEC (United States Atomic Energy Commission) a donné l’objectif et des conseils pour la réhabilitation de l’eau dans les anciens sites miniers, surtout pour les eaux souterraines contaminées par l'ISR. L’objectif est de restaurer la qualité de l'eau dans les nappes aquifères affectées à l’état avant l'exploitation minière. Bien que toutes les caractéristiques chimiques ne puissent pas être retournées à celles avant l'extraction, l'eau doit être assurée aux mêmes utilisations qu'auparavant. 
+Plus tard, l'USAEC (\textit{United States Atomic Energy Commission}) a donné l’objectif et des conseils pour la réhabilitation de l’eau dans les anciens sites miniers, surtout pour les eaux souterraines contaminées par l'ISR. L’objectif est de restaurer la qualité de l'eau dans les nappes aquifères affectées à l’état avant l'exploitation minière. Bien que toutes les caractéristiques chimiques ne puissent pas être retournées à celles avant l'extraction, l'eau doit être assurée aux mêmes utilisations qu'auparavant. 
 
-USAEC formule des recommandations concernant la caractérisation du niveau de base (baseline) de la qualité des eaux souterraines avant le début des opérations minières, la surveillance pour détecter l’évolution de lixiviat pendant l'exploitation minière et la surveillance à long terme pour déterminer à quel moment la qualité des eaux souterraines se stabilise après la fermeture des opérations minières.
+L'USAEC formule des recommandations concernant la caractérisation du niveau de base (baseline) de la qualité des eaux souterraines avant le début des opérations minières, la surveillance pour détecter l’évolution de lixiviat pendant l'exploitation minière et la surveillance à long terme pour déterminer à quel moment la qualité des eaux souterraines se stabilise après la fermeture des opérations minières.
 
 L'eau avant l'exploitation est généralement de mauvaise qualité (teneurs élevées en métal, en uranium et parfois de haute salinité), résultant des mécanismes de genèse du minerai. L'objectif de qualité physico-chimique à atteindre dépend de la réglementation locale, généralement de concentration aussi proche que possible du niveau de base.
 
-Par exemple, au Texas, c’est la TCEQ (Texas Commission on Environmental Quality) qui définit le niveau de base pour ses sites miniers locaux et surveille la réhabilitation. Le tableau suivant résume les données de référence des eaux souterraines avant l'extraction. Au Texas, 26 éléments chimiques sont mesurés avant l'exploitation minière pour établir le niveau de base, qui est l’objectif initial de restauration. On sélectionne la concentration moyenne la plus élevée de la zone de mine. Dans le site Zamzow, 0,171 milligramme par litre d'uranium était la valeur moyenne la plus élevée de cette zone.
+Par exemple, au Texas, c’est la TCEQ (\textit{Texas Commission on Environmental Quality}) qui définit le niveau de base pour ses sites miniers locaux et surveille la réhabilitation. Le tableau suivant résume les données de référence des eaux souterraines avant l'extraction. Au Texas, 26 éléments chimiques sont mesurés avant l'exploitation minière pour établir le niveau de base, qui est l’objectif initial de restauration. On sélectionne la concentration moyenne la plus élevée de la zone de mine. Dans le site Zamzow, 0,171 milligramme par litre d'uranium était la valeur moyenne la plus élevée de cette zone.
 
 %Figure 2 – Niveau de base du site Zamzow
 \begin{figure}[H]
@@ -674,7 +621,7 @@ Par exemple, au Texas, c’est la TCEQ (Texas Commission on Environmental Qualit
     \label{fig:site_zamzow_base}
 \end{figure}
 
-Cependant, une étude publiée par l'U.S. Geological Survey en 2009 a révélé que « À ce jour, aucune opération après ISR aux États-Unis n'a réussi à restaurer l'eau dans l'aquifère au niveau de base ». Tous les sites du Texas ont reçu des objectifs de restauration modifiés pour au moins un élément, déterminés par TCEQ. Les données de restauration finale pour Zamzow montrent une limite modifiée de 3,00 milligrammes par litre pour l'uranium. 
+Cependant, une étude publiée par l'\textit{U.S. Geological Survey} en 2009 a révélé que « À ce jour, aucune opération après ISR aux États-Unis n'a réussi à restaurer l'eau dans l'aquifère au niveau de base ». Tous les sites du Texas ont reçu des objectifs de restauration modifiés pour au moins un élément, déterminés par TCEQ. Les données de restauration finale pour Zamzow montrent une limite modifiée de 3,00 milligrammes par litre pour l'uranium. 
 
 
 %Figure 3 - Données de restauration finale du site Zamzow
@@ -703,7 +650,7 @@ Ce graphique de concentration d'uranium pour divers sites du Texas illustre la r
 
 Le Canada est un État fédéral et la responsabilité de la réglementation de traitement et la réhabilitation est partagée entre les gouvernements provincial et fédéral. Le 30 juin 1996, la dernière mine de la région d'Elliot Lake, la mine Stanleigh, était fermée. Après, seule la province de la Saskatchewan produit de l'uranium, mais comme la teneur en uranium du gisement de la Saskatchewan est élevée, le Canada restera le plus grand producteur d'uranium au monde.
 
-L'AECB (Atomic Energy Control Board), un organisme indépendant du gouvernement du Canada, est responsable des affaires liées à l'énergie nucléaire et aux matières radioactives. Le règlement R-90 traite de la fermeture et de la réhabilitation des sites. Bien que le Canada réglemente les mines d'uranium, les provinces sont les principaux propriétaires fonciers. Par conséquent, les mines d'uranium fermées reviendront finalement aux provinces ou redeviendront des terres de la Couronne. Les agences environnementales provinciales sont les principaux régulateurs de la qualité de l'eau de tous les sites miniers.
+L'AECB (\textit{Atomic Energy Control Board}), un organisme indépendant du gouvernement du Canada, est responsable des affaires liées à l'énergie nucléaire et aux matières radioactives. Le règlement R-90 traite de la fermeture et de la réhabilitation des sites. Bien que le Canada réglemente les mines d'uranium, les provinces sont les principaux propriétaires fonciers. Par conséquent, les mines d'uranium fermées reviendront finalement aux provinces ou redeviendront des terres de la Couronne. Les agences environnementales provinciales sont les principaux régulateurs de la qualité de l'eau de tous les sites miniers.
 
 En 1996, l'AECB a établi la réglementation stratégique de gestion des déchets radioactifs pour s'assurer que les déchets après les mines sont gérés de manière responsable. Les objectifs de cette réglementation canadienne sont :
 \begin{itemize}
@@ -713,7 +660,7 @@ En 1996, l'AECB a établi la réglementation stratégique de gestion des déchet
     \item ne pas interdire l'utilisation future des ressources naturelles contenues dans les déchets miniers.
 \end{itemize}
 
-Cela signifie en fait que des normes spécifiques sont développées, dépendant des situations actuelles de chaque site. Néanmoins, un certain nombre de critères communs sont applicables à tous les sites. Par exemple, une valeur de 1 mSv par an pour l'équivalent de dose efficace moyen est à respecter sur une période de 50 ans après la fermeture des sites d'uranium, ainsi que les autres exigences légales sur la sécurité nucléaire et la protection radiologique mises en place par AECB.
+Cela signifie en fait que des normes spécifiques sont développées, dépendant des situations actuelles de chaque site. Néanmoins, un certain nombre de critères communs sont applicables à tous les sites. Par exemple, une valeur de 1 mSv par an pour l'équivalent de dose efficace moyen est à respecter sur une période de 50 ans après la fermeture des sites d'uranium, ainsi que les autres exigences légales sur la sécurité nucléaire et la protection radiologique mises en place par l'AECB.
 
 Dans ce cadre, les propriétaires des déchets sont responsables du financement, de l'organisation, de la gestion et de l’élimination des installations. Pour les anciennes mines d'uranium, dont beaucoup ont été fermées il y a plus de 50 ans, plusieurs facteurs doivent être pris en compte. Dans de nombreux cas, l'entreprise qui exploitait la mine, ou son successeur, existe toujours et s'occupe des déchets sur ses sites. Cependant, dans certains cas, le site est retourné à la Couronne lorsque les entreprises n’existent plus et alors la responsabilité de traitement des déchets est partagée entre les gouvernements provincial et fédéral. Lorsque ces anciennes mines fonctionnaient, les réglementations environnementales appliquées à l'industrie minière n'étaient pas très strictes. Cependant, il n'est pas souvent pratique ou rentable de remettre en état les anciens sites en respectant les normes actuelles. La plupart des sites présentent un risque très faible, en raison des faibles teneurs de minerai, de leurs emplacements éloignés et du fait que les polluants se sont dissipés au cours des 50 dernières années.
 
@@ -726,9 +673,6 @@ Le traitement des eaux en sortie de mines est ainsi un enjeu central de l’apr�
 \paragraph{Traitement par précipitations} \hspace{1 em}
 
 %(IMAGE $III_A_1$)
-
-
-
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.5\linewidth]{III_A_1.png}
@@ -736,13 +680,11 @@ Le traitement des eaux en sortie de mines est ainsi un enjeu central de l’apr�
 \label{fig:bassin_decantation}
 \end{figure}
 
-
-
 Le procédé de traitement des eaux le plus répandu en France est le traitement actif par précipitation et coagulation-floculation-décantation. Il équipe onze des quinze stations de traitement des eaux de sortie de mine d'uranium françaises. 
 L’étape de précipitation vise la transformation des métaux dissous dans l’eau (généralement fer, aluminium, uranium, radium) en précipités insolubles par l’ajout de réactifs, souvent de la chaux ou de la soude, selon la réaction suivante :   
 $$Me^{n+} + n(OH) \rightarrow Me(OH)_{n}$$
           	
-L’ajout de sulfate d’alumine permet la formation d’hydroxyde d’aluminium sur lequel l'uranium est susceptible d'être fixé par sorption. De même, l’utilisation de chlorure de baryum permet de piéger de radium par la création d’un co-précipité baryum-radium. Ces réactions s’accompagnent d’une augmentation du pH. Etant donné que le pH favorisant la précipitation est différent selon les polluants, il faut ajuster le pH à une valeur optimale en fonction des polluants à éliminer, par exemple par l’ajout de soude ou de chaux.  
+L’ajout de sulfate d’alumine permet la formation d’hydroxyde d’aluminium sur lequel l'uranium est susceptible d'être fixé par sorption. De même, l’utilisation de chlorure de baryum permet de piéger de radium par la création d’un co-précipité baryum-radium. Ces réactions s’accompagnent d’une augmentation du pH. Étant donné que le pH favorisant la précipitation est différent selon les polluants, il faut ajuster le pH à une valeur optimale en fonction des polluants à éliminer, par exemple par l’ajout de soude ou de chaux.  
 
 La coagulation-floculation consiste en l’agrégation des précipités non décantables en microflocs puis en flocs  pour permettre leur décantation. Les réactifs couramment utilisés à cette fin sont la chaux pour la coagulation et les polymères organiques à longue chaîne carbonée pour la floculation. 
 
@@ -765,8 +707,8 @@ La maintenance nécessaire pour un site de traitement se divise entre le nettoya
 
 Les résines échangeuses d’ions sont des macromolécules granulaires insolubles. Elles possèdent des radicaux capables de permuter avec certains ions d’une solution de manière réversible. Lors du traitement, la résine se trouve dans un réservoir cylindrique fermé sous pression relié à un filtre et alimenté par un dispositif collecteur du liquide à traiter. Cet ensemble est appelé colonne.
 
-Le processus de traitement consiste à remplacer les ions centraux de complexes polluants par un autre type d’ion qui rendra le nouveau complexe inerte. Il existe 2 types de résines échangeuses d’ions : les résines cathodiques qui remplacent les cations des complexes de la solution (comme l’uranium $\text{U}^{4+}$) par des cations inoffensifs présents sur ces radicaux ; et les résines anodiques qui permutent des anions de la même manière.
-L’échange se fait selon l’équation suivante, de manière réversible sans altération ni solubilisation:
+Le processus de traitement consiste à remplacer les ions centraux de complexes polluants par un autre type d’ion qui rendra le nouveau complexe inerte. Il existe 2 types de résines échangeuses d’ions : les résines cathodiques qui remplacent les cations des complexes de la solution (comme l’uranium $\text{U}^{4+}$) par des cations inoffensifs présents sur ces radicaux et les résines anodiques qui permutent des anions de la même manière.
+L’échange se fait selon l’équation suivante, de manière réversible sans altération ni solubilisation :
 $$R-A^+ + B^+ = R-B^+ + A^+$$
 R est le radical de la résine, A l’ion de la résine fixé sur ce radical, et B l’ion à éliminer de la solution.
 
@@ -788,7 +730,7 @@ Ce type de traitement s’applique principalement à l’uranium dans le cadre d
 La majorité des coûts du traitement par résines échangeuses d’ions correspond à l’élution, aux coûts humains, matériels et de transport de la matière polluante.
 Un demi équivalent temps plein est nécessaire pour surveiller les différents paramètres de suivi (débits d’eau, concentrations et paramètre de fonctionnements comme la consommation électrique…), pour remplacer les colonnes et nettoyer les filtres.
 %(Tableau $III_A_1$)
-% \begin{figure}[!ht]
+% \begin{figure}[Ht]
 % \centering
 % \includegraphics[]{III_A_1.png}
 % \caption{Bassin de décantation}
@@ -813,7 +755,6 @@ Analyses & 4h / semaine  \\
 Dans le cas d’une mine d’uranium, la régénération des résines saturées permet de récupérer et revendre l’uranium à un prix avoisinant 80 €/kg.
 Le coût du matériel dépend directement du nombre de colonnes nécessaires et donc du débit d’eau à traiter : une colonne coûte 10 500 €.
 
-
 Le coût du transport correspond notamment aux déplacements des résines vers les lieux de régénération et dépend donc de l’éloignement entre le site de traitement de l’eau et le site de régénération des résines.
 L’ensemble des coûts de traitement pour un volume d’eau varie alors entre 0,10 et 0,50 €/$\text{m}^3$.
 
@@ -826,7 +767,6 @@ L’utilisation d’une zone humide (\textit{wetland} en anglais) constitue un m
 L’abaissement des concentrations en polluants dans l’eau repose sur trois procédés conjoints. D’une part, des bactéries sulfato-réductrices sont nourries par la matière organique présentes dans la tourbe et permettent le maintien du caractère réducteur du milieu. Dans ces conditions, l’uranium tend à précipiter en uraninite insoluble. D’autre part, uranium et radium peuvent être sorbés sur la matière organique ou sur les fractions argileuses présentes dans la tourbe. Enfin, dans le cas des eaux d’exhaure riches en fer, la présence d’une couche d’eau à la surface de la tourbière favorise la précipitation d’oxy-hydroxydes de fer capables de fixer uranium et radium. 
 
 Les coûts d’entretien d’une tourbière sont négligeables. Les seuls coûts significatifs lors de son fonctionnement sont ceux des analyses des eaux en sortie de la zone humide.
-
 
 %(Image III_A_4)
 \begin{figure}[H]
@@ -841,9 +781,7 @@ Les coûts d’entretien d’une tourbière sont négligeables. Les seuls coûts
 
 Il est assez fréquent qu’aucun traitement ne soit nécessaire sur un site minier, lorsque le site est assez isolé ou bien lorsque le traitement qui était nécessaire lors de l’exploitation est devenu inutile (voir III.B). Le coût n’est cependant pas nul, il faut continuer les prélèvements et analyses pour vérifier en permanence que l’eau n’a effectivement pas à être traitée et pouvoir traiter rapidement si un phénomène imprévu présente des dangers (apparition d’un nouveau rejet, effet saisonnier...). Les prélèvements doivent être réalisés au moins une fois par semaine et impliquent donc un coût humain. Il faut également payer les laboratoires responsables des analyses de ces prélèvements.
 
-
 Le coût est donc, même si aucun traitement n’est mis en place, non négligeable  par rapport au coût total de l’après-mine. Avec ou sans traitement, les prélèvements et analyses réalisés dans l’ensemble de la filière après-mine représentent un investissement de 700 000 à 800 000 € par an.
-
 
 Il est de même préférable de laisser les infrastructures en place après l'interruption d’un traitement, et de les entretenir régulièrement pour pouvoir recommencer le traitement si nécessaire, et permettre  une meilleure entente avec les associations et les locaux. 
 
@@ -875,19 +813,22 @@ En termes de coûts, les traitements par zones humides et par précipitation son
 %(Tableau III.A.2)
 
 
-\begin{center}
-\begin{tabular}{ |c |c |}
-\hline
- Type de traitement & Coût d’exploitation en € / m3 \\ 
- \hline
- Précipitations & 0.20 à 0.50 \\ 
- \hline
- Résines échangeuses d’ions & 0.10 (avec revente du polluant) à 0.50  \\
- \hline
-Zones humides & Négligeable  \\
- \hline
-\end{tabular}
-\end{center}
+\begin{figure}[H]
+    \centering    
+    \begin{tabular}{ |c |c |}
+        \hline
+         \textbf{Type de traitement} & \textbf{Coût d’exploitation en €/m$^3$} \\ 
+         \hline
+         Précipitations & 0,20 à 0,50 \\ 
+         \hline
+         Résines échangeuses d’ions & 0,10 à 0,50 (avec revente du polluant)  \\
+         \hline
+        Zones humides & Négligeable  \\
+         \hline
+    \end{tabular}
+    \caption{Coût d'exploitation des différents traitements \cite{schick_les_2020}}
+\label{tab:cout_exploitation_traitements}
+\end{figure}
 
 L’un des principaux enjeux de l’après-mine est de diminuer ces coûts car le traitement par résine est très avantageux lorsque le polluant peut être récupéré.
 
@@ -914,7 +855,7 @@ Ne pas traiter une eau dont les teneurs en polluants sont en adéquation avec le
 \subsubsection{Présentation du site de La Ribière}
 L’étude du traitement des eaux d’exhaure d’une mine nécessitait de se baser sur un exemple concret, et c’est pour cette raison que nous nous sommes penchés sur le site de la Ribière. 
 
-Situé sur la commune de Domeyrot dans la Creuse, ce site a été exploité de 1959 à 1984 par la compagnie TCMF (\emph{Total Compagnie Minière France}), qui en a extrait 142,9 tonnes d’uranium sur l’ensemble de la durée d’exploitation. Pour récupérer cette quantité d’uranium, il a fallu extraire 628 kt d’une mine à ciel ouvert (MCO) d’une superficie de 17472 m². Il n’y a pas de travaux miniers souterrains à la Ribière.
+Situé sur la commune de Domeyrot dans la Creuse, ce site a été exploité de 1959 à 1984 par la compagnie TCMF (\emph{Total Compagnie Minière France}), qui en a extrait 142,9 tonnes d’uranium sur l’ensemble de la durée d’exploitation. Pour récupérer cette quantité d’uranium, il a fallu extraire 628 kt d’une mine à ciel ouvert (MCO) d’une superficie de 17 472 m². Il n’y a pas de travaux miniers souterrains à la Ribière.
 
 Le traitement du minerai brut extrait a conduit, d’une part à l’uranium, et d’autre part à un volume important de résidus et de stériles miniers. Ainsi, une partie de ces résidus a été stockée sur le site, dans l’emplacement correspondant à l'ancienne mine à ciel ouvert, et pour une masse totale de 192 000 tonnes.
 
@@ -933,8 +874,210 @@ Nous nous proposons donc de mettre en œuvre deux modèles du site, hydrologique
 \subsubsection{Modèle géochimique et 1D}
 \paragraph{Modélisation}
 
+Nous avons réalisé, dans le cadre de l’étude de cas du site de La Ribière, un modèle géochimique des résidus, dans le but de modéliser ce qui se passe sur le site, en accord avec les mesures piézométriques, et comprendre les mécanismes de la mobilité de l’uranium. Nous avons également utilisé le modèle pour effectuer des prévisions à long terme.
+Pour réaliser le modèle, nous nous sommes servi des mesures effectuées dans les deux faciès, qui visaient à reconnaître les minéraux présents et la concentration des oxydes. (Annexe image 1 et 2) Nous avons sélectionné les oxydes principaux et ensuite déduis les minéraux qui pouvaient les contenir, pour arriver à une liste de 9 minéraux représentatifs de chaque faciès. Les concentrations de chaque minéral a ensuite été calculée en kilogramme par litre d’eau à l’aide des concentrations en oxydes. 
+	
+	(tableau à mettre) + (voir annexe)
+	
+Nous avons ainsi pu écrire un code Hytec pour calculer l’équilibre initial des deux faciès. Nous avons comparé les valeurs de pH, de concentration aqueuse en $UO_2^{2+}$, et en $SO_4^{2-}$ avec les mesures du piézomètre 3. Notre modèle correspondant bien à la réalité, nous avons gardé la géochimie précédemment calculée. Nous avons choisi de ne pas prendre en compte le radium.
+	
+	(deuxième tableau)
+	
+Pour étudier la mobilité de l’uranium, nous avons utilisé notre modèle géochimique pour créer une colonne 1D avec au début 30 mètre de résidus (faciès sableux) puis 170 mètres de granite. Nous avons ensuite ajouté un flux d’eau partant de la gauche pour s’écouler vers la droite. Les paramètres physiques correspondent à ceux du site de La Ribière. Pour la vitesse de l’écoulement, nous avons utilisé la hauteur de charge, la porosité et la perméabilité des différents faciès traversés. Pour obtenir un modèle le plus réaliste possible, nous avons choisi d’équilibrer l’eau injectée dans les résidus avec un granite basique, comme celui placé après le bloc de résidus. (code en annexe)
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{III_B_1.png}
+    \caption{Modélisation 1D des blocs de résidus (en rouge) et de granite (en gris)}
+    \label{fig:modele_bloc}
+\end{figure}
+
+Enfin, nous avons réalisé différentes simulations sur 100 ans pour étudier la mobilité de l’uranium et les facteurs l’influençant et nous les avons visualisées à l’aide du logiciel ParaView.
+
 
 \paragraph{Résultats du modèle géochimique }
+\paragraph{Etude du faciès sable}
+
+La première simulation réalisée vise à étudier la mobilité de l’uranium dans les conditions du site. Le pH de l’eau injectée est fixé à $6,1$, pH mesurer au niveau du piézomètre 2, juste avant la zone de résidus. Dans un premier temps, nous avons regardé l’effet de l’écoulement d’eau sur les résidus, et en particulier sur l’autunite, de formule $Ca(UO_2)_2(PO_4)_2(H_2O)_3$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{III_B_1.png}
+    \caption{Modélisation 1D des blocs de résidus (en rouge) et de granite (en gris)}
+    \label{fig:modele_bloc}
+\end{figure}
+
+On peut alors remarque que la quantité d’autunite est dissoute au cours du temps. Le phénomène en jeu ici est la dissolution de l’autunite. Un équilibre chimique va s’établir entre l’eau et les résidus. La concentration aqueuse en $UO_2^{2+}$ de l’eau injectée est nulle, ainsi l’autunite va se dissoudre pour que le système soit à l’équilibre. Cependant, on remarque que la concentration aqueuse en $UO_2^{2+}$ au niveau des résidus chute assez rapidement.
+
+(image 3)
+
+La concentration à l’équilibre initiale est environ $1 \mu mol/L$, puis en seulement 5 ans, elle est divisée par 10, pour finalement atteindre moins de $10^{-2} \mu mol/L$. L’uranium ne reste pas en solution. Il est en fait fixé sur la Montmorillonite et la Ferrihydrite grâce au phénomène de sorption.
+
+(image 4)
+
+La sorption est un phénomène d’échange cationique sur des sites libres en surface de minéraux, notamment sur les argiles. Son efficacité dépend donc de la surface spécifique des minéraux impliqués dans la sorption (typiquement $600 m^2/g$ pour les argiles) et de la capacité de fixation, qui est de l’ordre de $1 \mu mol/m^2$ (soit $6 \times 10^{-4} mol/g$ pour les argiles). Cependant, $UO_2^{2+}$ n’est pas le seul cation présent en solution pouvant être fixé. Les cations $Ca^{2+}$, $K^{+}$, $H^{+}$ et $Mg^{2+}$ peuvent également se fixer sur la Montmorillonite. Cependant, pour le pH étudié, seul $Ca^{2+}$ se fixe au cours du temps. Les trois autres ont plutôt tendance à être libérés, ils n’empêchent donc pas la sorption de l’uranium. \emph{(annexe images 1 à 4)}
+Dans un deuxième temps, nous avons regardé les caractéristiques physico-chimiques de l’eau rejetée dans la rivière : le pH, la concentration aqueuse en $UO_2^{2+}$, en $Fe^{3+}$ et en $Ba^{2+}$.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{III_B_2_5.png} 
+        \caption{}
+        \label{fig:pH_sable_Base}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{III_B_2_6.png} 
+        \caption{}
+        \label{fig:UO2_riviere_sable_base}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{III_B_2_7.png} 
+        \caption{}
+        \label{fig:Fe_riviere_sable_Base}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{III_B_2_8.png} 
+        \caption{}
+        \label{fig:Ba_riviere_sable_base}
+    \end{minipage}
+\end{figure}
+
+On remarque alors pour l’uranium un pic à $1 \mu mol/L$ correspondant au déplacement des ions en solution à l’équilibre initial, puis un établissement de la concentration inférieur à $0,1 \mu mol/L$. Cependant, la concentration augmente doucement à partir de 80 ans. En effet, les sites de sorption disponibles sont de moins en moins nombreux et donc les cations d’oxyde d’uranium sont de moins en moins fixés dans les résidus. Mais le phénomène reste faible. La concentration en baryum est négligeable et celle en fer ne dépasse pas les $70 \times 10^{-3} mg/L$. la norme de potabilité pour le fer est placée à $0,2 mg/L$, il n’y a donc aucun problème pour le fer.
+
+
+\paragraph{Influence du pH sur la mobilité de l'uranium}
+
+Pour étudier l’influence du pH sur la mobilité de l’uranium, nous avons choisi de changer le pH de l’eau injectée en entrée du modèle. Nous avons fait les simulations pour deux autres pH d’entrée : $4$ et $8$. Les résultats pour les trois pH sont superposés sur les mêmes courbes.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{III_B_2_9.png} 
+        \caption{}
+        \label{fig:autunite_residus_comparaison}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{III_B_2_10.png} 
+        \caption{}
+        \label{fig:UO2_residus_comparaison}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{III_B_2_11.png} 
+        \caption{}
+        \label{fig:UO2_fixe_rsidus_comparaison}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{III_B_2_12.png} 
+        \caption{}
+        \label{fig:UO2_riviere_comparaison}
+    \end{minipage}
+\end{figure}
+
+
+Lorsque que le pH devient très acide, la concentration aqueuse en $UO_2^{2+}$ au niveau des résidus augmente et la concentration d’ions fixés diminue par rapport aux pH neutre et basique. La dissolution de l’autunite est moins régulière : elle se fait plus par paliers, en commençant par le premier endroit en contact avec le pH acide. Il y a donc plus d’ion $UO_2^{2+}$ en solution et ils sont beaucoup moins fixés. On peut donc voir qu’une concentration bien plus importante atteint la rivière (presque 100 fois plus que pour un pH neutre ou basique). De plus, d’autre polluant comme le fer et le baryum sont également plus présent.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{III_B_2_13.png} 
+        \caption{}
+        \label{fig:Fe_riviere_comparaison}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{III_B_2_14.png} 
+        \caption{}
+        \label{fig:Ba_rivier_comparaison}
+    \end{minipage}
+\end{figure}
+
+Pour comprendre pourquoi l’uranium était moins fixé, nous avons regardé les concentrations des autres cations fixés sur la montmorillonite.
+
+(images 17)
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{III_B_2_15.png} 
+        \caption{}
+        \label{fig:Ca_residus_comparaison}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{III_B_2_16.png} 
+        \caption{}
+        \label{fig:K_residus_comparaison}
+    \end{minipage}
+\end{figure}
+
+
+Hormis le calcium, les autres cations sont plus fixés avec un pH bas. Un pH plus élevé ne change presque rien. Les sites de fixation sont en fait préférentiellement utilisés par les cations $Mg^{2+}$ et $K^{+}$, empêchant alors l’uranium de se fixer.
+En conclusion, le pH influence beaucoup la mobilité de l’uranium. Un pH plus élevé (basique) ne change presque rien à la sorption de l’uranium et donc à la concentration aqueuse en $UO_2^{2+}$ dans l’eau rejetée dans la rivière par rapport au pH initial de $6,1$. Cependant, lorsque le pH devient acide, les cations d’uranium sont beaucoup moins fixés, car remplacés par du magnésium et du potassium. Il y a donc une concentration en $UO_2^{2+}$ beaucoup plus élevée en sortie du modèle. Le contrôle du pH en amont des résidus est donc primordial pour le site.
+
+\paragraph{Etude d'une possibilité de sorption sur des hydroxydes d'aluminium précipités}
+Avec le modèle, nous avons essayé de mettre en place un traitement de l’eau par sorption sur des hydroxyde d’aluminium. Nous avons donc injecté des ions $Al^{3+}$ en solution en entrée du modèle. Cependant, la précipitation de $Al(OH)_3$ consomme des ions $OH^{-}$ et donc diminue le pH (il est alors autour de $4,5$). On observe donc une augmentation d’ions $UO_2^{2+}$ en solution. De plus, l’hydroxyde d’aluminium ne précipite que à l’entrée du modèle (dans les deux premières mailles).
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{III_B_2_18.png} 
+        \caption{}
+        \label{fig:UO2_residus_Al}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{III_B_2_19.png} 
+        \caption{}
+        \label{fig:UO2_fixe_residus_Al}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{III_B_2_20.png} 
+        \caption{}
+        \label{fig:UO2_riviere_Al}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{III_B_2_21.png} 
+        \caption{}
+        \label{fig:Al_riviere_Al}
+    \end{minipage}
+\end{figure}
+
+
+En sortie du modèle, on obtient une forte concentration en aluminium dans l’eau ($324 mg/L$ contre $200 \mu g/L$ pour la norme) et en uranium. Nous avons donc ajouté des hydroxydes d’aluminium en aval des résidus pour simuler une résine échangeuse d’ions et ajouter de la sorption.
+Nous regardons alors les caractéristiques physico-chimiques de l’eau en sortie du modèle, comparée avec celle que nous avions sans $Al(OH)_3$ en aval des résidus.
+
+(images 22, 23 et 24)
+
+On obtient effectivement moins d’uranium en solution pendant les 50 premières années, mais ensuite, la concentration se stabilise à $0,7 \mu mol/L$ pendant 30 ans puis augmente. La sorption est alors de moins en moins efficace On remarque de plus que le pH reste acide, ce qui explique des concentrations en $UO_2^{2+}$ élevées. Pour l’aluminium, on reste bien au-delà des normes en vigueur.
+Finalement, un traitement par sorption sur les hydroxydes d’aluminium semble efficace, mais pas sur le long terme. Pour envisager un tel traitement, il faut être capable de renouveler les hydroxydes d’aluminium tous les 30 ans, ou bien injecter des ions $Al^{3+}$ dans l’eau dans une station de traitement, puis réguler le pH (on n’a alors plus le problème du pH acide qui empêche l’$UO_2^{2+}$ de se fixer sur la montmorillonite). Il faut cependant faire attention aux autres polluant, notamment à l’aluminium, dont la quantité en solution est non négligeable en sortie de traitement.
+
+
+
 
 \subsubsection{Modèle hydrogéologique 2D}
 \paragraph{Modélisation}
@@ -943,9 +1086,9 @@ Nous voulons réaliser un modèle hydrogéologique du site, afin de pouvoir anal
 La modélisation du site sera réalisée à l'aide du logiciel HYTEC, développé depuis 1993 au sein du consortium \emph{Pôle Géochimie Transport} fondé autour du Département de Géosciences de Mines ParisTech - PSL \cite{site_hytec_hydrodynamique_nodate}. 
 Ce logiciel comporte un volet réalisant le calcul hydrodynamique nommé R2D2, qui est couplé avec le logiciel CHESS réalisant la simulation chimique \cite{lagneau:hal-00614306} afin d'obtenir un modèle complet de transport réactif. 
 
-Nous réaliseront le modèle géographique du site (code n°\ref{lst:modele_topo}) à l'aide du logiciel libre GMSH \cite{gmsh_site} afin de représenter fidèlement les données de terrain. Le choix du maillage n'est pas anodin, puisqu'il va servir de support pour que la machine puisse effectuer la simulation. Par exemple, puisque la couche de surface est estimée à 4 mètres d'épaisseur, il est nécessaire que les mailles fassent moins de 4 mètres: si possible, on choisira des paramètres de maillage qui permettront d'en avoir deux ou trois dans toute cette zone. Inversement, la zone de granite sain forme un socle presque imperméable, donc les flux hydrologiques seront moins importants. C'est pourquoi un maillage plus épais pourra être choisi. Enfin, puisque la zone de résidus de traitement contient les espèces à suivre, il faut être très précis, et choisir des mailles fines pour pouvoir bien rendre compte des deux faciès.
+Nous réaliseront le modèle géographique du site (code n°\ref{lst:modele_topo}) à l'aide du logiciel libre GMSH \cite{gmsh_site} afin de représenter fidèlement les données de terrain. Le choix du maillage n'est pas anodin, puisqu'il va servir de support pour que la machine puisse effectuer la simulation. Par exemple, puisque la couche de surface est estimée à 4 mètres d'épaisseur, il est nécessaire que les mailles fassent moins de 4 mètres : si possible, on choisira des paramètres de maillage qui permettront d'en avoir deux ou trois dans toute cette zone. Inversement, la zone de granite sain forme un socle presque imperméable, donc les flux hydrologiques seront moins importants. C'est pourquoi un maillage plus épais pourra être choisi. Enfin, puisque la zone de résidus de traitement contient les espèces à suivre, il faut être très précis, et choisir des mailles fines pour pouvoir bien rendre compte des deux faciès.
 
-Pour proposer un modèle convaincant du site, il est nécessaire de s’intéresser aux flux hydrogéologiques. Nous avons pour cela utilisé un rapport hydrogéologique du site, daté de 2011 \cite{societe_areva_nc_etude_2011}. Nous nous sommes basés sur les relevés des 9 piézomètres du site et avons décidé de faire une modélisation en coupe, ce qui permet à la fois de décrire "l'épaisseur" du site dans toute sa richesse tout en évitant de réaliser un modèle 3D beaucoup trop complexe. Cette coupe (figure \ref{fig:coupe_ribiere}) a été choisie car d'une part elle comprend l'intégralité de l'étendue du site (de 348 m à 395 m d'altitude), la zone de résidus et la rivière. Nous disposons également de 5 piézomètres pour nous renseigner sur le terrain.
+Pour proposer un modèle convaincant du site, il est nécessaire de s’intéresser aux flux hydrogéologiques. Nous avons pour cela utilisé un rapport hydrogéologique du site, daté de 2011 \cite{societe_areva_nc_etude_2011}. Nous nous sommes basés sur les relevés des 9 piézomètres du site et avons décidé de faire une modélisation en coupe, ce qui permet à la fois de décrire « l'épaisseur » du site dans toute sa richesse tout en évitant de réaliser un modèle 3D beaucoup trop complexe. Cette coupe (figure \ref{fig:coupe_ribiere}) a été choisie car d'une part elle comprend l'intégralité de l'étendue du site (de 348 m à 395 m d'altitude), la zone de résidus et la rivière. Nous disposons également de cinq piézomètres pour nous renseigner sur le terrain.
 
 \begin{figure}[H]
     \centering
@@ -997,9 +1140,9 @@ Les données météorologiques montrent des précipitations effectives (c’est 
 
 Les modélisations montrent l’importance de la perméabilité et de la porosité des différentes zones, puisque de faibles variations induisent des comportements différents à long terme. Il est donc nécessaire d’avoir des valeurs les plus précises possibles et les plus représentatives du site. En effet, un gradient de perméabilité trop élevé, ou bien des discontinuités de perméabilité peuvent engendrer des comportements non représentatifs, comme une remontée du traceur dans les résidus en surface. Il est également important de noter l'impact de l'anisotropie ou de l'isotropie de ces paramètres de transport. En effet, si il est possible de modéliser la perméabilité du granite sain comme isotrope, il n'en va de même pour la couche en surface. Un perméabilité verticale plus élevée qu'une perméabilité horizontale signifierait que l'eau s'infiltrant dans le sol serait plus à même de s'enfoncer dans les roches, et donc dans les couches granitiques en profondeur, que de se déplacer vers la rivière en contrebas, ce qui n'est pas cohérent. Inversement, puisque les résidus miniers sont sous forme de boue et de sable, il faut avoir une perméabilité isotrope dans ces zones.
 
-On retrouve l'impact des paramètres de transfert dans l'étude du champ de vitesse dans la zone de précipitation. A 40 et 140 m, on remarque une infiltration plus élévée que partout ailleurs: ceci est du à une discontinuité forte de perméabilité verticale, puisque la zone de surface a une perméabilité presque 10 fois plus faible que la zone de résidus selon cet axe. On remarque également sur cette simulation l'impact des saisons, avec un champ de vitesse parfois orienté vers la rivière (moment où les précipitations sont faibles) et parfois orienté verticalement (moment de fortes précipitations, donc l'infiltration prédomine). Une fois le régime permanent établie, on observe à environ 10 m du sol, un champ de vitesse toujours orienté vers la rivière: ceci correspond au déplacement de l'eau dans la couche de granite fracturé, puisque le granite sain est presque imperméable.
+On retrouve l'impact des paramètres de transfert dans l'étude du champ de vitesse dans la zone de précipitation. À 40 et 140 m, on remarque une infiltration plus élevée que partout ailleurs: ceci est du à une discontinuité forte de perméabilité verticale, puisque la zone de surface a une perméabilité presque dix fois plus faible que la zone de résidus selon cet axe. On remarque également sur cette simulation l'impact des saisons, avec un champ de vitesse parfois orienté vers la rivière (moment où les précipitations sont faibles) et parfois orienté verticalement (moment de fortes précipitations, donc l'infiltration prédomine). Une fois le régime permanent établie, on observe à environ 10 m du sol, un champ de vitesse toujours orienté vers la rivière: ceci correspond au déplacement de l'eau dans la couche de granite fracturé, puisque le granite sain est presque imperméable.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \begin{minipage}{0.5\textwidth}
         \centering
@@ -1014,9 +1157,9 @@ On retrouve l'impact des paramètres de transfert dans l'étude du champ de vite
     \caption{Variation des vitesses d'écoulement dues aux précipitations au cours d'une année}
 \end{figure}
 
-La détermination du temps de résidence de l'eau dans le système peut se faire de différentes façons. Une approximation linéaire permet un calcul d’ordre de grandeur : une modélisation par deux zones, une zone de résidus et une de granite fracturé, donne un temps de résidence d’environ 15 ans. La solution analytique donne également le même ordre de grandeur, avec un temps de résidence entre 20 et 22 ans de l'eau dans le système. Enfin, le modèle hydrogéologique montre l’évolution du traceur des résidus : on obtient ici un temps de résidence de 25 ans.
+La détermination du temps de résidence de l'eau dans le système, c'est à dire le temps qu'il faut pour que l'eau passe des résidus à la rivière, peut se faire de différentes façons. Une approximation linéaire permet un calcul d’ordre de grandeur : une modélisation par deux zones, une zone de résidus et une de granite fracturé, donne un temps de résidence d’environ 15 ans. La solution analytique donne également le même ordre de grandeur, avec un temps de résidence entre 20 et 22 ans de l'eau dans le système. Enfin, le modèle hydrogéologique montre l’évolution du traceur des résidus : on obtient ici un temps de résidence de 25 ans.
 
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{III_B_3_8.png}
     \caption{Résultat de la simulation du modèle hydrogéologique après 25 ans}
@@ -1036,27 +1179,22 @@ Une fois le modèle hydrogéologique et le modèle chimique établi, nous avons 
 Il a fallu néanmoins interpréter certaines données. Des relevés et analyses chimiques dans les différentes zones mises en jeu pourraient être réalisées pour évaluer précisément les compositions et concentrations en les différentes espèces. Par exemple, les taux précis en gypse ne sont pas connus partout.
 
 \subsubsection{Conclusion pour le site}
+Le modèle réalisé nous a permis de comprendre comment l’uranium pouvait circuler pour le site de la Ribière, et ce qui influence cette circulation. Ainsi, l’acidité de l’eau en entrée du système est un facteur déterminant pour la fixation de l’Uranium : en effet, si pour un pH de 6 ou de plus, l’uranium est globalement sorbé, pour un pH de 4, c’est plutôt le potassium et le magnésium qui se fixent. On obtient alors de l’uranium mobile, et donc de concentrations élevées en aval du système. De même les paramètres de transport des roches, comme la porosité et la perméabilité, vont permettre de délimiter des zones dans lesquelles l’écoulement est plus ou moins favorisé, ce qui va directement impacter la localisation et la vitesse des réactions chimiques.
 
+Puisque l’acidité de l’eau joue un rôle si important pour ce site, il serait judicieux de contrôler le pH de l’eau de pluie, afin de pouvoir réagir et traiter si celui-ci devient trop faible. Il faudrait aussi contrôler la teneur en aluminium, puisqu’il peut y avoir précipitation de ALOH3 ce qui ferait baisser le pH. Il ne semble pas pour l’instant y avoir de problème de pollution au fer.
+
+Le modèle construit admet toutefois certaines limites. Par exemple, nous n’avons modélisé que 9 minéraux pour les résidus. On peut se demander si ceci est bien représentatif de la zone, et il pourrait être intéressant de voir si cela reflète bien la composition réelle. En effet, l’ajout d’un seul minéral de plus peut impacter grandement les équilibres et les résultats. De même, le granite a été modélisé comme un granite usuel : peut être faudrait il étudier plus précisément le site, et notamment la zone de granite fracturé afin de voir quelles sont les particularités pour la Ribière. Enfin, on peut encore essayer d’améliorer le modèle numérique, puisque la modélisation des zones est encore un peu brutale : peut être pourrait on envisager des zones de transition, avec des modifications des paramètres physiques continues pour éviter des anomalies.
 
 \newpage
-\subsection{Atténuer la teneur en radon gazeux : le wikihow des radonistes}
-%ne vous inquiétez pas, je cherche encore un titre. -G
-% oui je m'inquiétais un peu hihihi -LJ
+\subsection{Atténuation de la teneur en radon gazeux}
 
-\paragraph{} Le radon, dont la production est réalisée en grande partie dans les résidus de traitement, peut être diffusé jusqu’à la surface. Selon les caractéristiques du milieu utilisé et la profondeur des résidus, la concentration en radon à la surface est plus ou moins atténuée. Nous nous sommes inspirés du carottage réalisé dans les résidus de la Ribière (figure III-C-1) pour construire nos modèles analytique et numérique. En effet, un modèle analytique unidimensionnel permet d’obtenir une première idée des ordres de grandeur en question, et les simulations numériques permettent d'obtenir plus de détails réalistes.
-
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width = 11cm]{III_C_1.png}
-    \caption{Carottage dans les résidus du site de la Ribière}
-    \label{fig:carottage_residus}
-\end{figure}
+\paragraph{} Le radon, dont la production est réalisée en grande partie dans les résidus de traitement, peut être diffusé jusqu’à la surface. Selon les caractéristiques du milieu utilisé et la profondeur des résidus, la concentration en radon à la surface est plus ou moins atténuée. Nous nous sommes inspirés du carottage réalisé dans les résidus de la Ribière (figure \ref{fig:carottage_residus}) pour construire nos modèles analytique et numérique. En effet, un modèle analytique unidimensionnel permet d’obtenir une première idée des ordres de grandeur en question, et les simulations numériques permettent d'entrer dans les détails des processus en jeu.
 
 \subsubsection{Diffusion unidimensionnelle : modèle analytique}
 
 \paragraph{Mise en équation et longueur caractéristique}
 
-\paragraph{} On se place dans la couche de stériles, au-dessus de la couche de résidus, où on néglige la production de radon dans un premier temps. On prend en compte la désintégration radioactive du radon et sa diffusion, de coefficient effectif $D_{eff}=D \omega^a {S_g}^b$ ($a$ et $b$ sont les coefficients de Millington-Quirk, on peut prendre $a=b=2$ dans les stériles miniers et $a=b=1$ dans l’air ou l’eau). La concentration de radon gazeux $c(z,t)$ en $mol/m^3$ évolue selon l’équation (Ferry, C. 2002) :
+\paragraph{} On se place dans la couche de stériles, au-dessus de la couche de résidus, où on néglige la production de radon dans un premier temps. On prend en compte la désintégration radioactive du radon et sa diffusion, de coefficient effectif $D_{eff}=D \omega^a {S_g}^b$ ($a$ et $b$ sont les coefficients de Millington-Quirk, on peut prendre $a=b=2$ dans les stériles miniers et $a=b=1$ dans l’air ou l’eau). La concentration de radon gazeux $c(z,t)$ en mol/m$^3$ évolue selon l’équation \cite{ferry_migration_2000} :
 
 $$
 \frac{\partial \omega S_g c}{\partial t} = D_{eff}  \frac{\partial^2 c}{\partial z^2}-\lambda \omega S_g c
@@ -1070,7 +1208,7 @@ L=\sqrt{\frac{D_{eff}}{\lambda \omega S_g }}=\sqrt{\frac{D \omega^a {S_g}^b}{\la
 $$
 Les applications numériques donnent :
 
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \includegraphics[width = \linewidth]{III_C_2.png}
     \caption{Longueurs caractéristiques de diffusion dans l'air, les stériles et l'eau}
@@ -1082,39 +1220,21 @@ Notons tout d’abord qu’une couche de protection est nécessaire : l’air ne
 \newpage
 \paragraph{Résolution de l'équation}
 
-\paragraph{} En régime stationnaire, l’équation différentielle admet la solution :
+\paragraph{} On montre en annexe que le régime transitoire ne dure que quelques jours. En régime stationnaire, l’équation différentielle admet la solution :
 $$
-c(z)=A \exp(-\frac{z}{L})+B \exp (\frac{z}{L})
+c(z)=A \exp \Big(-\frac{z}{L} \Big)+B \exp \Big( \frac{z}{L} \Big)
 $$
-La constante $B$ est nulle, car la concentration est nulle à l’infini. On place l’interface résidus/stériles à la cote $z=0$. L’équilibre séculaire dans les résidus implique alors l’égalité $c(0)=A=c_0$.
+La constante $B$ est nulle, car la concentration est nulle à l’infini. On place l’interface résidus/stériles à la cote $z=0$. L’équilibre séculaire dans les résidus implique alors l’égalité $c(0)=A=c_0$. Ainsi, on a :
 $$
-c(z)=c_0 \exp(-\frac{z}{L})
+\left\{ \begin{array}{cl}
+c(z)=c_0 \exp\Big(-\frac{z}{L}\Big) \\
+a(z)=N_a \lambda c(z) =a_0 \exp\Big(-\frac{z}{L}\Big)
+\end{array} \right.
 $$
 
-Par ailleurs, notons $erfc$ la fonction d’erreur complémentaire :
-$$
-erfc(u)=\frac{2}{\sqrt{\pi}} \int_{u}^{+\infty } e^{-\xi^2} d\xi
-$$
-Il existe une solution de l’équation en régime transitoire avec $c(0,t)=c_0$, de la forme :
-$$
-c(z,t)=\frac{c_0}{2} \Big( \exp(-\frac{z}{L}) \, erfc(\frac{z}{2L\sqrt{ \lambda t}} - \sqrt{\lambda t}) + \exp(\frac{z}{L}) \, erfc(\frac{z}{2L\sqrt{\lambda t}} + \sqrt{\lambda t} ) )
-$$
-L’expression admet un temps caractéristique de convergence vers l’état stationnaire :
-$$
-\tau=1/\lambda=4,8 \; .10^5 \; s=5j \; 13h
-$$
-Les graphiques suivants illustrent la progression de la solution transitoire vers l'état stationnaire, de gauche à droite.
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width = \linewidth]{III_C_3.png}
-    \caption{Transition vers l'état stationnaire}
-    \label{fig:diffusion_transitoire}
-\end{figure}
-
-\newpage
 \paragraph{Premières conclusions sur l'épaisseur de stériles nécessaire}
 
-\paragraph{} Dans un bâtiment habité, le niveau de référence d’activité volumique est de $a_n=300 \; Bq/m^3$. Imaginons que l’on souhaite respecter cette valeur à la surface de l’endroit où sont enfouis les résidus. Le facteur d’atténuation minimum requis est alors :
+\paragraph{} Dans un bâtiment habité, le niveau de référence d’activité volumique est de $a_n=300 \; \text{Bq/m}^3$. Imaginons que l’on souhaite respecter cette valeur à la surface de l’endroit où sont enfouis les résidus. Le facteur d’atténuation minimum requis est alors :
 $$
 r_{min}=\frac{a_0}{a_n} =3,03 \; .10^4
 $$
@@ -1132,25 +1252,16 @@ Ainsi, pour atténuer le radon et respecter le niveau de référence, il est né
 \paragraph{Sensibilité des différents paramètres}
 \paragraph{} Cette partie s'intéresse à la sensibilité des différents paramètres quant à leur impact sur l'efficacité de la diffusion du radon. Dans le modèle analytique, la variabilité tourne autour de la longueur caractéristique de diffusion, qui est déterminée selon le coefficient de diffusion, la porosité, la saturation et les coefficients de Millington-Quirk. Comme on s'intéresse en particulier à l'effet de la saturation en eau plus loin, focalisons nous d'abord sur les autres paramètres.
 
-La figure suivante montre l'impact significatif que le coefficient de diffusion a sur la diffusion du radon. Sur le site de la Ribière, on peut l'estimer autour de $1 \; .10^5 \; m^2s^{-1}$.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 9 cm]{III_C_8.png}
-    \caption{Fonction $\exp(-z/L)$ en fonction du coefficient de diffusion}
-    \label{fig:sens_diffusion}
-\end{figure}
-
-Il est important d'estimer le coefficient de diffusion des stériles avec précision, dans le but de déterminer l'épaisseur minimale de la couche à déposer au-dessus des résidus.
+La figure \ref{fig:sens_diffusion} montre l'impact significatif que le coefficient de diffusion a sur la diffusion du radon. Sur le site de la Ribière, on peut l'estimer autour de $1 \; .10^5 \; \text{m}^2 \text{s}^{-1}$.
 
 D'autres paramètres rentrent également en compte. La porosité et les coefficients de Millington-Quirk, qui interviennent dans l’expression du coefficient de diffusion effectif, peuvent grandement impacter la longueur effective de diffusion :
 $$
-L=\sqrt{\frac{D_{eff}}{\lambda \omega S_g }}=\sqrt{\frac{D \omega^a {S_g}^b}{\lambda \omega S_g }}
+L=\sqrt{\frac{D_{\text{eff}}}{\lambda \,\omega\, S_g }}=\sqrt{\frac{D \,\omega^a {S_g}^b}{\lambda\, \omega \,S_g }}
 $$
 
 Le tableau suivant donne une gamme de valeurs possibles de la longueur caractéristique $L$ en fonction de ces différents paramètres. On a retenu une saturation en gaz moyenne $S_g=0,3$.
 
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \includegraphics[width = \linewidth]{III_C_9.png}
     \caption{Valeur de $L$ en fonction de $a=b$, $D$ et $\omega$}
@@ -1162,59 +1273,20 @@ Sur le site de la Ribière, il y a une couche protectrice d'environ $6,5\;m$ au 
 \newpage
 \subsubsection{Introduction des modèles numériques}
 
-% Paul ?
-(juste expliquer l'importance des modèles numériques par rapport au modèle analytique)
-
 \paragraph{Deux modèles numériques}
-\paragraph{} Présenter rapidement : Modèle Nicolas. Modèle Irina. Modèle Nicolas/Paul. + donner code en annexe (j'ai déjà mis deux codes type Irina)
-% Paul ?
+\paragraph{} Nous utilisons le code de calcul HYTEC introduit plus haut dans sa dimension transport. 2 types de modèles sont utilisés par la suite pour obtenir les résultats. Les 2 modèles se limitent au cas unidimensionnel : on modélise une colonne de stériles et/ou résidus pour étudier comment le radon est produit et diffusé vers la surface. La différence entre les 2 types de modèles est la façon de modéliser le terme source de radon. Le premier type de modèle, le plus simple et le plus utilisé par la suite, ne comprend que des stériles dans la colonne. En effet pour modéliser les résidus source de radon nous utilisons une condition limite : une fugacité constante en radon à la limite stériles/résidus. Le deuxième type de modèle modélise les stériles et les résidus, la production du radon est intégré dans la roche elle-même : le gaz émane là où il y a du radium. Ce deuxième modèle n'est utilisé que dans la modélisation numérique de l'impact d'un terme source . Il s’agit là d’une présentation sommaire de ces modèles, pour des détails techniques sur leur implémentation dans le code HYTEC, se reporter à l'annexe \ref{annexe:detail_modele_radon_sec} \ref{annexe:detail_modele_radon_sub_sec}, pour les codes HYTEC utilisés se reporter aux annexes (citer annexe à ajouter)
 
-\paragraph{Relation entre fugacité et activité du radon}
-\paragraph{}Les modèles numériques demandent, pour les gaz, des conditions initiales exprimées en fugacité. Le but de cette partie est de formaliser les relations reliant l’activité du radon gazeux $a(z,t)$ en $Bq/m^3$, la concentration en radon gazeux $c(z,t)$ en $mol/m^3$ et la fugacité du radon gazeux $P_{Rn} (z,t)$ en $Pa$. La relation des gaz parfaits donne, à une température $T$ et avec $R$ la constante des gaz parfaits :
-$$
-P_{Rn} (z,t)=\frac{n_{Rn} RT}{V}=RTc(z,t)=\frac{RT}{N_a \lambda} a(z,t)
-$$
-On en déduit, pour une activité du radon $a_0=9,1 \; MBq/m^3$ dans les résidus, la fugacité initiale $p_0=p(0,t)$ à entrer dans le modèle HYTEC :
-$$
-p_0=1,7 \; .10^{-8} \; Pa=1,7 \;.10^{-13} \; bar
-$$
-
-\newpage
 \paragraph{Sensibilité des modèles numériques aux différents paramètres}
-\paragraph{} Cette partie est consacrée à la sensibilité des paramètres sur les modèles numériques. Les simulations ont été réalisées avec un même coefficient de diffusion $D = 1\;.10^{-6} m^2s^{-1}$, une porosité élevée $\omega = 0,43$ et une saturation variable dans la zone des stériles.
+\paragraph{} Cette partie est consacrée à la sensibilité des paramètres sur les modèles numériques. Les simulations ont été réalisées avec un même coefficient de diffusion $D = 1.10^{-6}$ m$^2 \!$ s$^{-1}$, une porosité élevée $\omega = 0,43$ et une saturation variable dans la zone des stériles.
 
-La figure suivante donne, en pourcentage, l'atténuation du radon en fonction des coefficients de Millington-Quirk sélectionnés. La simulation a été réalisée sur un modèle de 2 mètres, réduit par rapport à la réalité du site, mais cela suffit pour visualiser la sensibilité.
+La figure \ref{fig:sens_hytec_mq} donne, en pourcentage, l'atténuation du radon en fonction des coefficients de Millington-Quirk sélectionnés. La simulation a été réalisée sur un modèle de 2 mètres, réduit par rapport à la réalité du site, mais cela suffit pour visualiser la sensibilité. On note que ces coefficients influent grandement sur la diffusion du radon.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 10 cm]{III_C_10.png}
-    \caption{Résultats HYTEC en fonction des coefficients de Millington-Quirk}
-    \label{fig:sens_hytec_mq}
-\end{figure}
-
-Les figures suivantes illustrent la sensibilité des paramètres de Van-Genuchten. Ces coefficients interviennent dans l’expression de la pression capillaire, qui joue un rôle lorsque la saturation en eau n’est pas uniforme, en particulier dans un modèle vertical. On a :
+Les coefficients de Van-Genuchten, notés $\alpha$ et $n$, interviennent dans l’expression de la pression capillaire, qui joue un rôle lorsque la saturation en eau n’est pas uniforme, en particulier dans un modèle vertical. En posant $S_{e,\text{eff}}$ la saturation effective en eau, son expression est donnée par :
 $$
-p_c (S_e)= \frac{1}{\alpha} ( {S_{e,eff} }^{\frac{n}{n-1}} -1 )^{1/n}
+p_c (S_e)= \dfrac{1}{\alpha} \left( {S_{e,\text{eff}} }^{\frac{n}{n-1}} -1 \right)^{1/n}
 $$
-Où on a posé $S_{e,eff}$ la saturation effective en eau. Étudions la sensibilité des paramètres $\alpha$ et $n$ à l’aide d’un modèle vertical HYTEC.
 
-La figure suivante montre qu'une variation d’ordre $\pm 1$ du paramètre $\alpha$ ne modifie pas l’ordre de grandeur de la fugacité à la surface. En effet, à $n=1,56$ fixé, pour $\alpha \in \left\{2 ; \; 3,6 ; \; 4 ; \; 5\right\}$, on obtient :
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 10 cm]{III_C_11.png}
-    \caption{Résultats HYTEC en fonction de $\alpha$}
-    \label{fig:sens_hytec_alpha}
-\end{figure}
-
-La figure suivante montre qu'une variation d’ordre $\pm 0,1$ du paramètre $n$ ne modifie pas l’ordre de grandeur de la fugacité à la surface. En effet, à $\alpha=3,6$ fixé, pour $n \in \left\{1,30 ;\;1,56  ;\;1,70;\;2\right\}$, on obtient :
- 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 10 cm]{III_C_12.png}
-    \caption{Résultats HYTEC en fonction de $n$}
-    \label{fig:sens_hytec_n}
-\end{figure}
+Les figures \ref{fig:sens_hytec_alpha} et \ref{fig:sens_hytec_n} illustrent la sensibilité des paramètres de Van-Genuchten, et montrent qu'avec des coefficients de Millington-Quirk égaux à 2, une variation d’ordre $\pm 1$ du paramètre $\alpha$ ou une variation d’ordre $\pm 0,1$ du paramètre $n$ ne modifie pas l’ordre de grandeur de la fugacité du radon à la surface.
 
 Par la suite, nous avons fixé les paramètres de Van-Genuchten à $\alpha = 3,6$ et $n=1,56$, qui sont des valeurs moyennes pour les matériaux concernés.
 
@@ -1223,7 +1295,7 @@ Par la suite, nous avons fixé les paramètres de Van-Genuchten à $\alpha = 3,6
 
 \paragraph{Résultats analytiques}
 
-\paragraph{} Premièrement, le modèle analytique permet d'obtenir des ordres de grandeur. Pour un coefficient de diffusion moyen $D=1,0 \; .10^{-5} \; m^2/s^$, une porosité moyenne $\omega=0,30$ et des coefficients de Millington-Quirk égaux à 2, le tableau suivant donne les longueurs caractéristiques et les épaisseurs de stériles nécessaires pour respecter le niveau de référence de$300\; Bq/m^3$, en fonction de la saturation en gaz. Plus il y d’eau dans les pores, plus la saturation en gaz est faible.
+\paragraph{} Premièrement, le modèle analytique permet d'obtenir des ordres de grandeur. Pour un coefficient de diffusion moyen $D=1,0.10^{-5} \; \text{m}^2/\text{s}$, une porosité moyenne $\omega=0,30$ et des coefficients de Millington-Quirk égaux à 2, le tableau suivant donne les longueurs caractéristiques et les épaisseurs de stériles nécessaires pour respecter le niveau de référence de $300\; \text{Bq/m}^3$, en fonction de la saturation en gaz. Plus il y d’eau dans les pores, plus la saturation en gaz est faible.
 
 \begin{figure}[H]
     \centering
@@ -1232,75 +1304,24 @@ Par la suite, nous avons fixé les paramètres de Van-Genuchten à $\alpha = 3,6
     \label{fig:tableau_saturation}
 \end{figure}
 
-Lorsque la roche est saturée, la diffusion est moindre. Au contraire, une période sèche favorise la diffusion. Avec une épaisseur de stériles d'environ $6,5\; m$, le site de la Ribière peut être exposé à des activités de radon plus élevées en été quand il pleut moins souvent.
+Lorsque la roche est saturée, la diffusion est moindre. Au contraire, une période sèche favorise la diffusion. Avec une épaisseur de stériles d'environ 6,5 m, le site de la Ribière peut être exposé à des activités de radon cinq à dix fois plus élevées en été quand il pleut moins souvent.
 
 Il faut maintenant se tourner vers le modèle numérique, qui permet d’observer le régime transitoire alors que le sol est soumis aux précipitations, puis d'obtenir des courbes.
 
 \paragraph{Résultats numériques et liens avec le modèle analytique}
 
-\paragraph{} Nous utilisons ici le modèle numérique 2. Avec des précipitations moyennes de $400\;mm/an$ et une simulation pendant un an, on obtient un sol saturé après les précipitations (gauche). Sans précipitations, la zone non-saturée a un profil graduel (droite).
+\paragraph{} Nous utilisons ici le modèle numérique 2 avec des précipitations moyennes de 200 mm/an et une simulation pendant un an. La figure \ref{fig:rain_fugacity} donne la fugacité du radon en fonction de la cote (où l'origine est au niveau des résidus), en échelle logarithmique. La courbe bleue correspond au cas pluvieux et la courbe brune au cas témoin.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 10 cm]{III_C_5.png}
-    \caption{Teneur en eau avec ou sans précipitations}
-    \label{fig:water_content_rain}
-\end{figure}
+L’échelle logarithmique montre que la concentration en radon est divisée par un facteur 10, ce qui était dans l'ordre de grandeur donné par le modèle analytique. On en déduit que les précipitations sont bénéfiques quant à l’atténuation du radon gazeux. Le phénomène en jeu est la dissolution du radon dans l’eau. La présence d’eau augmente la pression, donc déplace l’équilibre de Henry entre le radon gazeux et le radon aqueux, dont la concentration augmente dans la zone humide.
 
-La figure suivante donne la fugacité du radon en fonction de la cote (où l'origine est au niveau des résidus), en échelle logarithmique. La courbe bleue correspond au cas pluvieux et la courbe brune au cas témoin.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 12 cm]{III_C_6.png}
-    \caption{Fugacité du radon avec ou sans précipitations}
-    \label{fig:rain_fugacity}
-\end{figure}
-
-L’échelle logarithmique montre que la concentration en radon est divisée par un facteur 10. On en déduit que les précipitations sont bénéfiques quant à l’atténuation du radon gazeux. Le phénomène en jeu est la dissolution du radon dans l’eau. La présence d’eau augmente la pression, donc déplace l’équilibre de Henry entre le radon gazeux et le radon aqueux, dont la concentration augmente dans la zone humide. La figure suivante donne les profils de pression, de fugacité du radon gazeux, de concentration en radon aqueux et de radon gazeux alors que le sol est en train de se remplir d'eau. Les courbes rouges correspondent au profil sec, les courbes bleues au cas pluvieux.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 12 cm]{III_C_7.png}
-    \caption{Dissolution du radon dans l'eau de pluie}
-    \label{fig:dissolution_radon_pluie}
-\end{figure}
-
+\newpage
 \subsubsection{Impact d'un terme source au sein des stériles}
 
 \paragraph{} Sur la plupart des anciens sites miniers, les résidus de traitement sont recouverts de stériles miniers. Ces derniers ont des activités plus faibles en uranium et en radium, et donc produisent moins de radon. Néanmoins, il est important de quantifier l'impact d'une source de radon au sein des stériles pour s'assurer que la décision de les utiliser pour recouvrir les résidus est sans danger.
 
 \paragraph{Résultats du modèle analytique}
 
-\paragraph{} Les stériles contiennent du radium d’activité massique $A_{Ra,s}$. Le radium se désintègre avec un coefficient $\lambda_{Ra}$. Ajoutons un terme source dans l’équation différentielle en concentration de radon $c(z,t)$ ($mol/m^3$) :
-$$
-\frac{\partial \omega S_g c}{\partial t} = D_{eff}  \frac{\partial^2 c}{\partial z^2}-\lambda \omega S_g c + \lambda_{Ra}(1-\omega)E c_{Ra}
-$$
-Cette équation se résout également en régime stationnaire, pour $c=c(z)$ et $L=\sqrt{\frac{D_{eff}}{\lambda \omega S_g }}$ :
-$$
-\frac{d^2 c}{dz^2} - \frac{c}{L^2}= \frac{\lambda_{Ra}(1-\omega)E}{D_{eff}} c_{Ra}
-$$
-On obtient, avec les mêmes conditions aux limites :
-$$
-c(z)= c_s + (c_0 - c_s) \exp(-z/L)
-$$
-On a posé la concentration source $c_s$ :
-$$
-c_s = \frac{(1-\omega)E\rho_s}{\lambda_{Rn}\omega S_g N_a} A_{Ra,s} 
-$$
-Ce résultat est à comparer avec la solution sans terme source, de la forme $c_0 \exp(-z/L)$. On calcule donc le rapport suivant :
-$$
-R=\frac{c_s}{c_0}= \frac{\frac{(1-\omega)E\rho}{\lambda_{Rn}\omega S_g N_a} A_{Ra,s}}{\frac{ E_r (1-\omega_r) \rho_r }{\lambda_{Rn} \omega_r S_{g,r} N_a} A_{Ra,r}} = \frac{E}{E_r} \frac{(1-1/\omega)}{(1-1/\omega_r)} \frac{\rho}{\rho_r} \frac{S_{g,r}}{S_g} \frac{A_{Ra,s}}{A_{Ra,r}}
-$$
-On a alors :
-$$
-c(z)=c_s + c_0(1-R) \exp(-z/L))
-$$
-L'interprétation de cette expression est claire :
-\begin{itemize}
-  \item Si $R\ll 1$, alors la production de radon dans les stériles est négligeable.
-  \item Sinon, la production de radon dans les stériles peut être visible.
-  \item Dans tous les cas, au bout d'une certaine altitude, seule la production de radon dans les stériles n'est visible.
-\end{itemize}
+\paragraph{} Le modèle analytique, avec l'ajout d'un terme source dans les stéril de radon dans les stériles est négligeable. Sinon, la production de radon dans les stériles peut être importante. Dans tous les cas, au bout d'une certaine altitude, seule la production de radon dans les stériles n'est visible.
 
 Ainsi, mettre une très grande couche de stériles permet d'atténuer complètement l'émanation de radon des résidus, mais cela n'a de sens que si les stériles eux-mêmes ne génèrent pas une grande quantité de radon. En effet, il se peut que le radon détecté à la surface soit issu des stériles, et non pas des résidus.
 
@@ -1310,13 +1331,13 @@ Donnons un ordre de grandeur du coefficient $R$ sur le site de la Ribière. On p
   \item Stériles miniers $\omega = 0,34$ ; résidus $\omega_r = 0,43 $
   \item Stériles miniers et résidus : $\rho \simeq \rho_r$
   \item Stériles non saturés $S_g = 0,67$; résidus saturés $S_{g,r}=0,03$
-  \item Stériles miniers $A_{Ra,s}= 0 - 0,04 - 0,4 \; Bq/g$, résidus $A_{Ra,s}= 4,0 \; Bq/g$
+  \item Stériles miniers $A_{Ra,s}= 0 - 0,04 - 0,4 \; \text{Bq/g}$, résidus $A_{Ra,s}= 4,0 \; \text{Bq/g}$
 \end{itemize}
-On obtient $ R=7,0\%$, ce qui signifie la production de radon dans les stériles, même le radium y est environ trois fois moins actif, a une influence sur la courbe de diffusion du radon. On peut ainsi comparer les concentrations à la surface, avec ou sans terme source ($L=0,6\;m$, $h=6,5\;m$):
+On obtient $ R=7,0\%$, ce qui signifie que la production de radon dans les stériles, même le radium y est environ trois fois moins actif, a une influence sur la courbe de diffusion du radon. On peut ainsi comparer les concentrations à la surface, avec ou sans terme source ($L=0,6$ m, $h=6,5$ m) :
 \begin{itemize}
-  \item Pour $A_{Ra,s}=0 \; Bq/g$ : $c(h) = 1,4 \; .10^{-16} mol/m^3$ soit $180 \; Bq/m^3$
-  \item Pour $A_{Ra,s}=0,04 \; Bq/g$ : $c(h) = 3,0 \; .10^{-16} mol/m^3$ soit $373 \; Bq/m^3$
-  \item Pour $A_{Ra,s}=0,4 \; Bq/g$ : $c(h) = 1,7 \; .10^{-15} mol/m^3$ soit $2,1 \; .10^3 Bq/m^3$
+  \item Pour $A_{Ra,s}=0$ Bq/g : $c(h) = 1,4 \; .10^{-16} \text{mol/m}^3$ soit 180 Bq/m$^3$
+  \item Pour $A_{Ra,s}=0,04$ Bq/g : $c(h) = 3,0 \; .10^{-16} \text{mol/m}^3$ soit 373 Bq/m$^3$
+  \item Pour $A_{Ra,s}=0,4$ Bq/g : $c(h) = 1,7 \; .10^{-15} \text{mol/m}^3$ soit $2,1 \; .10^3$ Bq/m$^3$
 \end{itemize}
 
 Ainsi, avec une activité de radium cent fois plus faible dans les stériles, l'activité du radon à la surface est multipliée par deux, et avec une activité de radium seulement dix fois plus faible, l'activité du radon est multipliée par un facteur 10 à la surface.
@@ -1324,9 +1345,7 @@ Ainsi, avec une activité de radium cent fois plus faible dans les stériles, l'
 Cette étude analytique permet donc de penser que les stériles doivent également être surveillés en terme de teneur en radium, car ils peuvent amplement modifier la teneur en radon gazeux à la surface.
 
 \paragraph{Résultats du modèle numérique}
-\paragraph{} 
-
-
+\paragraph{} Le modèle numérique utilisé est du deuxième type : modélisation de l'émanation du radon dans toute la colonne sans condition aux limites. Dans le cas de ce modèle, nous sommes limités par la précision des calculs internes de HYTEC, ainsi nous ne pouvons pas travailler avec les fugacités en radon réellement présentes sur le site de la Ribière. On va donc s'intéresser à des fugacités relatives par rapport à une
 
 \subsubsection{Conclusions sur le risque radon}
 
@@ -1339,7 +1358,12 @@ Cette étude analytique permet donc de penser que les stériles doivent égaleme
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
 
+\newpage
+\section*{Références bibliographiques}
+\addcontentsline{toc}{section}{Références bibliographiques}
 
+\printbibliography[heading=none] % j'ai trouvé !!!
+%Bien joué ! J'ai déplacé avant les annexes car je crois que cette bibliographie n'est pas une annexe car on a utilisé les refs dans le rapport --S
 
 %%%%%% ANNEXES %%%%%%%
 \newpage
@@ -1350,15 +1374,391 @@ Cette étude analytique permet donc de penser que les stériles doivent égaleme
     {Annexe \thesection \: -}
     {0.5 em}
     {}
-\newpage
-\section*{Références bibliographiques}
-\addcontentsline{toc}{section}{Références bibliographiques}
-
-\printbibliography[heading=none] % j'ai trouvé !!!
 
 \newpage
 \section{Figures utiles}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=13cm]{II_A2_1.png}
+    \caption{Chaîne de désintégration de l’uranium}
+    \label{fig:desintegration_uranium}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10cm]{II_A2_4.png}
+    \caption{Exposition moyenne de la population aux rayonnements ionisants}
+    \label{fig:exposition_moyenne}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{II_A2_5.png}
+    \caption{Comparaison des normes radiologiques sur le radon}
+    \label{fig:comparaison_normes}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 14.5cm]{III_C_1.png}
+    \caption{Carottage dans les résidus du site de la Ribière}
+    \label{fig:carottage_residus}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height = 0.4 \textheight]{III_C_8.png}
+    \caption{Fonction $\exp(-z/L)$ en fonction du coefficient de diffusion}
+    \label{fig:sens_diffusion}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height = 0.4 \textheight]{III_C_10.png}
+    \caption{Résultats HYTEC en fonction des coefficients de Millington-Quirk}
+    \label{fig:sens_hytec_mq}
+\end{figure}
+
+
+% \begin{figure}[H]
+%     \centering
+%     \makebox[\textwidth]{\makebox[1.3\textwidth]{\begin{minipage}{0.6\textwidth}
+%         \centering
+%         \includegraphics[height = 0.3 \textheight]{III_C_11.png}
+%         \caption{Résultats HYTEC en fonction de $\alpha$, à $n=1,56$ fixé}
+%         \label{fig:sens_hytec_alpha}
+%     \end{minipage}\hfill
+%     \begin{minipage}{0.6\textwidth}
+%         \centering
+%         \includegraphics[height = 0.3 \textheight]{III_C_12.png}
+%         \caption{Résultats HYTEC en fonction de $n$, à $\alpha=3,6$ fixé}
+%       \label{fig:sens_hytec_n}
+%     \end{minipage}}}
+% \end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height = 0.26 \textheight]{III_C_11.png}
+    \caption{Résultats HYTEC en fonction de $\alpha$, à $n=1,56$ fixé}
+    \label{fig:sens_hytec_alpha}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[height = 0.26 \textheight]{III_C_12.png}
+    \caption{Résultats HYTEC en fonction de $n$, à $\alpha=3,6$ fixé}
+    \label{fig:sens_hytec_n}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[height = 0.25 \textheight]{III_C_6.png}
+    \caption{Fugacité du radon avec ou sans précipitations}
+    \label{fig:rain_fugacity}
+\end{figure}
+
+\newpage
+\section{Hydrogéologie : la loi de Darcy}
+\subsection{La loi de Darcy}
+
+\paragraph{} Les roches sont poreuses : elles peuvent stocker de l’eau. On appelle porosité le rapport $p=\dfrac{V_{libre}}{V_{tot}}$, où $V_{tot}$ représentant le volume total de l'échantillon dont on veut mesurer la porosité, et $V_{libre}$ le volume qui y est laissé inoccupé. Ce rapport traduit la capacité de stockage d'une roche et peut atteindre jusqu’à 60\% pour les argiles, ou valoir quelques dixièmes de pourcents pour certains granites. Cela explique que les roches laissent circuler l’eau. Cependant, la porosité de définit pas la facilité avec laquelle l’eau peut circuler dans les roches. Cette propriété, liée à la porosité mais non déductible de cette dernière, s’appelle la perméabilité.
+
+L’hydrogéologie est l’étude de l’écoulement de l’eau dans les roches. Un premier modèle permettant d’étudier le phénomène est la loi de Darcy, du nom de l’hydraulicien Henry Darcy qui l’a établie. Elle s’écrit : $V = - K\cdot \nabla(h)$ où V est la vitesse de Darcy, K la perméabilité et h la charge. %et c'est nabla pas grad 
+
+Le logiciel HYTEC utilisé pour le calcul du modèle hydrogéologique détermine les écoulements de l’eau dans les roches par des calculs de charge en tenant compte des conditions imposées aux limites en charge, des perméabilités des milieux traversés et de la loi de Darcy. Le modèle du site de la Ribière étant constitué d’un ensemble de zones de perméabilité uniforme, nous établissons dans un premier temps le profil de charge dans des cas très simples de modèles à une dimension, et étudions rapidement un modèle très simple de prise en compte des précipitations. La vitesse de Darcy représente alors le débit de l’écoulement à travers la roche ou son opposé selon l'orientation du problème, le débit étant pris positif. 
+\subsection{Modèles simples pour la compréhension des phénomènes}
+\subsubsection{Variations de perméabilité}
+\paragraph{} On considère une zone d’épaisseur L et de perméabilité uniforme K (figure \ref{fig:ecoulement_permea_uniforme}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=6cm]{A_III_B_1.png}
+    \caption{Ecoulement dans une roche de perméabilité uniforme}
+    \label{fig:ecoulement_permea_uniforme}
+\end{figure}
+%super ! ouais ça rend pas mal du tou je trouve mdr bravo à toi en ft cest bcp trop penible overleaf
+De l’eau s’y écoule avec un débit Q. On se place au régime stationnaire. La charge en amont de la roche est notée $h_1$ et la charge en aval est notée $h_2$.
+
+La loi de Darcy relie les paramètres du problème :
+
+$$ Q = -V = K\nabla(h) = K\,\frac{dh}{dx} $$
+
+
+La conservation de la masse impose un débit constant dans toute l’épaisseur de la roche. Le gradient de charge est donc constant et  $Q = K\dfrac{\Delta h}{L} $.
+
+On considère à présent une deux zones de roches superposées d’épaisseurs respectives $L_1$ et $L_2$ et de perméabilités respectives $K_1$ et $K_2$ (figure \ref{fig:ecoulement_permea_variable}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=6cm]{A_III_B_2.png}
+    \caption{Ecoulement dans une roche de perméabilité variable}
+    \label{fig:ecoulement_permea_variable}
+\end{figure}
+
+On cherche à déterminer, au régime stationnaire, le profil de charge. Pour ce faire, on se place au régime stationnaire et on fixe les valeurs $h_2$ et $h_0$ en amont et en aval du système. La conservation de la masse empêche l’accumulation d’eau dans une tranche élémentaire de roche : le débit est donc uniforme sur tout le système. On note $h_1$ la valeur de la charge à l’interface entre les roches.
+
+Grâce à la loi de Darcy,  l’égalité du débit s’écrit alors : 
+
+$$ K_1 \,\frac{h_2 - h_1}{L_1} = K_2\, \frac{h_1 - h_0}{L_2} $$
+
+D’où l’on tire :
+
+$$ \left(\frac{K_1}{L_1} + \frac{K_2}{L_2}\right)\cdot h_1 = \frac{K_2}{L_2} \,h_0 + \frac{K_1}{L_1}\, h_2$$
+
+On peut alors exprimer Q en fonction de $h_0$ et $h_2$ :
+
+\begin{equation}
+\begin{split}
+Q &= \dfrac{K_1}{L_1} \left(h_0 - \dfrac{K_1}{L_1(\frac{K_1}{L_1} + \frac{K_2}{L_2})}\,h_2 - \dfrac{K_2}{L_2(\frac{K_1}{L_1} + \frac{K_2}{L_2})}\,h_0\right)\\
+&\\
+& = \dfrac{K_1}{L_1}\left(h_2\,\left(1 -  \dfrac{K_1}{L_1\,(\frac{K_1}{L_1} + \frac{K_2}{L_2})}\right) - h_0\dfrac{K_2}{L_2\,(\frac{K_1}{L_1} + \frac{K_2}{L_2})}\right)\\ 
+&\\
+& = \dfrac{K_1}{L_1}\left(h_2\,\dfrac{\frac{K_2}{L_2}}{\frac{K_1}{L_1} + \frac{K_2}{L_2}} - h_0\,\dfrac{\frac{K_2}{L_2}}{\frac{K_1}{L_1} + \frac{K_2}{L_2}}\right)\\
+&\\
+& = \dfrac{\dfrac{K_1K_2}{L_1L_2}}{\dfrac{K_1}{L_1} + \dfrac{K_2}{L_2}}\,(h_2 - h_0)
+\end{split}
+\end{equation}
+
+
+On peut alors définir une perméabilité équivalente pour le système complet, en considérant que sa longueur équivalente est $L_{eq} = L_1 + L_2$ :
+
+$$ Q = \frac{K_{eq}}{L_{eq}}\,(h_0 - h_2) $$
+
+Il vient :
+
+$$ K_{eq} = (L_1 + L_2)\,\dfrac{\dfrac{K_1K_2}{L_1L_2}}{\dfrac{K_1}{L_1} + \dfrac{K_2}{L_2}} $$
+
+On peut généraliser la relation à un nombre quelconque de perméabilités en série en notant que le rapport $ \dfrac{L}{K} $ est additif :  
+
+$$ \dfrac{L_{eq}}{K_{eq}} = \dfrac{L_1}{K_1} + \dfrac{L_2}{K_2} $$
+
+Pour n zones de roches en série de perméabilités et longueurs respectives $K_{i}$ et $L_{i}$, la perméabilité équivalente est :
+$$K_{eq} = \frac{\sum\limits_{i=1}^{n}L_i}{\sum\limits_{i=1}^{n}\frac{K_i}{L_i}} $$
+
+On est alors en mesure, connaissant les conditions aux bords d’un système de perméabilités en série, de déterminer la charge aux interfaces entre deux zones de roches en se ramenant à un problème à deux perméabilités par un calcul de perméabilité équivalente. Alors, le débit et la perméabilité étant constants dans une même zone rocheuse, la loi de Darcy permet d’affirmer que le gradient de charge y est aussi constant. On peut alors calculer la charge en tout point du système.
+
+Le système s’apparente alors à un système électrostatique, et on peut dresser l’analogie suivante :
+
+\begin{center}
+\begin{tabular}{ |c |c |}
+\hline
+ \textbf{Hydrologie} & \textbf{Électrocinétique} \\ 
+ \hline
+ Charge $h$ & Potentiel $V$ \\ 
+ \hline
+ Vitesse de Darcy $v$ & Densité de courant $j$  \\
+ \hline
+Perméabilité $K$ & Conductance électrique $\gamma$  \\
+ \hline
+Loi de Darcy : $v = -K\,\nabla h$ & $j = -\gamma\,\nabla V$  \\
+ \hline
+\end{tabular}
+\end{center}
+
+\subsection{Une première intégration des précipitations au modèle}
+\paragraph{} On considère le problème unidimensionnel suivant : une roche de perméabilité $K$ et de longueur $L$ est traversée par un écoulement stationnaire.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=13cm]{A_III_B_3.png}
+    \caption{Écoulement selon la direction x dans une roche de perméabilité uniforme soumise à des précipitations}
+    \label{fig:ecoulement_précipitations}
+\end{figure}
+\newpage
+Pour modéliser des précipitations (plus précisément leur infiltration dans les roches), on ajoute de l’eau de manière uniforme sur toute la longueur de la roche. On note q l’apport d’eau en $\text{m}^3/\text{s}/\text{m}$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=6cm]{A_III_B_4.png}
+    \caption{à légender}
+    \label{fig:schema_carre_ecoulement}%on touche pas au label
+\end{figure}
+
+
+On écrit l’équation de conservation de la charge d'après la figure \ref{fig:schema_carre_ecoulement} :
+$$ \text{div} (Q)=q$$
+
+On a donc $\dfrac{\text{d}Q}{\text{d}x}=q$.
+Or $Q= -K\, \dfrac{dh}{dx}$.
+
+On obtient donc l’équation différentielle du second ordre $\dfrac{\text{d}^2h}{\text{d}x^2}=-q/K$. 
+Pour la résoudre entièrement, il est nécessaire de connaître les conditions aux limites. 
+
+En supposant les conditions en charge en $x = 0$ et $x = L$ connues, on obtient le profil de charge dans le roche :
+
+$$h(x) = -\frac{Q}{2K}x^2 + \left(\frac{h_2 - h_1}{L} + \frac{QL}{2K}\right)x + h_2$$
+
+
+En supposant la condition en charge en $x = L$ et le débit entrant $Q_0 = K \dfrac{\text{d}h}{\text{d}x}(x = 0)$ connus, on obtient le profil de charges dans la roche :
+$$h(x) = -\frac{Q}{2K}x^2 + \frac{Q_0}x + h_2$$
+
+\newpage
+\section{Radon : détails des raisonnements}
+\label{annexe:detail_modele_radon_sec}
+\subsection{Estimation du facteur d'émanation}
+\label{annexe:emanation}
+
+\paragraph{} La formule suivante du facteur d'émanation $F_e$ est donnée en fonction du paramètre $x=2\,R_s/D$ et on a tracé la fonction selon le diamètre, avec $R_s=30$ nm dans le grain (figure \ref{fig:facteur_emanation}).
+
+$$
+F_e (x)= \frac{3}{4} \,x\,(1- \frac{x^2}{12} )
+$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10cm]{II_A2_2.png}
+    \caption{Facteur d’émanation en fonction du diamètre des grains}
+    \label{fig:facteur_emanation}
+\end{figure}
+
+\subsection{Équilibre séculaire : calculs }
+\label{annexe:seculaire}
+
+\paragraph{} Le but est de déterminer l'activité volumique du radon au sein des résidus, de concentration en radium solide $c_{Ra}$ constante (mol/m$^3$). 
+
+La proportion de quantité de matière de $Rn(g)$ créée par désintégration atteignant les porosités par unité de volume est $E c_{Ra}$, où $E$ est le facteur d’émanation. On note $\lambda_{Ra}$ et $\lambda_{Rn}$ les coefficients de désintégration du radium et du radon en $s^{-1}$. 
+
+On caractérise le milieu par une masse volumique $\rho$, une porosité $\omega$ et une saturation en gaz $S_g$. La concentration en radon $c_{Rn}$ en mol/m$^3$ évolue selon l'équation :
+
+$$
+\frac{\text{d} \omega S_g c_{Rn}}{\text{d}t} = - \lambda_{Rn}\cdot \omega\cdot S_g \cdot c_{Rn} + \lambda_{Ra} \cdot E \cdot(1-\omega)\cdot c_{Ra}
+$$
+
+A l'équilibre séculaire, $c_{Rn}(t)=c_0$ et ainsi :
+
+$$
+c_0 = \frac{ \lambda_{Ra} E (1-\omega) c_{Ra} }{\lambda_{Rn} \omega S_g}
+$$
+
+On notera les activités en radon et en radium dans les résidus, avec $N_a$ le nombre d'Avogadro :
+\begin{itemize}
+  \item $a_{Rn}= \lambda_{Rn} N_a c_{Rn}$ en Bq/m$^3$
+  \item $A_{Ra}= \dfrac{\lambda_{Ra} N_a }{\rho} c_{Ra}$ en Bq/kg
+\end{itemize}
+
+Ce qui permet d'obtenir les expressions, et les applications numériques dans le cas du site de la Ribière, avec $\rho = 2,6 \;.10^3 \text{ kg/m}^3$, $\omega= 0,43$, $S_g=0,3$ et $A_{Ra}=4 000$ Bq/kg :
+
+$$
+c_0 = \dfrac{ E \,(1-\omega)\, \rho }{\lambda_{Rn}\: \omega \,S_g N_a} A_{Ra} = 7,1.10^{-12} \text{ mol/m}^3
+$$
+$$
+a_0=\lambda_{Rn} N_a c_0 =\frac{E(1-\omega)\rho}{\omega S_g} A_{Ra} =9,1 \, \text{MBq/m}^3
+$$
+
+\subsection{Dose efficace : estimation du facteur $r$}
+\label{annexe:estimation_r}
+
+\paragraph{} On cherche à retrouver la valeur $r=7,8 \; .10^{-6} \;\text{m}\text{Sv}/(\text{Bq}/\text{m}^3.\text{h})$.
+
+L’IRSN donne un lien \cite{irsn_ineris_radon_nodate} entre l’activité volumique du radon $a$ et l’énergie alpha potentielle volumique $e_{\alpha}$ (l’énergie libérée par les désintégrations successives par unité de volume) à l’aide du facteur d’équilibre $F$ et du coefficient de conversion $f=5,56$ nJ/Bq :
+$$
+F=\frac{e_{\alpha}}{f\cdot a}
+$$
+
+On sait que le risque radiologique du radon gazeux se situe au niveau des poumons. Le volume d’air inspiré par une personne est égal à $V=4,8.10^3 \;  \text{m}^3/\text{an}=0,55 \; \text{m}^3/\text{h} $. Or, la dose absorbée en Grey pendant une durée $\Delta t$ et avec des poumons moyens de masse $m=1,2$ kg est donnée par : 
+$$
+d_{Gy}=\frac{E_{\text{absorbée}}}{m}=\frac{e_{\alpha} V \Delta t}{m}=\frac{F\,f\,V\Delta t}{m}\,a
+$$
+On peut en déduire la dose efficace en Sieverts, qui est pondérée par un facteur $\omega_{rad}=20$ (radioactivité alpha) et un facteur $\omega_{tissu}=0,12$ (tissus pulmonaires) :
+$$
+d_{Sv}=\omega_{rad}\: \omega_{tissu} \: d_{Gy} = r'\cdot F\cdot\Delta t\cdot a
+$$
+On a alors posé le facteur $r'$ :
+$$
+r'= \frac{\omega_{rad}\, \omega_{tissu}\,  f\,V}{m}=6,1.10^{-6} \; \text{m}\text{Sv}/(\text{Bq}/\text{m}^3.\text{h})
+$$
+Qui constitue un ordre de grandeur raisonnable du facteur r, avec un écart relatif de 22$\%$.
+
+\subsection{Diffusion unidimensionnelle : régime transitoire}
+
+Notons $\text{erfc}$ la fonction d’erreur complémentaire :
+$$
+\text{erfc}(u)=\frac{2}{\sqrt{\pi}} \int_{u}^{+\infty } e^{-\xi^2} \text{d}\xi
+$$
+Il existe une solution de l’équation en régime transitoire avec $c(0,t)=c_0$, de la forme :
+$$
+c(z,t)=\frac{c_0}{2} \left( \exp\!\left(-\frac{z}{L}\right) \, \text{erfc}\!\left(\frac{z}{2L\sqrt{ \lambda t}} - \sqrt{\lambda t}\right) + \exp\!\left(\frac{z}{L}\right) \, \text{erfc}\!\left(\frac{z}{2L\sqrt{\lambda t}} + \sqrt{\lambda t} \right) \right)
+$$
+L’expression admet un temps caractéristique de convergence vers l’état stationnaire :
+$$
+\tau=\frac{1}{\lambda}=4,8 \; .10^5 \; \text{s}=5\text{j} \; 13\text{h}
+$$
+Les graphiques suivants illustrent la progression de la solution transitoire vers l'état stationnaire, de gauche à droite.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \linewidth]{III_C_3.png}
+    \caption{Transition vers l'état stationnaire}
+    \label{fig:diffusion_transitoire}
+\end{figure}
+
+Ainsi, au bout d'une ou deux semaines, le régime stationnaire est atteint.
+
+\subsection{Détails des modèles HYTEC utilisés}
+\label{annexe:detail_modele_radon_sub_sec}
+\paragraph{}Cette partie explicite des détails propres aux implémentations dans HYTEC des différents modèles utilisés
+
+\paragraph{Deux codes HYTEC}l'étude du transport vers la surface du gaz radon, la prise en compte de sa désintégration radioactive est primordiale, en effet sa demie-vie de 2,8 jours est assez courte pour qu'une part non négligeable du gaz se soit désintégrée  avant d'arriver à la surface : ce phénomène va avoir un impact sur sa diffusion. Cette décroissance radioactive n'est pas prise en compte par HYTEC par défaut, nous avons donc utilisé 2 méthodes pour pallier à ce problème.
+% SECTION MAL ECRITE A REVOIR
+La première consiste à utiliser les outils que le code HYTEC nous met à sa disposition et de "détourner" leurs usages. Dans notre cas, nous créons un minéral fictif composé uniquement de radon ; le code permet définir les paramètres de l'équation de création du minéral: 
+$$Rn_{aq} \quad \text{ou} \quad Rn_{g} \rightarrow Rn_{mineral}$$
+On définit cette réaction par sa cinétique : 
+$$ \frac{d\left[ Rn_{mineral} \right]}{dt}=\lambda_{Rn} \left[ Rn_{aq \quad ou \quad g} \right] $$
+
+Nous introduisons par la suite ce minéral en quantité nulle dans toutes les zones de la simulation, ainsi la décomposition du radon est modélisée par sa précipitation sous la forme de ce minéral fictif qui ne réagit avec rien et reste sur place.
+
+La deuxième méthode consiste à modifier le code HYTEC lui même en incorporant cette décroissance directement dans l'équation de transport du Radon dans le code source. Cette modification a été mise en place par Irina Sin, le "nouveau" code HYTEC est formellement renommé HYTEC\_R.
+
+dans la suite l'une et l'autre méthode sont utilisés selon l'accès ou non (au temps de la simulation) au code HYTEC\_R, ou encore des éventuels problèmes de compatibilité du code HYTEC\_R avec le modèle utilisé. Cela n'a pas d'impact sur les résultats car les 2 méthodes sont équivalentes.
+\paragraph{Modèles de type "condition aux limites" } Le permier type de modèle utilisé est le plus simple : on modélise une colonne verticale stériles avec éventuellement une zone d'air au dessus selon les besoins. On ne modélise pas ici les résidus à proprement parler, on modélise juste leur impact sur les stériles. Cet impact se traduit par une fugacitée constante en radon à la limite basse de la zone stériles du modèle (limite qui est en réalité l'interface stériles/résidus). HYTEC a besoin d'un condition limite en fugacité (pression partielle en radon dans le gaz contenu dans les pores), on ne connaît pas cette valeur : on en propose un calcul dans la partie \ref{annexe:fug_act} ci-dessous.
+
+\paragraph{Modèles de type "production de radon dans toute la colonne"}Ce deuxième type de modèle met en place, pour modéliser la création de radon dans toute la colonne, un
+
+
+\subsection{Relation entre fugacité et activité du radon}
+\label{annexe:fug_act}
+\paragraph{}Les modèles numériques demandent, pour les gaz, des conditions initiales exprimées en fugacité. Le but de cette partie est de formaliser les relations reliant l’activité du radon gazeux $a(z,t)$ en Bq/m$^3$, la concentration en radon gazeux $c(z,t)$ en mol/m$^3$ et la fugacité du radon gazeux $P_{Rn} (z,t)$ en Pa. La relation des gaz parfaits donne, à une température $T$ et avec $R$ la constante des gaz parfaits :
+$$
+P_{Rn} (z,t)=\frac{n_{Rn} RT}{V}=RT\,c(z,t)=\frac{RT}{N_a \lambda}\, a(z,t)
+$$
+
+On en déduit, pour une activité du radon $a_0=9,1 \; MBq/m^3$ dans les résidus, la fugacité initiale $p_0=p(0,t)$ à entrer dans le modèle HYTEC :
+$$
+p_0=1,7 .10^{-8} \; \text{Pa}=1,7 .10^{-13} \; \text{bar}
+$$
+
+\subsection{Impact d'un terme source dans les stériles}
+\label{annexe:termesource}
+
+Les stériles contiennent du radium d’activité massique $A_{Ra,s}$. Le radium se désintègre avec un coefficient $\lambda_{Ra}$. Ajoutons un terme source dans l’équation différentielle en concentration de radon $c(z,t)$ (exprimée en mol/m$^3$) :
+$$
+\frac{\partial \omega S_g c}{\partial t} = D_{eff}  \frac{\partial^2 c}{\partial z^2}-\lambda \omega S_g c + \lambda_{Ra}(1-\omega)E c_{Ra}
+$$
+Cette équation se résout également en régime stationnaire, pour $c=c(z)$ et $L=\sqrt{\frac{D_{eff}}{\lambda \omega S_g }}$ :
+$$
+\frac{\text{d}^2 c}{\text{d}z^2} - \frac{c}{L^2}= \frac{\lambda_{Ra}(1-\omega)E}{D_{eff}} c_{Ra}
+$$
+On obtient, avec les mêmes conditions aux limites :
+$$
+c(z)= c_s + (c_0 - c_s) \exp(-z/L)
+$$
+On a posé la concentration source $c_s$ :
+$$
+c_s = \frac{(1-\omega)E\rho_s}{\lambda_{Rn}\omega S_g N_a} A_{Ra,s} 
+$$
+Ce résultat est à comparer avec la solution sans terme source, de la forme $c_0 \exp(-z/L)$. On calcule donc le rapport suivant :
+$$
+R=\dfrac{c_s}{c_0}= \dfrac{\dfrac{(1-\omega)E\rho}{\lambda_{Rn}\omega S_g N_a} A_{Ra,s}}{\dfrac{ E_r (1-\omega_r) \rho_r }{\lambda_{Rn} \omega_r S_{g,r} N_a} A_{Ra,r}} = \frac{E}{E_r} \frac{(1-1/\omega)}{(1-1/\omega_r)} \frac{\rho}{\rho_r} \frac{S_{g,r}}{S_g} \frac{A_{Ra,s}}{A_{Ra,r}}
+$$
+On a alors :
+$$
+c(z)=c_s + c_0(1-R) \exp(-z/L)
+$$
+L'interprétation de cette expression est claire :
+\begin{itemize}
+  \item Si $R\ll 1$, alors la production de radon dans les stériles est négligeable.
+  \item Sinon, la production de radon dans les stériles peut être importante.
+  \item Dans tous les cas, au bout d'une certaine altitude, seule la production de radon dans les stériles n'est visible.
+\end{itemize}
 
 \renewcommand\lstlistingname{Code n°}
 \renewcommand\lstlistlistingname{}
@@ -1370,15 +1770,14 @@ Cette étude analytique permet donc de penser que les stériles doivent égaleme
 \label{lst:modele_hydro_chimie_final}
 \lstinputlisting[language=hytec, caption = Modèle couplé hydrogéologique et chimique]{modele-final-100ans.htc}
 \newpage
-\lstinputlisting[language=hytec, caption=robin1]{ribieresable.htc}
+\lstinputlisting[language=hytec, caption = Modèle géochimique (sans injection d'aluminium) ]{ribieresable.htc}
 \newpage
-\lstinputlisting[language=hytec, caption=robin2]{ribieresablealumax.htc}
-
+\lstinputlisting[language=hytec, caption = Modèle géochimique (avec injection d'aluminium) ]{ribieresablealumax.htc}
 
 
 \newpage
 \section{Modèle topographique du site}
-\lstinputlisting[language=C++,caption = Modèle topographique du site de La Ribière ]{ribiere.geo}
+\lstinputlisting[language=gmsh,caption = Modèle topographique du site de La Ribière ]{ribiere.geo}
 \label{lst:modele_topo}
 
 \newpage
