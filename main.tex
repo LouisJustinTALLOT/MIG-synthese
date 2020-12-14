@@ -73,11 +73,12 @@
     {1 em}
     {}
 
-\renewcommand{\thesection}{\Roman{section}} % je préfére les parenthèses 
-\renewcommand{\thesubsection}{\arabic{subsection})} % c'est + joli
+\renewcommand{\thesection}{\Roman{section})}
+% je préfére les parenthèses 
+\renewcommand{\thesubsection}{\arabic{subsection})}
+% c'est + joli
 \renewcommand{\thesubsubsection}{\alph{subsubsection})} 
-% sinon on peut mettre Partie 1 ... aussi
-% Pour les numérotations en chiffres romains, les parenthèses sont étranges (cf Nico). Des points ? Rien ?
+
 
 %paramétrage de la table des matières
 % \titlecontents{section}
@@ -390,7 +391,7 @@ Dans le cadre de notre projet, nous nous sommes tout particulièrement intéress
 %Image 1 (prez Après-mine Orano)
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{I_B_1.jpg}
+    \includegraphics[width=0.7\textwidth]{I_B_3.jpg}
     \caption{Les différentes phases du réaménagement d'une mine (Orano)}
     \label{fig:phases_reamenagement}
 \end{figure}
@@ -448,7 +449,7 @@ Les sources les plus intéressantes de mise en évidence des effets sur la sant�
 
 La première étape du transport du radon est appelée émanation. Le radium se désintègre au sein des résidus de traitement, qui sont sous forme de grains, et ainsi, tous les atomes de radon ne parviennent pas à atteindre les porosités. En effet, la distance $R_s$ que les atomes peuvent parcourir de l’ordre de 30~nm dans un minéral de densité commune. Cette distance est de 50~$\mu$m dans l’air et de 50~nm dans l’eau.
 
-On définit alors le facteur d’émanation comme étant la proportion d’atomes de radon qui atteignent les porosités sans être absorbés par un autre grain. Il est possible d’estimer le facteur d’émanation \cite{fleischer_theory_1983} dans le cas simplifié d’un grain sphérique de diamètre~D, sans prendre en compte l’humidité ou la potentielle absorption des atomes par un grain adjacent (détails en annexe C\ref{annexe:emanation}). La littérature scientifique \cite{ferry_migration_2000} permet de confirmer l’ordre de grandeur obtenu par le calcul simplifié à sec pour des grains dont le diamètre est de l’ordre du micromètre ($E \simeq 10^{-2}$). On note que le facteur d’émanation est d’autant plus élevé que les résidus sont humides ($E\simeq 0,3$) puisque l’eau, avec une distance d’arrêt plus courte, empêche les atomes d’être absorbés par les grains adjacents.
+On définit alors le facteur d’émanation comme étant la proportion d’atomes de radon qui atteignent les porosités sans être absorbés par un autre grain. Il est possible d’estimer le facteur d’émanation \cite{fleischer_theory_1983} dans le cas simplifié d’un grain sphérique de diamètre~$D$, sans prendre en compte l’humidité ou la potentielle absorption des atomes par un grain adjacent (détails en annexe C\ref{annexe:emanation}). La littérature scientifique \cite{ferry_migration_2000} permet de confirmer l’ordre de grandeur obtenu par le calcul simplifié à sec pour des grains dont le diamètre est de l’ordre du micromètre ($E \simeq 10^{-2}$). On note que le facteur d’émanation est d’autant plus élevé que les résidus sont humides ($E\simeq 0,3$) puisque l’eau, avec une distance d’arrêt plus courte, empêche les atomes d’être absorbés par les grains adjacents.
 
 Pour nos valeurs numériques dans les résidus miniers, enfouis en zone saturée, on a sélectionné une valeur du coefficient d’émanation $E=0,3$.
 
@@ -505,19 +506,17 @@ Ces polluants sont importants pour les entreprises et doivent être pris en comp
 
 \subsection{La dimension sociétale}
 \subsubsection{La prise en charge des tensions entre riverains et entreprises}
-\paragraph{} De nos jours, des tensions sont encore présentes entre ORANO et les riverains. Le manque d’informations transmises par COGEMA (l’ancien nom d’ORANO) lors de l’ouverture des mines a rendu la population locale méfiante envers les différentes actions que l’entreprise a prises pour enfouir les déchets radioactifs. Les organisations locales, comme l’association Source et Rivière du Limousin, se tournent alors vers des organisations à but non lucratif pour accéder à des informations fiables sur les sites. 
+\paragraph{} De nos jours, des tensions sont encore présentes entre ORANO et les riverains. Le manque d’informations transmises par ORANO lors de l’ouverture des mines a rendu la population locale méfiante envers les différentes actions que l’entreprise a prises pour enfouir les déchets radioactifs. Les organisations locales, comme l’association Source et Rivière du Limousin, se tournent alors vers des organisations à but non lucratif pour accéder à des informations fiables sur les sites. 
 
-L’une de ces organisations est la CRIIRAD (Commission de Recherche et d'Information Indépendantes sur la Radioactivité). Cette association, créée en 1986, agit pour un accès plus direct à l’information sur la radioactivité à l’aide d’un laboratoire de recherche indépendant. Dans les années 1990, elle décide de se tourner vers la surveillance des anciens sites miniers à la demande d’acteurs locaux qui doutent des informations transmises par ORANO. Le but initial de la CRIIRAD est de faire des constats sur les sites en prélevant des échantillons, puis de former des citoyens à continuer cette surveillance. Ensuite, un dialogue s'instaure avec les différents partis concernés, comme les entreprises en charge du réaménagement, des CSS (comité de suivi des sites) ou d’autres acteurs comme l’IRSN. Suite à ce dialogue, les mines peuvent passer ICPE (Installation Classée pour la Protection de l'Environnement) où l’exploitant se voit obligé d’apporter des mesures complémentaires au site. Cependant, un enjeu économique entre en jeu lors de la demande de travaux complémentaires, qui peuvent donc ne pas être aussi efficaces que l’espèrent les organisations locales. 
+L’une de ces organisations est la CRIIRAD (Commission de Recherche et d'Information Indépendantes sur la Radioactivité). Cette association, créée en 1986, agit pour un accès plus direct à l’information sur la radioactivité à l’aide d’un laboratoire de recherche indépendant. Dans les années 1990, elle décide de se tourner vers la surveillance des anciens sites miniers à la demande d’acteurs locaux qui doutent des informations transmises par ORANO. Le but initial de la CRIIRAD est de faire des constats sur les sites en prélevant des échantillons, puis de former des citoyens à continuer cette surveillance. Ensuite, un dialogue s'instaure avec les différents partis concernés, comme les entreprises en charge du réaménagement, des CSS (comité de suivi des sites) ou d’autres acteurs comme l’IRSN. Suite à ce dialogue, les mines peuvent passer ICPE (Installation Classée pour la Protection de l'Environnement) où l’exploitant se voit obligé d’apporter des mesures complémentaires au site.
 
-Pour poursuivre la surveillance des sites sur des périodes de temps plus longues, la CRIIRAD a mis en place un Collectif Mines d’Uranium (CMU). Le CMU (regroupant plusieurs associations dont l’Association Oui à l'avenir (Creuse), l’Association Noria (Vendée), l’Association Sources et Rivières du Limousin (SRL), et bien d’autres) déplore  l’état dans lequel les entreprises minières laissent le territoire et  affirme que les déchets miniers sont souvent « disséminés dans l’environnement ou stockés dans des conditions totalement inappropriées » et qu’ils « génèrent des pollutions environnementales multiples (air, eau, sol, chaîne alimentaire) induisant des dangers sanitaires inacceptables aujourd’hui et pour les générations futures ». Il tiennent ORANO pour responsable de la dégradation de la faune et de la flore et protestent contre une « législation complaisante ». Ils se plaignent, entre autres, de la contamination des terrains par des éléments radioactifs, de la pollution des ressources aquatiques, de la mauvaise gestion des sites de stockage des déchets, de la perte de mémoire sur la localisation des sites, de l’absence de normes sanitaires et environnementales intégralement respectées… Accompagnés de la CRIIRAD, ils reprennent les rapports d’ORANO et de l’IRSN pour en dégager les erreurs et avoir un impact assez important pour que les acteurs publics agissent.
+Pour poursuivre la surveillance des sites sur des périodes de temps plus longues, la CRIIRAD a mis en place un Collectif Mines d’Uranium (CMU). Le CMU déplore  l’état dans lequel les entreprises minières laissent le territoire et  affirme que les déchets miniers sont souvent « disséminés dans l’environnement ou stockés dans des conditions totalement inappropriées » et qu’ils « génèrent des pollutions environnementales multiple induisant des dangers sanitaires inacceptables aujourd’hui et pour les générations futures ». Il tiennent ORANO pour responsable de la dégradation de la faune et de la flore et protestent contre une « législation complaisante ». Ils se plaignent, entre autres, de la contamination des terrains par des éléments radioactifs, de la pollution des ressources aquatiques, de la mauvaise gestion des sites de stockage des déchets… Accompagnés de la CRIIRAD, ils reprennent les rapports d’ORANO et de l’IRSN pour en dégager les erreurs et avoir un impact assez important pour que les acteurs publics agissent.
 
-Cependant, même avec l’action de la CRIIRAD, certains maires ou organisations territoriales se trouvent impactées par la mauvaise gestion de l’Après-Mine. L’impact sur le tourisme et l’accès au ressource n’est pas négligeable, puisqu’il est impensable de construire un complexe sur un ancien site minier, ou de se servir de l’eau d’un lac pollué pour l’agriculture par exemple. AREVA ayant laissé les entreprises utiliser les stériles miniers pour différents projets, il faut aussi détruire des infrastructures qui présentent un danger radioactif.
+Cependant, même avec l’action de la CRIIRAD, certains maires ou organisations territoriales se trouvent impactées par la mauvaise gestion de l’après-mine. L’impact sur le tourisme et l’accès au ressource n’est pas négligeable, puisqu’il est impensable de construire un complexe sur un ancien site minier, ou de se servir de l’eau d’un lac pollué pour l’agriculture par exemple. ORANO ayant laissé les entreprises utiliser les stériles miniers pour différents projets, il faut aussi détruire des infrastructures qui présentent un danger radioactif.
 
 
 \subsubsection{Gestion des risques par un acteur extérieur: le rôle de l’IRSN}
-Plus spécifiquement en ce qui concerne les risques liés à la radioactivité, l'Institut de Radioprotection et de Sûreté Nucléaire (IRSN), est un Établissement Public à caractère Industriel et Commercial créé en 2001 qui fonctionne sous la tutelle conjointe des ministères de la Défense, de l’Environnement, de la Recherche de la Santé. Il s’agit de l’expert français en matière de recherche et d’expertise sur les risques nucléaires et radiologiques. L’IRSN s’intéresse à l’impact radiologique sur la santé et sur l'environnement et intervient dans la gestion de la sûreté et de la sécurité nucléaire. Lors de la prise en charge d’un projet comportant un risque radiologique, l’IRSN, les concepteurs ou constructeurs, les autorités publiques et les parties prenantes (comme les Commissions Locales d’Informations) sont en interaction mutuelle.
-
-L’IRSN s’occupe donc  du réaménagement des anciennes mines d’uranium en France. Pour ce faire, l’institut doit tout d’abord connaître l’impact radiologique de l’ancienne mine sur l’environnement et sur les populations. Le modèle ERICA (méthode d’évaluation du risque environnemental associé aux rejets de substances radioactives mise en place dans le cadre du projet européen ERICA) est utilisé pour déterminer  le risque environnemental en effectuant des mesures dosimétriques sur le terrain. L’objectif est de quantifier la probabilité de l’existence d’un risque potentiel sur les écosystèmes aquatiques.
+Plus spécifiquement en ce qui concerne les risques liés à la radioactivité, l'Institut de Radioprotection et de Sûreté Nucléaire (IRSN), créée en 2001 fonctionne sous la tutelle conjointe des ministères de la Défense, de l’Environnement, de la Recherche de la Santé. Il s’agit de l’expert français en matière de recherche et d’expertise sur les risques nucléaires et radiologiques. L’IRSN s’intéresse à l’impact radiologique sur la santé et sur l'environnement et intervient dans la gestion de la sûreté et de la sécurité nucléaire. Lors de la prise en charge d’un projet comportant un risque radiologique, l’IRSN, les concepteurs ou constructeurs, les autorités publiques et les parties prenantes sont en interaction mutuelle. L’IRSN s’occupe en autre du réaménagement des anciennes mines d’uranium en France. Pour ce faire, l’institut doit tout d’abord connaître l’impact radiologique de l’ancienne mine sur l’environnement et sur les populations. Le modèle ERICA (méthode d’évaluation du risque environnemental associé aux rejets de substances radioactives) est utilisé pour déterminer le risque environnemental en effectuant des mesures dosimétriques sur le terrain. L’objectif est de quantifier la probabilité de l’existence d’un risque potentiel sur les écosystèmes aquatiques.
 
 L’institut  mène  des  expertises  afin  d’évaluer  des  points  techniques  particuliers,  concernant notamment l’impact radiologique de certains sites. Lorsqu’elles sont réalisées à la demande des préfets, les interventions de l’IRSN prennent en général la forme de tierces expertises, portant sur les documents techniques produits par ORANO au sujet des travaux menés par l'entreprise sur les sites qu'elle ou au sujet de l’impact environnemental de ceux-ci.
 
@@ -620,15 +619,15 @@ C'est un des plus importants producteurs d'uranium.
 
 L'AECB (\textit{Atomic Energy Control Board}), un organisme indépendant du gouvernement du Canada, est responsable des affaires liées à l'énergie nucléaire et aux matières radioactives. Le règlement R-90 traite de la fermeture et de la réhabilitation des sites. Bien que le Canada réglemente les mines d'uranium, les provinces sont les principaux propriétaires fonciers. Par conséquent, les mines d'uranium fermées reviendront finalement aux provinces ou redeviendront des terres de la Couronne. Les agences environnementales provinciales sont les principaux régulateurs de la qualité de l'eau de tous les sites miniers.
 
-En 1996, l'AECB a établi la réglementation stratégique de gestion des déchets radioactifs pour s'assurer que les déchets après les mines sont gérés de manière responsable. Les objectifs de cette réglementation canadienne sont :
-\begin{itemize}
-    \item protéger l'environnement, en tenant compte des facteurs sociaux et économiques
-    \item minimiser le besoin de contrôle et de surveillance à long terme
-    \item s'assurer que les risques pour la santé sont conformes aux normes en vigueur 
-    \item ne pas interdire l'utilisation future des ressources naturelles contenues dans les déchets miniers.
-\end{itemize}
+%En 1996, l'AECB a établi la réglementation stratégique de gestion des déchets radioactifs pour s'assurer que les déchets après les mines sont gérés de manière responsable. Les objectifs de cette réglementation canadienne sont :
+%\begin{itemize}
+%    \item protéger l'environnement, en tenant compte des facteurs sociaux et économiques
+%    \item minimiser le besoin de contrôle et de surveillance à long terme
+%    \item s'assurer que les risques pour la santé sont conformes aux normes en vigueur 
+%    \item ne pas interdire l'utilisation future des ressources naturelles contenues dans les déchets miniers.
+%\end{itemize}
 
-Cela signifie en fait que des normes spécifiques sont développées, dépendant des situations actuelles de chaque site. Néanmoins, un certain nombre de critères communs sont applicables à tous les sites. Par exemple, une valeur de 1~mSv par an pour l'équivalent de dose efficace moyen est à respecter sur une période de 50~ans après la fermeture des sites d'uranium, ainsi que les autres exigences légales sur la sécurité nucléaire et la protection radiologique mises en place par l'AECB.
+Des normes spécifiques sont développées pour chaque site. Néanmoins, un certain nombre de critères communs sont applicables à tous les sites. Par exemple, une valeur de 1~mSv par an pour l'équivalent de dose efficace moyen est à respecter sur une période de 50~ans après la fermeture des sites d'uranium, ainsi que les autres exigences légales sur la sécurité nucléaire et la protection radiologique mises en place par l'AECB.
 
 Dans ce cadre, les propriétaires des déchets sont responsables du financement, de l'organisation, de la gestion et de l’élimination des installations. Pour les anciennes mines d'uranium, dont beaucoup ont été fermées il y a plus de 50~ans, plusieurs facteurs doivent être pris en compte. Dans de nombreux cas, l'entreprise qui exploitait la mine, ou son successeur, existe toujours et s'occupe des déchets sur ses sites. Cependant, dans certains cas, le site est retourné à la Couronne lorsque les entreprises n’existent plus et alors la responsabilité de traitement des déchets est partagée entre les gouvernements provincial et fédéral. Lorsque ces anciennes mines fonctionnaient, les réglementations environnementales appliquées à l'industrie minière n'étaient pas très strictes. Cependant, il n'est pas souvent pratique ou rentable de remettre en état les anciens sites en respectant les normes actuelles. La plupart des sites présentent un risque très faible, en raison des faibles teneurs de minerai, de leurs emplacements éloignés et du fait que les polluants se sont dissipés au cours des 50~dernières années.
 
@@ -827,24 +826,24 @@ Ne pas traiter une eau dont les teneurs en polluants sont en adéquation avec le
 %Néanmoins, en 1984, le gouvernement limite la production et l’exportation d’uranium aux sites de Ranger, Nabarlek et Olympic Dam. Ce n’est qu’en 2007 que cette politique sera abandonnée, et en 2009 que sera approuvé le projet d’une une quatrième mine, Four Mile face, marquant le retour de l’expansion du marché de l’uranium en Australie.
 %L’Australie est désormais le troisième producteur mondial d’uranium, et le premier pays en termes de ressources connues. Cependant, toute la production est exportée.
 
-%L’existence de dépôts d'uranium est connue en Australie depuis 1890, mais ce n’est qu’à partir de 1944 que commencent les recherches intenses de gisements d’uranium. Dans les années 1950, commença l’exploitation des mines de Rum Jungle, Mary Kathleen et South Alligator. A la fin des années 1970, trois autres mines sont mises en exploitation et de l'uranium est produit comme sous-produit dans deux autres mines à partir de 1988.
-%Cependant, entre 1984 et 2007, le gouvernement limite la produciton d'uranium à trois sites, puis en 2009, une quatrième mine est mise en exploitation, marquant le retour de l'expansion du marché de l'uranium en australie.
-%L’Australie est désormais le troisième producteur mondial d’uranium, et le premier pays en termes de ressources connues. Cependant, toute la production est exportée.
+L’existence de dépôts d'uranium est connue en Australie depuis 1890, mais ce n’est qu’à partir de 1944 que commencent les recherches intenses de gisements d’uranium. Dans les années 1950, commença l’exploitation des mines de Rum Jungle, Mary Kathleen et South Alligator. A la fin des années 1970, trois autres mines sont mises en exploitation et de l'uranium est produit comme sous-produit dans deux autres mines à partir de 1988.
+Cependant, entre 1984 et 2007, le gouvernement limite la produciton d'uranium à trois sites, puis en 2009, une quatrième mine est mise en exploitation, marquant le retour de l'expansion du marché de l'uranium en australie.
+L’Australie est désormais le troisième producteur mondial d’uranium, et le premier pays en termes de ressources connues. Cependant, toute la production est exportée.
 
 
 \paragraph{Allemagne}
 %Durant la guerre froide, une importante industrie minière a été établie en Allemagne de l’Est. De 1947 à 1990, des mines d’uranium ont été exploitées en Saxe (Johanngeorgenstadt, Aue, Schlema) et en Thuringe (Ronneburg, Königstein…). La production a été utilisée par l’Union Soviétique, dans un premier temps, pour la production d’armes nucléaires, puis en tant que combustible dans des centrales nucléaires. Les mines d’uranium ont toutes été fermées suite à la réunification de l’Allemagne, pour des raisons environnementales. Au début, l’uranium extrait était traité dans des usines mécaniques proches des mines, mais s’est concentrée dans des usines à traitement chimique à Crossen et Seelingstädt dans les années 1950. La mine de Königstein s’est convertie au In-Situ Leaching acide dans les années 1980. La production totale d’uranium aura été d’environ 230~000~tonnes, avec jusqu’à 7000~tonnes par an.
 
-%Durant la guerre froide, une importante industrie minière a été établie en Allemagne de l’Est. De 1947 à 1990, des mines d’uranium ont été exploitées en Saxe (Johanngeorgenstadt, Aue, Schlema) et en Thuringe (Ronneburg, Königstein…). La production a été utilisée par l’Union Soviétique, dans un premier temps, pour la production d’armes nucléaires, puis en tant que combustible dans des centrales nucléaires. Les mines d’uranium ont toutes été fermées suite à la réunification de l’Allemagne, pour des raisons environnementales. Au début, l’uranium extrait était traité dans des usines mécaniques proches des mines, mais s’est concentrée dans des usines à traitement chimique à Crossen et Seelingstädt dans les années 1950. La mine de Königstein s’est convertie au In-Situ Leaching acide dans les années 1980. La production totale d’uranium aura été d’environ 230~000~tonnes, avec jusqu’à 7000~tonnes par an.
+Durant la guerre froide, une importante industrie minière a été établie en Allemagne de l’Est. De 1947 à 1990, des mines d’uranium ont été exploitées en Saxe (Johanngeorgenstadt, Aue, Schlema) et en Thuringe (Ronneburg, Königstein…).% La production a été utilisée par l’Union Soviétique, dans un premier temps, pour la production d’armes nucléaires, puis en tant que combustible dans des centrales nucléaires.% Les mines d’uranium ont toutes été fermées suite à la réunification de l’Allemagne, pour des raisons environnementales. Au début, l’uranium extrait était traité dans des usines mécaniques proches des mines, mais s’est concentrée dans des usines à traitement chimique à Crossen et Seelingstädt dans les années 1950. La mine de Königstein s’est convertie au In-Situ Leaching acide dans les années 1980. La production totale d’uranium aura été d’environ 230~000~tonnes, avec jusqu’à 7000~tonnes par an.
 
-%\paragraph{Etats-Unis}
-%Alors que l'uranium est principalement utilisé pour l'énergie nucléaire, son origine est la production de minerai contenant du radium à partir de 1898 dans l'ouest du Colorado. Les années 1950 ont vu un boom de l'extraction d'uranium dans l'ouest des États-Unis. Les États-Unis ont été le premier producteur mondial d'uranium de 1953 à 1980. Jusqu'au début des années 1980, il y avait des mines d'uranium actives en Arizona, Colorado, Nouveau-Mexique, Oregon, Dakota du Sud, Texas, Utah, Washington et Wyoming.
-%La baisse des prix au début des années 1980 a forcé la fermeture de nombreuses mines. La plupart du minerai d'uranium aux États-Unis est de moindre qualité que ceux de l'Australie et du Canada. En raison de la moindre teneur, de nombreux gisements d'uranium aux États-Unis sont devenus non rentables lorsque le prix de l'uranium a fortement baissé à la fin des années 1970. En 2001, il n'y avait que trois mines d'uranium en exploitation (toutes par ISR) aux États-Unis. La production annuelle a atteint un minimum de 779 tonnes métriques d'oxyde d'uranium en 2003. L'Energy Information Administration des États-Unis a signalé que 90~\% de la production d'uranium aux États-Unis en 2006 provenait de ISR.
-%En 2011, les États-Unis ont extrait 9~\% de l'uranium consommé par leurs centrales nucléaires. Le reste était importé, principalement de Russie, du Kazakhstan, du Canada et d'Australie. Bien que la production d'uranium soit tombée à de faibles niveaux, les États-Unis possèdent la quatrième plus grande ressource d'uranium au monde, derrière l'Australie, le Canada et le Kazakhstan. Les États possédant les plus grandes réserves de minerai d'uranium sont le Wyoming, le Nouveau-Mexique et le Colorado.
+\paragraph{Etats-Unis}
+Alors que l'uranium est principalement utilisé pour l'énergie nucléaire, son origine est la production de minerai contenant du radium à partir de 1898 dans l'ouest du Colorado. Les années 1950 ont vu un boom de l'extraction d'uranium dans l'ouest des États-Unis. Les États-Unis ont été le premier producteur mondial d'uranium de 1953 à 1980. Jusqu'au début des années 1980, il y avait des mines d'uranium actives en Arizona, Colorado, Nouveau-Mexique, Oregon, Dakota du Sud, Texas, Utah, Washington et Wyoming.
+La baisse des prix au début des années 1980 a forcé la fermeture de nombreuses mines. La plupart du minerai d'uranium aux États-Unis est de moindre qualité que ceux de l'Australie et du Canada. En raison de la moindre teneur, de nombreux gisements d'uranium aux États-Unis sont devenus non rentables lorsque le prix de l'uranium a fortement baissé à la fin des années 1970. En 2001, il n'y avait que trois mines d'uranium en exploitation (toutes par ISR) aux États-Unis. La production annuelle a atteint un minimum de 779 tonnes métriques d'oxyde d'uranium en 2003. L'Energy Information Administration des États-Unis a signalé que 90~\% de la production d'uranium aux États-Unis en 2006 provenait de ISR.
+En 2011, les États-Unis ont extrait 9~\% de l'uranium consommé par leurs centrales nucléaires. Le reste était importé, principalement de Russie, du Kazakhstan, du Canada et d'Australie. Bien que la production d'uranium soit tombée à de faibles niveaux, les États-Unis possèdent la quatrième plus grande ressource d'uranium au monde, derrière l'Australie, le Canada et le Kazakhstan. Les États possédant les plus grandes réserves de minerai d'uranium sont le Wyoming, le Nouveau-Mexique et le Colorado.
 
 
-%\paragraph{Canada}
-%La première découverte d'uranium enregistrée au Canada a eu lieu dans les années 1930 dans les Territoires du Nord-Ouest. Pendant de nombreuses années, le Canada a été le plus grand exportateur de minerai d'uranium au monde. En 2009, le Canada était le deuxième producteur d’uranium, derrière le Kazakhstan, 20~\% de la production mondiale d'uranium primaire provient du Canada. Aujourd’hui, la seule région productrice au Canada est le nord de la Saskatchewan.
+\paragraph{Canada}
+La première découverte d'uranium enregistrée au Canada a eu lieu dans les années 1930 dans les Territoires du Nord-Ouest. Pendant de nombreuses années, le Canada a été le plus grand exportateur de minerai d'uranium au monde. En 2009, le Canada était le deuxième producteur d’uranium, derrière le Kazakhstan, 20~\% de la production mondiale d'uranium primaire provient du Canada. Aujourd’hui, la seule région productrice au Canada est le nord de la Saskatchewan.
 %Pendant la Seconde Guerre Mondiale, la demande d'uranium a explosé lorsque les États-Unis ont lancé le projet Manhattan pour produire les premières armes atomiques. En conséquence, en 1943, le gouvernement du Canada a formé une société fédérale, Eldorado Gold Mines Limited, pour surveiller les exploitations d'uranium. La recherche d'uranium était limitée au gouvernement.
 %L'interdiction de la prospection privée a été levée en 1947. Cela a conduit à un boom d'exploration qui a rapidement abouti à la découverte des mines dans les Territoires du Nord-Ouest (Rayrock), en Ontario (Bancroft et Elliot Lake) et en Saskatchewan (Uranium City). En 1956, 23~mines étaient en opération dans cinq provinces. En 1959, les exportations canadiennes d'uranium étaient évaluées à 330~millions de dollars, plus que tous les autres minerais exportés du Canada cette année-là. Au début des années 1960, la demande militaire d'uranium a diminué et, en 1965, le Canada a imposé une politique consistant à ne vendre de l'uranium que pour des objectifs pacifiques. Cette période marque la fin du boom de l'uranium et le nombre de mines en exploitation tombe à quatre.
 
@@ -858,13 +857,15 @@ La revégétalisation des sites de stockage permet en outre de limiter l’éros
 
 
 \paragraph{Allemagne}
-Lors de la réhabilitation d’une mine d’uranium, la société allemande Wisbut GmbH peut procéder à une inondation des mines souterraines, un traitement des eaux contaminées et au stockage des résidus miniers… La première étape du traitement des résidus miniers étant de les déplacer jusqu’à un site de stockage, comme un bassin de rejet ou une ancienne mine. Wisbut GmbH a par exemple eu recours à un convoyeur tubulaire, un convoyeur à courroie ayant la forme d’un tuyau permettant ainsi de limiter le déversement des résidus miniers dans l’environnement, d’une longueur de 2~kilomètres. L’inondation des mines stockant les résidus permet alors de contenir le rejet de contaminants des matériaux. Pour traiter les bassins de rejet des résidus miniers, la société procède par déshydratation. Dans un premier temps, l’eau de surface est pompée pour être traitée, les résidus sont recouverts par une couverture multicouche, des drains sont ajoutés pour déshydrater les résidus et enfin, le tout est recouvert par une couche de stériles miniers dont la pression accélère le processus de déshydratation. La société peut alors procéder à une revégétalisation cohérente avec la zone géographique. Les procédés utilisés pour le traitement de l’eau sont le traitement par précipitations et le traitement par résines échangeuses d’ions.
+%Lors de la réhabilitation d’une mine d’uranium, la société allemande Wisbut GmbH peut procéder à une inondation des mines souterraines, un traitement des eaux contaminées et au stockage des résidus miniers…
+La première étape du traitement des résidus miniers est de les déplacer jusqu’à un site de stockage, comme un bassin de rejet ou une ancienne mine, et Wisbut GmbH a par exemple eu recours à un convoyeur tubulaire, un convoyeur à courroie ayant la forme d’un tuyau permettant ainsi de limiter le déversement des résidus miniers dans l’environnement, d’une longueur de 2~kilomètres. L’inondation des mines stockant les résidus permet alors de contenir le rejet de contaminants des matériaux. Pour traiter les bassins de rejet des résidus miniers, la société procède par déshydratation. Dans un premier temps, l’eau de surface est pompée pour être traitée, les résidus sont recouverts par une couverture multicouche, des drains sont ajoutés pour déshydrater les résidus et enfin, le tout est recouvert par une couche de stériles miniers dont la pression accélère le processus de déshydratation. La société peut alors procéder à une revégétalisation cohérente avec la zone géographique. Les procédés utilisés pour le traitement de l’eau sont le traitement par précipitations et le traitement par résines échangeuses d’ions.
 Les stériles miniers ont également été impliqués dans la production de gravier et de ciment utilisés dans la construction de routes et de voies ferrées. Le projet permettrait de disperser les matériaux radioactifs sur de grandes surfaces pour en réduire la concentration et donc la dangerosité.
 
 
 \paragraph{États-Unis}
-Le in-situ recovery (ISR) ou in-situ leach mining est une technique de lixiviation employée dans l’industrie minière pour extraire les minéraux d’uranium naturellement présents à l'état solide dans un gisement. Elle consiste à injecter lentement une solution (généralement une solution acide) dans le gisement par un premier forage, puis quelques mois plus tard, la solution riche d’uranium est pompée à la surface grâce à un deuxième forage. 
-Aujourd’hui, ISR représente plus de 90\% d’exploitation d’uranium aux États-Unis. Cependant, il présente un risque de contamination des eaux souterraines. Plusieurs méthodes de restauration sont introduites par Intercontinental Energy Corporation et les deux les plus courantes sont :
+%Le in-situ recovery (ISR) ou in-situ leach mining est une technique de lixiviation employée dans l’industrie minière pour extraire les minéraux d’uranium naturellement présents à l'état solide dans un gisement. Elle consiste à injecter lentement une solution (généralement une solution acide) dans le gisement par un premier forage, puis quelques mois plus tard, la solution riche d’uranium est pompée à la surface grâce à un deuxième forage. 
+Aujourd’hui, le in-situ recovery (ISR) représente plus de 90\% d’exploitation d’uranium aux États-Unis. Cependant, il présente un risque de contamination des eaux souterraines.
+Plusieurs méthodes de restauration sont introduites par Intercontinental Energy Corporation et les deux les plus courantes sont :
 1)  	Balayage des eaux souterraines (Groundwater Sweep)
 Cette méthode consiste à pomper les eaux souterraines contaminées du centre du site minier. Cela induit un afflux d'eau souterraine provenant des nappes aquifères environnantes. Le processus est illustré dans la figure. L'eau provenant de l'extérieur se déplace à travers l'espace poreux en déplaçant l'eau contaminée. Le processus est appelé « balayage des eaux souterraines » parce que les eaux souterraines propres balaient l'eau contaminée vers les puits d’extraction. Nous plaçons une rangée de puits pour assurer un flux d’eau plus uniforme vers le centre de la zone contaminée.
 2)  	Osmose inverse (Reverse Osmosis)
@@ -877,7 +878,8 @@ Au Canada, la technologie de réhabilitation des anciens sites miniers d'uranium
 
 
 \paragraph{À l'international}
-Le stockage des résidus dans l’objectif de limiter la contamination de l’environnement est une étape essentiel du cycle de vie d’une mine, cependant, dans deux cas ces résidus ont été relâchés dans la nature sans aucun contrôle : aux usines de Bukovo en Bulgarie et de Mounana au Gabon, avec de graves retombées sur l’environnement et la santé. De même, la revégétalisation est souvent une étape nécessaire à la réhabilitation des sites de stockage de résidus, cependant, dans certains pays, comme le Niger, le climat désertique ne permet pas d’assurer cette étape.
+Le stockage des résidus dans l’objectif de limiter la contamination de l’environnement est une étape essentiel du cycle de vie d’une mine.%, cependant, dans deux cas ces résidus ont été relâchés dans la nature sans aucun contrôle : aux usines de Bukovo en Bulgarie et de Mounana au Gabon, avec de graves retombées sur l’environnement et la santé.
+De même, la revégétalisation est souvent une étape nécessaire à la réhabilitation des sites de stockage de résidus.% cependant, dans certains pays, comme le Niger, le climat désertique ne permet pas d’assurer cette étape.
 Le stockage souterrain des résidus miniers offre une meilleure protection face à l’érosion que le stockage à la surface. Cependant, ce stockage diminue la distance entre les résidus et les eaux souterraines, et toute fuite provoquerait leur contamination. Seule la présence d’une couche géologique imperméable, naturelle ou artificielle permettrait de justifier le stockage souterrain. Le stockage à la surface permet lui de mieux contrôler le confinement des résidus, qui sont plus faciles d’accès, mais nécessite donc des mesures plus strictes afin d’assurer la protection de l’environnement.
 Il ressort donc qu’une approche au cas par cas de gestion des sites miniers permettrait d’offrir le traitement le plus adapté, mais l’absence de normes précises peut conduire les entreprises à une réhabilitation plus laxiste des sites.
 Il est néanmoins nécessaire d’assurer une surveillance régulière et intensive des sites de stockages et de leurs environs afin de certifier l’efficacité des méthodes mises en place et de prévenir au plus vite toute brèche de confinement.
@@ -1135,6 +1137,7 @@ Nous réaliseront le modèle géographique du site (code n°\ref{lst:modele_topo
 Pour proposer un modèle convaincant du site, il est nécessaire de s’intéresser aux flux hydrogéologiques. Nous avons pour cela utilisé un rapport hydrogéologique du site, daté d'avril 2010 \cite{societe_areva_nc_etude_2010}, ainsi que d'une étude complémentaire de 2011 \cite{societe_areva_nc_etude_2011}. Nous nous sommes basés sur les relevés des 9~piézomètres du site et avons décidé de faire une modélisation en coupe, ce qui permet à la fois de décrire fidèlement le site tout en évitant de réaliser un modèle 3D beaucoup trop complexe. Cette coupe (figure \ref{fig:coupe_ribiere}) a été choisie car elle comprend l'intégralité de l'étendue du site (de 348~m à 395~m d'altitude), la zone de résidus et la rivière, et que l'on dispose également de cinq piézomètres pour nous renseigner sur le terrain.
 
 %Guillaume, I_B_1 et pas 3 dsl
+%Ok, je fais ca
 
 \begin{figure}[H]
     \centering
@@ -1247,32 +1250,12 @@ Notons tout d’abord qu’une couche de protection est nécessaire : l’air ne
 \paragraph{} Dans un bâtiment habité, le niveau de référence d’activité volumique est de $a_n=300 \; \text{Bq/m}^3$. Imaginons que l’on souhaite respecter cette valeur à la surface de l’endroit où sont enfouis les résidus. Le facteur d’atténuation minimum requis est alors : $r_{min}=\frac{a_0}{a_n} =3,03 \; .10^4$. L’épaisseur de couche de stériles $h$ minimale nécessaire pour respecter ce facteur d’atténuation dans différentes circonstances est donnée analytiquement par la relation $h_{min}=\ln(r_{min}) \,L =10,3 \,L $. Ainsi, pour atténuer le radon et respecter le niveau de référence, il est nécessaire d’ajouter une couche de protection environ dix fois plus grande que la longueur caractéristique de diffusion $L$.
 
 \paragraph{Sensibilité des différents paramètres}
-\paragraph{} Cette partie s'intéresse à la sensibilité des différents paramètres quant à leur impact sur l'efficacité de la diffusion du radon. Dans le modèle analytique, la variabilité tourne autour de la longueur caractéristique de diffusion, qui est déterminée selon le coefficient de diffusion, la porosité, la saturation et les coefficients de Millington-Quirk. Comme on s'intéresse en particulier à l'effet de la saturation en eau plus loin, focalisons nous d'abord sur les autres paramètres.
-
-La figure \ref{fig:sens_diffusion} montre l'impact significatif que le coefficient de diffusion a sur la diffusion du radon. Sur le site de la Ribière, on peut l'estimer autour de $1 \; .10^5 \; \text{m}^2 \text{s}^{-1}$.
-
-D'autres paramètres rentrent également en compte. La porosité et les coefficients de Millington-Quirk, qui interviennent dans l’expression du coefficient de diffusion effectif, peuvent grandement impacter la longueur effective de diffusion :
-$$
-L=\sqrt{\frac{D_{\text{eff}}}{\lambda \,\omega\, S_g }}=\sqrt{\frac{D \,\omega^a {S_g}^b}{\lambda\, \omega \,S_g }}
-$$
-
-Le tableau suivant donne une gamme de valeurs possibles de la longueur caractéristique $L$ en fonction de ces différents paramètres. On a retenu une saturation en gaz moyenne $S_g=0,3$.
-
-\begin{table}[H]
-    \centering
-    \caption{Valeur de $L$ en fonction de $a=b$, $D$ et $\omega$}
-    \includegraphics[width = \linewidth]{III_C_9.png}
-
-    \label{tab:sens_mq_poro}
-\end{table}
-
-Sur le site de la Ribière, il y a une couche protectrice d'environ $6,5\;m$ au dessus des résidus. Ainsi, la longueur caractéristique doit être inférieure à $0,65\;m$ afin de respecter le niveau de référence à la surface des résidus. L'échelle de couleur donne les valeurs de $L$ pour lesquelles la référence est respectée. On peut estimer que les stériles miniers de la Ribière ont des coefficients de Millington-Quirk proches de $2$, et des porosités inférieures à $0,43$. Ainsi, le modèle analytique prévoit que le niveau de référence d'activité en radon peut être respecté.
-
+\paragraph{} L'annexe C \ref{annexe:sens_analytique} détaille à quel point les 
 
 \subsubsection{Introduction des modèles numériques}
 
 \paragraph{Deux modèles numériques}
-\paragraph{} Nous utilisons le code de calcul HYTEC introduit plus haut dans sa dimension transport. Deux types de modèles unidimensionnels sont utilisés par la suite pour obtenir les résultats : on modélise une colonne de stériles et/ou résidus pour étudier comment le radon est produit et diffusé vers la surface. La différence entre les deux types de modèles est la façon de modéliser le terme source de radon. Le premier type de modèle, le plus simple et le plus utilisé par la suite, ne comprend que des stériles dans la colonne. En effet, pour modéliser les résidus source de radon nous utilisons une condition limite : une fugacité constante en radon à la limite stériles/résidus. Le deuxième type de modèle modélise les stériles et les résidus, la production du radon est intégré dans la roche elle-même : le gaz émane là où il y a du radium. Ce deuxième modèle n'est utilisé que dans la modélisation numérique de l'impact d'un terme source . Il s’agit là d’une présentation sommaire de ces modèles, pour des détails techniques sur leur implémentation dans le code HYTEC, se reporter aux annexes C  \ref{annexe:detail_modele_radon_sub_sec}, pour des exemples de codes HYTEC utilisés se reporter dans l'annexe \ref{lst:modele_radon_1_1} aux codes "radon". L'annexe
+\paragraph{} Nous utilisons le code de calcul HYTEC introduit plus haut dans sa dimension transport. Deux types de modèles unidimensionnels sont utilisés par la suite pour obtenir les résultats : on modélise une colonne de stériles et/ou résidus pour étudier comment le radon est produit et diffusé vers la surface. La différence entre les deux types de modèles est la façon de modéliser le terme source de radon. Le premier type de modèle, le plus simple et le plus utilisé par la suite, ne comprend que des stériles dans la colonne. En effet, pour modéliser les résidus source de radon nous utilisons une condition limite : une fugacité constante en radon à la limite stériles/résidus. Le deuxième type de modèle modélise les stériles et les résidus, la production du radon est intégré dans la roche elle-même : le gaz émane là où il y a du radium. Ce deuxième modèle n'est utilisé que dans la modélisation numérique de l'impact d'un terme source . Il s’agit là d’une présentation sommaire de ces modèles, pour des détails techniques sur leur implémentation dans le code HYTEC, se reporter aux annexes C \ref{annexe:detail_modele_radon_sub_sec}, pour des exemples de codes HYTEC utilisés se reporter dans l'annexe \ref{lst:modele_radon_1_1} aux codes "radon". L'annexe C \ref{annexe:sens_numerique} se préoccupe de la sensibilité du modèle numérique aux différents paramètres et ne met pas en évidence une grande marge d'erreur.
 
 \subsubsection{Impact des précipitations}
 
@@ -1359,17 +1342,18 @@ Cette étude analytique permet donc de penser que les stériles doivent égaleme
 %    Image 2 (prez Orano C. Benesteau)
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{I_A_2.jpg}
+    \includegraphics[width=0.8\textwidth]{I_A_2.jpg}
     \caption{Carte des sites miniers uranifères en France (Orano)}
     \label{fig:sites_orano}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{I_B_3.jpg}
-    \caption{Les différents acteurs de l'après-mine}
-    \label{fig:acteurs_apres_mine}
-\end{figure}
+%\begin{figure}[H]
+%    \centering
+%    \includegraphics[width=0.8\linewidth]{I_B_3.jpg}
+%    \caption{Les différents acteurs de l'après-mine}
+%    \label{fig:acteurs_apres_mine}
+%\end{figure}
+%Mauvais fichier :(
 
 %\begin{figure}[H]
 %    \centering
@@ -1387,7 +1371,7 @@ Cette étude analytique permet donc de penser que les stériles doivent égaleme
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=10cm]{II_A2_4.png}
+    \includegraphics[width=5cm]{II_A2_4.png}
     \caption{Exposition moyenne de la population aux rayonnements ionisants (IRSN)}
     \label{fig:exposition_moyenne}
 \end{figure}
@@ -1730,7 +1714,26 @@ Ainsi, au bout d'une ou deux semaines, le régime stationnaire est atteint.
 \subsection{Sensibilité du modèle analytique aux différents paramètres}
 \label{annexe:sens_analytique}
 
+Cette partie s'intéresse à la sensibilité des différents paramètres quant à leur impact sur l'efficacité de la diffusion du radon. Dans le modèle analytique, la variabilité tourne autour de la longueur caractéristique de diffusion, qui est déterminée selon le coefficient de diffusion, la porosité, la saturation et les coefficients de Millington-Quirk. Comme on s'intéresse en particulier à l'effet de la saturation en eau plus loin, focalisons nous d'abord sur les autres paramètres.
 
+La figure \ref{fig:sens_diffusion} montre l'impact significatif que le coefficient de diffusion a sur la diffusion du radon. Sur le site de la Ribière, on peut l'estimer autour de $1 \; .10^5 \; \text{m}^2 \text{s}^{-1}$.
+
+D'autres paramètres rentrent également en compte. La porosité et les coefficients de Millington-Quirk, qui interviennent dans l’expression du coefficient de diffusion effectif, peuvent grandement impacter la longueur effective de diffusion :
+$$
+L=\sqrt{\frac{D_{\text{eff}}}{\lambda \,\omega\, S_g }}=\sqrt{\frac{D \,\omega^a {S_g}^b}{\lambda\, \omega \,S_g }}
+$$
+
+Le tableau suivant donne une gamme de valeurs possibles de la longueur caractéristique $L$ en fonction de ces différents paramètres. On a retenu une saturation en gaz moyenne $S_g=0,3$.
+
+\begin{table}[H]
+    \centering
+    \caption{Valeur de $L$ en fonction de $a=b$, $D$ et $\omega$}
+    \includegraphics[width = \linewidth]{III_C_9.png}
+
+    \label{tab:sens_mq_poro}
+\end{table}
+
+Sur le site de la Ribière, il y a une couche protectrice d'environ $6,5\;m$ au dessus des résidus. Ainsi, la longueur caractéristique doit être inférieure à $0,65\;m$ afin de respecter le niveau de référence à la surface des résidus. L'échelle de couleur donne les valeurs de $L$ pour lesquelles la référence est respectée. On peut estimer que les stériles miniers de la Ribière ont des coefficients de Millington-Quirk proches de $2$, et des porosités inférieures à $0,43$. Ainsi, le modèle analytique prévoit que le niveau de référence d'activité en radon peut être respecté.
 
 \subsection{Détails des modèles HYTEC utilisés}
 \label{annexe:detail_modele_radon_sub_sec}
