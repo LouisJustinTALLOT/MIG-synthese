@@ -1,0 +1,131 @@
+#=======================================================================
+# Production de radon dans toute la colonne : residus 100%, steriles 10%
+#=======================================================================
+output-format = res, vtk
+read minerals in 10m_r100_s010.dat
+precision of coupling = 1e-15
+
+# Description de l'ecoulement
+# --------------------------------------
+flow-regime = two-phase, stationary
+unsaturated-model = van-genuchten {
+  alpha = 0
+  n = 0
+}
+gas-diffusion-coefficient = 1.5e-5 m2/s
+# Geometrie
+# --------------
+domain = 0,0 1,0 1,10 0,10 m
+
+zone bottom { #--------------residus-------------- 
+  geometry = rectangle 0.5,5 1,10 m, nodes = 1,100
+  permeability = 1e-5 m/s
+  dispersivity = 0.1 m
+  diff.coeff = 1e-10 m2/s
+  storage = 1e-2
+  porosity = 0.43
+  gas-diffusion-coefficient = 1.5e-5 m2/s
+  geochem = bottom
+  unsaturated-model = van-genuchten { # parameters for silty loam
+    alpha = 2
+    n = 1.41
+  }
+  head = -1 m
+  millington-quirk = enabled {
+    porosity-coefficient = 2
+    saturation-coefficient = 2
+    gas-porosity-coefficient = 2
+    gas-saturation-coefficient = 2
+  }
+  water-content {
+      start  = 0.3
+      minimum = 0.
+      maximum = 0.43
+  }
+}
+
+
+#-----------conditions limites-----------
+#----------------------------------------
+
+boundary top {
+	coordinates = 0,10 1,10 m
+	flow-condition = constant-head at -1 m
+}
+
+#---------------geochimie----------------
+#----------------------------------------
+
+unit bottom {
+  fug Rn(g) = 1e-25
+  fug Ar(g) = 1e-25
+  mineral decroissance_radon = 0 mol/kg, surface = 2.0985e-6 m2/l
+  mineral prod_radon = 1 g/l, surface = 1 m2/g
+}
+
+unit top {
+  fug Rn(g) = 1e-25
+  fug Ar(g) = 1e-25
+  mineral decroissance_radon = 0 mol/kg, surface = 2.0985e-6 m2/l
+  mineral prod_radon = 1 g/l, surface = 1 m2/g
+}
+
+define mineral decroissance_radon {
+  composition = 1 Rn(aq)
+  logK = 3
+  vol.weight = 1e6
+}
+
+define mineral prod_radon {
+  composition = 1 Rn(aq)
+  logK = 3
+  vol.weight = 1e6
+}
+
+extend mineral decroissance_radon {
+  kinetics {
+	rate = 1 mol/m2/s   #correction volumique d'eau: 0.1 m3 par maille, 0.3 water content
+    w-term, species = Rn(aq)
+    area = decroissance_radon
+  }
+  kinetics {
+	rate = 1 mol/m2/s   #correction volumique d'eau: 0.1 m3 par maille, 0.3 water content
+    w-term, species = Rn(g)
+    area = decroissance_radon
+  }
+}
+
+extend mineral prod_radon {
+  kinetics {
+	rate = -1.5e-17 mol/m2/s #rate ajuste pour eviter les instabilites numeriques
+    surface = 1 m2/g
+  }
+}
+
+include Rn(g)
+exclude minerals, gases, gas, sites
+database = chess.tdb
+
+# Criteres de temps
+# ------------------------
+duration = 240 days
+timestep = variable {
+  start = 2 h
+  maximum = 10 h
+}
+
+# Parametres de sortie
+# ----------------------------
+sample = 60
+verbose = enabled
+
+select head in m
+select water-content
+select decroissance_radon
+select prod_radon
+select fug{Rn(g)}
+select rate{prod_radon}
+select surface{prod_radon}
+select aqueous{Rn(aq)}
+select fug{Ar(g)}
+
