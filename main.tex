@@ -1051,7 +1051,7 @@ Nous voulons réaliser un modèle hydrogéologique du site, afin de pouvoir anal
 
 La modélisation du site sera réalisée à l'aide du logiciel HYTEC qui comporte un volet réalisant le calcul hydrodynamique nommé R2D2.On utilisera également le logiciel CHESS réalisant la simulation chimique \cite{lagneau:hal-00614306} afin d'obtenir un modèle complet de transport réactif. 
 
-Nous réaliserons le modèle géographique du site (code n°\ref{lst:modele_topo}) à l'aide du logiciel libre GMSH \cite{gmsh_site} afin de représenter fidèlement les données de terrain. Le choix du maillage n'est pas anodin, puisqu'il va servir de support pour que la machine puisse effectuer la simulation. Par exemple, puisque la couche de surface est estimée à 4~mètres d'épaisseur, il est nécessaire que les mailles fassent moins de 4~mètres : si possible, on choisira des paramètres de maillage qui permettront d'en avoir deux ou trois dans toute cette zone. Inversement, la zone de granite sain forme un socle presque imperméable, donc les flux hydrologiques seront moins importants. C'est pourquoi un maillage plus épais pourra être choisi. Enfin, puisque la zone de résidus de traitement contient les espèces à suivre, il faut être très précis, et choisir des mailles fines pour pouvoir bien rendre compte des deux faciès.
+Nous réaliserons le modèle géographique du site (script n°\ref{lst:modele_topo}) à l'aide du logiciel libre GMSH \cite{gmsh_site} afin de représenter fidèlement les données de terrain. Le choix du maillage n'est pas anodin, puisqu'il va servir de support pour que la machine puisse effectuer la simulation. Par exemple, puisque la couche de surface est estimée à 4~mètres d'épaisseur, il est nécessaire que les mailles fassent moins de 4~mètres : si possible, on choisira des paramètres de maillage qui permettront d'en avoir deux ou trois dans toute cette zone. Inversement, la zone de granite sain forme un socle presque imperméable, donc les flux hydrologiques seront moins importants. C'est pourquoi un maillage plus épais pourra être choisi. Enfin, puisque la zone de résidus de traitement contient les espèces à suivre, il faut être très précis, et choisir des mailles fines pour pouvoir bien rendre compte des deux faciès.
 
 Pour proposer un modèle convaincant du site, il est nécessaire de s’intéresser aux flux hydrogéologiques. Nous avons pour cela utilisé un rapport hydrogéologique du site, daté d'avril 2010 \cite{societe_areva_nc_etude_2010}, ainsi que d'une étude complémentaire de 2011 \cite{societe_areva_nc_etude_2011}. Nous nous sommes basés sur les relevés des 9~piézomètres du site et avons décidé de faire une modélisation en coupe, ce qui permet à la fois de décrire fidèlement le site tout en évitant de réaliser un modèle 3D beaucoup trop complexe. Cette coupe (figure \ref{fig:coupe_ribiere}) a été choisie car elle comprend l'intégralité de l'étendue du site (de 348~m à 395~m d'altitude), la zone de résidus et la rivière, et que l'on dispose également de cinq piézomètres pour nous renseigner sur le terrain.
 
@@ -1866,42 +1866,48 @@ L'interprétation de cette expression est claire :
 \section{Résultats des simulations numériques HYTEC}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{}
-    \caption{}
+    \includegraphics[width=\linewidth]{LJ-zones-HYTEC-final.png}
+    \caption{Les différentes zones du terrain prises en compte par HYTEC}
     \label{fig:zones_HYTEC}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\linewidth]{}
-    \caption{}
-    \label{fig:ca2p-initial}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=\linewidth]{}
+%     \caption{}
+%     \label{fig:ca2p-initial}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=\linewidth]{}
+%     \caption{}
+%     \label{fig:ca2p-final}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{}
-    \caption{}
-    \label{fig:ca2p-final}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\linewidth]{}
-    \caption{}
+    \includegraphics[width=\linewidth]{LJ-UO22P-initial.png}
+    \caption{Concentration initiale en UO$_2^{2+}$}
     \label{fig:uo2P-initial}
 \end{figure}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{}
-    \caption{}
+    \includegraphics[width=\linewidth]{LJ-UO22P-final.PNG}
+    \caption{Concentration finale en UO$_2^{2+}$}
     \label{fig:uo2P-final}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{}
-    \caption{}
+    \includegraphics[width=\linewidth]{LJ-charge-hydraulique-finale.PNG}
+    \caption{La charge hydraulique sur le site de La Ribière}
+    \label{fig:charge_hydro_finale}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{LJ-charge-hydraulique-finale.PNG}
+    \caption{La charge hydraulique sur le site de La Ribière}
     \label{fig:charge_hydro_finale}
 \end{figure}
 
