@@ -73,10 +73,8 @@
     {1 em}
     {}
 
-\renewcommand{\thesection}{\Roman{section})}
-% je préfére les parenthèses 
+\renewcommand{\thesection}{\Roman{section}.}
 \renewcommand{\thesubsection}{\arabic{subsection})}
-% c'est + joli
 \renewcommand{\thesubsubsection}{\alph{subsubsection})} 
 
 
@@ -136,7 +134,7 @@
     rulecolor=\color{black},
     frame=tb
     }%, numbersep=5pt}
-    
+%LJ ? Pour les appels aux annexes, il apparait tjr une parenthèse. C'est possible de ne pas avoir de parenthèse ? 
     
 \lstdefinelanguage{hytec}{language = Python,
     alsoletter =/,
@@ -215,8 +213,9 @@ Louis-Justin \textsc{Tallot},
 Gabrielle \textsc{Vernet}, 
 Guillaume \textsc{Vigne}, 
 Robin \textsc{Willocquet}\\
-%\\ qui furent encadrés par les enseignants-chercheurs  : \\
-\\ encadrés par les enseignants-chercheurs \\
+\\
+%qui furent encadrés par les enseignants-chercheurs  : \\
+encadrés par les enseignants-chercheurs \\
 Irina \textsc{Sin}, 
 Sophie \textsc{Guillon}, 
 Nicolas \textsc{Seigneur}
@@ -262,15 +261,15 @@ Les élèves remercient sincèrement les différents intervenants :
     \item Roland \textsc{Desbordes} (CRIIRAD)
 \end{itemize}
 
-ainsi que leurs encadrants :
-\begin{itemize}
-    \item Irina \textsc{Sin} (Mines ParisTech - PSL, Centre de géosciences) 
-    \item Sophie \textsc{Guillon} (Mines ParisTech - PSL, Centre de géosciences) 
-    \item Nicolas \textsc{Seigneur} (Mines ParisTech - PSL, Centre de géosciences) 
-    \item Vincent \textsc{Lagneau} (Mines ParisTech - PSL, Centre de géosciences) 
-\end{itemize}
+%ainsi que leurs encadrants :
+%\begin{itemize}
+%    \item Irina \textsc{Sin} (Mines ParisTech - PSL, Centre de géosciences) 
+%    \item Sophie \textsc{Guillon} (Mines ParisTech - PSL, Centre de géosciences) 
+%    \item Nicolas \textsc{Seigneur} (Mines ParisTech - PSL, Centre de géosciences) 
+%    \item Vincent \textsc{Lagneau} (Mines ParisTech - PSL, Centre de géosciences) 
+%\end{itemize}
 
-%Les élèves souhaitent tout particulièrement remercier leurs encadrants : Irina \textsc{Sin}, Sophie \textsc{Guillon}, Nicolas \textsc{Seigneur} et Vincent \textsc{Lagneau}. Merci pour votre implication tout au long du MIG !
+Les élèves souhaitent tout particulièrement remercier leurs encadrants : Irina \textsc{Sin}, Sophie \textsc{Guillon}, Nicolas \textsc{Seigneur} et Vincent \textsc{Lagneau}. Merci pour votre implication tout au long de ce MIG !
 
 
 % \vspace{0.5 em}   
@@ -304,18 +303,20 @@ ainsi que leurs encadrants :
 \newpage
 
 \begin{abstract}
-% A revoir
-La France, autrefois grand pays minier, possède aujourd’hui de nombreux sites miniers ayant cessé toute activité, et devant donc être réhabilités : c'est ce qu'on appelle l'\emph{après-mine}.
+%La France, autrefois grand pays minier, possède aujourd’hui de nombreux sites miniers ayant cessé toute activité, et devant donc être réhabilités : c'est ce qu'on appelle l'\emph{après-mine}.
+La France possède aujourd’hui de nombreux sites miniers ayant cessé toute activité qui doivent être réhabilités. Cette problématique se nomme l'\emph{après-mine}.
 
-L’après-mine comprend ainsi des enjeux sanitaires et environnementaux (comme la gestion des déchets), sociaux (notamment l'entente avec les associations et les habitants), politiques (par exemple le respect des normes) et économiques.
+%L’après-mine comprend ainsi des enjeux sanitaires et environnementaux (comme la gestion des déchets), sociaux (notamment l'entente avec les associations et les habitants), politiques (par exemple le respect des normes) et économiques.
+L'après-mine comprend de nombreux enjeux : sanitaires et environnementaux avec la gestion des déchets et des pollutions, sociaux avec notamment le dialogue des différentes parties, politiques avec le respect des normes ou encore économiques.
 
-La présente étude concerne la majorité de ces aspects. Elle a pour but d'identifier les différents acteurs de l'après-mine et ses problématiques, tout en essayant d’y répondre. Elle aborde la question des normes à respecter, le respect de l’environnement et des sociétés locales mais aussi des aspects plus techniques comme la gestion des polluants.
+La présente étude s'intéresse à la majorité de ces sujets. Elle a pour but d'identifier les différents acteurs de l'après-mine et ses problématiques, tout en essayant d’y répondre. Elle aborde la question des normes à respecter, le respect de l’environnement et des habitants mais aussi des aspects plus techniques comme la gestion des polluants.
 
 Nous étudions plus particulièrement le cas des anciennes mines d'uranium, ainsi que le traitement de l’eau et du radon. Une attention spécifique est portée à la nécessité du traitement de l’eau pour l’ancienne mine d’uranium de la Ribière.
 
-Nous proposons ainsi une synthèse des problématiques de l’après-mine comprenant les contraintes des différentes normes, les restrictions imposées par les acteurs sociaux, une comparaison des différents types de traitement existants et la gestion de l'après-mine par les principaux pays miniers. Les principaux polluants, comme le radon, l'uranium et le radium, peuvent être traités efficacement. Un modèle hydrogéochimique établi pour notre étude permet également de conclure sur le cas de la Ribière : aucun traitement ne semble nécessaire pour l’uranium.
+Nous proposons ainsi une synthèse des problématiques de l’après-mine comprenant les contraintes des différentes normes, les restrictions imposées par les acteurs sociaux, une comparaison des différents types de traitement existants et la gestion de l'après-mine par les principaux pays miniers. Les principaux polluants, comme le radon, l'uranium et le radium, peuvent être traités efficacement. Un modèle hydrogéochimique établi pour notre étude permet également de conclure sur le cas de la Ribière : aucun traitement ne semble nécessaire pour l’uranium. Toutefois, les imprécisions de notre modèle nous empêchent d'émettre un jugement définitif.
 
-L’après-mine est ainsi un problème très important pris au sérieux et bien résolu par les exploitants mais souvent méconnu des populations. Bien que de nombreuses solutions soient mises en place, il est nécessaire de faire de l’information et de donner à l’après-mine une importance plus grande encore que celle qui lui est accordée aujourd’hui.
+%L’après-mine est ainsi un problème très important pris au sérieux et bien résolu par les exploitants mais souvent méconnu des populations. Bien que de nombreuses solutions soient mises en place, il est nécessaire de faire de l’information et de donner à l’après-mine une importance plus grande encore que celle qui lui est accordée aujourd’hui.
+Si l'après-mine est aujourd'hui une problématique prise au sérieux par les exploitants, elle reste souvent mal connue des populations. Bien que de nombreuses solutions soient mises en place, il est encore nécessaire d’informer les citoyens et de donner une plus grande importance à l’après-mine que celle qui lui est aujourd’hui accordée.
 \end{abstract}
 
 {\selectlanguage{english}
@@ -339,13 +340,13 @@ We will acknowledge that the major polluting substances (radon, radium, uranium�
 
 \subsection{Histoire minière de la France}
 
-\paragraph{} La France est un pays avec un passif minier bien présent et ancré dans les esprits. C’est vers l’ère industrielle qu’apparaissent les nombreuses mines qui mèneront à divers bassins miniers français : or, cuivre, fer, étain, manganèse, tungstène, bauxite… Au début du XX$^\text{ème}$ siècle, on compte environ 800 sites miniers en France. Bien que le charbon ait occupé une place importante, surtout dans le Nord et l'Est de la France, de nombreux autres métaux ont été exploités en France - dont notamment l’uranium \cite{ledoux_notions_2020}. 
+\paragraph{} La France est un pays avec un passif minier bien présent et ancré dans les esprits. C’est vers l’ère industrielle qu’apparaissent les nombreuses mines qui mèneront à divers bassins miniers français : or, cuivre, fer, étain, manganèse, tungstène, bauxite… Au début du XX$^\text{ème}$ siècle, on compte environ 800 sites miniers en France. Bien que le charbon ait occupé une place importante, surtout dans le Nord et l'Est de la France, de nombreux autres métaux ont été exploités en France dont notamment l’uranium \cite{ledoux_notions_2020}. 
 
 %La décision d’exploiter un gisement est le résultat d’un processus appelé exploration. Il vise à établir, avec le plus haut niveau de confiance possible, la géologie du site. On effectue pour cela des sondages, des forages et des analyses géochimiques. Pour décider de l’exploitation, il faut réunir plusieurs conditions : une ressource en quantité suffisante, des techniques d’exploitation suffisamment adaptées et des risques financiers limités. Une fois l’exploitation décidée, vient la phase de développement. Cette dernière consiste à décider des techniques d’exploitation et à étudier les impacts sociaux et environnementaux afin d’obtenir les autorisations légales. Il se passe ainsi une dizaine d’années entre les premières études géologiques et le début de l’exploitation. 
 
 %La moitié des mines dans le monde sont à ciel ouvert, mais ces dernières représentent 90 \% de la quantité extraite en masse. La plupart sont excavées par motif en escalier : cela permet de voir les différentes strates et différentes époques d’exploitation \cite{raimbault_mine_2020}.
 
-L’uranium est le centre de notre attention ici. En effet, il est au fondement de l’énergie nucléaire massivement utilisée en France. On trouve naturellement deux isotopes de l'uranium : l'uranium 238 (99.3~\%) et l'uranium 235 (0.7~\%), utilisé pour les centrales nucléaires car fissile. L'uranium comporte deux degrés d’oxydation : le +IV se trouve surtout sous terre, il est insoluble et est celui qui est prévalent (avec comme exemples de minerais porteurs d'uranium l'uraninite, ou la coffinite) ; le +VI se trouve principalement en surface, et est soluble (avec comme exemple de minerai l'autunite). On le trouve aussi en quantité moindre en rétention dans de l’argile ou des oxydes \cite{descostes_introduction_2020}.
+L’uranium est le centre de notre attention ici. En effet, il est au fondement de l’énergie nucléaire massivement utilisée en France. On trouve naturellement deux isotopes de l'uranium : l'uranium 238 (99,3~\%) et l'uranium 235 (0,7~\%), utilisé pour les centrales nucléaires car fissile. L'uranium comporte deux degrés d’oxydation : le +IV se trouve surtout sous terre, il est insoluble et est celui qui est prévalent (avec comme exemples de minerais porteurs d'uranium l'uraninite, ou la coffinite) ; le +VI se trouve principalement en surface, et est soluble (avec comme exemple de minerai l'autunite). On le trouve aussi en quantité moindre en rétention dans de l’argile ou des oxydes \cite{descostes_introduction_2020}.
 
 %Les gisements d’uranium ont des concentrations très diverses, comme le montre la figure \ref{fig:gisements_uranium}. La plupart des gisements ont une concentration en uranium de l’ordre de 0,1 \% mais elle peut atteindre jusqu’à 10 \% dans certaines mines canadiennes (Cigar Lake, McArthur River) \cite{raimbault_mine_2020}.
 
@@ -392,7 +393,7 @@ Dans le cadre de notre projet, nous nous sommes tout particulièrement intéress
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{I_B_3.jpg}
-    \caption{Les différentes phases du réaménagement d'une mine (Orano)}
+    \caption{Les différentes phases du réaménagement d'une mine (inspiré d'un graphique d'Orano)}
     \label{fig:phases_reamenagement}
 \end{figure}
 
@@ -443,55 +444,21 @@ Les sources les plus intéressantes de mise en évidence des effets sur la sant�
 
 \subsubsection{Le radon, un polluant gazeux issu des résidus de traitement}
 
-\paragraph{Formation et émanation du radon}
+\paragraph{Formation et émanation du radon} Les résidus de traitement, dont on a extrait l’uranium, contiennent encore des traces d’uranium et de radium, qui se situe dans la chaîne de désintégration radioactive de l’uranium (figure \ref{fig:desintegration_uranium}). Au sein d’un grain de résidu, les atomes de radium, dont la demi-vie est de 1602~années, se désintègrent en atomes de radon en libérant une particule alpha. Alors que la radioactivité alpha de l’uranium ou du radium, libérée en profondeur, ne pose pas de risque radiologique direct, le radon naît à l’état gazeux et peut atteindre la surface. Il est donc impératif de savoir quelle proportion de radon est transportée vers la surface, pour évaluer les risques et prendre les mesures de sûreté nécessaires.
 
-\paragraph{} Les résidus de traitement, dont on a extrait l’uranium, contiennent encore des traces d’uranium et de radium, qui se situe dans la chaîne de désintégration radioactive de l’uranium (figure \ref{fig:desintegration_uranium}). Au sein d’un grain de résidu, les atomes de radium, dont la demi-vie est de 1602~années, se désintègrent en atomes de radon en libérant une particule alpha. Alors que la radioactivité alpha de l’uranium ou du radium, libérée en profondeur, ne pose pas de risque radiologique direct, le radon naît à l’état gazeux et peut atteindre la surface. Il est donc impératif de savoir quelle proportion de radon est transportée vers la surface, pour évaluer les risques et prendre les mesures de sûreté nécessaires.
+La première étape du transport du radon est appelée émanation. Le radium se désintègre au sein des résidus de traitement, qui sont sous forme de grains, et ainsi, tous les atomes de radon ne parviennent pas à atteindre les porosités. En effet, la distance $R_s$ que les atomes peuvent parcourir de l’ordre de 30~nm dans un minéral de densité commune. Cette distance est de 50~$\mu$m dans l’air et de 50~nm dans l’eau. L'étape d'émanation est caractérisée par le facteur d'émanation, que l'on explique plus en détail en annexe C \ref{annexe:emanation}
 
-La première étape du transport du radon est appelée émanation. Le radium se désintègre au sein des résidus de traitement, qui sont sous forme de grains, et ainsi, tous les atomes de radon ne parviennent pas à atteindre les porosités. En effet, la distance $R_s$ que les atomes peuvent parcourir de l’ordre de 30~nm dans un minéral de densité commune. Cette distance est de 50~$\mu$m dans l’air et de 50~nm dans l’eau.
+\paragraph{Équilibre séculaire} Au sein des résidus, le radium se désintègre en radon, mais le radon se désintègre également, plus rapidement. Au bout d’un certain temps, autant de radon est créé que désintégré. La concentration de radon dans les résidus est alors constante, c’est l’équilibre séculaire. On peut détermine l'activité volumique du radon dans les résidus à l'équilibre en annexe C \ref{annexe:seculaire}.
 
-On définit alors le facteur d’émanation comme étant la proportion d’atomes de radon qui atteignent les porosités sans être absorbés par un autre grain. Il est possible d’estimer le facteur d’émanation \cite{fleischer_theory_1983} dans le cas simplifié d’un grain sphérique de diamètre~$D$, sans prendre en compte l’humidité ou la potentielle absorption des atomes par un grain adjacent (détails en annexe C\ref{annexe:emanation}). La littérature scientifique \cite{ferry_migration_2000} permet de confirmer l’ordre de grandeur obtenu par le calcul simplifié à sec pour des grains dont le diamètre est de l’ordre du micromètre ($E \simeq 10^{-2}$). On note que le facteur d’émanation est d’autant plus élevé que les résidus sont humides ($E\simeq 0,3$) puisque l’eau, avec une distance d’arrêt plus courte, empêche les atomes d’être absorbés par les grains adjacents.
+\paragraph{Transport du radon vers la surface} Plusieurs processus peuvent expliquer le transport du radon vers la surface \cite{irsn_ineris_radon_nodate} : sa diffusion ou le déplacement de la matière environnante. Le moteur de la diffusion du radon dans les pores est son gradient de concentration, dans la mesure où le radon est transporté vers les zones où sa concentration est plus faible. Par ailleurs, le radon étant un gaz inerte, dense et très dilué, son transport est surtout lié au mouvement de son environnement, c’est-à-dire d’autres gaz ou l’eau infiltrée dans le sous-sol. Le gradient de température est le moteur de la convection de ces fluides, mais c’est surtout le gradient de pression - le moteur de l’advection - qui induit une vitesse de Darcy et qui engendre le transport du radon. Autrement dit, si l’eau est en mouvement, le radon emprisonné dans l’eau se déplace avec elle.
 
-Pour nos valeurs numériques dans les résidus miniers, enfouis en zone saturée, on a sélectionné une valeur du coefficient d’émanation $E=0,3$.
+\paragraph{Impact radiologique : calcul de dose efficace} Le radon gazeux, à l’air libre, est susceptible d’être inspiré par des êtres humains. Sa désintégration de type alpha pose alors un risque radiologique important. Son impact a donc été quantifié par plusieurs agences de radioprotection, et des normes ont été imposées. Il y a tout d’abord une norme sur la dose efficace de radioactivité absorbée. En France, la dose efficace moyenne liée au radon est de 1,43~mSv/an (figure \ref{fig:exposition_moyenne}) \cite{irsn_quelle_nodate}. Cette exposition est en partie d’origine naturelle, puisque le radon est un élément chimiquement présent dans les sols, notamment dans les zones granitiques. En revanche, l’exposition au radon peut également être d’origine anthropique, et c’est là qu’intervient la norme \cite{inrs_rayonnements_nodate}. La valeur limite d’exposition du public ou des travailleurs non exposés au radon est de 1~mSv, et de 20~mSv pour les travailleurs majeurs exposés (figure \ref{fig:comparaison_normes}).
 
-\paragraph{Équilibre séculaire}
+Depuis le 1$^{\text{er}}$ juillet 2018, le niveau de référence de l’activité volumique du radon dans l'air est fixé à $300 \; \text{Bq/m}^3$ en moyenne annuelle \cite{autorite_de_surete_nucleaire_reglementation_nodate}, dans les bâtiments habités, publics ou accueillant des travailleurs. L'annexe C \ref{annexe:dose_efficace} donne le détail du calcul de la dose efficace en mSv à partir de la valeur de l'activité volumique du radon.
 
-\paragraph{} Au sein des résidus, le radium se désintègre en radon, mais le radon se désintègre également, plus rapidement. Au bout d’un certain temps, autant de radon est créé que désintégré. La concentration de radon dans les résidus est alors constante, c’est l’équilibre séculaire.
+À la surface de la zone d’enfouissement des résidus de la Ribière, on peut approximer analytiquement la valeur de l’activité volumique à $a=180 \; \text{Bq/m}^3$. Pour une ventilation naturelle $F=0,4$ et 56~semaines de travail à 35h, la dose efficace absorbée par un travailleur est de 1,1~mSv. Cette valeur respecte les normes établies par le code du travail.
 
-On peut déterminer l'activité volumique du radon $a_0$ (en~$Bq/m^3$) dans les résidus atteinte à cet équilibre, en fonction de l'activité massique du radium $A_{Ra}$ (en~$Bq/kg$), du facteur d'émanation $E$ du milieu, de sa masse volumique $\rho$, de sa porosité $\omega$ et de sa une saturation en gaz $S_g$ (détails et valeurs sélectionnées en annexe C\ref{annexe:seculaire} :
-$$
-a_0 =\frac{E(1-\omega)\rho}{\omega S_g} A_{Ra} =9,1 \; \text{MBq/m}^3
-$$
-
-\paragraph{Transport du radon vers la surface}
-
-\paragraph{} Plusieurs processus peuvent expliquer le transport du radon vers la surface \cite{irsn_ineris_radon_nodate} : sa diffusion ou le déplacement de la matière environnante. Le moteur de la diffusion du radon dans les pores est son gradient de concentration, dans la mesure où le radon est transporté vers les zones où sa concentration est plus faible. Par ailleurs, le radon étant un gaz inerte, dense et très dilué, son transport est surtout lié au mouvement de son environnement, c’est-à-dire d’autres gaz ou l’eau infiltrée dans le sous-sol. Le gradient de température est le moteur de la convection de ces fluides, mais c’est surtout le gradient de pression - le moteur de l’advection - qui induit une vitesse de Darcy et qui engendre le transport du radon. Autrement dit, si l’eau est en mouvement, le radon emprisonné dans l’eau se déplace avec elle.
-
-\paragraph{Impact radiologique : calcul de dose efficace}
-
-\paragraph{} Le radon gazeux, à l’air libre, est susceptible d’être inspiré par des êtres humains. Sa désintégration de type alpha pose alors un risque radiologique important. Son impact a donc été quantifié par plusieurs agences de radioprotection, et des normes ont été imposées.
-
-Il y a tout d’abord une norme sur la dose efficace de radioactivité absorbée. En France, la dose efficace moyenne liée au radon est de 1,43~mSv/an (figure \ref{fig:exposition_moyenne}) \cite{irsn_quelle_nodate}. Cette exposition est en partie d’origine naturelle, puisque le radon est un élément chimiquement présent dans les sols, notamment dans les zones granitiques. En revanche, l’exposition au radon peut également être d’origine anthropique, et c’est là qu’intervient la norme \cite{inrs_rayonnements_nodate}. La valeur limite d’exposition du public ou des travailleurs non exposés au radon est de 1~mSv, et de 20~mSv pour les travailleurs majeurs exposés (figure \ref{fig:comparaison_normes}).
-
-Depuis le 1$^{\text{er}}$ juillet 2018, le niveau de référence de l’activité volumique du radon dans l'air est fixé à $300 \; Bq/m^3$ en moyenne annuelle \cite{autorite_de_surete_nucleaire_reglementation_nodate}, dans les bâtiments habités, publics ou accueillant des travailleurs. Il est possible de déduire la dose efficace d’exposition au radon sur le lieu de travail à partir de l’activité volumique en radon $a$ en $Bq/m^3$, le temps de travail en heures $\Delta t$ et du facteur d’équilibre $F$, qui est une image de la qualité de la ventilation du milieu. Un facteur d’équilibre proche de $0$ caractérise un milieu bien aéré, et un facteur d’équilibre proche de $1$ signifie que l’air du milieu n’est que très peu renouvelé. Le facteur d’équilibre $0,4$ correspond à la moyenne dans les habitations françaises. Une ventilation forcée peut baisser ce paramètre. L'INRS donne alors une expression \cite{blanchardon_evaluation_2019} de la dose efficace (en Sieverts) : $$
-d = r F a \Delta t
-$$
-où $r=7,8 \; .10^{-6} \; \text{mSv/(Bq/m}^3\text{.h})$ est un coefficient lié à l’impact du radon, que l'on approxime en annexe C\ref{annexe:estimation_r}. % à faire proprement
-
-Le tableau \ref{tab:exposition_double_entree} permet de visualiser la position du niveau de référence de $300 \; Bq/m^3$ par rapport aux limites d’exposition (les cases rouges sont les doses dépassant la limite légale de dose efficace) pour des travailleurs qui ont travaillé 35~heures pendant 56~semaines de l’année. On note que le niveau de référence est bien positionné.
-
-\begin{table}[H]
-    \centering
-    \caption{Dose efficace en $mSv/an$ en fonction de $F$ et $a$ pour un travailleur}
-    \includegraphics[width=\linewidth]{II_A2_6.png}
-
-    \label{tab:exposition_double_entree}
-\end{table}
-
-A la surface de la zone d’enfouissement des résidus de la Ribière, on peut approximer analytiquement la valeur de l’activité volumique à $a=180 \; Bq/m^3$. Pour une ventilation naturelle $F=0,4$ et 56~semaines de travail à 35h, la dose efficace absorbée par un travailleur est de $1,1 \; mSv$. Cette valeur respecte les normes établies par le code du travail.
-
-\paragraph{Enjeux sanitaires}
-
-\paragraph{}Les principales études sanitaires sur ce gaz ont été menées dans les années 1920. D’après elles, une exposition chronique au radium par ingestion peut causer non seulement des anémies mais aussi des cancers et une détérioration des tissus du squelette.
+\paragraph{Enjeux sanitaires} Les principales études sanitaires sur ce gaz ont été menées dans les années 1920. D’après elles, une exposition chronique au radium par ingestion peut causer non seulement des anémies mais aussi des cancers et une détérioration des tissus du squelette.
 
 Plus récemment, l’IRSN a mené une étude sur le lien entre l’augmentation du taux de décès par cancer du poumon et la présence de radon dans les maisons. Les résultats ont été publiés en 2004 dans la revue « Epidemiology » [Baysson et al 2004]. Ils montraient une augmentation faible du risque de cancer du poumon associée à l’exposition au radon  domestique. Cependant, les résultats sont très peu fiables étant donné qu’ils ont donné des résultats à la limite de la significativité statistique.
 
@@ -512,73 +479,70 @@ L’une de ces organisations est la CRIIRAD (Commission de Recherche et d'Inform
 
 Pour poursuivre la surveillance des sites sur des périodes de temps plus longues, la CRIIRAD a mis en place un Collectif Mines d’Uranium (CMU). Le CMU déplore  l’état dans lequel les entreprises minières laissent le territoire et  affirme que les déchets miniers sont souvent « disséminés dans l’environnement ou stockés dans des conditions totalement inappropriées » et qu’ils « génèrent des pollutions environnementales multiple induisant des dangers sanitaires inacceptables aujourd’hui et pour les générations futures ». Il tiennent ORANO pour responsable de la dégradation de la faune et de la flore et protestent contre une « législation complaisante ». Ils se plaignent, entre autres, de la contamination des terrains par des éléments radioactifs, de la pollution des ressources aquatiques, de la mauvaise gestion des sites de stockage des déchets… Accompagnés de la CRIIRAD, ils reprennent les rapports d’ORANO et de l’IRSN pour en dégager les erreurs et avoir un impact assez important pour que les acteurs publics agissent.
 
-Cependant, même avec l’action de la CRIIRAD, certains maires ou organisations territoriales se trouvent impactées par la mauvaise gestion de l’après-mine. L’impact sur le tourisme et l’accès au ressource n’est pas négligeable, puisqu’il est impensable de construire un complexe sur un ancien site minier, ou de se servir de l’eau d’un lac pollué pour l’agriculture par exemple. ORANO ayant laissé les entreprises utiliser les stériles miniers pour différents projets, il faut aussi détruire des infrastructures qui présentent un danger radioactif.
+Cependant, même avec l’action de la CRIIRAD, certains maires ou organisations territoriales se trouvent impactés par la mauvaise gestion de l’après-mine. L’impact sur le tourisme et l’accès au ressource n’est pas négligeable, puisqu’il est impensable de construire un complexe sur un ancien site minier, ou de se servir de l’eau d’un lac pollué pour l’agriculture par exemple. ORANO ayant laissé les entreprises utiliser les stériles miniers pour différents projets, il faut aussi détruire des infrastructures qui présentent un danger radioactif.
 
 
 \subsubsection{Gestion des risques par un acteur extérieur: le rôle de l’IRSN}
-Plus spécifiquement en ce qui concerne les risques liés à la radioactivité, l'Institut de Radioprotection et de Sûreté Nucléaire (IRSN), créée en 2001 fonctionne sous la tutelle conjointe des ministères de la Défense, de l’Environnement, de la Recherche de la Santé. Il s’agit de l’expert français en matière de recherche et d’expertise sur les risques nucléaires et radiologiques. L’IRSN s’intéresse à l’impact radiologique sur la santé et sur l'environnement et intervient dans la gestion de la sûreté et de la sécurité nucléaire. Lors de la prise en charge d’un projet comportant un risque radiologique, l’IRSN, les concepteurs ou constructeurs, les autorités publiques et les parties prenantes sont en interaction mutuelle. L’IRSN s’occupe en autre du réaménagement des anciennes mines d’uranium en France. Pour ce faire, l’institut doit tout d’abord connaître l’impact radiologique de l’ancienne mine sur l’environnement et sur les populations. Le modèle ERICA (méthode d’évaluation du risque environnemental associé aux rejets de substances radioactives) est utilisé pour déterminer le risque environnemental en effectuant des mesures dosimétriques sur le terrain. L’objectif est de quantifier la probabilité de l’existence d’un risque potentiel sur les écosystèmes aquatiques.
 
-L’institut  mène  des  expertises  afin  d’évaluer  des  points  techniques  particuliers,  concernant notamment l’impact radiologique de certains sites. Lorsqu’elles sont réalisées à la demande des préfets, les interventions de l’IRSN prennent en général la forme de tierces expertises, portant sur les documents techniques produits par ORANO au sujet des travaux menés par l'entreprise sur les sites qu'elle ou au sujet de l’impact environnemental de ceux-ci.
+Plus spécifiquement en ce qui concerne les risques liés à la radioactivité, l'Institut de Radioprotection et de Sûreté Nucléaire (IRSN), créé en 2001 fonctionne sous la tutelle conjointe des ministères de la Défense, de l’Environnement, de la Recherche de la Santé. Il s’agit de l’expert français en matière de recherche et d’expertise sur les risques nucléaires et radiologiques. L’IRSN s’intéresse à l’impact radiologique sur la santé et sur l'environnement et intervient dans la gestion de la sûreté et de la sécurité nucléaire. Lors de la prise en charge d’un projet comportant un risque radiologique, l’IRSN, les concepteurs ou constructeurs, les autorités publiques et les parties prenantes sont en interaction mutuelle. L’IRSN s’occupe entre autres du réaménagement des anciennes mines d’uranium en France. Pour ce faire, l’institut doit tout d’abord connaître l’impact radiologique de l’ancienne mine sur l’environnement et sur les populations. Le modèle ERICA (méthode d’évaluation du risque environnemental associé aux rejets de substances radioactives) est utilisé pour déterminer le risque environnemental en effectuant des mesures dosimétriques sur le terrain. L’objectif est de quantifier la probabilité de l’existence d’un risque potentiel sur les écosystèmes aquatiques.
 
-Pour les sites miniers, l’enjeu est le long terme : les polluants seront là pendant des dizaines de milliers d’années. Les réglementations qui s’appliquent sur ces sites sont le code de la santé publique, pour la protection du public contre les rayonnements ionisant autour des anciens sites miniers d’uranium; le code minier, pour la partie exploitation, surveillance et réaménagement ; et le code de l’environnement, pour le stockage des résidus.
+L’institut  mène  des  expertises  afin  d’évaluer  des  points  techniques  particuliers,  concernant notamment l’impact radiologique de certains sites. Lorsqu’elles sont réalisées à la demande des préfets, les interventions de l’IRSN prennent en général la forme de tierces expertises, portant sur les documents techniques produits par ORANO au sujet des travaux menés par l'entreprise sur les sites ou au sujet de l’impact environnemental de ceux-ci.
 
-L’objectif pour les entreprises est de faire en sorte que les eaux rejetées dans l’environnement soient conformes aux limites fixées par arrêté préfectoral. Il est  basé sur les limites fixées par le RGIE (Règlement Général des Industries Extractives).
+Pour les sites miniers, l’enjeu est le long terme : les polluants seront là pendant des dizaines de milliers d’années. Les réglementations qui s’appliquent sur ces sites sont le code de la santé publique, pour la protection du public contre les rayonnements ionisant autour des anciens sites miniers d’uranium; le code minier, pour la partie exploitation, surveillance et réaménagement ; et le code de l’environnement, pour le stockage des résidus.  L’objectif pour les entreprises est de faire en sorte que les eaux rejetées dans l’environnement soient conformes aux limites fixées par arrêté préfectoral. Il est  basé sur les limites fixées par le RGIE (Règlement Général des Industries Extractives).
 
-Au niveau sanitaire, l’impact radiologique sur la santé a été évalué par la Commission Internationale de Protection Radiologique qui a évalué le risque à 17~cancers pour 100~000~personnes exposées à 1~mSv/an. La limite fixée pour le public est de 1 mSv/an et pour les travailleurs miniers de 20~mSv/an. Or, certains acteurs comme des associations pour les travailleurs au Niger ou les Amis de la Terre en France critiquent Orano pour ne pas avoir admis avoir mis en danger ses travailleurs en les exposant à 20~mSv/an. Selon eux, d’une part les études scientifiques ne sont pas précises et donc Orano n’est en rien obligé de se plier aux seuils définis par la CIPR et d’autre part Orano ne prend pas en compte dans ses calculs les émissions radiologiques liées au fond géochimique lorsque le travailleur rentre chez lui.
 
-\subsection{Les différentes normes mises en place sur l’eau}
+\subsection{Les différentes normes mises en place}% sur l’eau}
 \subsubsection{Acteurs de la législation}
-\paragraph{} De nombreux acteurs interviennent dans la mise en place d’une législation régissant la qualité des eaux. Tout d’abord, c’est l’Union Européenne qui établit des directives. Les états-membres doivent transposer ces actes juridiques dans leur législation nationale. En France, le  ministère de l’environnement contrôle le Comité National de l’Eau, qui évalue la qualité et le prix de l’eau, et l’Office National de l’Eau et des Milieux Aquatiques  qui contrôle les usages des milieux aquatiques. Il existe aussi des institutions régionales : la direction régionale de l’environnement, de l’aménagement et du logement, l’agence régionale de santé et la direction départementale du territoire  appliquent les directives nationales dans les différents régions. De manière encore plus locale, les collectivités territoriales (communauté de communes ou d’agglomérations, métropoles) donnent des ordres pour les travaux de Gestion des Milieux Aquatiques et de Prévention des Inondations. Enfin, les acteurs économiques et les diverses associations de protection de l’environnement entrent en jeu : les industriels et les agriculteurs sont responsables de leurs installations de dépollution et de prélèvement. Parallèlement, les associations sont associées aux décisions au sein du Comité de bassin, appliquées par l’agence de l’eau.
+
+\paragraph{} De nombreux acteurs interviennent dans la mise en place d’une législation régissant la qualité des eaux. Tout d’abord, c’est l’Union Européenne qui établit des directives. Puis, en France, le  ministère de l’environnement contrôle le Comité National de l’Eau, qui évalue la qualité et le prix de l’eau, et l’Office National de l’Eau et des Milieux Aquatiques  qui contrôle les usages des milieux aquatiques. Il existe aussi des institutions régionales : la direction régionale de l’environnement, de l’aménagement et du logement par exemple. De manière encore plus locale, les collectivités territoriales donnent des ordres pour les travaux de Gestion des Milieux Aquatiques et de Prévention des Inondations. Enfin, les acteurs économiques et les diverses associations de protection de l’environnement entrent en jeu : les industriels et les agriculteurs sont responsables de leurs installations de dépollution et de prélèvement.
 
 \subsubsection{Cas de l’eau rejetée dans l’environnement}
 Lorsqu’il n’est pas nécessaire que l’eau soit potable, la DCE (Directive-Cadre sur l’Eau) est la directive européenne qui fait loi. Adoptée en 2000 pour préserver la ressource en eau, elle indique des valeurs seuils pour protéger la vie humaine mais aussi l’environnement. Les NQE (Normes de Qualité de l’Eau) sont définies dans la DCE au niveau européen pour les substances polluantes prioritaires. La NQE est la plus faible des PNEC (“Predicted No Effect Concentration”) : concentration en dessous de laquelle aucun effet inacceptable n’est observé. Ces NQE n’étant définies que pour les polluants considérés comme prioritaires, des VGE (Valeur Guide Environnementale) ont été établies: elles sont calculées comme les NQE mais n’ont pas de valeur réglementaire (donc ne sont pas obligatoirement respectées).
 
-Pour définir ces normes, il faut notamment prendre en compte le fond géochimique. Le fond géochimique est la composition chimique d'un sol et des roches du sous-sol dont il est la décomposition. Il détermine en partie la qualité du sol, de l'eau et la vie de la flore et de la faune. On distingue généralement le fond géochimique naturel, résultant exclusivement de l'évolution de la roche-mère et d'apports naturels : salinité, confinement d’une eau, phénomène de drainance, et le fond d'origine anthropique, qui exprime la part des éléments exclusivement introduits dans le milieu par les activités humaines ou à la suite de ces activités. Le fond géochimique naturel est parfois confondu avec le  “bruit de fond”, mais ce dernier comprend également des apports anthropiques diffus. Les substances généralement considérées pour l’évaluation d’un fond géochimique sont  l’arsenic, le baryum, le bore, le fluor, le cadmium, le chrome, le mercure, le cuivre, le nickel, le plomb, le zinc, l’antimoine, le sélénium, l’aluminium, l’argent, le fer et le manganèse.
+Pour définir ces normes, il faut notamment prendre en compte le fond géochimique : la composition chimique d'un sol et des roches du sous-sol dont il est la décomposition. On distingue généralement le fond géochimique naturel, résultant exclusivement de l'évolution de la roche-mère et d'apports naturels, et le fond d'origine anthropique, qui exprime la part des éléments exclusivement introduits dans le milieu par les activités humaines ou à la suite de ces activités. Le fond géochimique naturel est parfois confondu avec le  “bruit de fond”, mais ce dernier comprend également des apports anthropiques diffus.
 
-Pour quantifier la quantité de polluants dans le milieu, les différents acteurs ont besoin de connaître le fond géochimique du milieu afin de savoir s’ils dépassent sa valeur pour les polluants lors du rejet des eaux dans l’environnement. Or, ce bruit de fond géochimique est difficile à quantifier car il dépend du milieu, et au sein d’un même site sa valeur peut varier d’un point à un autre. Les acteurs ont alors du mal à quantifier la quantité de polluants qu’ils rejettent dans l’environnement et peuvent parfois dépasser les valeurs seuils en prenant en compte une valeur de bruit de fond géochimique plus importante. De plus, la proportion naturelle en certains éléments est parfois supérieure à celle fixée par la législation. C’est en France le cas du baryum (concentration maximale naturelle de 1600~mg/L alors que la norme est à 700 mg/L), du fluor (12 g/L contre 1.5 g/L) ou encore du nickel (100~mg/L contre 20~mg/L) par exemple. D’où la difficulté à établir des normes qui puissent être respectées partout. %/ cf tableau
+Pour quantifier la quantité de polluants dans le milieu, les différents acteurs ont besoin de connaître le fond géochimique du milieu afin de savoir s’ils dépassent sa valeur pour les polluants lors du rejet des eaux dans l’environnement. Or, ce bruit de fond géochimique est difficile à quantifier car il dépend du milieu, et au sein d’un même site sa valeur peut varier d’un point à un autre. Les acteurs ont alors du mal à quantifier la quantité de polluants qu’ils rejettent dans l’environnement et peuvent parfois dépasser les valeurs seuils en prenant en compte une valeur de bruit de fond géochimique plus importante. De plus, la proportion naturelle en certains éléments est parfois supérieure à celle fixée par la législation. C’est en France le cas du baryum, du fluor ou encore du nickel. D’où la difficulté à établir des normes qui puissent être respectées partout. 
 
 Un autre moyen pour établir l’impact de la pollution des eaux de surface sur l’environnement est d’étudier la faune et la flore du milieu. Cela pose un problème car les effets sont donc observés après la pollution du milieu et peuvent ne pas être pris en compte par les entreprises. 
 
 \subsubsection{Cas de l’eau potable} 
 
-\paragraph{} Lorsque l’eau est destinée à la consommation humaine, les critères de potabilité sont établis sur la base des recommandations en vigueur de l’Organisation Mondiale de la Santé (OMS) et sur celle de données scientifiques établissant des doses maximales admissibles (DMA), définies comme la quantité maximale d’une substance qu’une personne peut absorber tous apports confondus (alimentaires, hydriques), sans danger, chaque jour, sa vie durant. Ces doses sont calculées pour des personnes fragiles (bébés, femmes enceintes, immunodéprimés).
+\paragraph{} Lorsque l’eau est destinée à la consommation humaine, les critères de potabilité sont établis sur la base des recommandations en vigueur de l’Organisation Mondiale de la Santé (OMS) et sur celle de données scientifiques établissant des doses maximales admissibles (DMA), définies comme la quantité maximale d’une substance qu’une personne peut absorber tous apports confondus sans danger chaque jour, sa vie durant. Ces doses sont calculées pour des personnes fragiles (bébés, femmes enceintes, immunodéprimés).
 
 Ces critères sont basés sur les principaux indicateurs de la qualité de l’eau. Ils indiquent les  germes pathogènes, virus et bactéries, micro-organismes parasites ainsi que les autres polluants chimiques à éliminer, et de même quels sels minéraux et quels oligo-éléments sont à conserver (comme le calcium, le magnésium, le chlore ou le fer). Afin de fixer une réglementation adaptée, une différence fondamentale est établie entre références de qualité et normes de qualité: les normes de qualité, impératives, concernant des substances pouvant avoir une répercussion sur la santé tandis que les références de qualité (couleur, odeur) sont des indicateurs reflétant le bon fonctionnement des installations de production d’eau potable.
-La qualité de l’eau potable est encadrée par une réglementation européenne, le Code de la Santé publique, des décrets, des arrêtés, des circulaires et en particulier par la Directive européenne 98/83 du 3~novembre 1998 et par le décret 2001-1220 qui fixe les limites et références de qualité pour l’eau potable. Plus spécifiquement, en France, le code de santé publique (CSP) régit le socle de la réglementation en matière de qualité, de production et de distribution de l’eau et transpose les directives européennes. 
+La qualité de l’eau potable est décrite en particulier par la Directive européenne 98/83 du 3~novembre 1998 et par le décret 2001-1220 qui fixe les limites et références de qualité pour l’eau potable. Plus spécifiquement, en France, le code de santé publique (CSP) régit le socle de la réglementation en matière de qualité, de production et de distribution de l’eau et transpose les directives européennes. 
 
 \subsubsection{Comparaison avec d’autres pays}
+
+%Partie à revoir ? Quel est le but de la partie ? On veut parler de quoi ?
 
 \paragraph{Australie}
 
 En Australie, les \textit{Environmental Requirements} (ER) pour la mine d’uranium de Ranger, établis en 1999, fixent les normes de protection environnementale auxquelles l’entreprise responsable d’un site minier doit se soumettre.
 %L’entreprise doit s’assurer que les opérations minières ne compromettent pas l’écosystème environnant et la santé de la population locale. Elle doit maintenir la biodiversité des écosystèmes et assurer la continuation des processus biologiques. Elle doit par ailleurs réhabiliter le site minier de sorte à établir un environnement correspondant à sa zone géographique, en assurant la revégétalisation avec des espèces natives de cette zone, avec la même densité et abondance, ou encore en faisant en sorte que les caractéristiques d’érosion du site soient cohérentes, afin d’assurer la viabilité à long terme et, à terme, de permettre à la zone de se développer sans maintenance particulière par rapport aux zones alentour. De plus, l’entreprise doit assurer des conditions radiologiques stables afin que la dose reçue par les travailleurs et le public soit aussi basse que raisonnablement possible. Elle doit pour cela minimiser le volume d’eau contaminée nécessaire pour faire fonctionner le site, et minimiser la quantité de contaminants présente dans cette eau, tout en s’assurant que ces contaminants soient contenus dans le site. De même, les émissions gazeuses et particulaires doivent être minimisées. L’objectif étant de limiter autant que raisonnablement possible les risques pour la santé des locaux.
 L’entreprise doit pour cela suivre le principe BTP (\textit{Best Practicable Technology}), en implémentant la technologie disponible ayant le plus de retombées positives sur l’environnement. L’Australie a donc mis en place un mode de gestion ALARA (\textit{As Low As Reasonably Possible}) pour le contrôle et la réhabilitation de ses mines d’uranium.
-
 Les mesures correctives doivent être prises en accord avec le ministère de l’environnement, mais ce sont les compagnies minières qui ont la responsabilité de réaliser la réhabilitation et de payer les coûts associés jusqu’à ce que les autorités (comme par exemple le \textit{Northern Territory Department of Mines and Energy} : NTDME) estiment que le site a été réhabilité à un niveau satisfaisant. La surveillance du site doit par ailleurs s’effectuer par des prélèvements réguliers sur les eaux souterraines.
 
 \paragraph{Allemagne}
 
-En Allemagne, le \emph{Radiation Protection Act} (StrlSchG), établi en 2017, fournit le cadre juridique de la protection face aux effets néfastes des radiations et établit les bases légales de la radioprotection.
+En Allemagne, le \emph{Radiation Protection Act} (StrlSchG), établi en 2017, implémentant la directive 2013/59/Euratom du conseil européen, fournit le cadre juridique de la protection face aux effets néfastes des radiations et établit les bases légales de la radioprotection.
 %Cet acte implémente la directive 2013/59/Euratom du conseil européen qui met en place des standards de protection face à l’exposition aux radiations.
 Cette loi met donc en place des valeurs limites de concentration d’activité, d’activité et de dose effective annuelles précises pour des espèces radioactives et des publics distincts. 
-
-Par exemple, la limite générale de la dose effective annuelle pour le public est de 1 mSv, et la concentration d’activité de l’uranium ne doit pas dépasser 10 kBq/kg. Cependant, il n’existe pas de loi spécifique à la gestion des mines d’uranium après la fin de leurs activités, pas de législation globale sur les méthodes à appliquer. Le gouvernement allemand préfère appliquer des méthodes distinctes pour chaque site afin d’apporter des réponses adaptées à des questions spécifiques.
+%Par exemple, la limite générale de la dose effective annuelle pour le public est de 1 mSv, et la concentration d’activité de l’uranium ne doit pas dépasser 10 kBq/kg.
+Cependant, il n’existe pas de loi spécifique à la gestion des mines d’uranium après la fin de leurs activités, pas de législation globale sur les méthodes à appliquer. Le gouvernement allemand préfère appliquer des méthodes distinctes pour chaque site afin d’apporter des réponses adaptées à des questions spécifiques.
 
 %La réhabilitation des mines d’uranium allemandes est principalement gérée par la société Wisbut GmbH, détenue et financée par le gouvernement. Elle est chargée du démantèlement des mines, du traitement du site et de la surveillance des installations et des émanations. La surveillance implique des mesures menées sur le long terme à des positions précises afin d’assurer la cohérence du site avec la loi et un meilleur contrôle sur les actions de réhabilitation.
 
 \paragraph{Etats-Unis}
 
-Aux États-Unis, en 1950, le \textit{US Public Health Service} commençait une étude sur les mineurs d'uranium, conduisant à la première publication d'une corrélation statistique entre le cancer et l'extraction d'uranium, publiée en 1962. Le gouvernement fédéral a finalement réglementé la quantité standard de radon dans les mines, fixant le niveau à 0,3~WL en 1969.
-
-Plus tard, l'USAEC (\textit{United States Atomic Energy Commission}) a donné l’objectif et des conseils pour la réhabilitation de l’eau dans les anciens sites miniers, surtout pour les eaux souterraines contaminées par l'ISR.
-%L’objectif est de restaurer la qualité de l'eau dans les nappes aquifères affectées à l’état avant l'exploitation minière. Bien que toutes les caractéristiques chimiques ne puissent pas être retournées à celles avant l'extraction, l'eau doit être assurée aux mêmes utilisations qu'auparavant. 
-
-L'USAEC formule des recommandations concernant la caractérisation du niveau de base (baseline) de la qualité des eaux souterraines avant le début des opérations minières, la surveillance pour détecter l’évolution de lixiviat pendant l'exploitation minière et la surveillance à long terme pour déterminer à quel moment la qualité des eaux souterraines se stabilise après la fermeture des opérations minières.
-
-L'eau avant l'exploitation est généralement de mauvaise qualité (teneurs élevées en métal, en uranium et parfois de haute salinité), résultant des mécanismes de genèse du minerai. L'objectif de qualité physico-chimique à atteindre dépend de la réglementation locale, généralement de concentration aussi proche que possible du niveau de base.
-
-Par exemple, au Texas, c’est la TCEQ (\textit{Texas Commission on Environmental Quality}) qui définit le niveau de base pour ses sites miniers locaux et surveille la réhabilitation. Le tableau suivant résume les données de référence des eaux souterraines avant l'extraction. Au Texas, 26~éléments chimiques sont mesurés avant l'exploitation minière pour établir le niveau de base, qui est l’objectif initial de restauration. On sélectionne la concentration moyenne la plus élevée de la zone de mine. Dans le site Zamzow, 0,171~milligramme par litre d'uranium était la valeur moyenne la plus élevée de cette zone.
-
+Aux États-Unis, en 1950, le \textit{US Public Health Service} commençait une étude sur les mineurs d'uranium, conduisant à la première publication d'une corrélation statistique entre le cancer et l'extraction d'uranium, publiée en 1962. Le gouvernement fédéral a finalement réglementé la quantité standard de radon dans les mines en 1969.% fixant le niveau à 0,3~WL .
+%Plus tard, l'USAEC (\textit{United States Atomic Energy Commission}) a donné l’objectif et des conseils pour la réhabilitation de l’eau dans les anciens sites miniers, surtout pour les eaux souterraines contaminées par l'ISR (in-situ recovery).
+%L’objectif est de restaurer la qualité de l'eau dans les nappes aquifères affectées à l’état avant l'exploitation minière. Bien que toutes les caractéristiques chimiques ne puissent pas être retournées à celles avant l'extraction, l'eau doit être assurée aux mêmes utilisations qu'auparavant.
+L'USAEC (\textit{United States Atomic Energy Commission}) formule des recommandations concernant la caractérisation du niveau de base (baseline) de la qualité des eaux souterraines avant le début des opérations minières, la surveillance pour détecter l’évolution de lixiviat pendant l'exploitation minière et la surveillance à long terme pour déterminer à quel moment la qualité des eaux souterraines se stabilise après la fermeture des opérations minières.
+%L'eau avant l'exploitation est généralement de mauvaise qualité (teneurs élevées en métal, en uranium et parfois de haute salinité), résultant des mécanismes de genèse du minerai.
+L'objectif de qualité physico-chimique à atteindre dépend de la réglementation locale, généralement de concentration aussi proche que possible du niveau de base.
+%Par exemple, au Texas, c’est la TCEQ (\textit{Texas Commission on Environmental Quality}) qui définit le niveau de base pour ses sites miniers locaux et surveille la réhabilitation.
+%Le tableau suivant résume les données de référence des eaux souterraines avant l'extraction. Au Texas, 26~éléments chimiques sont mesurés avant l'exploitation minière pour établir le niveau de base, qui est l’objectif initial de restauration. On sélectionne la concentration moyenne la plus élevée de la zone de mine. Dans le site Zamzow, 0,171~milligramme par litre d'uranium était la valeur moyenne la plus élevée de cette zone.
 %Figure 2 – Niveau de base du site Zamzow ON ENLEVE
 % \begin{figure}[H]
 %     \centering
@@ -586,8 +550,8 @@ Par exemple, au Texas, c’est la TCEQ (\textit{Texas Commission on Environmenta
 %     \caption{Niveau de base du site Zamzow}
 %     \label{fig:site_zamzow_base}
 % \end{figure}
-
-Cependant, une étude publiée par l'\textit{U.S. Geological Survey} en 2009 a révélé que « À ce jour, aucune opération après ISR aux États-Unis n'a réussi à restaurer l'eau dans l'aquifère au niveau de base ». Tous les sites du Texas ont reçu des objectifs de restauration modifiés pour au moins un élément, déterminés par TCEQ. Les données de restauration finale pour Zamzow montrent une limite modifiée de 3,00~milligrammes par litre pour l'uranium. 
+Cependant, une étude publiée par l'\textit{U.S. Geological Survey} en 2009 a révélé que « À ce jour, aucune opération après ISR (in-situ recovery) aux États-Unis n'a réussi à restaurer l'eau dans l'aquifère au niveau de base ».
+%Tous les sites du Texas ont reçu des objectifs de restauration modifiés pour au moins un élément, déterminés par TCEQ. Les données de restauration finale pour Zamzow montrent une limite modifiée de 3,00~milligrammes par litre pour l'uranium. 
 
 
 %Figure 3 - Données de restauration finale du site Zamzow ON ENLEVE
@@ -616,9 +580,7 @@ Cependant, une étude publiée par l'\textit{U.S. Geological Survey} en 2009 a r
 Le Canada est un État fédéral et la responsabilité de la réglementation de traitement et la réhabilitation est partagée entre les gouvernements provinciaux et le gouvernement fédéral.
 %Le 30~juin 1996, la dernière mine de la région d'Elliot Lake, la mine Stanleigh, était fermée. Après, seule la province de la Saskatchewan produit de l'uranium, mais comme la teneur en uranium du gisement de la Saskatchewan est élevée, le Canada restera le plus grand producteur d'uranium au monde.
 C'est un des plus importants producteurs d'uranium.
-
 L'AECB (\textit{Atomic Energy Control Board}), un organisme indépendant du gouvernement du Canada, est responsable des affaires liées à l'énergie nucléaire et aux matières radioactives. Le règlement R-90 traite de la fermeture et de la réhabilitation des sites. Bien que le Canada réglemente les mines d'uranium, les provinces sont les principaux propriétaires fonciers. Par conséquent, les mines d'uranium fermées reviendront finalement aux provinces ou redeviendront des terres de la Couronne. Les agences environnementales provinciales sont les principaux régulateurs de la qualité de l'eau de tous les sites miniers.
-
 %En 1996, l'AECB a établi la réglementation stratégique de gestion des déchets radioactifs pour s'assurer que les déchets après les mines sont gérés de manière responsable. Les objectifs de cette réglementation canadienne sont :
 %\begin{itemize}
 %    \item protéger l'environnement, en tenant compte des facteurs sociaux et économiques
@@ -626,16 +588,16 @@ L'AECB (\textit{Atomic Energy Control Board}), un organisme indépendant du gouv
 %    \item s'assurer que les risques pour la santé sont conformes aux normes en vigueur 
 %    \item ne pas interdire l'utilisation future des ressources naturelles contenues dans les déchets miniers.
 %\end{itemize}
-
-Des normes spécifiques sont développées pour chaque site. Néanmoins, un certain nombre de critères communs sont applicables à tous les sites. Par exemple, une valeur de 1~mSv par an pour l'équivalent de dose efficace moyen est à respecter sur une période de 50~ans après la fermeture des sites d'uranium, ainsi que les autres exigences légales sur la sécurité nucléaire et la protection radiologique mises en place par l'AECB.
-
-Dans ce cadre, les propriétaires des déchets sont responsables du financement, de l'organisation, de la gestion et de l’élimination des installations. Pour les anciennes mines d'uranium, dont beaucoup ont été fermées il y a plus de 50~ans, plusieurs facteurs doivent être pris en compte. Dans de nombreux cas, l'entreprise qui exploitait la mine, ou son successeur, existe toujours et s'occupe des déchets sur ses sites. Cependant, dans certains cas, le site est retourné à la Couronne lorsque les entreprises n’existent plus et alors la responsabilité de traitement des déchets est partagée entre les gouvernements provincial et fédéral. Lorsque ces anciennes mines fonctionnaient, les réglementations environnementales appliquées à l'industrie minière n'étaient pas très strictes. Cependant, il n'est pas souvent pratique ou rentable de remettre en état les anciens sites en respectant les normes actuelles. La plupart des sites présentent un risque très faible, en raison des faibles teneurs de minerai, de leurs emplacements éloignés et du fait que les polluants se sont dissipés au cours des 50~dernières années.
+Des normes spécifiques sont développées pour chaque site. Néanmoins, un certain nombre de critères communs sont applicables à tous les sites.
+%Par exemple, une valeur de 1~mSv par an pour l'équivalent de dose efficace moyen est à respecter sur une période de 50~ans après la fermeture des sites d'uranium, ainsi que les autres exigences légales sur la sécurité nucléaire et la protection radiologique mises en place par l'AECB.
+Dans ce cadre, les propriétaires des déchets sont responsables du financement, de l'organisation, de la gestion et de l’élimination des installations.
+%Pour les anciennes mines d'uranium, dont beaucoup ont été fermées il y a plus de 50~ans, plusieurs facteurs doivent être pris en compte. Dans de nombreux cas, l'entreprise qui exploitait la mine, ou son successeur, existe toujours et s'occupe des déchets sur ses sites. Cependant, dans certains cas, le site est retourné à la Couronne lorsque les entreprises n’existent plus et alors la responsabilité de traitement des déchets est partagée entre les gouvernements provincial et fédéral. Lorsque ces anciennes mines fonctionnaient, les réglementations environnementales appliquées à l'industrie minière n'étaient pas très strictes. Cependant, il n'est pas souvent pratique ou rentable de remettre en état les anciens sites en respectant les normes actuelles. La plupart des sites présentent un risque très faible, en raison des faibles teneurs de minerai, de leurs emplacements éloignés et du fait que les polluants se sont dissipés au cours des 50~dernières années.
+Si l'entreprise qui exploitait la mine, ou son successeur, existe toujours, elle doit s'occuper des déchets sur ses sites. Sinon, le site est sous responsabilité des gouvernements provincial et fédéral. 
+Néanmoins, il n'est pas souvent pratique ou rentable de remettre en état les anciens sites en respectant les normes actuelles. La plupart des sites présentent un risque très faible, en raison des faibles teneurs de minerai, de leurs emplacements éloignés et du fait que les polluants se sont dissipés au cours des 50~dernières années.
 
 \newpage
 \section{Traitements/Solutions}
 \subsection{Les différentes méthodes de traitement des eaux}
-Le traitement des eaux en sortie de mines est ainsi un enjeu central de l’après-mine. En France, plusieurs techniques de traitement sont utilisées dans les quinze stations stations dédiées. Elles diffèrent par les installations qu’elles requièrent tant que par leurs implications socio-économiques.
-
 \subsubsection{Fonctionnement et coûts}
 \paragraph{Traitement par précipitations} \hspace{1 em}
 
@@ -648,18 +610,12 @@ Le traitement des eaux en sortie de mines est ainsi un enjeu central de l’apr�
 \end{figure}
 
 Le procédé de traitement des eaux le plus répandu en France est le traitement actif par précipitation et coagulation-floculation-décantation. Il équipe onze des quinze stations de traitement des eaux de sortie de mine d'uranium françaises. 
-L’étape de précipitation vise la transformation des métaux dissous dans l’eau (généralement fer, aluminium, uranium, radium) en précipités insolubles par l’ajout de réactifs, souvent de la chaux ou de la soude, selon la réaction suivante :   
+Lors de la précipitation, les métaux dissous dans l’eau (généralement fer, aluminium, uranium, radium) sont transformés en précipités insolubles par l’ajout de réactifs, souvent de la chaux ou de la soude, selon la réaction suivante :   
 $$Me^{n+} + n(OH) \rightarrow Me(OH)_{n}$$
           	
-L’ajout de sulfate d’alumine permet la formation d’hydroxyde d’aluminium sur lequel l'uranium est susceptible d'être fixé par sorption. De même, l’utilisation de chlorure de baryum permet de piéger de radium par la création d’un co-précipité baryum-radium. Ces réactions s’accompagnent d’une augmentation du pH. Étant donné que le pH favorisant la précipitation est différent selon les polluants, il faut ajuster le pH à une valeur optimale en fonction des polluants à éliminer, par exemple par l’ajout de soude ou de chaux.  
+L’ajout de sulfate d’alumine permet la formation d’hydroxyde d’aluminium sur lequel l'uranium est susceptible d'être fixé par sorption. De même, l’utilisation de chlorure de baryum permet de piéger de radium par la création d’un co-précipité baryum-radium. Ces réactions s’accompagnent d’une augmentation du pH. Le pH favorisant la précipitation etant différent selon les substances à éliminer, le pH doit être ajusté à une valeur optimale dépendant des éléments présents dans l'eau, par exemple par l’ajout de soude ou de chaux. La coagulation-floculation consiste en l’agrégation des précipités non décantables en flocs  pour permettre leur décantation. Les réactifs couramment utilisés à cette fin sont la chaux pour la coagulation et les polymères organiques à longue chaîne carbonée pour la floculation. Enfin, la décantation consiste à séparer les phases eau et flocs. Elle peut se faire par passage des effluents dans plusieurs bassins successifs, ou par passage à travers un lit de boue. Les eaux à la surface des décanteurs sont évacuées et les boues créées chargées en polluants sont récupérées au fond des cuves pour être déshydratées puis traitées.
 
-La coagulation-floculation consiste en l’agrégation des précipités non décantables en microflocs puis en flocs  pour permettre leur décantation. Les réactifs couramment utilisés à cette fin sont la chaux pour la coagulation et les polymères organiques à longue chaîne carbonée pour la floculation. 
-
-Enfin, la décantation consiste à séparer les phases eau et flocs. Elle peut se faire par passage des effluents dans plusieurs bassins successifs, ou par passage à travers un lit de boue. Les eaux à la surface des décanteurs sont évacuées et les boues créées chargées en polluants sont récupérées au fond des cuves pour être déshydratées puis traitées.
-
-Ce procédé est largement répandu pour le traitement industriel d’eaux riches en métaux. Il nécessite de nombreuses installations pour contenir les matières (cuves de préparation ou de stockage des réactifs nécessaires aux différentes étapes, cuves de précipitation, coagulation, décantation), pour traiter les déchets formés (filière de traitement des boues) et contrôler les caractéristiques des eaux en réaction comme en sortie (mesure de la stoechiométrie, du pH…). 
-
-La maintenance nécessaire pour un site de traitement se divise entre le nettoyage préventif du site à hauteur de douze heures hebdomadaires et l’étalonnage des dispositifs de mesure à hauteur d’une demi-heure hebdomadaire. En prenant également en compte de la consommation énergétique du site (pompes à boues, agitateurs à cuves…) et du prix des réactifs, le prix de traitement d’un mètre cube d’effluent par précipitation-coagulation-floculation varie entre 0,20~\euro{} et 0,50~\euro{} en fonction des réactifs utilisés.
+Ce procédé est largement répandu pour le traitement industriel d’eaux riches en métaux. Il nécessite de nombreuses installations pour contenir les matières (cuves de préparation ou de stockage des réactifs nécessaires aux différentes étapes, cuves de précipitation, coagulation, décantation), pour traiter les déchets formés (filière de traitement des boues) et contrôler les caractéristiques des eaux en réaction comme en sortie (mesure de la stoechiométrie, du pH…). La maintenance nécessaire d'un site se divise entre le nettoyage préventif des cuves et l'étalonnage des sondes. En prenant également en compte la consommation énergétique du site et le prix des réactifs, le prix de traitement d’un mètre cube d’effluent par précipitation-coagulation-floculation varie entre 0,20~\euro{} et 0,50~\euro{} en fonction des réactifs utilisés.
 
 \paragraph{Traitement par résines échangeuses d’ions} \hspace{1 em}
 
@@ -672,18 +628,13 @@ La maintenance nécessaire pour un site de traitement se divise entre le nettoya
 \label{fig:resine_echangeuse_ions}
 \end{figure}
 
-Les résines échangeuses d’ions sont des macromolécules granulaires insolubles. Elles possèdent des radicaux capables de permuter avec certains ions d’une solution de manière réversible. Lors du traitement, la résine se trouve dans un réservoir cylindrique fermé sous pression relié à un filtre et alimenté par un dispositif collecteur du liquide à traiter. Cet ensemble est appelé colonne.
-
-Le processus de traitement consiste à remplacer les ions centraux de complexes polluants par un autre type d’ion qui rendra le nouveau complexe inerte. Il existe 2 types de résines échangeuses d’ions : les résines cathodiques qui remplacent les cations des complexes de la solution (comme l’uranium $\text{U}^{4+}$) par des cations inoffensifs présents sur ces radicaux et les résines anodiques qui permutent des anions de la même manière.
-L’échange se fait selon l’équation suivante, de manière réversible sans altération ni solubilisation :
+Les résines échangeuses d’ions sont des macromolécules granulaires insolubles. Elles possèdent des radicaux capables de permuter avec certains ions d’une solution de manière réversible. Lors du traitement, la résine se trouve dans un réservoir cylindrique fermé sous pression relié à un filtre et alimenté par un dispositif collecteur du liquide à traiter. Cet ensemble est appelé colonne. Le processus de traitement consiste à remplacer les ions centraux de complexes polluants par un autre type d’ion qui rendra le nouveau complexe inerte. Il existe 2 types de résines échangeuses d’ions : les résines cathodiques qui remplacent les cations des complexes de la solution (comme l’uranium $\text{U}^{4+}$) par des cations inoffensifs présents sur ces radicaux et les résines anodiques qui permutent des anions de la même manière. L’échange se fait selon l’équation suivante, de manière réversible sans altération ni solubilisation :
 $$R-A^+ + B^+ = R-B^+ + A^+$$
 R est le radical de la résine, A l’ion de la résine fixé sur ce radical, et B l’ion à éliminer de la solution.
 
 Le traitement se décompose en plusieurs étapes. Si l’espèce polluante n’est pas sous forme ionique, ou si l’eau contient trop de précipités, une élution est nécessaire. L’eau à traiter est ensuite envoyée grâce à une pompe dans le réservoir jusqu’à saturation de la résine. Ce réservoir est ensuite remplacé et transporté jusqu’au lieu de régénération de la résine, où est opéré le procédé inverse du traitement. L’injection d’une solution régénérante permet de remplacer les ions polluants (comme les ions uranium) par de nouveaux ions inertes. Les résines sont ensuite rincées à faible puis fort débit afin d’éliminer les traces de la solution régénérante. Elles peuvent ensuite être réutilisées pour le processus de traitement de l’eau.
 
-Les réservoirs contenant les résines peuvent être disposés en série, pour augmenter l’efficacité du traitement de l’eau ou bien en parallèle pour augmenter le débit d’eau traité.
-
-Lorsque les colonnes sont en série, le remplacement se fait de manière cyclique : la deuxième colonne prend la place de la première qui est envoyé au site de régénération tandis que la troisième colonne prend la place de la deuxième et ainsi de suite. Une seule nouvelle colonne est ajoutée à la fin de la série. %(Image $III_A_3$)
+Les réservoirs contenant les résines peuvent être disposés en série, pour augmenter l’efficacité du traitement de l’eau ou bien en parallèle pour augmenter le débit d’eau traité. Lorsque les colonnes sont en série, le remplacement se fait de manière cyclique : la deuxième colonne prend la place de la première qui est envoyé au site de régénération tandis que la troisième colonne prend la place de la deuxième et ainsi de suite. Une seule nouvelle colonne est ajoutée à la fin de la série. %(Image $III_A_3$)
 
 \begin{figure}[H]
 \centering
@@ -694,8 +645,7 @@ Lorsque les colonnes sont en série, le remplacement se fait de manière cycliqu
 
 Lors de la régénération des résines, il est possible de traiter la solution régénérante qui ressort du réservoir pour récupérer la substance polluante, soit pour une mise en déchet soit pour réutilisation. Ce processus est notamment très utilisé lors du traitement des eaux pour les mines d’uranium : l’uranium récupéré peut alors être utilisé ou vendu.
 Ce type de traitement s’applique principalement à l’uranium dans le cadre des mines et il permet également de traiter des eaux contenant des métaux solubles, des sulfates, des nitrates, des cyanures, des halogénures… Le procédé est plus rarement utilisé pour les polluants organiques.
-La majorité des coûts du traitement par résines échangeuses d’ions correspond à l’élution, aux coûts humains, matériels et de transport de la matière polluante.
-Un demi équivalent temps plein est nécessaire pour surveiller les différents paramètres de suivi (débits d’eau, concentrations et paramètre de fonctionnements comme la consommation électrique…), pour remplacer les colonnes et nettoyer les filtres.
+La majorité des coûts du traitement par résines échangeuses d’ions correspond à l’élution, aux coûts humains, matériels et de transport de la matière polluante. Un demi équivalent temps plein est nécessaire pour surveiller les différents paramètres de suivi (débits d’eau, concentrations et paramètre de fonctionnements comme la consommation électrique…), pour remplacer les colonnes et nettoyer les filtres.
 %(Tableau $III_A_1$)
 % \begin{figure}[Ht]
 % \centering
@@ -705,37 +655,31 @@ Un demi équivalent temps plein est nécessaire pour surveiller les différents 
 % \end{figure}
 
 
-\begin{table}[H]
-    \centerize
-    \caption{Tableau à légender}
-    \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}c|>{\centering\arraybackslash}X|}
-        \hline
-         \textbf{Tâche à réaliser} & \textbf{Temps nécessaire pour un fonctionnement hebdomadaire permanent} \\ 
-         \hline
-         Nettoyage des filtres & 8 h / semaine \\ 
-         \hline
-         Changement des colonnes & 8,5 h / colonne / semaine  \\
-         \hline
-        Analyses & 4h / semaine  \\
-         \hline
-    \end{tabularx}
+%\begin{table}[H]
+ %   \centerize
+  %  \caption{Tableau à légender}
+  %  \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}c|>{\centering\arraybackslash}X|}
+   %     \hline
+    %     \textbf{Tâche à réaliser} & \textbf{Temps nécessaire pour un fonctionnement hebdomadaire permanent} \\ 
+     %    \hline
+      %   Nettoyage des filtres & 8 h / semaine \\ 
+       %  \hline
+        % Changement des colonnes & 8,5 h / colonne / semaine  \\
+         %\hline
+        %Analyses & 4h / semaine  \\
+         %\hline
+    %\end{tabularx}
 
-    \label{tab:temps_necessaire_fonctionnement_permanent}
-\end{table}
+    %\label{tab:temps_necessaire_fonctionnement_permanent}
+%\end{table}
 
-Dans le cas d’une mine d’uranium, la régénération des résines saturées permet de récupérer et revendre l’uranium à un prix avoisinant 80~\euro{}/kg.
-Le coût du matériel dépend directement du nombre de colonnes nécessaires et donc du débit d’eau à traiter : une colonne coûte 10~500~\euro{}.
+Dans le cas d’une mine d’uranium, la régénération des résines saturées permet de récupérer et revendre l’uranium à un prix avoisinant 80~\euro{}/kg. Le coût du matériel dépend directement du nombre de colonnes nécessaires et donc du débit d’eau à traiter : une colonne coûte 10~500~\euro{}. Le coût du transport correspond notamment aux déplacements des résines vers les lieux de régénération et dépend donc de l’éloignement entre le site de traitement de l’eau et le site de régénération des résines. L’ensemble des coûts de traitement varie alors entre 0,10~et 0,50~\euro{}/$\text{m}^3$.
 
-Le coût du transport correspond notamment aux déplacements des résines vers les lieux de régénération et dépend donc de l’éloignement entre le site de traitement de l’eau et le site de régénération des résines.
-L’ensemble des coûts de traitement pour un volume d’eau varie alors entre 0,10~et 0,50~\euro{}/$\text{m}^3$.
-
-\paragraph{Traitement par zones humides}
+\paragraph{Traitement par zones humides \\ \\}
 
 A l’inverse des traitements précédents, les traitements passifs reposent sur des réactions chimiques à l’œuvre naturellement dans l’environnement. Ils ne nécessitent donc pas d’apport d’énergie supplémentaire. 
 
-L’utilisation d’une zone humide (\textit{wetland} en anglais) constitue un moyen de traitement passif des effluents miniers. Le procédé est encore à l’étude et son emploi est encore très marginal en France : parmi les quinze stations de traitement des eaux françaises, une seule en est équipée. Un wetland désigne une étendue d’eau artificielle reproduisant les conditions d’une tourbière dans laquelle transitent des effluents miniers. 
-
-L’abaissement des concentrations en polluants dans l’eau repose sur trois procédés conjoints. D’une part, des bactéries sulfato-réductrices sont nourries par la matière organique présentes dans la tourbe et permettent le maintien du caractère réducteur du milieu. Dans ces conditions, l’uranium tend à précipiter en uraninite insoluble. D’autre part, uranium et radium peuvent être sorbés sur la matière organique ou sur les fractions argileuses présentes dans la tourbe. Enfin, dans le cas des eaux d’exhaure riches en fer, la présence d’une couche d’eau à la surface de la tourbière favorise la précipitation d’oxy-hydroxydes de fer capables de fixer uranium et radium. 
+L’utilisation d’une zone humide (\textit{wetland} en anglais) constitue un moyen de traitement passif des effluents miniers. Le procédé est encore à l’étude et son emploi est encore très marginal en France : parmi les quinze stations de traitement des eaux françaises, une seule en est équipée. Un wetland désigne une étendue d’eau artificielle reproduisant les conditions d’une tourbière dans laquelle transitent des effluents miniers. L’abaissement des concentrations en polluants dans l’eau repose sur trois procédés conjoints. D’une part, des bactéries sulfato-réductrices sont nourries par la matière organique présentes dans la tourbe et permettent le maintien du caractère réducteur du milieu. Dans ces conditions, l’uranium tend à précipiter en uraninite insoluble. D’autre part, uranium et radium peuvent être sorbés sur la matière organique ou sur les fractions argileuses présentes dans la tourbe. Enfin, dans le cas des eaux d’exhaure riches en fer, la présence d’une couche d’eau à la surface de la tourbière favorise la précipitation d’oxy-hydroxydes de fer capables de fixer uranium et radium. 
 
 Les coûts d’entretien d’une tourbière sont négligeables. Les seuls coûts significatifs lors de son fonctionnement sont ceux des analyses des eaux en sortie de la zone humide.
 
@@ -748,41 +692,28 @@ Les coûts d’entretien d’une tourbière sont négligeables. Les seuls coûts
 \end{figure}
 
 
-\paragraph{Pas de traitement : prélèvements et analyses}
+\paragraph{Pas de traitement : prélèvements et analyses \\ \\}
 
-Il est assez fréquent qu’aucun traitement ne soit nécessaire sur un site minier, lorsque le site est assez isolé ou bien lorsque le traitement qui était nécessaire lors de l’exploitation est devenu inutile (voir III.B). Le coût n’est cependant pas nul, il faut continuer les prélèvements et analyses pour vérifier en permanence que l’eau n’a effectivement pas à être traitée et pouvoir traiter rapidement si un phénomène imprévu présente des dangers (apparition d’un nouveau rejet, effet saisonnier...). Les prélèvements doivent être réalisés au moins une fois par semaine et impliquent donc un coût humain. Il faut également payer les laboratoires responsables des analyses de ces prélèvements.
+Il est assez fréquent qu’aucun traitement ne soit nécessaire sur un site minier, lorsque le site est assez isolé ou que le traitement qui était nécessaire lors de l’exploitation est devenu inutile (voir III.B). Le coût n’est cependant pas nul : il faut continuer les prélèvements et analyses pour vérifier en permanence que l’eau n’a effectivement pas à être traitée et pouvoir reprendre le traitement rapidement si un phénomène imprévu présente des dangers (apparition d’un nouveau rejet, effet saisonnier...). Il est donc préférable de laisser les infrastructures en place après l'interruption d’un traitement, et de les entretenir régulièrement pour pouvoir recommencer le traitement si nécessaire, et permettre  une meilleure entente avec les associations et les locaux.  Les prélèvements doivent être réalisés au moins une fois par semaine et impliquent donc un coût humain. Il faut également payer les laboratoires responsables des analyses de ces prélèvements.
 
-Le coût est donc, même si aucun traitement n’est mis en place, non négligeable  par rapport au coût total de l’après-mine. Avec ou sans traitement, les prélèvements et analyses réalisés dans l’ensemble de la filière après-mine représentent un investissement de 700~000 à 800~000~\euro{} par an.
-
-Il est de même préférable de laisser les infrastructures en place après l'interruption d’un traitement, et de les entretenir régulièrement pour pouvoir recommencer le traitement si nécessaire, et permettre  une meilleure entente avec les associations et les locaux. 
-
+Le coût est donc, même si aucun traitement n’est mis en place, non négligeable par rapport au coût total de l’après-mine. Avec ou sans traitement, les prélèvements et analyses réalisés dans l’ensemble de la filière après-mine représentent un investissement de 700~000 à 800~000~\euro{} par an.
 
 \subsubsection{Comparaison et faisabilité des méthodes de traitement de l'eau}
-Les trois méthodes de traitements discutées ci-dessus sont aujourd’hui utilisées en France. Bien qu’elles soient toutes les trois non destructives, elles ne sont pas perçues de la même manière et présentent chacune certains avantages ou aspects contraignants importants à étudier pour savoir quel type de traitement utiliser sur chaque site.
+\paragraph{} Les trois méthodes de traitements discutées ci-dessus sont aujourd’hui utilisées en France. Bien qu’elles soient toutes les trois non destructives, elles ne sont pas perçues de la même manière et présentent chacune certains avantages ou aspects contraignants importants à étudier pour savoir quel type de traitement utiliser sur chaque site.
 
+\paragraph{Investissement et mise en place \\ \\}
 
-\paragraph{Investissement et mise en place}
+Les coûts détaillés à la partie précédente représentent principalement les OPEX (dépenses d’exploitation). Les CAPEX (dépenses d’investissement) représentent également une dépense conséquente qui s'additionne à toute la gestion de l’après-mine et doivent donc être considérés pour le choix d'un traitement. Ils prennent en compte les dépenses liées aux infrastructures et à l’achat du matériel pérenne non remplacé pendant l’exploitation. Ce coût est équivalent pour ce qui concerne les traitements par précipitation et par zone humide, mais il est 4 à 5~fois plus important pour le traitement par résines échangeuses d’ions.
 
-Les coûts détaillés à la partie précédente représentent principalement les OPEX (dépenses d’exploitation). Les CAPEX (dépenses d’investissement) représentent également une dépense conséquente qui s'additionne à toute la gestion de l’après-mine. Ce type de dépense doit donc être pris en compte pour choisir un type de traitement plutôt qu’un autre.
+Il faut également prendre en compte la durée de vie du matériel pour faire un retour sur investissement. Par exemple, si la construction d’un wetland demande un faible investissement, les travaux se réduisant souvent à quelques opérations de terrassement, la tourbe nécessaire à son fonctionnement semble devenir inefficace en quelques années. Or, l’approvisionnement en tourbe a un impact économique et environnemental important, puisque, l’exploitation industrielle de la tourbe française étant strictement réglementée, il peut être nécessaire de l’importer, notamment des pays baltes. L’impact environnemental des infrastructures est aussi à prendre en compte. Par exemple, alors que le traitement par précipitation nécessite la construction de nombreux bassins spacieux et pouvant empiéter sur l’environnement, le wetland s’insère dans le paysage, accueillant la végétation et permettant le développement d’une faune spécifique.
 
-Les CAPEX prennent en compte les dépenses liées aux infrastructures et à l’achat du gros matériel non remplacé pendant l’exploitation. Ce coût est équivalent pour ce qui concerne les traitements par précipitation et par zone humide, mais il est 4 à 5~fois plus important pour le traitement par résines échangeuses d’ions.
+\paragraph{Exploitation et maintenance \\ \\}
 
-Il faut cependant également prendre en compte la durée de vie du matériel pour faire un retour sur investissement. Par exemple, si la construction d’un wetland demande un faible investissement, les travaux se réduisant souvent à quelques opérations de terrassement, la tourbe nécessaire à son fonctionnement semble devenir inefficace en quelques années. Or, l’approvisionnement en tourbe a un impact économique et environnemental important, puisque, l’exploitation industrielle de la tourbe française étant strictement réglementée, il peut être nécessaire de l’importer, notamment des pays baltes. 
-
-L’impact environnemental des infrastructures est aussi à prendre en compte. Par exemple, alors que le traitement par précipitation nécessite la construction de nombreux bassins spacieux et pouvant empiéter sur l’environnement, le wetland s’insère dans le paysage, accueillant la végétation et permettant le développement d’une faune spécifique.
-
-\paragraph{Exploitation et maintenance}
-
-Les méthodes de traitement présentent chacune des avantages et inconvénients relatifs à leur exploitation. D’une part, leurs caractéristiques techniques ne leur permettent pas de prendre en charge les mêmes débits d’effluents. Le traitement par précipitation et coagulation-floculation-décantation est le plus productif, avec environ 200~$\text{m}^3$ traités par heure, mais aussi le plus flexible, avec une bonne capacité d’adaptation aux variations saisonnières du volume d’effluent entrant. 
-Le traitement par résines échangeuses d’ions permet le traitement d’environ 100~$\text{m}^3$ d’effluent par heure et présente une bonne adaptabilité au débit grâce à la possibilité de placer les bouteilles en série ou en parallèle. Au contraire, le wetland ne traite que de très faibles débits, de l’ordre du $\text{m}^3$ par heure.
+Les méthodes de traitement présentent chacune des avantages et inconvénients relatifs à leur exploitation. D’une part, leurs caractéristiques techniques ne leur permettent pas de prendre en charge les mêmes débits d’effluents. Le traitement par précipitation et coagulation-floculation-décantation est le plus productif, avec environ 200~$\text{m}^3$ traités par heure, mais aussi le plus flexible, avec une bonne capacité d’adaptation aux variations saisonnières du volume d’effluent entrant. Le traitement par résines échangeuses d’ions permet le traitement d’environ 100~$\text{m}^3$ d’effluent par heure et présente une bonne adaptabilité au débit grâce à la possibilité de placer les bouteilles en série ou en parallèle. Au contraire, le wetland ne traite que de très faibles débits, de l’ordre du $\text{m}^3$ par heure.
 
 Le traitement par résines échangeuses d’ions est le traitement le plus efficace pour abattre la concentration en uranium de l’eau avec un rendement pouvant atteindre 95~\% ou même 98~\% lorsque les colonnes sont disposées en série.  Tout comme le procédé de précipitation, qui permet d’atteindre dans de bonnes conditions des rendements de 90~\%, il est en mesure d’éliminer une large gamme de polluants grâce au recours à différentes résines. L’efficacité de ces deux traitements est en outre sensible aux caractéristiques chimiques de l’effluent, telles que son pH ou la présence de certains éléments. Pour le traitement par résines, la présence de précipités peut très fortement nuire au traitement. Un prétraitement, l’élution, est alors nécessaire et représente la majorité des coûts du traitement par résines. Le wetland est de nouveau la solution la moins efficace, l’abattage des concentrations en uranium et radium étant de l’ordre de 50 à 70~\%.
 
-Le traitement par résines met en jeu des réactions rapides qui permettent, sous réserve de bonnes conditions chimiques, un traitement rapide des eaux. A l’inverse, le traitement par précipitation repose sur une longue phase de décantation pouvant durer plusieurs jours. Les deux solutions de traitement actif présentent également des coûts importants en maintenance (transport des résines, manutention des colonnes, nettoyage préventif des cuves) et en réactifs tandis que l’utilisation du wetland ne requiert pas la présence permanente d’un opérateur. Les seuls coûts associés à son fonctionnement sont les coûts des analyses de l’eau en sortie.  Néanmoins, la durée d’efficacité du wetland semble courte : des données relevées en 2020 au bassin pilote de la mine d’Henriette ouvert en 2014 montrent que l’abattage des concentrations en polluants est moins important après cinq ans d’activité. 
-
-En termes de coûts, les traitements par zones humides et par précipitation sont plus avantageux que celui par résine car l’investissement et l’élution sont trop coûteux, même en prenant en compte les éventuelles ventes après régénération de la résine.
-%(Tableau III.A.2)
-
+Le traitement par résines met en jeu des réactions rapides qui permettent, sous réserve de bonnes conditions chimiques, un traitement rapide des eaux. A l’inverse, le traitement par précipitation repose sur une longue phase de décantation pouvant durer plusieurs jours. Les deux solutions de traitement actif présentent également des coûts importants en maintenance (transport des résines, manutention des colonnes, nettoyage préventif des cuves) et en réactifs tandis que l’utilisation du wetland ne requiert pas la présence permanente d’un opérateur. Les seuls coûts associés à son fonctionnement sont les coûts des analyses de l’eau en sortie.  Néanmoins, la durée d’efficacité du wetland semble courte : des données relevées en 2020 au bassin pilote de la mine d’Henriette ouvert en 2014 montrent que l’abattage des concentrations en uranium est moins important après cinq ans d’activité, passant d'environ 70\% à environ 50\%. %(Tableau III.A.2)
 
 \begin{table}[H]
     \centering
@@ -801,93 +732,89 @@ En termes de coûts, les traitements par zones humides et par précipitation son
 \label{tab:cout_exploitation_traitements}
 \end{table}
 
-L’un des principaux enjeux de l’après-mine est de diminuer ces coûts car le traitement par résine est très avantageux lorsque le polluant peut être récupéré.
+En termes de coûts, les traitements par zones humides et par précipitation sont plus avantageux que celui par résine car l’investissement et l’élution sont trop coûteux, même en prenant en compte les éventuelles ventes après régénération de la résine. L’un des principaux enjeux de l’après-mine est de diminuer ces coûts car le traitement par résine est très avantageux lorsque la substance d'intérêt peut être récupérée.
 
-\paragraph{Gestion des déchets }
+\paragraph{Gestion des déchets \\ \\}
 
-Les traitements produisent des déchets sous différentes formes qu’il est nécessaire de stocker où d’évacuer en respectant les normes et les sociétés locales.
+Les traitements produisent des déchets sous différentes formes qu’il est nécessaire de stocker où d’évacuer en respectant les normes et les sociétés locales. Le traitement par zone humide engendre des tourbes saturées au bout de quelques années. La question de la gestion de cette matière organique chargée est encore à l’étude. En outre, l’utilisation d’un wetland peut entraîner le relargage des métaux fixés dans l’environnement avoisinant. De même, le traitement par précipitation donne naissance à d’importants volumes de boues qui impliquent de nouveaux coûts de traitement ou de déshydratation. Il peut également augmenter les concentrations en sulfates dans l’eau. 
 
-Le traitement par zone humide engendre des tourbes saturées au bout de quelques années. La question de la gestion de cette matière organique chargée est encore à l’étude. En outre, l’utilisation d’un wetland peut entraîner le relargage des métaux fixés dans l’environnement avoisinant.
-De même, le traitement par précipitation donne naissance à d’importants volumes de boues qui impliquent de nouveaux coûts de traitement ou de déshydratation. Il peut également augmenter les concentrations en sulfates dans l’eau. 
-
-Au contraire, le traitement par résines échangeuses d’ions est très bien perçu par les associations car il permet de retirer définitivement un certain type de polluant du site minier. C’est notamment le cas pour les mines d’uranium : les associations qui se focalisent sur les dangers liés à l’uranium sont satisfaites par l’exportation de ce dernier vers d’autres lieux ou il va être traité puis revendu lors de la régénération des résines.
-
-Cependant ce type de traitement provoque la création de nouveaux déchets, à l’extérieur du site minier, lorsque le polluant ne peut pas être réutilisé après avoir été récupéré lors de la régénération des résines. Le problème est donc dans ce cas le même que la gestion des déchets liés aux traitements par zones humides et précipitations.
+Au contraire, le traitement par résines échangeuses d’ions est très bien perçu par les associations car il permet de retirer définitivement un certain type de polluant du site minier. C’est notamment le cas pour les mines d’uranium : les associations qui se focalisent souvent sur les dangers liés à l’uranium sont satisfaites par l’exportation de ce dernier vers d’autres lieux où il va être traité puis revendu lors de la régénération des résines. Cependant ce type de traitement provoque la création de nouveaux déchets, à l’extérieur du site minier, lorsque le polluant ne peut pas être réutilisé après avoir été récupéré lors de la régénération des résines. Le problème est donc dans ce cas le même que la gestion des déchets liés aux traitements par zones humides et précipitations.
 
 Le traitement de l’eau par résine échangeuse d’ion est alors plus avantageux que les autres principalement dans le cas où le polluant peut être récupéré après régénération de la résine : le coût est diminué grâce à la revente et le processus ne produit presque pas de déchets.
 
-Ne pas traiter une eau dont les teneurs en polluants sont en adéquation avec les normes en vigueur est aussi une solution pertinente sur les plans environnementaux et économiques, son coût se réduisant aux frais de contrôle et d’analyse des eaux. Cette solution pourrait également être pertinente dans le cas où l’évacuation de l’eau vers un cours d’eau met en jeu des dilutions importantes. Néanmoins, du fait de l’exacerbation de la dangerosité de l’uranium dans l’opinion collective, un traitement, même s’il est plus susceptible de dégrader la qualité de l’eau que de l’améliorer, est souvent préféré par les populations locales. De même, l’interruption d’un traitement des eaux est susceptible d’être mal accueillie par les riverains.
+%Ne pas traiter une eau dont les teneurs en polluants sont en adéquation avec les normes en vigueur est aussi une solution pertinente sur les plans environnementaux et économiques, son coût se réduisant aux frais de contrôle et d’analyse des eaux. Cette solution pourrait également être pertinente dans le cas où l’évacuation de l’eau vers un cours d’eau met en jeu des dilutions importantes. Néanmoins, du fait de l’exacerbation de la dangerosité de l’uranium dans l’opinion collective, un traitement, même s’il est plus susceptible de dégrader la qualité de l’eau que de l’améliorer, est souvent préféré par les populations locales. De même, l’interruption d’un traitement des eaux est susceptible d’être mal accueillie par les riverains.
 
 \subsubsection{Présentation des situations des autres pays}
 %\paragraph{Situation générale de mines d’uranium de chaque pays}
 
-\paragraph{Australie}
+\paragraph{Australie \\ \\}
 %L’existence de dépôts d'uranium est connue en Australie depuis 1890, et les mines de Radium Hill et Mount Painter exploitées pour leur radium, produisent également un peu d’uranium. Mais ce n’est qu’à partir de 1944 que commencent les recherches intenses de gisements d’uranium. Dans les années 1950, commença l’exploitation des mines de Rum Jungle, Mary Kathleen et South Alligator. L’uranium a principalement été exporté aux Etats-Unis et au Royaume-Uni, pour alimenter leurs programmes d’armement nucléaire. Le développement de l’énergie nucléaire conduit à l’exploitation des mines de Ranger, Nabarlek et Koongarra à la fin des années 1970. En 1988, la mine Olympic Dam commence une production d’uranium comme sous-produit.
 %Néanmoins, en 1984, le gouvernement limite la production et l’exportation d’uranium aux sites de Ranger, Nabarlek et Olympic Dam. Ce n’est qu’en 2007 que cette politique sera abandonnée, et en 2009 que sera approuvé le projet d’une une quatrième mine, Four Mile face, marquant le retour de l’expansion du marché de l’uranium en Australie.
 %L’Australie est désormais le troisième producteur mondial d’uranium, et le premier pays en termes de ressources connues. Cependant, toute la production est exportée.
 
-L’existence de dépôts d'uranium est connue en Australie depuis 1890, mais ce n’est qu’à partir de 1944 que commencent les recherches intenses de gisements d’uranium. Dans les années 1950, commença l’exploitation des mines de Rum Jungle, Mary Kathleen et South Alligator. A la fin des années 1970, trois autres mines sont mises en exploitation et de l'uranium est produit comme sous-produit dans deux autres mines à partir de 1988.
-Cependant, entre 1984 et 2007, le gouvernement limite la produciton d'uranium à trois sites, puis en 2009, une quatrième mine est mise en exploitation, marquant le retour de l'expansion du marché de l'uranium en australie.
+%L’existence de dépôts d'uranium est connue en Australie depuis 1890, mais ce n’est qu’à partir de 1944 que commencent les recherches intenses de gisements d’uranium.
+Dans les années 1950, commença l’exploitation des mines de Rum Jungle, Mary Kathleen et South Alligator. A la fin des années 1970, trois autres mines sont mises en exploitation et de l'uranium est produit comme sous-produit dans deux autres mines à partir de 1988.
+Cependant, entre 1984 et 2007, le gouvernement limite la production d'uranium à trois sites, puis en 2009, une quatrième mine est mise en exploitation, marquant le retour de l'expansion du marché de l'uranium en Australie.
 L’Australie est désormais le troisième producteur mondial d’uranium, et le premier pays en termes de ressources connues. Cependant, toute la production est exportée.
 
 
-\paragraph{Allemagne}
+\paragraph{Allemagne \\ \\}
 %Durant la guerre froide, une importante industrie minière a été établie en Allemagne de l’Est. De 1947 à 1990, des mines d’uranium ont été exploitées en Saxe (Johanngeorgenstadt, Aue, Schlema) et en Thuringe (Ronneburg, Königstein…). La production a été utilisée par l’Union Soviétique, dans un premier temps, pour la production d’armes nucléaires, puis en tant que combustible dans des centrales nucléaires. Les mines d’uranium ont toutes été fermées suite à la réunification de l’Allemagne, pour des raisons environnementales. Au début, l’uranium extrait était traité dans des usines mécaniques proches des mines, mais s’est concentrée dans des usines à traitement chimique à Crossen et Seelingstädt dans les années 1950. La mine de Königstein s’est convertie au In-Situ Leaching acide dans les années 1980. La production totale d’uranium aura été d’environ 230~000~tonnes, avec jusqu’à 7000~tonnes par an.
 
-Durant la guerre froide, une importante industrie minière a été établie en Allemagne de l’Est. De 1947 à 1990, des mines d’uranium ont été exploitées en Saxe (Johanngeorgenstadt, Aue, Schlema) et en Thuringe (Ronneburg, Königstein…).% La production a été utilisée par l’Union Soviétique, dans un premier temps, pour la production d’armes nucléaires, puis en tant que combustible dans des centrales nucléaires.% Les mines d’uranium ont toutes été fermées suite à la réunification de l’Allemagne, pour des raisons environnementales. Au début, l’uranium extrait était traité dans des usines mécaniques proches des mines, mais s’est concentrée dans des usines à traitement chimique à Crossen et Seelingstädt dans les années 1950. La mine de Königstein s’est convertie au In-Situ Leaching acide dans les années 1980. La production totale d’uranium aura été d’environ 230~000~tonnes, avec jusqu’à 7000~tonnes par an.
+Durant la guerre froide, une importante industrie minière a été établie en Allemagne de l’Est. De 1947 à 1990, des mines d’uranium ont été exploitées en Saxe (Johanngeorgenstadt, Aue, Schlema) et en Thuringe (Ronneburg, Königstein…). Les mines d’uranium ont toutes été fermées suite à la réunification de l’Allemagne, pour des raisons environnementales. La production totale d’uranium aura été d’environ 230~000~tonnes, avec jusqu’à 7000~tonnes par an.
 
-\paragraph{Etats-Unis}
-Alors que l'uranium est principalement utilisé pour l'énergie nucléaire, son origine est la production de minerai contenant du radium à partir de 1898 dans l'ouest du Colorado. Les années 1950 ont vu un boom de l'extraction d'uranium dans l'ouest des États-Unis. Les États-Unis ont été le premier producteur mondial d'uranium de 1953 à 1980. Jusqu'au début des années 1980, il y avait des mines d'uranium actives en Arizona, Colorado, Nouveau-Mexique, Oregon, Dakota du Sud, Texas, Utah, Washington et Wyoming.
-La baisse des prix au début des années 1980 a forcé la fermeture de nombreuses mines. La plupart du minerai d'uranium aux États-Unis est de moindre qualité que ceux de l'Australie et du Canada. En raison de la moindre teneur, de nombreux gisements d'uranium aux États-Unis sont devenus non rentables lorsque le prix de l'uranium a fortement baissé à la fin des années 1970. En 2001, il n'y avait que trois mines d'uranium en exploitation (toutes par ISR) aux États-Unis. La production annuelle a atteint un minimum de 779 tonnes métriques d'oxyde d'uranium en 2003. L'Energy Information Administration des États-Unis a signalé que 90~\% de la production d'uranium aux États-Unis en 2006 provenait de ISR.
-En 2011, les États-Unis ont extrait 9~\% de l'uranium consommé par leurs centrales nucléaires. Le reste était importé, principalement de Russie, du Kazakhstan, du Canada et d'Australie. Bien que la production d'uranium soit tombée à de faibles niveaux, les États-Unis possèdent la quatrième plus grande ressource d'uranium au monde, derrière l'Australie, le Canada et le Kazakhstan. Les États possédant les plus grandes réserves de minerai d'uranium sont le Wyoming, le Nouveau-Mexique et le Colorado.
+\paragraph{Etats-Unis \\ \\}
+%à réduire
+Alors que l'uranium est principalement utilisé pour l'énergie nucléaire, son origine est la production de minerai contenant du radium à partir de 1898 dans l'ouest du Colorado. Les années 1950 ont vu un boom de l'extraction d'uranium dans l'ouest des États-Unis : ils ont été le premier producteur mondial d'uranium de 1953 à 1980. 
+%La baisse des prix au début des années 1980 a forcé la fermeture de nombreuses mines. La plupart du minerai d'uranium aux États-Unis est de moindre qualité que ceux de l'Australie et du Canada. En raison de la moindre teneur, de nombreux gisements d'uranium aux États-Unis sont devenus non rentables lorsque le prix de l'uranium a fortement baissé à la fin des années 1970. En 2001, il n'y avait que trois mines d'uranium en exploitation (toutes par ISR) aux États-Unis. La production annuelle a atteint un minimum de 779 tonnes métriques d'oxyde d'uranium en 2003. L'Energy Information Administration des États-Unis a signalé que 90~\% de la production d'uranium aux États-Unis en 2006 provenait de ISR.
+En 2011, les États-Unis ont extrait 9~\% de l'uranium consommé par leurs centrales nucléaires. Le reste était importé. Bien que la production d'uranium soit tombée à de faibles niveaux, les États-Unis possèdent la quatrième plus grande ressource d'uranium au monde, derrière l'Australie, le Canada et le Kazakhstan.
 
 
-\paragraph{Canada}
+\paragraph{Canada \\ \\}
 La première découverte d'uranium enregistrée au Canada a eu lieu dans les années 1930 dans les Territoires du Nord-Ouest. Pendant de nombreuses années, le Canada a été le plus grand exportateur de minerai d'uranium au monde. En 2009, le Canada était le deuxième producteur d’uranium, derrière le Kazakhstan, 20~\% de la production mondiale d'uranium primaire provient du Canada. Aujourd’hui, la seule région productrice au Canada est le nord de la Saskatchewan.
 %Pendant la Seconde Guerre Mondiale, la demande d'uranium a explosé lorsque les États-Unis ont lancé le projet Manhattan pour produire les premières armes atomiques. En conséquence, en 1943, le gouvernement du Canada a formé une société fédérale, Eldorado Gold Mines Limited, pour surveiller les exploitations d'uranium. La recherche d'uranium était limitée au gouvernement.
 %L'interdiction de la prospection privée a été levée en 1947. Cela a conduit à un boom d'exploration qui a rapidement abouti à la découverte des mines dans les Territoires du Nord-Ouest (Rayrock), en Ontario (Bancroft et Elliot Lake) et en Saskatchewan (Uranium City). En 1956, 23~mines étaient en opération dans cinq provinces. En 1959, les exportations canadiennes d'uranium étaient évaluées à 330~millions de dollars, plus que tous les autres minerais exportés du Canada cette année-là. Au début des années 1960, la demande militaire d'uranium a diminué et, en 1965, le Canada a imposé une politique consistant à ne vendre de l'uranium que pour des objectifs pacifiques. Cette période marque la fin du boom de l'uranium et le nombre de mines en exploitation tombe à quatre.
 
 
 
-\paragraph{Les méthodes de traitement préférées par pays}
+%\paragraph{Les méthodes de traitement préférées par pays}
 
-\paragraph{Australie}
-La méthode privilégiée pour le stockage de résidus en Australie est le stockage souterrain. Cependant, un manque d’attention au stockage des résidus, et en particulier à la perméabilité des roches constituant les sites de stockage a souvent conduit à la contamination des réserves d’eau souterraines, notamment par interaction avec eaux de pluies accélérant grandement l’érosion des roches, ce qui est exacerbé pendant la saison des pluies. De plus, le traitement des eaux souterraines a souvent été insuffisant voire inexistant, conduisant à la contamination des réserves d’eau naturelles. À la mine de Rum Jungle, l’approche utilisée pour limiter cette acidification a été la construction d’une couverture multicouches, limitant l’infiltration des eaux de pluie. A la mine de Nabarlek, l’eau des bassins de rejet a même été dispersée en 1985 sur 20~hectares de terrains forestiers pour accélérer la déshydratation en dispersant l’eau contaminée. Cependant, une élévation de la concentration de sulfate et nitrate dans les eaux souterraines a conduit à la mort d’une partie des arbres de la forêt qui ne s’est rétablie qu’en 1997.
-La revégétalisation des sites de stockage permet en outre de limiter l’érosion des roches et de déshydrater les couches de couverture par évapotranspiration et captage de l’humidité, et donc de limiter les émissions de polluants.
+%\paragraph{Australie}
+%La méthode privilégiée pour le stockage de résidus en Australie est le stockage souterrain. Cependant, un manque d’attention au stockage des résidus, et en particulier à la perméabilité des roches constituant les sites de stockage a souvent conduit à la contamination des réserves d’eau souterraines, notamment par interaction avec les eaux de pluies accélérant grandement l’érosion des roches, ce qui est exacerbé pendant la saison des pluies. De plus, le traitement des eaux souterraines a souvent été insuffisant voire inexistant, conduisant à la contamination des réserves d’eau naturelles. À la mine de Rum Jungle, l’approche utilisée pour limiter cette acidification a été la construction d’une couverture multicouches, limitant l’infiltration des eaux de pluie. A la mine de Nabarlek, l’eau des bassins de rejet a même été dispersée en 1985 sur 20~hectares de terrains forestiers pour accélérer la déshydratation en dispersant l’eau contaminée. Cependant, une élévation de la concentration de sulfate et nitrate dans les eaux souterraines a conduit à la mort d’une partie des arbres de la forêt qui ne s’est rétablie qu’en 1997.
+%La revégétalisation des sites de stockage permet en outre de limiter l’érosion des roches et de déshydrater les couches de couverture par évapotranspiration et captage de l’humidité, et donc de limiter les émissions de polluants.
 
 
-\paragraph{Allemagne}
+%\paragraph{Allemagne}
 %Lors de la réhabilitation d’une mine d’uranium, la société allemande Wisbut GmbH peut procéder à une inondation des mines souterraines, un traitement des eaux contaminées et au stockage des résidus miniers…
-La première étape du traitement des résidus miniers est de les déplacer jusqu’à un site de stockage, comme un bassin de rejet ou une ancienne mine, et Wisbut GmbH a par exemple eu recours à un convoyeur tubulaire, un convoyeur à courroie ayant la forme d’un tuyau permettant ainsi de limiter le déversement des résidus miniers dans l’environnement, d’une longueur de 2~kilomètres. L’inondation des mines stockant les résidus permet alors de contenir le rejet de contaminants des matériaux. Pour traiter les bassins de rejet des résidus miniers, la société procède par déshydratation. Dans un premier temps, l’eau de surface est pompée pour être traitée, les résidus sont recouverts par une couverture multicouche, des drains sont ajoutés pour déshydrater les résidus et enfin, le tout est recouvert par une couche de stériles miniers dont la pression accélère le processus de déshydratation. La société peut alors procéder à une revégétalisation cohérente avec la zone géographique. Les procédés utilisés pour le traitement de l’eau sont le traitement par précipitations et le traitement par résines échangeuses d’ions.
-Les stériles miniers ont également été impliqués dans la production de gravier et de ciment utilisés dans la construction de routes et de voies ferrées. Le projet permettrait de disperser les matériaux radioactifs sur de grandes surfaces pour en réduire la concentration et donc la dangerosité.
+%La première étape du traitement des résidus miniers est de les déplacer jusqu’à un site de stockage, comme un bassin de rejet ou une ancienne mine, et Wisbut GmbH a par exemple eu recours à un convoyeur tubulaire, un convoyeur à courroie ayant la forme d’un tuyau permettant ainsi de limiter le déversement des résidus miniers dans l’environnement, d’une longueur de 2~kilomètres. L’inondation des mines stockant les résidus permet alors de contenir le rejet de contaminants des matériaux. Pour traiter les bassins de rejet des résidus miniers, la société procède par déshydratation. Dans un premier temps, l’eau de surface est pompée pour être traitée, les résidus sont recouverts par une couverture multicouche, des drains sont ajoutés pour déshydrater les résidus et enfin, le tout est recouvert par une couche de stériles miniers dont la pression accélère le processus de déshydratation. La société peut alors procéder à une revégétalisation cohérente avec la zone géographique. Les procédés utilisés pour le traitement de l’eau sont le traitement par précipitations et le traitement par résines échangeuses d’ions.
+%Les stériles miniers ont également été impliqués dans la production de gravier et de ciment utilisés dans la construction de routes et de voies ferrées. Le projet permettrait de disperser les matériaux radioactifs sur de grandes surfaces pour en réduire la concentration et donc la dangerosité.
 
 
-\paragraph{États-Unis}
+%\paragraph{États-Unis}
 %Le in-situ recovery (ISR) ou in-situ leach mining est une technique de lixiviation employée dans l’industrie minière pour extraire les minéraux d’uranium naturellement présents à l'état solide dans un gisement. Elle consiste à injecter lentement une solution (généralement une solution acide) dans le gisement par un premier forage, puis quelques mois plus tard, la solution riche d’uranium est pompée à la surface grâce à un deuxième forage. 
-Aujourd’hui, le in-situ recovery (ISR) représente plus de 90\% d’exploitation d’uranium aux États-Unis. Cependant, il présente un risque de contamination des eaux souterraines.
-Plusieurs méthodes de restauration sont introduites par Intercontinental Energy Corporation et les deux les plus courantes sont :
-1)  	Balayage des eaux souterraines (Groundwater Sweep)
-Cette méthode consiste à pomper les eaux souterraines contaminées du centre du site minier. Cela induit un afflux d'eau souterraine provenant des nappes aquifères environnantes. Le processus est illustré dans la figure. L'eau provenant de l'extérieur se déplace à travers l'espace poreux en déplaçant l'eau contaminée. Le processus est appelé « balayage des eaux souterraines » parce que les eaux souterraines propres balaient l'eau contaminée vers les puits d’extraction. Nous plaçons une rangée de puits pour assurer un flux d’eau plus uniforme vers le centre de la zone contaminée.
-2)  	Osmose inverse (Reverse Osmosis)
-Les eaux souterraines contaminées sont pompées hors du sol et vers un équipement d'osmose inverse. Avant de s'écouler vers cet équipement, l'eau est filtrée, le pH est abaissé pour empêcher le carbonate de calcium de boucher les membranes filtres et l'eau est acheminée vers une pompe de haute pression (à environ 550~psig). A cette pression, environ 60 à 75~\% de l'eau est forcée à travers les membranes filtres, laissant environ 70 à 90~\% des solutés. L'eau propre est ensuite réinjectée dans les champs.
-Les deux méthodes sont souvent combinées pour maximiser l’efficacité. Les plus grands facteurs à considérer sont l'estimation du volume de la zone contaminée et du nombre de puits nécessaires à la restauration.
+%Aujourd’hui, le in-situ recovery (ISR) représente plus de 90\% d’exploitation d’uranium aux États-Unis. Cependant, il présente un risque de contamination des eaux souterraines.
+%Plusieurs méthodes de restauration sont introduites par Intercontinental Energy Corporation et les deux les plus courantes sont le balayage des eaux souterraines (Groundwater Sweep) et l'osmose inversée (Reverse Osmosis).
+%Les deux méthodes de resturation les plus courantes sont le balayage des eaux souterraines (Groundwater Sweep) et l'osmose inversée (Reverse Osmosis).
+%La première méthode consiste à pomper les eaux souterraines contaminées du centre du site minier. Cela induit un afflux d'eau souterraine provenant des nappes aquifères environnantes. Le processus est illustré dans la figure. L'eau provenant de l'extérieur se déplace à travers l'espace poreux en déplaçant l'eau contaminée. Le processus est appelé « balayage des eaux souterraines » parce que les eaux souterraines propres balaient l'eau contaminée vers les puits d’extraction. Nous plaçons une rangée de puits pour assurer un flux d’eau plus uniforme vers le centre de la zone contaminée.
+%L'osmose inversée consiste à pomper les eaux souterraines contaminées hors du sol  vers un équipement d'osmose inversée. Avant de s'écouler vers cet équipement, l'eau est filtrée, le pH est abaissé pour empêcher le carbonate de calcium de boucher les membranes filtres et l'eau est acheminée vers une pompe de haute pression (à environ 550~psig). A cette pression, environ 60 à 75~\% de l'eau est forcée à travers les membranes filtres, laissant environ 70 à 90~\% des solutés. L'eau propre est ensuite réinjectée dans les champs.
+%Les deux méthodes sont souvent combinées pour maximiser l’efficacité. Les plus grands facteurs à considérer sont l'estimation du volume de la zone contaminée et du nombre de puits nécessaires à la restauration.
 
 
-\paragraph{Canada}
-Au Canada, la technologie de réhabilitation des anciens sites miniers d'uranium a évolué sur une période de plus de 50~ans. Les premières pratiques tendent à déverser directement des stériles non traitées dans la dépression ou le lac le plus proche et de laisser les installations en place. Les remèdes sont planifiés et mis en place plus tard. Comme pour les mines d'uranium partout dans le monde, les principaux problèmes sont la radioactivité, la dispersion et la contamination de l'eau. Pour la plupart des sites miniers au Canada, la quantité de précipitation est plus grande que l'évaporation tout au long de l'année, c’est pourquoi la couverture d’eau est une méthode de traitement souvent utilisée au Canada, mais qui est rarement vue dans les autres pays. Avec un très faible coefficient de diffusion dans l’eau, la longueur caractéristique d’atténuation de radon est en ordre de grandeur de quelques centimètres. Les résidus étaient asséchés avant d'être placés dans un bassin avec des remblais à faible perméabilité ou dans un lac naturel rénové avec des barrages. Cette méthode a pour objectif de prévenir l’émission de radon, la génération d’acide et aussi pour la raison économique.
+%\paragraph{Canada}
+%Au Canada, la technologie de réhabilitation des anciens sites miniers d'uranium a évolué sur une période de plus de 50~ans. Les premières pratiques tendent à déverser directement des stériles non traitées dans la dépression ou le lac le plus proche et de laisser les installations en place. Les remèdes sont planifiés et mis en place plus tard. Comme pour les mines d'uranium partout dans le monde, les principaux problèmes sont la radioactivité, la dispersion et la contamination de l'eau. Pour la plupart des sites miniers au Canada, la quantité de précipitation est plus grande que l'évaporation tout au long de l'année, c’est pourquoi la couverture d’eau est une méthode de traitement souvent utilisée au Canada, mais qui est rarement vue dans les autres pays. Avec un très faible coefficient de diffusion dans l’eau, la longueur caractéristique d’atténuation de radon est en ordre de grandeur de quelques centimètres. Les résidus étaient asséchés avant d'être placés dans un bassin avec des remblais à faible perméabilité ou dans un lac naturel rénové avec des barrages. Cette méthode a pour objectif de prévenir l’émission de radon, la génération d’acide et aussi pour la raison économique.
 
 
-\paragraph{À l'international}
-Le stockage des résidus dans l’objectif de limiter la contamination de l’environnement est une étape essentiel du cycle de vie d’une mine.%, cependant, dans deux cas ces résidus ont été relâchés dans la nature sans aucun contrôle : aux usines de Bukovo en Bulgarie et de Mounana au Gabon, avec de graves retombées sur l’environnement et la santé.
-De même, la revégétalisation est souvent une étape nécessaire à la réhabilitation des sites de stockage de résidus.% cependant, dans certains pays, comme le Niger, le climat désertique ne permet pas d’assurer cette étape.
+\paragraph{Conclusions de la comparaison \\ \\}
+Le stockage des résidus dans l’objectif de limiter la contamination de l’environnement est une étape essentiel du cycle de vie d’une mine. %, cependant, dans deux cas ces résidus ont été relâchés dans la nature sans aucun contrôle : aux usines de Bukovo en Bulgarie et de Mounana au Gabon, avec de graves retombées sur l’environnement et la santé.
+De plus, la revégétalisation est souvent une étape nécessaire à la réhabilitation des sites de stockage de résidus.% cependant, dans certains pays, comme le Niger, le climat désertique ne permet pas d’assurer cette étape.
 Le stockage souterrain des résidus miniers offre une meilleure protection face à l’érosion que le stockage à la surface. Cependant, ce stockage diminue la distance entre les résidus et les eaux souterraines, et toute fuite provoquerait leur contamination. Seule la présence d’une couche géologique imperméable, naturelle ou artificielle permettrait de justifier le stockage souterrain. Le stockage à la surface permet lui de mieux contrôler le confinement des résidus, qui sont plus faciles d’accès, mais nécessite donc des mesures plus strictes afin d’assurer la protection de l’environnement.
 Il ressort donc qu’une approche au cas par cas de gestion des sites miniers permettrait d’offrir le traitement le plus adapté, mais l’absence de normes précises peut conduire les entreprises à une réhabilitation plus laxiste des sites.
 Il est néanmoins nécessaire d’assurer une surveillance régulière et intensive des sites de stockages et de leurs environs afin de certifier l’efficacité des méthodes mises en place et de prévenir au plus vite toute brèche de confinement.
 
 
-\subsection{Les traitements sont-ils toujours nécessaires ? Étude de cas du site de la Ribière}
+\subsection{Les traitements sont-ils toujours nécessaires ?\\Étude de cas du site de la Ribière}% + joli
 \subsubsection{Présentation du site de La Ribière}
-L’étude du traitement des eaux d’exhaure d’une mine nécessitait de se baser sur un exemple concret, et c’est pour cette raison que nous nous sommes penchés sur le site de la Ribière. 
+\paragraph{} L’étude du traitement des eaux d’exhaure d’une mine nécessitait de se baser sur un exemple concret, et c’est pour cette raison que nous nous sommes penchés sur le site de la Ribière. 
 
 Situé sur la commune de Domeyrot dans la Creuse, ce site a été exploité de 1959 à 1984 par la compagnie TCMF (\emph{Total Compagnie Minière France}), qui en a extrait 142,9~tonnes d’uranium sur l’ensemble de la durée d’exploitation. Pour récupérer cette quantité d’uranium, il a fallu extraire 628~kt d’une mine à ciel ouvert (MCO) d’une superficie de 17~472~m². Il n’y a pas de travaux miniers souterrains à la Ribière.
 
@@ -899,19 +826,17 @@ Puis, une fois cette phase de dépôt effectuée, le site est entré en phase de
 
 Le site constitue un bassin versant d’altitude maximale 405~mètres, avec le ruisseau Le Verraux qui le longe dans sa partie inférieure, à un altitude de 348~mètres.
 
-Désormais géré par Orano Mining, le site de la Ribière a été équipé d'appareils de mesure et de surveillance, notamment pour ce qui est de l’eau qui traverse le site. Ainsi 4~points de surface sont répartis sur les 14~hectares pour la surveillance environnementale, et 9~piézomètres qui s’enfoncent dans le sol afin d’en avoir une vision détaillée, et notamment le profil géologique et hydrologique de la zone.
+Désormais géré par Orano Mining, le site de la Ribière a été équipé d'appareils de mesure et de surveillance, notamment pour ce qui est de l’eau qui traverse le site. Ainsi, 4~points de surface sont répartis sur les 14~hectares pour la surveillance environnementale, et 9~piézomètres qui s’enfoncent dans le sol afin d’en avoir une vision détaillée, et notamment le profil géologique et hydrologique de la zone.
 
 Selon Orano Mining, le site, qui ne dispose pas de station de traitement des eaux, respecte les normes environnementales en vigueur en termes de qualité des eaux à l’exutoire. La concentration en uranium mesurée est de $7,6 \cdot 10^{-6}$~mol/L et la dose mesurée est de $1,37$~Bq/L pour le $^{226}$Ra.
 
 Nous nous proposons donc de mettre en œuvre deux modèles du site, hydrologique et géochimique, afin de confirmer ces mesures et d’obtenir une prévision de long terme quant au respect de ces normes. 
 
 \subsubsection{Modèle géochimique et 1D}
-\paragraph{Modélisation}
 
-
+\paragraph{Modélisation \\ \\}
 Nous avons réalisé, dans le cadre de l’étude de cas du site de La Ribière, un modèle géochimique des résidus, dans le but de modéliser ce qui se passe sur le site, en accord avec les mesures piézométriques, et comprendre les mécanismes de la mobilité de l’uranium. Nous avons également utilisé le modèle pour effectuer des prévisions à long terme.
-Pour réaliser le modèle, nous nous sommes servi des mesures effectuées dans les deux faciès, qui visaient à reconnaître les minéraux présents et la concentration des oxydes. (Annexe image à mettre) Nous avons sélectionné les oxydes principaux et ensuite déduis les minéraux qui pouvaient les contenir, pour arriver à une liste de 9 minéraux représentatifs de chaque faciès (voir tableau \ref{tab:mineraux_concentrations}). Les concentrations de chaque minéral a ensuite été calculée en kilogramme par litre d’eau à l’aide des concentrations en oxydes. (description du calcul, annexe) 
-
+Pour réaliser le modèle, nous nous sommes servi des mesures effectuées dans les deux faciès, qui visaient à reconnaître les minéraux présents et la concentration des oxydes. (Annexe image à mettre) Nous avons sélectionné les oxydes principaux et ensuite déduit les minéraux qui pouvaient les contenir, pour arriver à une liste de neuf minéraux représentatifs de chaque faciès (voir tableau \ref{tab:mineraux_concentrations}). La concentration de chaque minéral a ensuite été calculée, en kilogramme par litre d’eau, à l’aide des concentrations en oxydes (description du calcul, annexe).
 
 La modélisation géochimique sera réalisée à l'aide du logiciel HYTEC, développé depuis 1993 au sein du consortium \emph{Pôle Géochimie Transport} fondé autour du Département de Géosciences de Mines ParisTech - PSL \cite{site_hytec_hydrodynamique_nodate}. Il est couplé avec le logiciel CHESS \cite{lagneau:hal-00614306} pour le calcul des équilibres chimiques. 
 	
@@ -935,7 +860,7 @@ Nous avons ainsi pu écrire un code HYTEC pour calculer l’équilibre initial d
     \label{tab:comparaison_valeurs_simul_mesure}
 \end{table}
 
-	
+
 Pour étudier la mobilité de l’uranium, nous avons utilisé notre modèle géochimique pour créer une colonne 1D avec au début 30~mètres de résidus (faciès sableux) puis 170~mètres de granite. Nous avons ensuite ajouté un flux d’eau partant de la gauche pour s’écouler vers la droite. Les paramètres physiques correspondent à ceux du site de La Ribière. Pour la vitesse de l’écoulement, nous avons utilisé la hauteur de charge, la porosité et la perméabilité des différents faciès traversés. Pour obtenir un modèle le plus réaliste possible, nous avons choisi d’équilibrer l’eau injectée dans les résidus avec un granite basique, comme celui placé après le bloc de résidus. (code en annexe)
 
 
@@ -949,15 +874,12 @@ Pour étudier la mobilité de l’uranium, nous avons utilisé notre modèle gé
 Enfin, nous avons réalisé différentes simulations sur 100~ans pour étudier la mobilité de l’uranium et les facteurs l’influençant et nous les avons visualisées à l’aide du logiciel ParaView.
 
 
-\paragraph{Résultats du modèle géochimique }
+\paragraph{Résultats du modèle géochimique}
 
-\paragraph{Etude du faciès sable}
+\paragraph{Étude du faciès sable}
 La première simulation réalisée vise à étudier la mobilité de l’uranium dans les conditions du site. Le pH de l’eau injectée est fixé à $6,1$, pH mesuré au niveau du piézomètre~2, juste avant la zone de résidus. Dans un premier temps, nous avons regardé l’effet de l’écoulement d’eau sur les résidus, et en particulier sur l’autunite, de formule Ca(UO$_2$)$_2$(PO$_4$)$_2$(H$_2$O)$_3$.
 
-
-
 On peut alors remarque que la quantité d’autunite est dissoute au cours du temps. (voir figure \ref{fig:annexe_autunite_residus_sable_base}) Le phénomène en jeu ici est la dissolution de l’autunite. Un équilibre chimique va s’établir entre l’eau et les résidus. La concentration aqueuse en UO$_2^{2+}$ de l’eau injectée est nulle, ainsi l’autunite va se dissoudre pour que le système soit à l’équilibre. Cependant, on remarque que la concentration aqueuse en UO$_2^{2+}$ au niveau des résidus chute assez rapidement.
-
 
 
 \begin{figure}[H]
@@ -978,8 +900,7 @@ On peut alors remarque que la quantité d’autunite est dissoute au cours du te
 
 La concentration à l’équilibre initiale est environ 1~$\mu$mol/L, puis en seulement 5~ans, elle est divisée par~10, pour finalement atteindre moins de $10^{-2} \, \mu$mol/L. L’uranium ne reste pas en solution. Il est en fait fixé sur la Montmorillonite et la Ferrihydrite grâce au phénomène de sorption.
 
-
-La sorption est un phénomène d’échange cationique sur des sites libres en surface de minéraux, notamment sur les argiles. Son efficacité dépend donc de la surface spécifique des minéraux impliqués dans la sorption (typiquement 600~m²/g pour les argiles) et de la capacité de fixation, qui est de l’ordre de 1~$\mu$mol/m$^2$ (soit $6 . 10^{-4}$~mol/g pour les argiles). Cependant, $UO_2^{2+}$ n’est pas le seul cation présent en solution pouvant être fixé. Les cations Ca$^{2+}$, K$^{+}$, H$^{+}$ et Mg$^{2+}$ peuvent également se fixer sur la Montmorillonite. Cependant, pour le pH étudié, seul Ca$^{2+}$ se fixe au cours du temps. Les trois autres ont plutôt tendance à être libérés, ils n’empêchent donc pas la sorption de l’uranium. (annexe images 1 à 4)
+La sorption est un phénomène d’échange cationique sur des sites libres en surface de minéraux, notamment sur les argiles. Son efficacité dépend donc de la surface spécifique des minéraux impliqués dans la sorption (typiquement 600~m²/g pour les argiles) et de la capacité de fixation, qui est de l’ordre de 1~$\mu$mol/m$^2$ (soit $6 . 10^{-4}$~mol/g pour les argiles). Cependant, $UO_2^{2+}$ n’est pas le seul cation présent en solution pouvant être fixé. Les cations Ca$^{2+}$, K$^{+}$, H$^{+}$ et Mg$^{2+}$ peuvent également se fixer sur la Montmorillonite. Néanmoins, pour le pH étudié, seul Ca$^{2+}$ se fixe au cours du temps. Les trois autres ont plutôt tendance à être libérés, ils n’empêchent donc pas la sorption de l’uranium. (annexe images 1 à 4)
 Dans un deuxième temps, nous avons regardé les caractéristiques physico-chimiques de l’eau rejetée dans la rivière : le pH, la concentration aqueuse en UO$_2^{2+}$, en Fe$^{3+}$ et en Ba$^{2+}$.
 
 \begin{figure}[H]
@@ -1015,11 +936,10 @@ Dans un deuxième temps, nous avons regardé les caractéristiques physico-chimi
 \end{figure}
 %courbe Ba et Fe en annexe possible
 
-On remarque alors pour l’uranium un pic à 1~$\mu$mol/L correspondant au déplacement des ions en solution à l’équilibre initial, puis un établissement de la concentration inférieur à 0,1~$\mu$mol/L. Cependant, la concentration augmente doucement à partir de 80~ans. En effet, les sites de sorption disponibles sont de moins en moins nombreux et donc les cations d’oxyde d’uranium sont de moins en moins fixés dans les résidus. Mais le phénomène reste faible. La concentration en baryum est négligeable et celle en fer ne dépasse pas les $70. 10^{-3}$~mg/L. La norme de potabilité pour le fer est placée à 0,2~mg/L, il n’y a donc aucun problème pour le fer.
+On remarque alors pour l’uranium un pic à 1~$\mu$mol/L - correspondant au déplacement des ions en solution à l’équilibre initial - puis un établissement de la concentration inférieur à 0,1~$\mu$mol/L. Toutefois, la concentration augmente doucement à partir de 80~ans. En effet, les sites de sorption disponibles sont de moins en moins nombreux et donc les cations d’oxyde d’uranium sont de moins en moins fixés dans les résidus. Mais le phénomène reste faible. La concentration en baryum est négligeable et celle en fer ne dépasse pas les $70. 10^{-3}$~mg/L. La norme de potabilité pour le fer est placée à 0,2~mg/L, il n’y a donc aucun problème pour le fer.
 
 
-\paragraph{Influence du pH sur la mobilité de l'uranium}
-
+\paragraph{Influence du pH sur la mobilité de l'uranium \\ \\}
 Pour étudier l’influence du pH sur la mobilité de l’uranium, nous avons choisi de changer le pH de l’eau injectée en entrée du modèle. Nous avons fait les simulations pour deux autres pH d’entrée : 4 et 8. Les résultats pour les trois pH sont superposés sur les mêmes courbes.
 
 \begin{figure}[H]
@@ -1057,13 +977,12 @@ Pour étudier l’influence du pH sur la mobilité de l’uranium, nous avons ch
 
 Lorsque que le pH devient très acide, la concentration aqueuse en UO$_2^{2+}$ au niveau des résidus augmente et la concentration d’ions fixés diminue par rapport aux pH neutre et basique. La dissolution de l’autunite est moins régulière : elle se fait plus par paliers, en commençant par le premier endroit en contact avec le pH acide. Il y a donc plus d’ion UO$_2^{2+}$ en solution et ils sont beaucoup moins fixés. On peut donc voir qu’une concentration bien plus importante atteint la rivière (presque 100~fois plus que pour un pH neutre ou basique). De plus, d’autre polluant comme le fer et le baryum sont également plus présent (voir figures \ref{fig:Fe_riviere_comparaison} et \ref{fig:Ba_rivier_comparaison}).
 
-
-Pour comprendre pourquoi l’uranium était moins fixé, nous avons regardé les concentrations des autres cations fixés sur la montmorillonite. (voir figures \ref{fig:Ca_residus_comparaison}, \ref{fig:K_residus_comparaison}, et \ref{fig:Mg_residus_comparaison})
+Pour comprendre pourquoi l’uranium était moins fixé, nous avons regardé les concentrations des autres cations fixés sur la montmorillonite (voir figures \ref{fig:Ca_residus_comparaison}, \ref{fig:K_residus_comparaison}, et \ref{fig:Mg_residus_comparaison}).
 
 Hormis le calcium, les autres cations sont plus fixés avec un pH bas. Un pH plus élevé ne change presque rien. Les sites de fixation sont en fait préférentiellement utilisés par les cations $Mg^{2+}$ et $K^{+}$, empêchant alors l’uranium de se fixer.
 En conclusion, le pH influence beaucoup la mobilité de l’uranium. Un pH plus élevé (basique) ne change presque rien à la sorption de l’uranium et donc à la concentration aqueuse en $UO_2^{2+}$ dans l’eau rejetée dans la rivière par rapport au pH initial de 6,1. Cependant, lorsque le pH devient acide, les cations d’uranium sont beaucoup moins fixés, car remplacés par du magnésium et du potassium. Il y a donc une concentration en $UO_2^{2+}$ beaucoup plus élevée en sortie du modèle. Le contrôle du pH en amont des résidus est donc primordial pour le site.
 
-\paragraph{Etude d'une possibilité de sorption sur des hydroxydes d'aluminium précipités}
+\paragraph{Etude d'une possibilité de sorption sur des hydroxydes d'aluminium précipités \\ \\}
 Avec le modèle, nous avons essayé de mettre en place un traitement de l’eau par sorption sur des hydroxyde d’aluminium. Nous avons donc injecté des ions $Al^{3+}$ en solution en entrée du modèle. Cependant, la précipitation de $Al(OH)_3$ consomme des ions $OH^{-}$ et donc diminue le pH (il est alors autour de $4,5$). On observe donc une augmentation d’ions $UO_2^{2+}$ en solution. De plus, l’hydroxyde d’aluminium ne précipite que à l’entrée du modèle (dans les deux premières mailles).
 
 \begin{figure}[H]
@@ -1100,7 +1019,7 @@ Avec le modèle, nous avons essayé de mettre en place un traitement de l’eau 
 
 
 En sortie du modèle, on obtient une forte concentration en aluminium dans l’eau (324~mg/L contre $200 \, \mu \text{g/L}$ pour la norme) et en uranium. Nous avons donc ajouté des hydroxydes d’aluminium en aval des résidus pour simuler une résine échangeuse d’ions et ajouter de la sorption.
-Nous regardons alors les caractéristiques physico-chimiques de l’eau en sortie du modèle, comparée avec celle que nous avions sans $Al(OH)_3$ en aval des résidus.
+Nous regardons alors les caractéristiques physico-chimiques de l’eau en sortie du modèle, comparées avec celles que nous avions sans $Al(OH)_3$ en aval des résidus.
 
 \begin{figure}[H]
     \centering
@@ -1121,23 +1040,21 @@ Nous regardons alors les caractéristiques physico-chimiques de l’eau en sorti
 
 
 On obtient effectivement moins d’uranium en solution pendant les 50~premières années, mais ensuite, la concentration se stabilise à 0,7~$\mu$mol/L pendant 30~ans puis augmente. La sorption est alors de moins en moins efficace On remarque de plus que le pH reste acide, ce qui explique des concentrations en $UO_2^{2+}$ élevées. Pour l’aluminium, on reste bien au-delà des normes en vigueur (voir figure \ref{fig:Al_riviere_comparaison_Al}).
-Finalement, un traitement par sorption sur les hydroxydes d’aluminium semble efficace, mais pas sur le long terme. Pour envisager un tel traitement, il faut être capable de renouveler les hydroxydes d’aluminium tous les 30~ans, ou bien injecter des ions $Al^{3+}$ dans l’eau dans une station de traitement, puis réguler le pH (on n’a alors plus le problème du pH acide qui empêche l’$UO_2^{2+}$ de se fixer sur la montmorillonite). Il faut cependant faire attention aux autres polluant, notamment à l’aluminium, dont la quantité en solution est non négligeable en sortie de traitement.
+Finalement, un traitement par sorption sur les hydroxydes d’aluminium semble efficace, mais pas sur le long terme. Pour envisager un tel traitement, il faut être capable de renouveler les hydroxydes d’aluminium tous les 30~ans, ou bien injecter des ions $Al^{3+}$ dans l’eau dans une station de traitement, puis réguler le pH (on n’a alors plus le problème du pH acide qui empêche l’$UO_2^{2+}$ de se fixer sur la montmorillonite). Il faut cependant faire attention aux autres polluants, notamment à l’aluminium, dont la quantité en solution est non négligeable en sortie de traitement.
 
 %J'ai des annexes à faire pour cette partie....
 
 
 \subsubsection{Modèle hydrogéologique 2D}
-\paragraph{Modélisation}
-Nous voulons réaliser un modèle hydrogéologique du site, afin de pouvoir analyser et prévoir à long terme l'écoulement des eaux qui traversent le site. L'eau arrive grâce aux précipitations, s'infiltre dans le site ou ruisselle, puis est évacuée en partie dans le ruisseau le Verraux en contrebas. Nous voulons donc connaître le niveau piézométrique sous le site, le profil de vitesse sur une coupe tranversale, ainsi que le débit d'exhaure au niveau du ruisseau.
+\paragraph{Modélisation \\ \\}
+Nous voulons réaliser un modèle hydrogéologique du site, afin de pouvoir analyser et prévoir à long terme l'écoulement des eaux qui traversent le site. L'eau arrive grâce aux précipitations, s'infiltre dans le site ou ruisselle, puis est évacuée en partie dans le ruisseau du Verraux en contrebas. Nous voulons donc connaître le niveau piézométrique sous le site, le profil de vitesse sur une coupe tranversale, ainsi que le débit d'exhaure au niveau du ruisseau.
 
-La modélisation du site sera réalisée à l'aide du logiciel HYTEC. Ce logiciel comporte un volet réalisant le calcul hydrodynamique nommé R2D2, qui est couplé avec le logiciel CHESS réalisant la simulation chimique \cite{lagneau:hal-00614306} afin d'obtenir un modèle complet de transport réactif. 
+La modélisation du site sera réalisée à l'aide du logiciel HYTEC qui comporte un volet réalisant le calcul hydrodynamique nommé R2D2.On utilisera également le logiciel CHESS réalisant la simulation chimique \cite{lagneau:hal-00614306} afin d'obtenir un modèle complet de transport réactif. 
 
-Nous réaliseront le modèle géographique du site (code n°\ref{lst:modele_topo}) à l'aide du logiciel libre GMSH \cite{gmsh_site} afin de représenter fidèlement les données de terrain. Le choix du maillage n'est pas anodin, puisqu'il va servir de support pour que la machine puisse effectuer la simulation. Par exemple, puisque la couche de surface est estimée à 4~mètres d'épaisseur, il est nécessaire que les mailles fassent moins de 4~mètres : si possible, on choisira des paramètres de maillage qui permettront d'en avoir deux ou trois dans toute cette zone. Inversement, la zone de granite sain forme un socle presque imperméable, donc les flux hydrologiques seront moins importants. C'est pourquoi un maillage plus épais pourra être choisi. Enfin, puisque la zone de résidus de traitement contient les espèces à suivre, il faut être très précis, et choisir des mailles fines pour pouvoir bien rendre compte des deux faciès.
+Nous réaliserons le modèle géographique du site (code n°\ref{lst:modele_topo}) à l'aide du logiciel libre GMSH \cite{gmsh_site} afin de représenter fidèlement les données de terrain. Le choix du maillage n'est pas anodin, puisqu'il va servir de support pour que la machine puisse effectuer la simulation. Par exemple, puisque la couche de surface est estimée à 4~mètres d'épaisseur, il est nécessaire que les mailles fassent moins de 4~mètres : si possible, on choisira des paramètres de maillage qui permettront d'en avoir deux ou trois dans toute cette zone. Inversement, la zone de granite sain forme un socle presque imperméable, donc les flux hydrologiques seront moins importants. C'est pourquoi un maillage plus épais pourra être choisi. Enfin, puisque la zone de résidus de traitement contient les espèces à suivre, il faut être très précis, et choisir des mailles fines pour pouvoir bien rendre compte des deux faciès.
 
 Pour proposer un modèle convaincant du site, il est nécessaire de s’intéresser aux flux hydrogéologiques. Nous avons pour cela utilisé un rapport hydrogéologique du site, daté d'avril 2010 \cite{societe_areva_nc_etude_2010}, ainsi que d'une étude complémentaire de 2011 \cite{societe_areva_nc_etude_2011}. Nous nous sommes basés sur les relevés des 9~piézomètres du site et avons décidé de faire une modélisation en coupe, ce qui permet à la fois de décrire fidèlement le site tout en évitant de réaliser un modèle 3D beaucoup trop complexe. Cette coupe (figure \ref{fig:coupe_ribiere}) a été choisie car elle comprend l'intégralité de l'étendue du site (de 348~m à 395~m d'altitude), la zone de résidus et la rivière, et que l'on dispose également de cinq piézomètres pour nous renseigner sur le terrain.
 
-%Guillaume, I_B_1 et pas 3 dsl
-%Ok, je fais ca
 
 \begin{figure}[H]
     \centering
@@ -1176,11 +1093,10 @@ Les relevés piézométriques permettent aussi de définir un niveau de charge :
 
 Les données météorologiques montrent des précipitations effectives (c’est à dire la différence entre les précipitations totales et l’évapotranspiration) variables au cours de l’année : en effet, on remarque que les mois de novembre, décembre, janvier et mars correspondent à de hautes valeurs de précipitations effectives, alors qu’elles sont presque nulles le reste de l’année. La couche de surface sert d'interface au système, et permet à l'eau en surface de pénétrer dans les autres zones, ce qui génère un flux vertical qui va notamment impacter la mobilité dans la zone de résidus. En modélisant les saisons, on modélise les fortes variations de ce flux, qui est nul une grande partie de l'année, et très intense de novembre jusqu'en janvier, ainsi qu'en mars.
 
-\paragraph{Résultats}
-\paragraph{}
-Les modélisations montrent l’importance de la perméabilité et de la porosité des différentes zones, puisque de faibles variations induisent des comportements différents à long terme. Il est donc nécessaire d’avoir des valeurs les plus précises possibles et les plus représentatives du site. En effet, un gradient de perméabilité trop élevé, ou bien des discontinuités de perméabilité peuvent engendrer des comportements non représentatifs, comme une remontée du traceur dans les résidus en surface. Il est également important de noter l'impact de l'anisotropie ou de l'isotropie de ces paramètres de transport. En effet, si il est possible de modéliser la perméabilité du granite sain comme isotrope, il n'en va de même pour la couche en surface. Un perméabilité verticale plus élevée qu'une perméabilité horizontale signifierait que l'eau s'infiltrant dans le sol serait plus à même de s'enfoncer dans les roches, et donc dans les couches granitiques en profondeur, que de se déplacer vers la rivière en contrebas, ce qui n'est pas cohérent. Inversement, puisque les résidus miniers sont sous forme de boue et de sable, il faut avoir une perméabilité isotrope dans ces zones.
+\paragraph{Résultats \\ \\}
+Les modélisations montrent l’importance de la perméabilité et de la porosité des différentes zones, puisque de faibles variations induisent des comportements différents à long terme. Il est donc nécessaire d’avoir des valeurs les plus précises possibles et les plus représentatives du site. En effet, un gradient de perméabilité trop élevé, ou bien des discontinuités de perméabilité peuvent engendrer des comportements non représentatifs, comme une remontée du traceur dans les résidus en surface. Il est également important de noter l'impact de l'anisotropie ou de l'isotropie de ces paramètres de transport. En effet, si il est possible de modéliser la perméabilité du granite sain comme isotrope, il n'en va de même pour la couche en surface. Une perméabilité verticale plus élevée qu'une perméabilité horizontale signifierait que l'eau s'infiltrant dans le sol serait plus à même de s'enfoncer dans les roches, et donc dans les couches granitiques en profondeur, que de se déplacer vers la rivière en contrebas, ce qui n'est pas cohérent. Inversement, puisque les résidus miniers sont sous forme de boue et de sable, il faut avoir une perméabilité isotrope dans ces zones.
 
-On retrouve l'impact des paramètres de transfert dans l'étude du champ de vitesse dans la zone de précipitation. À 40 et 140~m, on remarque une infiltration plus élevée que partout ailleurs: ceci est du à une discontinuité forte de perméabilité verticale, puisque la zone de surface a une perméabilité presque dix fois plus faible que la zone de résidus selon cet axe. On remarque également sur cette simulation l'impact des saisons, avec un champ de vitesse parfois orienté vers la rivière (moment où les précipitations sont faibles) et parfois orienté verticalement (moment de fortes précipitations, donc l'infiltration prédomine). Une fois le régime permanent établie, on observe à environ 10~m du sol, un champ de vitesse toujours orienté vers la rivière: ceci correspond au déplacement de l'eau dans la couche de granite fracturé, puisque le granite sain est presque imperméable.
+On retrouve l'impact des paramètres de transfert dans l'étude du champ de vitesse dans la zone de précipitation. À 40 et 140~m, on remarque une infiltration plus élevée que partout ailleurs: ceci est du à une discontinuité forte de perméabilité verticale, puisque la zone de surface a une perméabilité presque dix fois plus faible que la zone de résidus selon cet axe. On remarque également sur cette simulation l'impact des saisons, avec un champ de vitesse parfois orienté vers la rivière (moment où les précipitations sont faibles) et parfois orienté verticalement (moment de fortes précipitations, donc l'infiltration prédomine). Une fois le régime permanent établi, on observe à environ 10~m du sol, un champ de vitesse toujours orienté vers la rivière: ceci correspond au déplacement de l'eau dans la couche de granite fracturé, puisque le granite sain est presque imperméable.
 
 \begin{figure}[H]
     \centering
@@ -1208,22 +1124,21 @@ La détermination du temps de résidence de l'eau dans le système, c'est à dir
 
 Ces résultats sont à nuancer, puisqu’à ce stade aucun modèle chimique n’a été intégré. De plus, certaines données non renseignées permettraient d’aller plus loin. Il serait possible d’affiner les bords de la fosse à résidus: nous l’avons modélisé par un trapèze, mais il est très probable que les pentes de la fosse aient une forme de gradins, afin d’assurer la stabilité de la zone. La donnée de la hauteur et de la largeur des marches permettrait une modélisation plus fine.
 
-La nature des résidus est également peu connue. Il y a une alternance entre les deux faciès, mais la proportion réelle de chaque n’est pas renseignée. Or ces deux zones ont des comportements hydrogéologiques très différents, avec des porosité et perméabilités différentes. Une analyse géochimique des résidus pourrait donc être réalisée. De plus, seul un unique piézomètre est présent dans cette zone, ce qui induit des incertitudes : on ne dispose que des données en un point pour une zone de 80~m de long et d’environ 20~m de profondeur.
+La nature des résidus est également peu connue. Il y a une alternance entre les deux faciès, mais la proportion réelle de chaque faciès n’est pas renseignée. Or, ces deux zones ont des comportements hydrogéologiques très différents, avec des porosités et perméabilités différentes. Une analyse géochimique des résidus pourrait donc être réalisée. De plus, un unique piézomètre est présent dans cette zone, ce qui induit des incertitudes : on ne dispose que des données en un point pour une zone de 80~m de long et d’environ 20~m de profondeur.
 
 Le granite fracturé aux alentours n’est pas non plus très bien connu. Des analyses seraient nécessaires pour déterminer ses caractéristiques, afin de les comparer avec celles du granite sain. Le fait que la zone soit fracturée va en effet modifier drastiquement le comportement hydrologique, puisqu’il s’agit de la zone la plus en contact avec les résidus miniers.
 
-\paragraph{Modèle hydrogéochimique}
-
+\paragraph{Modèle hydrogéochimique \\ \\}
 Une fois le modèle hydrogéologique et le modèle chimique établi, nous avons pu concevoir un nouveau modèle, prenant en compte la dynamique des flux hydrologiques et les interactions chimiques entre les éléments mis en jeu. Ceci introduit de nouvelles sensibilités, puisque l’augmentation ou la diminution de la concentration ou de la distribution d’un élément peut impacter tout le modèle. On obtient donc un modèle à la fois très sensible aux caractéristiques des roches, mais aussi à des données chimiques comme le pH.
 
 Il a fallu néanmoins interpréter certaines données. Des relevés et analyses chimiques dans les différentes zones mises en jeu pourraient être réalisées pour évaluer précisément les compositions et concentrations en les différentes espèces. Par exemple, les taux précis en gypse ne sont pas connus partout.
 
 \subsubsection{Conclusion pour le site}
-Le modèle réalisé nous a permis de comprendre comment l’uranium pouvait circuler pour le site de la Ribière, et ce qui influence cette circulation. Ainsi, l’acidité de l’eau en entrée du système est un facteur déterminant pour la fixation de l’Uranium : en effet, si pour un pH de 6 ou de plus, l’uranium est globalement sorbé, pour un pH de 4, c’est plutôt le potassium et le magnésium qui se fixent. On obtient alors de l’uranium mobile, et donc de concentrations élevées en aval du système. De même les paramètres de transport des roches, comme la porosité et la perméabilité, vont permettre de délimiter des zones dans lesquelles l’écoulement est plus ou moins favorisé, ce qui va directement impacter la localisation et la vitesse des réactions chimiques.
+\paragraph{} Le modèle réalisé nous a permis de comprendre comment l’uranium pouvait circuler pour le site de la Ribière, et ce qui influence cette circulation. Ainsi, l’acidité de l’eau en entrée du système est un facteur déterminant pour la fixation de l’Uranium : en effet, si pour un pH de 6 ou de plus, l’uranium est globalement sorbé, pour un pH de 4, c’est plutôt le potassium et le magnésium qui se fixent. On obtient alors de l’uranium mobile, et donc de concentrations élevées en aval du système. De même les paramètres de transport des roches, comme la porosité et la perméabilité, vont permettre de délimiter des zones dans lesquelles l’écoulement est plus ou moins favorisé, ce qui va directement impacter la localisation et la vitesse des réactions chimiques.
 
-Puisque l’acidité de l’eau joue un rôle si important pour ce site, il serait judicieux de contrôler le pH de l’eau de pluie, afin de pouvoir réagir et traiter si celui-ci devient trop faible. Il faudrait aussi contrôler la teneur en aluminium, puisqu’il peut y avoir précipitation de ALOH3 ce qui ferait baisser le pH. Il ne semble pas pour l’instant y avoir de problème de pollution au fer.
+Puisque l’acidité de l’eau joue un rôle si important pour ce site, il serait judicieux de contrôler le pH de l’eau de pluie, afin de pouvoir réagir et traiter si celui-ci devient trop faible. Il faudrait aussi contrôler la teneur en aluminium, puisqu’il peut y avoir précipitation de $Al(OH)_3$ ce qui ferait baisser le pH. Il ne semble pas pour l’instant y avoir de problème de pollution au fer.
 
-Le modèle construit admet toutefois certaines limites. Par exemple, nous n’avons modélisé que 9 minéraux pour les résidus. On peut se demander si ceci est bien représentatif de la zone, et il pourrait être intéressant de voir si cela reflète bien la composition réelle. En effet, l’ajout d’un seul minéral de plus peut impacter grandement les équilibres et les résultats. De même, le granite a été modélisé comme un granite usuel : peut être faudrait il étudier plus précisément le site, et notamment la zone de granite fracturé afin de voir quelles sont les particularités pour la Ribière. Enfin, on peut encore essayer d’améliorer le modèle numérique, puisque la modélisation des zones est encore un peu brutale : peut être pourrait on envisager des zones de transition, avec des modifications des paramètres physiques continues pour éviter des anomalies.
+Le modèle construit admet toutefois certaines limites. Par exemple, nous n’avons modélisé que 9 minéraux pour les résidus. On peut se demander si ceci est bien représentatif de la zone, et il pourrait être intéressant de voir si cela reflète bien la composition réelle. En effet, l’ajout d’un seul minéral de plus peut impacter grandement les équilibres et les résultats. De même, le granite a été modélisé comme un granite usuel : peut être faudrait il étudier plus précisément le site, et notamment la zone de granite fracturé afin de voir quelles sont les particularités pour la Ribière. Enfin, on peut encore essayer d’améliorer le modèle numérique, puisque la modélisation des zones est encore un peu brutale : peut être pourrait on envisager des zones de transition, avec des modifications des paramètres physiques continues - pour éviter des anomalies.
 
 \subsection{Atténuation de la teneur en radon gazeux}
 
@@ -1231,9 +1146,7 @@ Le modèle construit admet toutefois certaines limites. Par exemple, nous n’av
 
 \subsubsection{Diffusion unidimensionnelle : modèle analytique}
 
-\paragraph{Longueur caractéristique de diffusion}
-
-\paragraph{} La mise en équation en annexe \ref{annexe:equation} met en évidence une longueur caractéristique qui dépend du coefficient de diffusion $D$, de la porosité $\omega$ et la saturation en gaz $S_g$. Notons que l’on travaille dans la zone non-saturée en eau, au-dessus du niveau piézométrique. La saturation en gaz n’est donc pas uniforme dans la réalité. Ce modèle donne toutefois de bonnes estimations des ordres de grandeur en question. La figure suivante donne des valeurs de longueur caractéristique dans différents milieux.
+\paragraph{Longueur caractéristique de diffusion \\ \\} La mise en équation en annexe \ref{annexe:equation} met en évidence une longueur caractéristique qui dépend du coefficient de diffusion $D$, de la porosité $\omega$ et la saturation en gaz $S_g$. Notons que l’on travaille dans la zone non-saturée en eau, au-dessus du niveau piézométrique. La saturation en gaz n’est donc pas uniforme dans la réalité. Ce modèle donne toutefois de bonnes estimations des ordres de grandeur en question. La figure suivante donne des valeurs de longueur caractéristique dans différents milieux.
 
 \begin{table}[H]
     \centering
@@ -1243,25 +1156,20 @@ Le modèle construit admet toutefois certaines limites. Par exemple, nous n’av
     \label{tab:longueur_diffusion}
 \end{table}
 
-Notons tout d’abord qu’une couche de protection est nécessaire : l’air ne suffit pas à atténuer le radon. On peut donc envisager d’enterrer les résidus sous une couche de stériles, ce qui leur donne une utilité et un emplacement de stockage. On remarque aussi qu’une couche d’eau peut permettre d’atténuer le radon autant qu’une couche de stérile, mais sur une épaisseur de couche 20 à 30 fois plus courte.
+Notons tout d’abord qu’une couche de protection est nécessaire : l’air ne suffit pas à atténuer le radon. On peut donc envisager d’enterrer les résidus sous une couche de stériles, ce qui leur donne une utilité et un emplacement de stockage. On remarque aussi qu’une couche d’eau peut permettre d’atténuer le radon autant qu’une couche de stérile, mais sur une épaisseur de couche 20 à 30 fois plus courte. Par ailleurs, l'annexe C \ref{annexe:sens_analytique} détaille à quel point les paramètres peuvent impacter la longueur caractéristique de diffusion. On trouve, dans un cas moyen, une longueur caractéristique variant entre 0,29 m et 0,78 m, mais elle peut varier fortement jusqu'à 2 m dans les pires cas. Il est donc très important d'évaluer les paramètres de porosité et de diffusion des stériles utilisés.
 
-\paragraph{Premières conclusions sur l'épaisseur de stériles nécessaire}
-
-\paragraph{} Dans un bâtiment habité, le niveau de référence d’activité volumique est de $a_n=300 \; \text{Bq/m}^3$. Imaginons que l’on souhaite respecter cette valeur à la surface de l’endroit où sont enfouis les résidus. Le facteur d’atténuation minimum requis est alors : $r_{min}=\frac{a_0}{a_n} =3,03 \; .10^4$. L’épaisseur de couche de stériles $h$ minimale nécessaire pour respecter ce facteur d’atténuation dans différentes circonstances est donnée analytiquement par la relation $h_{min}=\ln(r_{min}) \,L =10,3 \,L $. Ainsi, pour atténuer le radon et respecter le niveau de référence, il est nécessaire d’ajouter une couche de protection environ dix fois plus grande que la longueur caractéristique de diffusion $L$.
-
-\paragraph{Sensibilité des différents paramètres}
-\paragraph{} L'annexe C \ref{annexe:sens_analytique} détaille à quel point les 
+\paragraph{Premières conclusions sur l'épaisseur de stériles nécessaire \\ \\}
+Dans un bâtiment habité, le niveau de référence d’activité volumique est de $a_n=300 \; \text{Bq/m}^3$. Imaginons que l’on souhaite respecter cette valeur à la surface de l’endroit où sont enfouis les résidus. Le facteur d’atténuation minimum requis est alors : $r_{min}=\frac{a_0}{a_n} =3,03 \; .10^4$. L’épaisseur de couche de stériles $h$ minimale nécessaire pour respecter ce facteur d’atténuation dans différentes circonstances est donnée analytiquement par la relation $h_{min}=\ln(r_{min}) \,L =10,3 \,L $. Ainsi, pour atténuer le radon et respecter le niveau de référence, il est nécessaire d’ajouter une couche de protection environ dix fois plus grande que la longueur caractéristique de diffusion $L$.
 
 \subsubsection{Introduction des modèles numériques}
 
-\paragraph{Deux modèles numériques}
-\paragraph{} Nous utilisons le code de calcul HYTEC introduit plus haut dans sa dimension transport. Deux types de modèles unidimensionnels sont utilisés par la suite pour obtenir les résultats : on modélise une colonne de stériles et/ou résidus pour étudier comment le radon est produit et diffusé vers la surface. La différence entre les deux types de modèles est la façon de modéliser le terme source de radon. Le premier type de modèle, le plus simple et le plus utilisé par la suite, ne comprend que des stériles dans la colonne. En effet, pour modéliser les résidus source de radon nous utilisons une condition limite : une fugacité constante en radon à la limite stériles/résidus. Le deuxième type de modèle modélise les stériles et les résidus, la production du radon est intégré dans la roche elle-même : le gaz émane là où il y a du radium. Ce deuxième modèle n'est utilisé que dans la modélisation numérique de l'impact d'un terme source . Il s’agit là d’une présentation sommaire de ces modèles, pour des détails techniques sur leur implémentation dans le code HYTEC, se reporter aux annexes C \ref{annexe:detail_modele_radon_sub_sec}, pour des exemples de codes HYTEC utilisés se reporter dans l'annexe \ref{lst:modele_radon_1_1} aux codes "radon". L'annexe C \ref{annexe:sens_numerique} se préoccupe de la sensibilité du modèle numérique aux différents paramètres et ne met pas en évidence une grande marge d'erreur.
+\paragraph{Deux modèles numériques \\ \\}
+Nous utilisons le code de calcul HYTEC introduit plus haut dans sa dimension transport. Deux types de modèles unidimensionnels sont utilisés par la suite pour obtenir les résultats : on modélise une colonne de stériles et/ou résidus pour étudier comment le radon est produit et diffusé vers la surface. La différence entre les deux types de modèles est la façon de modéliser le terme source de radon. Le premier type de modèle, le plus simple et le plus utilisé par la suite, ne comprend que des stériles dans la colonne. En effet, pour modéliser les résidus sources de radon, nous utilisons une condition limite : une fugacité constante en radon à la limite stériles/résidus. Le deuxième type de modèle modélise les stériles et les résidus, la production du radon est intégrée dans la roche elle-même : le gaz émane là où il y a du radium. Ce deuxième modèle n'est utilisé que dans la modélisation numérique de l'impact d'un terme source . Il s’agit là d’une présentation sommaire de ces modèles, pour des détails techniques sur leur implémentation dans le code HYTEC, se reporter aux annexes C \ref{annexe:detail_modele_radon_sub_sec}, pour des exemples de codes HYTEC utilisés se reporter dans l'annexe \ref{lst:modele_radon_1_1} aux codes "radon". L'annexe C \ref{annexe:sens_numerique} se préoccupe de la sensibilité du modèle numérique aux différents paramètres et ne met pas en évidence une grande marge d'erreur.
 
 \subsubsection{Impact des précipitations}
 
-\paragraph{Résultats analytiques}
-
-\paragraph{} Premièrement, le modèle analytique permet d'obtenir des ordres de grandeur. Pour un coefficient de diffusion moyen $D=1,0.10^{-5} \; \text{m}^2/\text{s}$, une porosité moyenne $\omega=0,30$ et des coefficients de Millington-Quirk égaux à 2, le tableau suivant donne les longueurs caractéristiques et les épaisseurs de stériles nécessaires pour respecter le niveau de référence de $300\; \text{Bq/m}^3$, en fonction de la saturation en gaz. Plus il y d’eau dans les pores, plus la saturation en gaz est faible.
+\paragraph{Résultats analytiques \\ \\}
+Premièrement, le modèle analytique permet d'obtenir des ordres de grandeur. Pour un coefficient de diffusion moyen $D=1,0.10^{-5} \; \text{m}^2/\text{s}$, une porosité moyenne $\omega=0,30$ et des coefficients de Millington-Quirk égaux à 2, le tableau suivant donne les longueurs caractéristiques et les épaisseurs de stériles nécessaires pour respecter le niveau de référence de $300\; \text{Bq/m}^3$, en fonction de la saturation en gaz. Plus il y d’eau dans les pores, plus la saturation en gaz est faible.
 
 \begin{table}[H]
     \centering
@@ -1275,47 +1183,45 @@ Lorsque la roche est saturée, la diffusion est moindre. Au contraire, une péri
 
 Il faut maintenant se tourner vers le modèle numérique, qui permet d’observer le régime transitoire alors que le sol est soumis aux précipitations, puis d'obtenir des courbes.
 
-\paragraph{Résultats numériques}
-
-\paragraph{} Nous utilisons ici le modèle numérique "Radon type 1 : modèle vertical avec précipitations" (code en annexe \ref{lst:modele_radon_1_2}) avec des précipitations moyennes de 200~mm/an et une simulation pendant un an. La figure \ref{fig:rain_fugacity} donne la fugacité du radon en fonction de la cote (où l'origine est au niveau des résidus), en échelle logarithmique. La courbe bleue correspond au cas pluvieux et la courbe brune au cas témoin.
+\paragraph{Résultats numériques \\ \\}
+Nous utilisons ici le modèle numérique « Radon type 1 : modèle vertical avec précipitations » (code en annexe \ref{lst:modele_radon_1_2}) avec des précipitations moyennes de 200~mm/an et une simulation pendant un an. La figure \ref{fig:rain_fugacity} donne la fugacité du radon en fonction de la cote (où l'origine est au niveau des résidus), en échelle logarithmique. La courbe bleue correspond au cas pluvieux et la courbe brune au cas témoin.
 
 L’échelle logarithmique montre que la concentration en radon est divisée par un facteur~10, ce qui était dans l'ordre de grandeur donné par le modèle analytique. On en déduit que les précipitations sont bénéfiques quant à l’atténuation du radon gazeux. Le phénomène en jeu est la dissolution du radon dans l’eau. La présence d’eau augmente la pression, donc déplace l’équilibre de Henry entre le radon gazeux et le radon aqueux, dont la concentration augmente dans la zone humide.
 
-
-\subsubsection{Impact d'un terme source au sein des stériles}
-
-\paragraph{} Sur la plupart des anciens sites miniers, les résidus de traitement sont recouverts de stériles miniers. Ces derniers ont des activités plus faibles en uranium et en radium, et donc produisent moins de radon. Néanmoins, il est important de quantifier l'impact d'une source de radon au sein des stériles pour s'assurer que la décision de les utiliser pour recouvrir les résidus est sans danger.
-
-\paragraph{Résultats du modèle analytique}
-
-\paragraph{} Le modèle analytique, avec l'ajout d'un terme source dans les stéril de radon dans les stériles est négligeable. Sinon, la production de radon dans les stériles peut être importante. Dans tous les cas, au bout d'une certaine altitude, seule la production de radon dans les stériles n'est visible.
-
-Ainsi, mettre une très grande couche de stériles permet d'atténuer complètement l'émanation de radon des résidus, mais cela n'a de sens que si les stériles eux-mêmes ne génèrent pas une grande quantité de radon. En effet, il se peut que le radon détecté à la surface soit issu des stériles, et non pas des résidus.
-
-On a établi en annexe \ref{annexe:termesource} l'expression d'un coefficient $R$ qui évalue l'impact de ce phénomène. On obtient $ R=7,0\%$, ce qui signifie que la production de radon dans les stériles, même le radium y est environ trois fois moins actif, a une influence sur la courbe de diffusion du radon. On peut ainsi comparer les concentrations à la surface, avec ou sans terme source ($L=0,6$~m, $h=6,5$~m) :
-\begin{itemize}
-  \item Pour $A_{Ra,s}=0$~Bq/g : $c(h) = 1,4 \; .10^{-16} \, \text{mol/m}^3$ soit 180~Bq/m$^3$
-  \item Pour $A_{Ra,s}=0,04$~Bq/g : $c(h) = 3,0 \; .10^{-16} \, \text{mol/m}^3$ soit 373~Bq/m$^3$
-  \item Pour $A_{Ra,s}=0,4$~Bq/g : $c(h) = 1,7 \; .10^{-15} \, \text{mol/m}^3$ soit $2,1 \; .10^3$~Bq/m$^3$
-\end{itemize}
-
-Ainsi, avec une activité de radium cent fois plus faible dans les stériles, l'activité du radon à la surface est multipliée par deux, et avec une activité de radium seulement dix fois plus faible, l'activité du radon est multipliée par un facteur~10 à la surface.
-
-Cette étude analytique permet donc de penser que les stériles doivent également être surveillés en terme de teneur en radium, car ils peuvent amplement modifier la teneur en radon gazeux à la surface.
-
-\paragraph{Résultats du modèle numérique}
-\paragraph{} Le modèle numérique utilisé est du deuxième type : modélisation de l'émanation du radon dans toute la colonne sans condition aux limites. Dans le cas de ce modèle, nous sommes limités par la précision des calculs internes de HYTEC, ainsi nous ne pouvons pas travailler avec les fugacités en radon réellement présentes sur le site de la Ribière. On va donc s'intéresser à des fugacités relatives par rapport à une fugacité de référence
-
-\subsubsection{Conclusions sur le risque radon}
-
 \newpage
-\section{Synthèse des enjeux}
-\subsection{Aspect socio-économique du traitement de l’eau}
-\subsection{Ouverture à l’international}
+\subsubsection{Impact d'un terme source au sein des stériles}
+\paragraph{} Sur la plupart des anciens sites miniers, les résidus de traitement sont recouverts de stériles miniers. Ces derniers ont des activités plus faibles en uranium et en radium, et donc produisent moins de radon. Néanmoins, il est important de quantifier l'impact d'une source de radon au sein des stériles pour s'assurer que la décision de les utiliser pour recouvrir les résidus est sans danger\cite{ferry_evaluation_2002}.
+
+\paragraph{Résultats du modèle analytique \\ \\}
+On a établi en annexe C \ref{annexe:termesource} l'expression d'un coefficient $R$ qui évalue l'impact de ce phénomène. En choisissant des paramètres moyens pour les deux zones de résidus et de stériles, on peut comparer les activités volumiques du radon à la surface ($L=0,6$~m, $h=6,5$~m). Sans terme source, elle est d'environ 180~Bq/m$^3$.
+\begin{itemize}
+  \item Pour $A_{Ra,s}=0,04$~Bq/g (1$\% \; A_{Ra,r}$) : 373~Bq/m$^3$
+  \item Pour $A_{Ra,s}=0,4$~Bq/g (10$\% \; A_{Ra,r}$): $2,1 \; .10^3$~Bq/m$^3$
+\end{itemize}
+Ainsi, avec une activité de radium cent fois plus faible dans les stériles, l'activité du radon à la surface est multipliée par deux, et avec une activité de radium seulement dix fois plus faible, l'activité du radon est multipliée par un facteur~10 à la surface. Cette étude analytique permet donc de penser que les stériles doivent également être surveillés en terme de teneur en radium, car ils peuvent amplement modifier la teneur en radon gazeux à la surface.
+
+\paragraph{Résultats du modèle numérique \\ \\}
+Le modèle numérique utilisé est du deuxième type : modélisation de l'émanation du radon dans toute la colonne sans condition aux limites. Dans le cas de ce modèle, nous sommes limités par la précision des calculs internes de HYTEC, ainsi nous ne pouvons pas travailler avec les fugacités en radon réellement présentes sur le site de la Ribière. On va donc s'intéresser à des fugacités relatives par rapport à une fugacité de référence $f_0$. On s'intéresse à une couche de stériles de 6~m d'épaisseur, et une couche de résidus de 4~m d'épaisseur. On fait tourner trois simulations, chacune avec des activités de radium dans les stériles différentes : 0~\%, 1~\% et 10~\% de l'activité dans les résidus. Les résultats sont donnés par la figure \ref{fig:num_ts}.
+
+On voit que l'impact d'un terme source au sein des stériles impacte de manière significative la fugacité en "sortie" de notre zone tampon : si l'activité du radium représente 1~\% de l'activité du radium des résidus, la fugacité en radon au niveau de la surface est multipliée par un facteur $1,21$ par rapport au cas ou cette activité est nulle. Pour une différence de 10~\%, ce facteur est de $1,75$. La différence significative entre les facteurs multiplicateurs obtenus par les modèles numérique et analytique est due au fait que la saturation en eau est considérée constante dans le modèle analytique, alors que l'on travaille en zone non saturée avec un gradient de saturation. Malgré les différences, la conclusion reste la même : il apparaît qu'une activité, même faible, des stériles (des activités de l'ordre de 10~\% celles des résidus sont courantes \cite{ferry_evaluation_2002}) peut avoir un effet significatif dans les émissions de radon en surface. Ainsi, il faut surveiller l'activité des stériles eux-mêmes, car il est probable que le radon mesuré à la surface soit en grande partie originaire de la couche protectrice.
+
+%\newpage
+%\section{Synthèse des enjeux}
+%\subsection{Aspect socio-économique du traitement de l’eau}
+%\subsection{Ouverture à l’international}
 
 \newpage
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
+
+\paragraph{} Notre étude de MIG nous a permis de tirer des conclusions sur la gestion du site de la Ribière. Sur les points techniques, nous avons estimé que le choix de ne pas traiter l'eau sur le site était correct, et nous avons évalué que l'atténuation du radon était suffisante. Sur les points non techniques, nous avons pu observer que les solutions de l'après-mine dépendent de chaque site, chaque région, chaque pays. En effet, ce n'est pas qu'un compromis entre les points de vue technique et économique, car l'aspect social peut dominer le reste. De plus, la gestion des sites dépend fortement des pays qui ont tous des histoires et des contextes miniers différents. Finalement, nous avons pu voir que le secteur de l'après-mine se dirige vers un avenir avec des normes plus nombreuses, plus cohérentes avec la réalité et déterminées par plusieurs acteurs en collaboration.
+
+% n'hésitez pas à relire ça et modifier si c'est faux
+
+Cette étude nous a donné un réel avant-goût du monde de la recherche et de l'entreprise. Nous avons dû nous organiser collectivement afin de répartir le travail mais aussi regrouper nos idées. Pas à pas, nous avons pu comprendre comment manipuler les outils utilisés par les personnes qui travaillent ou effectuent des recherches dans le secteur de l'après-mine. Nous avons également appris à nous documenter, synthétiser nos analyses et citer nos sources, comme dans le monde professionnel. 
+
+%je sais pas comment finir, faudra peut être mettre une chute ici
+
 
 \newpage
 \section*{Références bibliographiques}
@@ -1342,7 +1248,7 @@ Cette étude analytique permet donc de penser que les stériles doivent égaleme
 %    Image 2 (prez Orano C. Benesteau)
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{I_A_2.jpg}
+    \includegraphics[width=0.8\textwidth]{I_A_2.png}
     \caption{Carte des sites miniers uranifères en France (Orano)}
     \label{fig:sites_orano}
 \end{figure}
@@ -1441,6 +1347,15 @@ Cette étude analytique permet donc de penser que les stériles doivent égaleme
     \label{fig:rain_fugacity}
 \end{figure}
 
+\begin{figure}
+    \centering
+    \subfloat[\centering vue d'ensemble]{\includegraphics[width=0.5\textwidth]{III_C_13.png}}
+    \hfill
+    \subfloat[\centering vue stériles]{\includegraphics[width=0.5\textwidth]{III_C_14.png}}
+    \caption{Modèle numérique : impact d'un terme source}
+    \label{fig:num_ts}
+\end{figure}
+
 \newpage
 \section{Hydrogéologie : la loi de Darcy}
 \subsection{La loi de Darcy}
@@ -1516,7 +1431,7 @@ On peut généraliser la relation à un nombre quelconque de perméabilités en 
 
 $$ \dfrac{L_{eq}}{K_{eq}} = \dfrac{L_1}{K_1} + \dfrac{L_2}{K_2} $$
 
-Pour n zones de roches en série de perméabilités et longueurs respectives $K_{i}$ et $L_{i}$, la perméabilité équivalente est :
+Pour $n$ zones de roches en série de perméabilités et longueurs respectives $K_{i}$ et $L_{i}$, la perméabilité équivalente est :
 $$K_{eq} = \frac{\sum\limits_{i=1}^{n}L_i}{\sum\limits_{i=1}^{n}\frac{K_i}{L_i}} $$
 
 On est alors en mesure, connaissant les conditions aux bords d’un système de perméabilités en série, de déterminer la charge aux interfaces entre deux zones de roches en se ramenant à un problème à deux perméabilités par un calcul de perméabilité équivalente. Alors, le débit et la perméabilité étant constants dans une même zone rocheuse, la loi de Darcy permet d’affirmer que le gradient de charge y est aussi constant. On peut alors calculer la charge en tout point du système.
@@ -1586,8 +1501,9 @@ $$h(x) = -\frac{Q}{2K}x^2 + \frac{Q_0}x + h_2$$
 \subsection{Estimation du facteur d'émanation}
 \label{annexe:emanation}
 
-\paragraph{} La formule suivante du facteur d'émanation $F_e$ est donnée en fonction du paramètre $x=2\,R_s/D$ et on a tracé la fonction selon le diamètre, avec $R_s=30$ nm dans le grain (figure \ref{fig:facteur_emanation}).
+\paragraph{} On définit le facteur d’émanation comme étant la proportion d’atomes de radon qui atteignent les porosités sans être absorbés par un autre grain. Il est possible d’estimer le facteur d’émanation \cite{fleischer_theory_1983} dans le cas simplifié d’un grain sphérique de diamètre~$D$, sans prendre en compte l’humidité ou la potentielle absorption des atomes par un grain adjacent (détails en annexe C\ref{annexe:emanation}). 
 
+La formule suivante du facteur d'émanation $F_e$ est donnée en fonction du paramètre $x=2\,R_s/D$ et on a tracé la fonction selon le diamètre, avec $R_s=30$ nm dans le grain (figure \ref{fig:facteur_emanation}).
 $$
 F_e (x)= \frac{3}{4} \,x\,(1- \frac{x^2}{12} )
 $$
@@ -1598,6 +1514,10 @@ $$
     \caption{Facteur d’émanation en fonction du diamètre des grains}
     \label{fig:facteur_emanation}
 \end{figure}
+
+La littérature scientifique \cite{ferry_migration_2000} permet de confirmer l’ordre de grandeur obtenu par le calcul simplifié à sec pour des grains dont le diamètre est de l’ordre du micromètre ($E \simeq 10^{-2}$). On note que le facteur d’émanation est d’autant plus élevé que les résidus sont humides ($E\simeq 0,3$) puisque l’eau, avec une distance d’arrêt plus courte, empêche les atomes d’être absorbés par les grains adjacents.
+
+Pour nos valeurs numériques dans les résidus miniers, enfouis en zone saturée, on a sélectionné une valeur du coefficient d’émanation $E=0,3$.
 
 \subsection{Équilibre séculaire : calculs }
 \label{annexe:seculaire}
@@ -1632,6 +1552,23 @@ $$
 $$
 a_0=\lambda_{Rn} N_a c_0 =\frac{E(1-\omega)\rho}{\omega S_g} A_{Ra} =9,1 \, \text{MBq/m}^3
 $$
+
+\subsection{Dose efficace : calculs}
+\label{annexe:dose_efficace}
+
+Il est possible de déduire la dose efficace d’exposition au radon sur le lieu de travail à partir de l’activité volumique en radon $a$ en $Bq/m^3$, le temps de travail en heures $\Delta t$ et du facteur d’équilibre $F$, qui est une image de la qualité de la ventilation du milieu. Un facteur d’équilibre proche de $0$ caractérise un milieu bien aéré, et un facteur d’équilibre proche de $1$ signifie que l’air du milieu n’est que très peu renouvelé. Le facteur d’équilibre $0,4$ correspond à la moyenne dans les habitations françaises. Une ventilation forcée peut baisser ce paramètre. L'INRS donne alors une expression \cite{blanchardon_evaluation_2019} de la dose efficace (en Sieverts) : $$
+d = r F a \Delta t
+$$
+où $r=7,8 \; .10^{-6} \; \text{mSv/(Bq/m}^3\text{.h})$ est un coefficient lié à l’impact du radon, que l'on approxime en annexe C\ref{annexe:estimation_r}. % à faire proprement
+
+Le tableau \ref{tab:exposition_double_entree} permet de visualiser la position du niveau de référence de $300 \; Bq/m^3$ par rapport aux limites d’exposition (les cases rouges sont les doses dépassant la limite légale de dose efficace) pour des travailleurs qui ont travaillé 35~heures pendant 56~semaines de l’année. On note que le niveau de référence est bien positionné.
+
+\begin{table}[H]
+    \centering
+    \caption{Dose efficace en $mSv/an$ en fonction de $F$ et $a$ pour un travailleur}
+    \includegraphics[width=\linewidth]{II_A2_6.png}
+    \label{tab:exposition_double_entree}
+\end{table}
 
 \subsection{Dose efficace : estimation du facteur $r$}
 \label{annexe:estimation_r}
@@ -1750,10 +1687,10 @@ $$ \frac{d\left[ Rn_{mineral} \right]}{dt}=\lambda_{Rn} \left[ Rn_{aq \quad ou \
 
 Nous introduisons par la suite ce minéral en quantité nulle dans toutes les zones de la simulation, ainsi la décomposition du radon est modélisée par sa précipitation sous la forme de ce minéral fictif qui ne réagit avec rien et reste sur place.
 
-La deuxième méthode consiste à modifier le code HYTEC lui même en incorporant cette décroissance directement dans l'équation de transport du Radon dans le code source. Cette modification a été mise en place par Irina Sin, le "nouveau" code HYTEC est formellement renommé HYTEC\_R.
+La deuxième méthode consiste à modifier le code HYTEC lui même en incorporant cette décroissance directement dans l'équation de transport du radon dans le code source. Cette modification a été mise en place par Irina Sin, le "nouveau" code HYTEC est formellement renommé HYTEC\_R.
 
 dans la suite l'une et l'autre méthode sont utilisés selon l'accès ou non (au temps de la simulation) au code HYTEC\_R, ou encore des éventuels problèmes de compatibilité du code HYTEC\_R avec le modèle utilisé. Cela n'a pas d'impact sur les résultats car les 2 méthodes sont équivalentes.
-\paragraph{Modèles de type "condition aux limites" } Le permier type de modèle utilisé est le plus simple : on modélise une colonne verticale stériles avec éventuellement une zone d'air au dessus selon les besoins. On ne modélise pas ici les résidus à proprement parler, on modélise juste leur impact sur les stériles. Cet impact se traduit par une fugacitée constante en radon à la limite basse de la zone stériles du modèle (limite qui est en réalité l'interface stériles/résidus). HYTEC a besoin d'un condition limite en fugacité (pression partielle en radon dans le gaz contenu dans les pores), on ne connaît pas cette valeur : on en propose un calcul dans la partie \ref{annexe:fug_act} ci-dessous.
+\paragraph{Modèles de type "condition aux limites" } Le permier type de modèle utilisé est le plus simple : on modélise une colonne verticale stériles avec éventuellement une zone d'air au dessus selon les besoins. On ne modélise pas ici les résidus à proprement parler, on modélise juste leur impact sur les stériles. Cet impact se traduit par une fugacité constante en radon à la limite basse de la zone stériles du modèle (limite qui est en réalité l'interface stériles/résidus). HYTEC a besoin d'un condition limite en fugacité (pression partielle en radon dans le gaz contenu dans les pores), on ne connaît pas cette valeur : on en propose un calcul dans la partie \ref{annexe:fug_act} ci-dessous.
 
 \paragraph{Modèles de type "production de radon dans toute la colonne"} Ce deuxième type de modèle met en place, pour modéliser la création de radon dans toute la colonne, un
 %en cours (paul)
@@ -1819,6 +1756,8 @@ L'interprétation de cette expression est claire :
   \item Sinon, la production de radon dans les stériles peut être importante.
   \item Dans tous les cas, au bout d'une certaine altitude, seule la production de radon dans les stériles n'est visible.
 \end{itemize}
+
+
 
 \section{Géochimie}
 
