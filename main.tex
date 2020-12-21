@@ -1128,31 +1128,30 @@ Les relevés piézométriques permettent aussi de définir le profil de charge :
 
 Les précipitations effectives \blue{globalement} correspondent à la différence entre les précipitations totales et l'évapotranspiration : ce sont donc les conditions imposées au modèle dans la couche supérieure. Celle-ci sert d'interface au système, et permet à l'eau en surface de pénétrer dans les autres zones, ce qui génère un flux vertical qui va notamment influencer la mobilité des éléments chimiqes dans la zone de résidus. 
 La prise en compte des variations saisonnières permet de représenter les évolutions importantes de ce flux.
-C'est pourquoi nous nous sommes intéressés aux données météorologiques. Elles montrent des précipitations effectives très variables: en effet, on remarque que les mois de novembre, décembre, janvier et mars correspondent à de fortes précipitations, alors qu’elles sont presque nulles le reste de l’année.\blue{ Tableau des données des précipitations modélisées serait utile} 
-WIP!!! -> ajout de la table en annexe
+C'est pourquoi nous nous sommes intéressés aux données météorologiques. Elles montrent des précipitations effectives très variables: en effet, on remarque que les mois de novembre, décembre, janvier et mars correspondent à de fortes précipitations, alors qu’elles sont presque nulles le reste de l’année\ref{fig:precipitations_tableau_ribière}.
 
-La modélisation du site est réalisée à l'aide du logiciel HYTEC qui comporte un module de calcul hydrodynamique nommé R2D2. Nous utilisons également le \blue{code géochimique}\sout{logiciel} CHESS \blue{intégré dans HYTEC} \sout{réalisant la simulation chimique} \cite{van_der_lee_module-oriented_2003} afin d'obtenir un modèle complet de transport réactif.
+La modélisation du site est réalisée à l'aide du logiciel HYTEC qui comporte un module de calcul hydrodynamique nommé R2D2. Nous utilisons également le code géochimique CHESS intégré dans HYTEC \cite{van_der_lee_module-oriented_2003} afin d'obtenir un modèle complet de transport réactif.
 %\sout{\cite{lagneau:hal-00614306}} \blue{référence principale}
 % j'ai inclus votre référence dans le .bib:
 % van_der_lee_module-oriented_2003 
 
-Le modèle géographique du site (script \ref{lst:modele_topo}) est réalisé à l'aide du logiciel libre GMSH \cite{geuzaine_gmsh}, qui permet d'obtenir un meilleur maillage \blue{adapté à la complexité du système}. Le choix du maillage n'est en effet pas anodin puisqu'il sert de support à la simulation. Il doit donc être adapté \sout{à la zone modélisée}\blue{ aux phénomènes physiques modélisés}. Par exemple, pour la couche de surface dont l'épaisseur estimée à 4~mètres, il est nécessaire que les mailles fassent moins de 4~mètres. Nous ajustons donc les paramètres de maillage afin de discrétiser plus finement cette zone. Inversement, la zone de granite sain forme un socle presque imperméable, limitant les flux hydrologiques à l'intérieur de celle-ci. C'est pourquoi un maillage plus épais peut être choisi. Enfin, pour la zone de résidus de traitement qui contient les espèces étudiées, il faut être très précis et choisir des mailles fines pour pouvoir bien rendre compte des deux faciès.
+Le modèle géographique du site (script \ref{lst:modele_topo}) est réalisé à l'aide du logiciel libre GMSH \cite{geuzaine_gmsh}, qui permet d'obtenir un meilleur maillage adapté à la complexité du système. Le choix du maillage n'est en effet pas anodin puisqu'il sert de support à la simulation. Il doit donc être adapté aux phénomènes physiques modélisés. Par exemple, pour la couche de surface dont l'épaisseur estimée à 4~mètres, il est nécessaire que les mailles fassent moins de 4~mètres. Nous ajustons donc les paramètres de maillage afin de discrétiser plus finement cette zone. Inversement, la zone de granite sain forme un socle presque imperméable, limitant les flux hydrologiques à l'intérieur de celle-ci. C'est pourquoi un maillage plus épais peut être choisi. Enfin, pour la zone de résidus de traitement qui contient les espèces étudiées, il faut être très précis et choisir des mailles fines pour pouvoir bien rendre compte des deux faciès.
 
 \blue{C'est très bien. Il faut ajouter les connaissances de base: le sol est un milieu très perméable, donner des ordres de grandeur de perm et poro, $\rightarrow$ les vitesses importantes; le granite est un milieu très peu perméable, donner des ordres de grandeur, l'écoulement est limité dans le granite. Après, on raconte le callage de paramètres et des observations. }
 
 
-\paragraph{\blue{Sensibilité et calibrage du modèle} \\ \\}
+\paragraph{Sensibilité et calibrage du modèle \\ \\}
 Le travail de modélisation a montré l’importance de la perméabilité et de la porosité des différentes zones, puisque de faibles variations induisent des comportements différents à long terme. Il est donc nécessaire d’avoir des valeurs les plus précises possibles et les plus représentatives du site. En effet, une forte modification de la perméabilité entre deux zones, ou bien des discontinuités de perméabilité peuvent engendrer des comportements non représentatifs, comme une remontée du traceur dans les résidus en surface. Il est également important de noter l'impact de l'anisotropie ou de l'isotropie de ces paramètres de transport. En effet, s\blue{'}il est possible de modéliser la perméabilité du granite sain comme isotrope, il n'en va de même pour la couche en surface. Une perméabilité verticale plus élevée qu'une perméabilité horizontale signifierait que l'eau s'infiltrant dans le sol serait plus à même de s'enfoncer dans les roches, et donc dans les couches granitiques en profondeur, que de se déplacer vers la rivière en contrebas. Inversement, puisque les résidus miniers sont sous forme de boue et de sable, il faut avoir une perméabilité isotrope dans ces zones.
 
 \blue{Mettre un tableau avec les paramètres hydro poro, perm par zone}
 
-\blue{Nous avons étudié}\sout{On retrouve} l'impact des paramètres de \sout{transfert}\blue{transport sur le} \sout{dans l'étude du} champ de vitesse\sout{dans la zone de précipitations}. \blue{Les figures \ref{fig:v_précipitations_ribiere_1} et \ref{fig:v_précipitations_ribiere_2} montrent l'évolution du champs de vitesse et d'un traceur non réactif associé à l'eau des précipitations au sein du stockage de résidus et dans la zone de granite fracturé.} À 40 et 140~m, l'infiltration est plus élevée que partout ailleurs : ceci est dû à une discontinuité forte de perméabilité verticale, puisque la zone de surface a une perméabilité presque dix fois plus faible que la zone de résidus selon cet axe. Nous remarquons également sur cette simulation l'impact des saisons, avec un champ de vitesse parfois orienté vers la rivière (moment où les précipitations sont faibles) et parfois orienté verticalement (moment de fortes précipitations où l'infiltration prédomine). Une fois le régime permanent établi, nous observons à environ 10~m du sol, un champ de vitesse toujours orienté vers la rivière: ceci correspond au déplacement de l'eau dans la couche de granite fracturé, puisque le granite sain est presque imperméable.
+Nous avons étudié l'impact des paramètres de transport sur le champ de vitesse. Les figures \ref{fig:v_précipitations_ribiere_1} et \ref{fig:v_précipitations_ribiere_2} montrent l'évolution du champs de vitesse et d'un traceur non réactif associé à l'eau des précipitations au sein du stockage de résidus et dans la zone de granite fracturé. À 40 et 140~m, l'infiltration est plus élevée que partout ailleurs : ceci est dû à une discontinuité forte de perméabilité verticale, puisque la zone de surface a une perméabilité presque dix fois plus faible que la zone de résidus selon cet axe. Nous remarquons également sur cette simulation l'impact des saisons, avec un champ de vitesse parfois orienté vers la rivière (moment où les précipitations sont faibles) et parfois orienté verticalement (moment de fortes précipitations où l'infiltration prédomine). Une fois le régime permanent établi, nous observons à environ 10~m du sol, un champ de vitesse toujours orienté vers la rivière: ceci correspond au déplacement de l'eau dans la couche de granite fracturé, puisque le granite sain est presque imperméable.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\linewidth]{III_B_3_6.png}
     
-    \caption{\blue{Carte du traceur associé aux précipitations et champs de vitesse }orienté vers la rivière. Faibles précipitations.}
+    \caption{Carte du traceur associé aux précipitations et champs de vitesse orienté vers la rivière. Faibles précipitations.}
     \label{fig:v_précipitations_ribiere_1}
 \end{figure}
 
@@ -1190,8 +1189,8 @@ précisment les compositions et concentrations en les différentes espèces.}
 \subsubsection{Conclusion pour le site}
 \paragraph{} Le modèle réalisé nous a permis de comprendre comment l’uranium pouvait migrer au sein du site de la Ribière, et ce qui \sout{influence cette migration}\blue{contrôle sa mobilité}. 
 
-\blue{L'acidité est initialement imposée par les résidus et légèrement par l'eau de la pluie.} \blue{L}’acidité de l’eau en entrée du système est un facteur déterminant pour la fixation de l’uranium \blue{contrôlant les mécanismes de rétention par sorption}. \blue{E}n effet, si pour un pH \blue{supérieur à} 6 \sout{ou de plus}, l’uranium est \sout{globalement}\blue{efficacement} sorbé, pour un pH de 4 \sout{c’est plutôt}\blue{les sites de sorption auront une affinité plus fortes pour} le potassium et le magnésium qui se \sout{fixent}\blue{fixeront préférablement à l'uranium}. On obtient alors de l'uranium mobile, \blue{\underline{et donc de concentrations élevées en aval du système.} est-ce vrai ?} De même les paramètres de transport des roches, comme la porosité et la perméabilité, vont permettre de délimiter des zones dans lesquelles l’écoulement est plus ou moins favorisé, ce qui va directement impacter la localisation et la vitesse des réactions chimiques.
-
+\blue{L'acidité est initialement imposée par les résidus et légèrement par l'eau de la pluie.} \blue{L}’acidité de l’eau en entrée du système est un facteur déterminant pour la fixation de l’uranium \blue{contrôlant les mécanismes de rétention par sorption}. \blue{E}n effet, si pour un pH \blue{supérieur à} 6 \sout{ou de plus}, l’uranium est \sout{globalement}\blue{efficacement} sorbé, pour un pH de 4 \sout{c’est plutôt}\blue{les sites de sorption auront une affinité plus fortes pour} le potassium et le magnésium qui se \sout{fixent}\blue{fixeront préférablement à l'uranium}. On obtient alors de l'uranium mobile, \blue{\underline{et donc de concentrations élevées en aval du système.} est-ce vrai ?} De même les paramètres de transport \sout{des roches, comme la }\blue{(}porosité, perméabilité\blue{ et facteurs d'anisotropie}, vont \sout{permettre de délimiter}\blue{contraindre} des zones dans lesquelles l’écoulement est plus ou moins favorisé, ce qui va directement impacter \sout{la localisation et }\blue{le transport des éléments mis en solution, leurs distribution e} la vitesse des réactions chimiques .
+ 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{LJ-pH-initial.PNG}
@@ -1286,15 +1285,15 @@ Nous constatons que l'impact d'un terme source au sein des stériles impacte de 
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
 
-\paragraph{} Notre étude de MIG nous a permis de tirer des conclusions sur la gestion du site de la Ribière. Sur les points techniques, nous avons dressé plusieurs conclusions. %nous avons estimé que le choix de ne pas traiter l'eau sur le site était correct 
-% à développer
-Quant au risque radon, nous avons évalué que l'épaisseur de stériles était suffisamment grande pour respecter les valeurs de références dans des conditions habituelles. Cela ne
+\paragraph{} Notre étude de MIG nous a permis de tirer des conclusions sur la gestion du site de la Ribière. %premièrement, nous avons estimé que le choix de ne pas traiter l'eau sur le site était correct 
+% point hydro/chimie à développer
+Quant au risque radon, nous avons évalué que l'épaisseur de stériles était suffisamment grande pour respecter les valeurs de références dans des conditions habituelles. Un pic de concentration de radon dans l'air peut tout de même être atteint si le sol est très sec : le dérèglement du cycle de l'eau dû au changement climatique devra probablement induire des modifications des mesures mises en place sur le site de la Ribière, puisqu'il est prévu que les précipitations futures seront plus intenses, mais plus brèves et plus espacées dans le temps.
 
 Sur les points non techniques, nous avons pu observer que les solutions de l'après-mine dépendent de chaque site, chaque région, chaque pays. En effet, ce n'est pas qu'un compromis entre les points de vue technique et économique, car l'aspect social peut dominer le reste. De plus, la gestion des sites dépend fortement des pays qui ont tous des histoires et des contextes miniers différents. Finalement, nous avons pu voir que le secteur de l'après-mine se dirige vers un avenir avec des normes plus nombreuses, plus cohérentes avec la réalité et déterminées par plusieurs acteurs en collaboration.
 
 Cette étude nous a donné un réel avant-goût du monde de la recherche et de l'entreprise. Nous avons dû nous organiser collectivement afin de répartir le travail mais aussi regrouper nos idées. Pas à pas, nous avons pu comprendre comment manipuler les outils utilisés par les personnes qui travaillent ou effectuent des recherches dans le secteur de l'après-mine. Nous avons également appris à nous documenter, synthétiser nos analyses et citer nos sources, comme dans le monde professionnel. 
 
-%je sais pas comment finir, faudra peut être mettre une chute ici
+% je sais pas comment finir, faudra peut être mettre une chute ici
 
 
 \newpage
@@ -1303,9 +1302,9 @@ Cette étude nous a donné un réel avant-goût du monde de la recherche et de l
 % \bibliographystyle{ieeetr}
 % \bibliographystyle{ieeetr}
 % \bibliography{biblio}[heading=none]
-\sloppy
+% \sloppy
 \printbibliography[heading=none]%
-\fussy
+% \fussy
 % \printbibliography
 %%%%%% ANNEXES %%%%%%%
 
