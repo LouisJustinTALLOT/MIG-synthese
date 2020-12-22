@@ -1078,11 +1078,11 @@ Finalement, un traitement par sorption sur les hydroxydes d’aluminium semble e
 
 \subsubsection{Modèle hydrogéologique 2D}
 \paragraph{Modélisation \\ \\}
-La construction du modèle transport réactif du site de la Ribière nécessite de réaliser un modèle hydrogéologique \blue{représentatif} afin de pouvoir analyser et prévoir à long terme l'écoulement des eaux qui traversent le site. 
-L'eau provenant des précipitations atmosphériques\blue{, comme dans la colonne (Section \ref{subsec:geoch_1D}), va s'écouler entre la zone de stockage et} \sout{s'infiltre dans le site ou ruisselle puis est évacuée en partie dans} le ruisseau du Verraux en contrebas. \blue{L'objectif de ce modèle plus précis est de représenter l'infiltration et le déplacement de l'eau au sein du stockage de résidus et du massif granitique encaissant. Les chroniques de précipitations et le profil} \sout{Nous voulons donc connaître le niveau} piézom\blue{é}trique \blue{permettent de contraindre les} \sout{sous le ste, le profi de} vitesse sur une coupe transversale, ains\blue{i} que le débit d'exhaure au niveau du ruisseau.
+La construction du modèle transport réactif du site de la Ribière nécessite de réaliser un modèle hydrogéologique représentatif afin de pouvoir analyser et prévoir à long terme l'écoulement des eaux qui traversent le site. 
+Comme dans la colonne (Section \ref{subsec:geoch_1D}), l'eau provient des précipitations atmosphériques, et va s'écouler entre la zone de stockage et le ruisseau du Verraux en contrebas. L'objectif de ce modèle plus précis est de représenter l'infiltration et le déplacement de l'eau au sein du stockage de résidus et du massif granitique encaissant. Les chroniques de précipitations et le profil piézométrique permettent de contraindre les vitesses sur une coupe transversale, ainsi que le débit d'exhaure au niveau du ruisseau.
 
-Nous avons pour cela utilisé un rapport hydrogéologique du site, daté d'avril 2010 \cite{societe_areva_nc_etude_2010}, ainsi que d'une étude complémentaire de 2011 \cite{societe_areva_nc_etude_2011}. Nous nous sommes basés sur les relevés des 9~piézomètres du site \blue{et des 8 forages?} et avons décidé de faire une modélisation sur la coupe,  représentée en figure \ref{fig:coupe_site_ribiere}.
-Cette coupe a été choisie car elle couvre la topographie du site (de 395~m à 348~m d'altitude), la zone de résidus et la rivière. De plus, cet axe dispose de cinq piézomètres \blue{et combien de forages?} \sout{pour nous renseigner sur le terrain}\blue{qui ont été utilisés pour reconstituer le système hydrogéologique du site}.
+Nous avons pour cela utilisé un rapport hydrogéologique du site, daté d'avril 2010 \cite{societe_areva_nc_etude_2010}, ainsi que d'une étude complémentaire de 2011 \cite{societe_areva_nc_etude_2011}. Nous nous sommes basés sur les relevés des 9~piézomètres du site et des 8 forages et avons décidé de faire une modélisation sur la coupe,  représentée en figure \ref{fig:coupe_site_ribiere}.
+Cette coupe a été choisie car elle couvre la topographie du site (de 395~m à 348~m d'altitude), la zone de résidus et la rivière. De plus, cet axe dispose de cinq piézomètres et est à proximité de 5 forages, ce qui permet de reconstituer le système hydrogéologique du site.
 
 
 % \begin{figure}[H]
@@ -1127,9 +1127,9 @@ Les relevés des carottés réalisés pendant la construction des piézomètres 
 
 Les relevés piézométriques permettent aussi de définir le profil de charge : le piézomètre~PZ2 indique une profondeur d’eau à environ 24~m, et le piézomètre~PZ9 à 1~m, ce qui correspond au ruisseau du Verraux. \blue{Préciser le gradient de charge, donnez une valeur approx.}
 
-Les précipitations effectives \blue{globalement} correspondent à la différence entre les précipitations totales et l'évapotranspiration : ce sont donc les conditions imposées au modèle dans la couche supérieure. Celle-ci sert d'interface au système, et permet à l'eau en surface de pénétrer dans les autres zones, ce qui génère un flux vertical qui va notamment influencer la mobilité des éléments chimiqes dans la zone de résidus. 
+Les précipitations effectives correspondent à la quantité d'eau due aux précipitations rentrant dans le système (après avoir notamment pris en compte l'évapotranspiration): ce sont donc les conditions imposées au modèle dans la couche supérieure. Celle-ci sert d'interface au système, et permet à l'eau en surface de pénétrer dans les autres zones, ce qui génère un flux vertical qui va notamment influencer la mobilité des éléments chimiqes dans la zone de résidus. 
 La prise en compte des variations saisonnières permet de représenter les évolutions importantes de ce flux.
-C'est pourquoi nous nous sommes intéressés aux données météorologiques. Elles montrent des précipitations effectives très variables: en effet, on remarque que les mois de novembre, décembre, janvier et mars correspondent à de fortes précipitations, alors qu’elles sont presque nulles le reste de l’année\ref{fig:precipitations_tableau_ribière}.
+C'est pourquoi nous nous sommes intéressés aux données météorologiques. Elles montrent des précipitations effectives très variables: en effet, on remarque que les mois de novembre, décembre, janvier et mars correspondent à de fortes précipitations, alors qu’elles sont presque nulles le reste de l’année [\ref{fig:PE_ribiere}].
 
 La modélisation du site est réalisée à l'aide du logiciel HYTEC qui comporte un module de calcul hydrodynamique nommé R2D2. Nous utilisons également le code géochimique CHESS intégré dans HYTEC \cite{van_der_lee_module-oriented_2003} afin d'obtenir un modèle complet de transport réactif.
 %\sout{\cite{lagneau:hal-00614306}} \blue{référence principale}
@@ -1163,7 +1163,7 @@ Nous avons étudié l'impact des paramètres de transport sur le champ de vitess
     \label{fig:v_précipitations_ribiere_2}
 \end{figure}
 
-La détermination du temps de résidence de l'eau dans le système, c'est à dire le temps qu'il faut pour que l'eau passe des résidus à la rivière, peut se faire de différentes façons. Une approximation linéaire \blue{Est-ce avec la seule vitesse Darcy partout ? A préciser } permet un calcul d’ordre de grandeur : une modélisation par deux zones, une zone de résidus et une de granite fracturé, donne un temps d résidence d’environ 15~ans. La solution analytique \blue{Quelle solution analytique? si c'est celle de Ogata Banks, préciser et mettre la ref} donne également le même ordre de grandeur, avec un temps de résidence entre 20 et 22~ans de l'eau dans le système \blue{homogène/hétérogène ?}. Enfin, le modèle hydrogéologique montre l’évolution du traceur associé aux résidus dans le milieu \blue{hétérogène avec des contraintes hydrogéologiques du site} : nous obtenons ici un temps de résidence de 25~ans confirmant également un callage satisfaisant du modèle (Figure~\ref{hytec_hydro_25ans}).
+La détermination du temps de résidence de l'eau dans le système, c'est à dire le temps qu'il faut pour que l'eau passe des résidus à la rivière, peut se faire de différentes façons. Une approximation linéaire \blue{Est-ce avec la seule vitesse Darcy partout ? A préciser } permet un calcul d’ordre de grandeur : une modélisation par deux zones, une zone de résidus et une de granite fracturé, donne un temps d résidence d’environ 15~ans. La solution analytique \cite{runkel_solution_1996} donne également le même ordre de grandeur, avec un temps de résidence entre 20 et 22~ans de l'eau dans le système hétérogène. Enfin, le modèle montre l’évolution du traceur associé aux résidus dans le milieu hétérogène avec les contraintes hydrogéologiques du site : nous obtenons ici un temps de résidence de 25~ans confirmant également un callage satisfaisant du modèle (Figure~\ref{hytec_hydro_25ans}).
 
 \begin{figure}[H]
     \centering
@@ -1205,7 +1205,7 @@ Avec les hypothèses prises dans ce travail de modélisation, nous observons un 
     \label{fig:pH-final}
 \end{figure}
 
-Pour l’uranium en revanche, le contrôle de la solubilité par les mécanismes d’échanges d’ions semble être suffisamment efficace pour limiter sa propagation en aval. A 25 ans, aucune augmentation de concentration en uranium n’est prédite aux alentours immédiats du stockage de résidus (figure \ref{fig:uo2P-aqueux-final}, \ref{fig:uo2P-fixe-final}). Des modélisations plus longues seraient nécessaires pour estimer le temps à partir duquel les sites de sorptions seront saturés et perdront leur capacité à fixer l’uranium. La progression d’un front de concentration d’uranium sera toutefois limitée si, comme dans le modèle, la zone d’écoulement (sol et granite fracturé) contient également des minéraux argileux avec une capacité d’échange cationique. \blue{Voir l'annexe~\ref{annexe:modele-transport-reactive} pour plus de détails sur des résultats du modèle.}
+Pour l’uranium en revanche, le contrôle de la solubilité par les mécanismes d’échanges d’ions semble être suffisamment efficace pour limiter sa propagation en aval. A 25 ans, aucune augmentation de concentration en uranium n’est prédite aux alentours immédiats du stockage de résidus (figure \ref{fig:uo2P-aqueux-final}, \ref{fig:uo2P-fixe-final}). Des modélisations plus longues seraient nécessaires pour estimer le temps à partir duquel les sites de sorptions seront saturés et perdront leur capacité à fixer l’uranium. La progression d’un front de concentration d’uranium sera toutefois limitée si, comme dans le modèle, la zone d’écoulement (sol et granite fracturé) contient également des minéraux argileux avec une capacité d’échange cationique. Voir l'annexe~\ref{annexe:modele-transport-reactive} pour plus de détails sur des résultats du modèle.
 
 \blue{(Un tableau avec des unités chimiques par zone serait très utile.)
 }
@@ -1390,8 +1390,8 @@ Cette étude nous a donné un réel avant-goût du monde de la recherche et de l
 \begin{figure}[H]
  \centering
         \includegraphics[width = \textwidth]{III_B_3_5.png} 
-        \label{fig:precipitations_tableau_ribière}
         \caption{Données des précipitations effectives sur le site utilisées pour le modèle hydrogéochimique}
+        \label{fig:PE_ribiere}
 \end{figure}
 \begin{figure}[H]
     \centering
