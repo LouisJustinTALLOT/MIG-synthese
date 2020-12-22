@@ -73,7 +73,6 @@ zone Atm {
   gas-diffusion-coefficient = 1e-4 m2/s
 }
 
-
 # Conditions aux limites
 
 boundary Residus {
