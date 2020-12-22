@@ -903,7 +903,7 @@ Situé sur la commune de Domeyrot dans la Creuse, ce site a été exploité de 1
 
 Désormais géré par Orano Mining, le site de la Ribière est équipé d'appareils de mesure et de surveillance, notamment pour ce qui est de l’eau qui traverse le site. Ainsi, 4~points de prélévements en surface sont répartis sur les 14~hectares pour la surveillance environnementale, notamment en ce qui concerne la biodiversité du site, tandis que 9~piézomètres permettent d’avoir une vision détaillée du profil géologique et hydrologique de la zone.
 
-Selon les mesures effectuées par Orano Mining \cite{chautard_evaluation_2020}, le site respecte les normes environnementales en vigueur en termes de qualité des eaux à l’exutoire (le ruisseau du Verraux). La concentration en uranium mesurée est de $7,6 \, . 10^{-6}$~mol/L et la dose mesurée est de $1,37$~Bq/L pour le $^{226}$Ra. En effet, les normes applicables sont de $1,7$~Bq/L pour le radon.
+Selon les mesures effectuées par Orano Mining \cite{chautard_evaluation_2020}, le site respecte les normes environnementales en vigueur en termes de qualité des eaux à l’exutoire (le ruisseau du Verraux). La concentration en uranium mesurée est de $7,6 \, . 10^{-6}$~mol/L et la dose mesurée est de $1,37$~Bq/L pour le $^{226}$Ra. En effet, les normes applicables sont de $1,7$~Bq/L pour le radium.
 %ce qui est inférieur 
 %Dernière phrase pas très claire
 %Référence des valeurs ? Par ailleurs 1,37 Bq/L=1370 Bq/m^3 ce qui est supérieur à la norme de 300 Bq/m^3 (mais peut être qu'ici c'est une autre norme qui s'applique...
@@ -2222,8 +2222,12 @@ Il est néanmoins nécessaire d’assurer une surveillance régulière et intens
 \newpage
 
 \lstinputlisting[language=Python, caption= Variation du facteur d'émanation selon le diamètre des grains ]{emanation.py}
-% LJ, vous a rapport 
+% LJ, vous devrez envoyer le rapport PDF à Sabine. les encadrants en copie
+% sabine.cantournet@mines-paristech.fr 
+% vous avez son mail ?? ça marche mais je ne sais pas qui c'est
+% noté ! oui le TeX ne va pas l'intéresser je pense =)
 
+% j'ai encore la microcline a rajouter je le fais tout de suite
 \newpage
 \section{Résultats des simulations numériques HYTEC}
 \label{annexe:modele-transport-reactive}
@@ -2351,8 +2355,42 @@ Nous nous intéressons à l'évolution de l'autunite, minéral de formule Ca(UO$
     \caption{Taux de dissolution de l'autunite à la saison sèche}
     \label{fig:rate_autunite_seche}
 \end{figure}
-\newpage
+%LJ-rate-Microcline-timestep0.png
 
+
+\newpage
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{LJ-rate-Microcline-timestep0.png}
+    \caption{Taux de dissolution de la microcline à l'état initial}
+    \label{fig:rate_}
+\end{figure}% je complie pour regarder des images . Je ferai des titres simples. fais autre chose
+% c'est surtout que le premire couple d'images c'est au timestep = 0 - état inital 
+% et le 2e au timestep = 1 - pluie forte . Ok . 
+%donc comme saison pluies et sehce mais je sais pas si ça colle
+% je sais pas quoi mettre pour les images :( :( help
+
+% faudrait juste mettre une phrase pour introduire ces figures aussi .....
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{LJ-rate-Montmorillonite-timestep0.png}
+    \caption{Taux de dissolution de la montmorillonite à l'état initial}
+    \label{fig:rate_}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{LJ-rate-Microcline-timestep1.png}
+    \caption{Taux de dissolution de la microcline sous régime de pluies fortes}
+    \label{fig:rate_}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{LJ-rate-Montmorillonite-timestep1.png}
+    \caption{Taux de dissolution de la montmorillonite sous régime de pluies fortes}
+    \label{fig:rate_}
+\end{figure}
 \newpage
 \listoffigures
 \newpage
