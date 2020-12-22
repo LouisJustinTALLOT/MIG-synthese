@@ -49,7 +49,7 @@ zone 1005 {
   geochem = chimie_residus_boues
 }
 
-# les frontières qui définissent les conditions aux limites
+# les frontieres qui definissent les conditions aux limites
 
 boundary 2001 {
   coordinates = 0,300 0,370 m
