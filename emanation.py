@@ -8,7 +8,7 @@ d=np.linspace(10**(-7),5*10**(-6),1000000)
 
 F=np.vectorize(Fe)
 
-plt.title('Fe en fonction du diamètre du grain')
-plt.xlabel('Diamètre (en μm)')
+plt.title('Fe en fonction du diametre du grain')
+plt.xlabel('Diametre (en μm)')
 plt.ylabel('Fe')
 plt.plot(d,f(d))
