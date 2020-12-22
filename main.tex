@@ -1072,7 +1072,10 @@ Ainsi, le pH influence fortement la mobilité de l’uranium. Un pH plus élevé
 \paragraph{Étude d'une possibilité de sorption sur des hydroxydes d'aluminium précipités \\ \\}
 À l'aide du modèle, nous avons simulé un traitement de l’eau par sorption sur des hydroxyde d’aluminium. Nous avons donc injecté des ions Al$^{3+}$ en solution en entrée du modèle. Cependant, la précipitation de Al(OH)$_3$ consomme des ions OH$^{-}$ et diminue donc le pH. Il se situe alors autour de $4,5$. On observe donc une augmentation de la concentration en ions UO$_2^{2+}$ dans la solution. Par ailleurs, l’hydroxyde d’aluminium ne précipite qu'à l’entrée du modèle (dans les deux premières mailles).
 
-\begin{figure}[b]
+En sortie du modèle, on obtient une forte concentration en aluminium dans l’eau (324~mg/L contre 200~µg/L pour la norme) et en uranium. Nous avons donc ajouté des hydroxydes d’aluminium en aval des résidus pour simuler une résine échangeuse d’ions et ajouter de la sorption.
+Nous regardons alors les caractéristiques physico-chimiques de l’eau en sortie du modèle, comparées avec celles que nous avions sans Al(OH)$_3$ en aval des résidus.
+
+\begin{figure}[tbh]
     \centering
     \begin{minipage}{0.5\textwidth}
         \centering
@@ -1086,9 +1089,7 @@ Ainsi, le pH influence fortement la mobilité de l’uranium. Un pH plus élevé
         \caption{Concentration en UO$_2^{2+}$ fixé au \\milieu des résidus}
         \label{fig:UO2_fixe_residus_Al}
     \end{minipage}
-\end{figure}
 
-\begin{figure}[b]
     \centering
     \begin{minipage}{0.5\textwidth}
         \centering
@@ -1102,13 +1103,7 @@ Ainsi, le pH influence fortement la mobilité de l’uranium. Un pH plus élevé
         \caption{Concentration aqueuse en Al$^{3+}$ \\dans l'eau rejetée dans la rivière}
         \label{fig:Al_riviere_Al}
     \end{minipage}
-\end{figure}
 
-
-En sortie du modèle, on obtient une forte concentration en aluminium dans l’eau (324~mg/L contre 200~µg/L pour la norme) et en uranium. Nous avons donc ajouté des hydroxydes d’aluminium en aval des résidus pour simuler une résine échangeuse d’ions et ajouter de la sorption.
-Nous regardons alors les caractéristiques physico-chimiques de l’eau en sortie du modèle, comparées avec celles que nous avions sans Al(OH)$_3$ en aval des résidus.
-
-\begin{figure}[b]
     \centering
     \begin{minipage}{0.5\textwidth}
         \centering
@@ -1125,13 +1120,13 @@ Nous regardons alors les caractéristiques physico-chimiques de l’eau en sorti
 \end{figure}
 
 
-
 On obtient effectivement moins d’uranium en solution pendant les 50~premières années, mais ensuite, la concentration se stabilise à 0,7~µmol/L pendant 30~ans puis augmente. La sorption est alors de moins en moins efficace. On remarque de plus que le pH reste acide, ce qui explique des concentrations en UO$_2^{2+}$ élevées. Pour l’aluminium, on reste bien au-delà des normes en vigueur (figure~\ref{fig:Al_riviere_comparaison_Al}).
 Finalement, un traitement par sorption sur les hydroxydes d’aluminium semble efficace, mais pas sur le long terme. Pour envisager un tel traitement, il faut être capable de renouveler les hydroxydes d’aluminium tous les 30~ans, ou bien injecter des ions Al$^{3+}$ dans l’eau dans une station de traitement, puis réguler le pH (on n’a alors plus le problème du pH acide qui empêche l’UO$_2^{2+}$ de se fixer sur la montmorillonite). Il faut cependant faire attention aux autres polluants, notamment à l’aluminium, dont la quantité en solution est non négligeable en sortie de traitement.
 
 
 \subsubsection{Modèle hydrogéologique 2D}
 \paragraph{Modélisation \\ \\}
+\label{page:modele_hydro}
 La construction du modèle de transport réactif du site de la Ribière nécessite de réaliser un modèle hydrogéologique représentatif afin de pouvoir analyser et prévoir à long terme l'écoulement des eaux qui traversent le site. 
 Comme pour la colonne (section \ref{subsec:geoch_1D}), l'eau provient des précipitations atmosphériques et s'écoule entre la zone de stockage et le ruisseau du Verraux en contrebas. L'objectif de ce modèle plus précis est de représenter l'infiltration et le déplacement de l'eau au sein du stockage de résidus et du massif granitique encaissant. Les chroniques de précipitations et le profil piézométrique permettent de contraindre les vitesses sur une coupe transversale, ainsi que le débit d'exhaure au niveau du ruisseau.
 
@@ -1365,7 +1360,8 @@ Nous constatons que l'impact d'un terme source au sein des stériles impacte de 
 %2
 Notre étude de MIG nous a donc permis de tirer des conclusions sur la gestion du site. En matière de géochimie, nous avons utilisé une modélisation hydrogéologique sur le logiciel HYTEC pour tester l'influence de différents paramètres sur les concentrations en éléments tels que l'uranium. C'est une approche importante pour pouvoir anticiper les potentielles évolutions des résidus et stériles miniers et évaluer l'impact environnemental. Notre modèle, assez simple mais se basant sur des données géologiques du site, nous a permis ainsi de constater le rôle majeur du pH sur la mobilité de l'uranium, notamment au niveau de la sorption de celui-ci parfois remplacé par d'autres cations. HYTEC nous a aussi permis de modéliser le site de La Ribière en 2D et d'analyser les effets de divers paramètres sur le transport et les concentrations en uranium et autres métaux, ainsi que la dispersion de ces éléments. Les simulations sur des grandes échelles de temps ont montré que le transport des éléments issus des résidus était assez limité, et ont donc confirmé le choix de ne pas avoir de station de traitement de l'eau sur le site de la Ribière. Quant au risque radon, nous avons évalué que l'épaisseur de stériles était suffisamment grande pour respecter les valeurs de références dans des conditions habituelles. Un pic de concentration de radon dans l'air peut tout de même être atteint si le sol est très sec en été. Notre étude nous a également démontré que le calcul des flux de radon devaient non seulement utiliser les teneurs en radium dans les résidus enfouis, mais également inclure les teneurs en radium dans la couche protectrice de stériles. En effet, le radon finalement émis dans l'air peut provenir en grande majorité des stériles.
 
-Sur les points non techniques, nous avons pu observer que les solutions de l'après-mine dépendent de chaque site. En effet, ce n'est pas qu'un compromis entre les points de vue technique et économique, car l'aspect social peut dominer le reste. De plus, la gestion des sites dépend fortement des pays qui ont tous des histoires et des contextes miniers différents.
+%Sur les points non techniques, nous avons pu observer que les solutions de l'après-mine dépendent de chaque site. En effet, ce n'est pas qu'un compromis entre les points de vue technique et économique, car l'aspect social peut dominer le reste. De plus, la gestion des sites dépend fortement des pays qui ont tous des histoires et des contextes miniers différents.
+Sur les points non techniques, nous avons pu observer que les solutions de l'après-mine dépendent de chaque site. Il ne s'agit pas seulement d'un compris entre les enjeux techniques et économiques, l'aspect social pouvant orienter les décisions. De plus, la gestion des sites dépend fortement des pays qui ont tous des histoires et des contextes miniers différents.
 
 De nombreux acteurs interviennent dans l'après-mine et doivent collaborer. L'entreprise Orano, chargée de la gestion technique du site, doit atteindre les objectifs des PNGMDR successifs sous l'égide de l'ASN et respecter les normes établies par l'IRSN. L'accord de tous les acteurs sur les normes n'est pas évident à trouver puisque leurs intérêts sont tous différents : sécurité humaine, protection environnementale, gestion des matériaux, rentabilité économique ou revalorisation du paysage. Par ailleurs, fixer une norme n'est pas chose aisée : elle se base parfois sur des critères peu exhaustifs et plus ou moins arbitraires, car il est nécessaire de réaliser de nombreuses études poussées et diverses pour évaluer les impacts réels des différents polluants. C'est pour cela que l'IRSN développe une méthode multi-critères pour l'établissement des futures normes.
 
@@ -2223,6 +2219,9 @@ Il est néanmoins nécessaire d’assurer une surveillance régulière et intens
 \section{Résultats des simulations numériques HYTEC}
 \label{annexe:modele-transport-reactive}
 
+Dans cette annexe, nous exposons les différentes figures obtenues avec HYTEC et le modèle hydrogéologique du site de La Ribière, comme détaillé page \pageref{page:modele_hydro}.
+
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{LJ-zones-HYTEC-final.png}
@@ -2282,41 +2281,41 @@ Il est néanmoins nécessaire d’assurer une surveillance régulière et intens
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{LJ-Autunite-concentration.PNG}
-    \caption{}
+    \caption{Concentration en autunite sur le site de La Ribière }
     \label{fig:concentration_autunite}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{LJ-Ferrihydrite-concentration.PNG}
-    \caption{}
+    \caption{Concentration en ferrihydrite sur le site de La Ribière}
     \label{fig:concentration_ferrihydrite}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{LJ-Montmorillonite-concentration.PNG}
-    \caption{}
-    \label{fig:concentration_montmorilonite}
+    \caption{Concentration en monrillonite sur le site de La Ribière}
+    \label{fig:concentration_montmorillonite}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{LJ-Quartz-concentration.PNG}
-    \caption{}
+    \caption{Concentration en quartz sur le site de La Ribière}
     \label{fig:concentration_quartz}
 \end{figure}
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{LJ-Calcite-initial-concentration.PNG}
-    \caption{}
+    \caption{Concentration en calcite sur le site de La Ribière au début de la simulation}
     \label{fig:concentration_calcite_initial}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{LJ-Calcite-final-concentration.PNG}
-    \caption{}
+    \caption{Concentration en calcite sur le site de La Ribière à la fin de la simulation}
     \label{fig:concentration_calcite_final}
 \end{figure}
 % \begin{figure}[H]
